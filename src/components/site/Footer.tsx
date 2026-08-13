@@ -72,6 +72,7 @@ export function Footer() {
             <Link to="/parents/safety" className={col}>Child Safety Policy</Link>
             <Link to="/parents/testimonials" className={col}>Parent Testimonials</Link>
             <Link to="/parents/faq" className={col}>FAQ</Link>
+            <Link to="/blogs" className={col}>Blogs</Link>
           </div>
         </div>
 

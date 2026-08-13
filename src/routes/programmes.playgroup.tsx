@@ -37,7 +37,6 @@ const info: ProgrammeInfo = {
     { title: "Predictable Routines", body: "A consistent rhythm to the day helps children feel secure, settled and ready to learn." },
   ],
   developmentTitle: "Holistic Development",
-  developmentDescription: "Growing confident, curious and capable. Every activity supports multiple areas of a child's development.",
   development: [
     "Building confidence away from home",
     "Language through stories, songs and conversations",

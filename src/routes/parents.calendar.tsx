@@ -34,7 +34,7 @@ const months = [
 ];
 
 const tagColor = (t: string) =>
-  ({ Festival: "bg [oklch(0.82_0.12_30)] text primary", Theme: "bg accent text primary", Trip: "bg [oklch(0.88_0.07_235)] text primary", PTM: "bg primary text primary foreground", Term: "bg [oklch(0.88_0.07_165)] text primary", Break: "bg muted text primary", Orientation: "bg accent text primary", Showcase: "bg primary text primary foreground", Sports: "bg [oklch(0.85_0.11_320)] text primary", Graduation: "bg primary text primary foreground" }[t] ?? "bg muted text primary");
+  ({ Festival: "bg-[#FFD9C6] text-primary", Theme: "bg-accent text-primary", Trip: "bg-[#E6F0FF] text-primary", PTM: "bg-primary text-primary-foreground", Term: "bg-[#E6FFF2] text-primary", Break: "bg-muted text-primary", Orientation: "bg-accent text-primary", Showcase: "bg-primary text-primary-foreground", Sports: "bg-[#F7E6F3] text-primary", Graduation: "bg-primary text-primary-foreground" }[t] ?? "bg-muted text-primary");
 
 function CalendarPage() {
   return (

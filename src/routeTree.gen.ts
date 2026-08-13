@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as BlogsRouteImport } from './routes/blogs'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as BeyondIndexRouteImport } from './routes/beyond.index'
@@ -19,6 +20,8 @@ import { Route as BeyondFestivalsRouteImport } from './routes/beyond.festivals'
 import { Route as BeyondFieldTripsRouteImport } from './routes/beyond.field-trips'
 import { Route as BeyondMusicRouteImport } from './routes/beyond.music'
 import { Route as BeyondYogaRouteImport } from './routes/beyond.yoga'
+import { Route as BlogsPostIdRouteImport } from './routes/blogs.$postId'
+import { Route as BlogsPreschoolReadinessguideRouteImport } from './routes/blogs.preschool-readinessguide'
 import { Route as ParentsIndexRouteImport } from './routes/parents.index'
 import { Route as ParentsAdmissionRouteImport } from './routes/parents.admission'
 import { Route as ParentsCalendarRouteImport } from './routes/parents.calendar'
@@ -53,6 +56,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogsRoute = BlogsRouteImport.update({
+  id: '/blogs',
+  path: '/blogs',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -95,6 +103,17 @@ const BeyondYogaRoute = BeyondYogaRouteImport.update({
   path: '/beyond/yoga',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogsPostIdRoute = BlogsPostIdRouteImport.update({
+  id: '/$postId',
+  path: '/$postId',
+  getParentRoute: () => BlogsRoute,
+} as any)
+const BlogsPreschoolReadinessguideRoute =
+  BlogsPreschoolReadinessguideRouteImport.update({
+    id: '/preschool-readinessguide',
+    path: '/preschool-readinessguide',
+    getParentRoute: () => BlogsRoute,
+  } as any)
 const ParentsIndexRoute = ParentsIndexRouteImport.update({
   id: '/parents/',
   path: '/parents/',
@@ -224,6 +243,7 @@ const WorldSteamRoute = WorldSteamRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/blogs': typeof BlogsRouteWithChildren
   '/contact': typeof ContactRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/beyond/arts': typeof BeyondArtsRoute
@@ -231,6 +251,8 @@ export interface FileRoutesByFullPath {
   '/beyond/field-trips': typeof BeyondFieldTripsRoute
   '/beyond/music': typeof BeyondMusicRoute
   '/beyond/yoga': typeof BeyondYogaRoute
+  '/blogs/$postId': typeof BlogsPostIdRoute
+  '/blogs/preschool-readinessguide': typeof BlogsPreschoolReadinessguideRoute
   '/parents/admission': typeof ParentsAdmissionRoute
   '/parents/calendar': typeof ParentsCalendarRoute
   '/parents/curriculum': typeof ParentsCurriculumRoute
@@ -261,6 +283,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/blogs': typeof BlogsRouteWithChildren
   '/contact': typeof ContactRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/beyond/arts': typeof BeyondArtsRoute
@@ -268,6 +291,8 @@ export interface FileRoutesByTo {
   '/beyond/field-trips': typeof BeyondFieldTripsRoute
   '/beyond/music': typeof BeyondMusicRoute
   '/beyond/yoga': typeof BeyondYogaRoute
+  '/blogs/$postId': typeof BlogsPostIdRoute
+  '/blogs/preschool-readinessguide': typeof BlogsPreschoolReadinessguideRoute
   '/parents/admission': typeof ParentsAdmissionRoute
   '/parents/calendar': typeof ParentsCalendarRoute
   '/parents/curriculum': typeof ParentsCurriculumRoute
@@ -299,6 +324,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/blogs': typeof BlogsRouteWithChildren
   '/contact': typeof ContactRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/beyond/arts': typeof BeyondArtsRoute
@@ -306,6 +332,8 @@ export interface FileRoutesById {
   '/beyond/field-trips': typeof BeyondFieldTripsRoute
   '/beyond/music': typeof BeyondMusicRoute
   '/beyond/yoga': typeof BeyondYogaRoute
+  '/blogs/$postId': typeof BlogsPostIdRoute
+  '/blogs/preschool-readinessguide': typeof BlogsPreschoolReadinessguideRoute
   '/parents/admission': typeof ParentsAdmissionRoute
   '/parents/calendar': typeof ParentsCalendarRoute
   '/parents/curriculum': typeof ParentsCurriculumRoute
@@ -338,6 +366,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/blogs'
     | '/contact'
     | '/sitemap.xml'
     | '/beyond/arts'
@@ -345,6 +374,8 @@ export interface FileRouteTypes {
     | '/beyond/field-trips'
     | '/beyond/music'
     | '/beyond/yoga'
+    | '/blogs/$postId'
+    | '/blogs/preschool-readinessguide'
     | '/parents/admission'
     | '/parents/calendar'
     | '/parents/curriculum'
@@ -375,6 +406,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/blogs'
     | '/contact'
     | '/sitemap.xml'
     | '/beyond/arts'
@@ -382,6 +414,8 @@ export interface FileRouteTypes {
     | '/beyond/field-trips'
     | '/beyond/music'
     | '/beyond/yoga'
+    | '/blogs/$postId'
+    | '/blogs/preschool-readinessguide'
     | '/parents/admission'
     | '/parents/calendar'
     | '/parents/curriculum'
@@ -412,6 +446,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/blogs'
     | '/contact'
     | '/sitemap.xml'
     | '/beyond/arts'
@@ -419,6 +454,8 @@ export interface FileRouteTypes {
     | '/beyond/field-trips'
     | '/beyond/music'
     | '/beyond/yoga'
+    | '/blogs/$postId'
+    | '/blogs/preschool-readinessguide'
     | '/parents/admission'
     | '/parents/calendar'
     | '/parents/curriculum'
@@ -450,6 +487,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  BlogsRoute: typeof BlogsRouteWithChildren
   ContactRoute: typeof ContactRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   BeyondArtsRoute: typeof BeyondArtsRoute
@@ -499,6 +537,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blogs': {
+      id: '/blogs'
+      path: '/blogs'
+      fullPath: '/blogs'
+      preLoaderRoute: typeof BlogsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -556,6 +601,20 @@ declare module '@tanstack/react-router' {
       fullPath: '/beyond/yoga'
       preLoaderRoute: typeof BeyondYogaRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/blogs/$postId': {
+      id: '/blogs/$postId'
+      path: '/$postId'
+      fullPath: '/blogs/$postId'
+      preLoaderRoute: typeof BlogsPostIdRouteImport
+      parentRoute: typeof BlogsRoute
+    }
+    '/blogs/preschool-readinessguide': {
+      id: '/blogs/preschool-readinessguide'
+      path: '/preschool-readinessguide'
+      fullPath: '/blogs/preschool-readinessguide'
+      preLoaderRoute: typeof BlogsPreschoolReadinessguideRouteImport
+      parentRoute: typeof BlogsRoute
     }
     '/parents/': {
       id: '/parents/'
@@ -735,9 +794,22 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface BlogsRouteChildren {
+  BlogsPostIdRoute: typeof BlogsPostIdRoute
+  BlogsPreschoolReadinessguideRoute: typeof BlogsPreschoolReadinessguideRoute
+}
+
+const BlogsRouteChildren: BlogsRouteChildren = {
+  BlogsPostIdRoute: BlogsPostIdRoute,
+  BlogsPreschoolReadinessguideRoute: BlogsPreschoolReadinessguideRoute,
+}
+
+const BlogsRouteWithChildren = BlogsRoute._addFileChildren(BlogsRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  BlogsRoute: BlogsRouteWithChildren,
   ContactRoute: ContactRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   BeyondArtsRoute: BeyondArtsRoute,

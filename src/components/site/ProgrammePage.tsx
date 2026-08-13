@@ -74,6 +74,9 @@ export type ProgrammeInfo = {
   features: { title: string; body: string }[];
   development?: string[];
   developmentTitle?: string;
+  learningExperiencesTitle?: string;
+  learningExperiencesDescription?: string;
+  learningExperiences?: string[];
   scheduleTitle?: string;
   scheduleSubtitle?: string;
   schedule: { time: string; block: string }[];

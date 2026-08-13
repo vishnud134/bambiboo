@@ -14,10 +14,10 @@ const info: ProgrammeInfo = {
   hours: "Mon–Fri 8:30 AM – 6:30 PM (Sat on request)",
   ratio: "1:12",
   developmentTitle: "Eight domains, one child.",
-  highlights: [
-    { title: "❤ A Home Away From Home", body: "A calm, caring environment where children feel secure and valued." },
-    { title: "🎲 Meaningful Play", body: "Indoor and outdoor activities, stories and creative experiences throughout the day." },
-    { title: "🤝 Peace of Mind for Parents", body: "Reliable care with caring educators and regular communication." },
+    highlights: [
+    { title: "A Home Away From Home", body: "A calm, caring environment where children feel secure and valued." },
+    { title: "Meaningful Play", body: "Indoor and outdoor activities, stories and creative experiences throughout the day." },
+    { title: "Peace of Mind for Parents", body: "Reliable care with caring educators and regular communication." },
   ],
   features: [
     { title: "Quiet rest & napping pods", body: "Individual sleep mats in a dedicated quiet room with comfortable bedding." },

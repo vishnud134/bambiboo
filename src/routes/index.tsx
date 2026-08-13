@@ -99,7 +99,7 @@ const categoryFaqs = [
   // Live CCTV (5 questions)
   { cat: "cctv", q: "Is live CCTV access provided to all parents?", a: "Yes. Every verified parent receives secure, encrypted live streaming access to their child's classroom, activity area, dining hall, and play space through our parent app during operating hours." },
   { cat: "cctv", q: "How is parent CCTV login access kept secure?", a: "Access is protected with multi-factor authentication, device binding, and encrypted streaming protocols. Only pre-registered parents with active credentials can view the live feed." },
-  { cat: "cctv", q: "Which areas of the campus are covered by cameras?", a: "100% of shared spaces—including classrooms, outdoor play yards, hallways, dining spaces, and nap rooms—are under continuous high-definition camera coverage. Washrooms and private change rooms are strictly unmonitored for privacy." },
+  { cat: "cctv", q: "Which areas of the campus are covered by cameras?", a: "100% of shared spaces-including classrooms, outdoor play yards, hallways, dining spaces, and nap rooms-are under continuous high-definition camera coverage. Washrooms and private change rooms are strictly unmonitored for privacy." },
   { cat: "cctv", q: "How long is CCTV video footage stored?", a: "All high-definition CCTV video recordings are stored securely on local encrypted servers for 30 days for complete auditability and safety review." },
   { cat: "cctv", q: "Can grandparents or family members get CCTV access?", a: "Yes, parents can authorize up to two secondary family members (such as grandparents or primary guardians) through our written consent form on the parent portal." },
 
@@ -133,9 +133,9 @@ function Home() {
       {/* HERO */}
       <section className="relative overflow-hidden bg-[#FFEBCB] bg-ambient-mesh">
         {/* Floating Nursery Decorative Elements */}
-        <div className="absolute top-12 left-10 text-2xl animate-float opacity-40 select-none pointer-events-none">⭐</div>
-        <div className="absolute top-1/3 right-12 text-3xl animate-float-slow opacity-30 select-none pointer-events-none">☁️</div>
-        <div className="absolute bottom-12 left-1/4 text-2xl animate-float opacity-35 select-none pointer-events-none">✨</div>
+        <div className="absolute top-12 left-10 text-2xl animate-float opacity-40 select-none pointer-events-none" aria-hidden="true" />
+        <div className="absolute top-1/3 right-12 text-3xl animate-float-slow opacity-30 select-none pointer-events-none" aria-hidden="true" />
+        <div className="absolute bottom-12 left-1/4 text-2xl animate-float opacity-35 select-none pointer-events-none" aria-hidden="true" />
 
         <div className="absolute -top-24 -right-24 h-96 w-96 blob bg-[#F8D9A8] animate-float-slow" />
         <div className="absolute top-40 -left-16 h-72 w-72 blob bg-[#FFD48A]/25 animate-float" />
@@ -150,18 +150,15 @@ function Home() {
                 childhood comes first.
               </span>
             </h1>
-            <ul className="mt-6 max-w-xl text-base md:text-lg text-foreground/90 space-y-2 font-medium">
-              <li className="flex items-start gap-2">
-                <span className="shrink-0">🌿</span>
-                <span><strong>Learning Through Play</strong> — Real experiences. Real friendships. Real confidence.</span>
+            <ul className="mt-6 max-w-xl text-base md:text-lg text-foreground/90 space-y-2 font-medium list-none">
+              <li className="flex items-start gap-2 before:content-[''] before:inline-block">
+                <span><strong>Learning Through Play</strong> - Real experiences. Real friendships. Real confidence.</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="shrink-0">❤️</span>
-                <span><strong>Small Groups. Big Relationships.</strong> — Every child is seen, heard and encouraged.</span>
+              <li className="flex items-start gap-2 before:content-[''] before:inline-block">
+                <span><strong>Small Groups. Big Relationships.</strong> - Every child is seen, heard and encouraged.</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="shrink-0">🤍</span>
-                <span><strong>Peace of Mind for Parents.</strong> — Safe care, transparent communication and teachers you can trust.</span>
+              <li className="flex items-start gap-2 before:content-[''] before:inline-block"> 
+                <span><strong>Peace of Mind for Parents.</strong> - Safe care, transparent communication and teachers you can trust.</span>
               </li>
             </ul>
             <div className="mt-8 flex flex-wrap gap-3">

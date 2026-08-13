@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpen, Clock, Calendar } from "lucide-react";
 import {
@@ -16,6 +17,7 @@ export type BlogPost = {
   readTime: string;
   excerpt: string;
   image: string;
+  content?: React.ReactNode | string;
 };
 
 export const blogPosts: BlogPost[] = [
@@ -26,7 +28,89 @@ export const blogPosts: BlogPost[] = [
     date: "Aug 2, 2026",
     readTime: "4 min read",
     excerpt: "Transitioning to preschool is a big milestone for toddlers and parents alike. Discover 5 gentle routines to make day one full of smiles.",
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80",
+    image: "https://www.ameyaworldschool.in/idea/2022/11/9-Tips-for-teaching-kids-Adjectives-in-a-fun-way.jpg",
+    content: (
+      <div className="prose prose-lg max-w-none text-foreground">
+        <p>
+          Starting preschool is a big milestone—not just for your child, but for the whole family. A new environment, unfamiliar faces, and a different routine can make the first day exciting and, sometimes, a little overwhelming.
+        </p>
+
+        <p>
+          The good news is that a little preparation can help your child feel more confident and comfortable. Here are some simple ways parents can prepare their child for a happy and positive preschool experience.
+        </p>
+
+        <h2>1. Talk About Preschool Positively</h2>
+        <p>
+          Start talking about preschool a few days or weeks before the first day. Keep the conversation light, positive, and age-appropriate.
+        </p>
+        <p>
+          You can tell your child about the fun things they may experience—playing with other children, listening to stories, singing songs, drawing, exploring, and meeting their teachers.
+        </p>
+
+        <h2>2. Introduce a Preschool Routine</h2>
+        <p>
+          Children often feel more comfortable when they know what to expect. Before preschool begins, gradually introduce a routine similar to their school schedule.
+        </p>
+        <p>Set consistent times for:</p>
+        <ul>
+          <li>Waking up</li>
+          <li>Having breakfast</li>
+          <li>Getting dressed</li>
+          <li>Playing</li>
+          <li>Eating meals</li>
+          <li>Taking a nap</li>
+          <li>Going to bed</li>
+        </ul>
+        <p>A predictable routine can make the transition from home to preschool much smoother.</p>
+
+        <h2>3. Practice Being Away From Parents</h2>
+        <p>
+          If your child has rarely spent time away from you, the first day can feel like a big change.
+        </p>
+        <p>
+          Before preschool starts, allow your child to spend short periods with grandparents, relatives, trusted caregivers, or during playdates. Gradually increasing these periods can help your child become comfortable being away from you.
+        </p>
+
+        <h2>4. Help Your Child Become More Independent</h2>
+        <p>
+          Encourage your child to practise simple everyday tasks such as eating independently, drinking from their bottle, washing hands, putting toys away, wearing or removing simple footwear, telling an adult when they need the toilet, and carrying their small backpack.
+        </p>
+
+        <h2>5. Visit the Preschool Before the First Day</h2>
+        <p>
+          If possible, take your child to visit the preschool beforehand. Let them see the classroom, play area, teachers, and other children. Familiar surroundings can make the first day feel less unfamiliar.
+        </p>
+
+        <h2>6. Let Your Child Help Prepare</h2>
+        <p>
+          Make preparation exciting by involving your child. Let them choose a small backpack, water bottle, or other age-appropriate school essentials. Allow them to help pack their bag the night before.
+        </p>
+
+        <h2>7. Don't Make Goodbyes Too Long</h2>
+        <p>
+          The first goodbye can be emotional. Give them a warm hug, reassure them that they are safe, and say goodbye confidently. Avoid repeatedly returning after saying goodbye, as this can make separation more difficult.
+        </p>
+
+        <h2>8. Stay Calm and Confident</h2>
+        <p>
+          Children often pick up on their parents' emotions. Try to communicate confidence and reassurance — your calm presence helps your child feel that preschool is a safe and positive place.
+        </p>
+
+        <h2>9. Don't Compare Your Child With Others</h2>
+        <p>
+          Every child adjusts at their own pace. Give your child time, patience, encouragement, and plenty of reassurance.
+        </p>
+
+        <h2>10. Celebrate Their First Preschool Experience</h2>
+        <p>
+          After school, ask simple, positive questions about their day and celebrate small achievements—entering the classroom, meeting a teacher, playing with another child, or trying something new.
+        </p>
+
+        <p>
+          With a little preparation, a familiar routine, positive conversations, and lots of reassurance, parents can help make this transition easier and more enjoyable. Every child is different—give them time and space to settle in, trust the process, and celebrate every little step forward.
+        </p>
+      </div>
+    ),
   },
   {
     id: "montessori-vs-play-based",
@@ -36,6 +120,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     excerpt: "Why choose between Montessori independence and play-based inquiry when your child can thrive with a blended curriculum?",
     image: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=800&q=80",
+    content: "",
   },
   {
     id: "steam-activities-for-toddlers",
@@ -45,6 +130,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "3 min read",
     excerpt: "From sink-and-float water trays to seed germination logs, learn how hands-on exploration builds early scientific reasoning.",
     image: "https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=800&q=80",
+    content: "",
   },
   {
     id: "nutrition-for-growing-brains",
@@ -54,6 +140,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     excerpt: "Explore BambiBoo's nutritionist-crafted meal plans that boost focus, immunity, and energy without refined sugars.",
     image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80",
+    content: "",
   },
   {
     id: "outdoor-play-motor-skills",
@@ -63,6 +150,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     excerpt: "Outdoor play isn't just recess—it's sensory integration, physical balance, and social negotiation in action.",
     image: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80",
+    content: "",
   },
   {
     id: "preschool-safety-checklist",
@@ -72,6 +160,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     excerpt: "From 100% CCTV live feeds to background-checked staff and GPS-tracked transport, here is our non-negotiable safety framework.",
     image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80",
+    content: "",
   },
 ];
 
@@ -144,7 +233,7 @@ export function BlogCarouselSection({ className = "" }: { className?: string }) 
                   {/* Card Footer Link */}
                   <div className="px-6 pb-6 pt-2">
                     <Link
-                      to="/parents/faq"
+                      to={`/blogs/${post.id}`}
                       className="inline-flex items-center gap-1.5 text-sm font-bold text-primary group-hover:underline"
                     >
                       Read full article <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />

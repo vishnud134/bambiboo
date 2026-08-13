@@ -12,8 +12,9 @@ const excludedBlogRoutes = [
   "/parents",
   "/world",
   "/beyond",
-  "/contact",
+    "/contact",
   "/parents/faq",
+    "/blogs",
 ];
 
 export function PageShell({ children }: { children: ReactNode }) {
