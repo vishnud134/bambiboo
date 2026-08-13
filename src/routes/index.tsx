@@ -1,0 +1,479 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import {
+  ArrowRight,
+  Salad,
+  ShieldCheck,
+  Lock,
+  Cctv,
+  Bus,
+  HeartHandshake,
+  Sparkles,
+  Star,
+  Wind,
+  Trees,
+  Palette,
+  Music,
+  Rocket,
+  MapPin,
+  Phone,
+  Mail,
+} from "lucide-react";
+import { PageShell } from "@/components/site/PageShell";
+import { HeroCarousel } from "@/components/site/HeroCarousel";
+import { AdmissionDialog } from "@/components/site/AdmissionDialog";
+import { WhyBambiboo } from "@/components/site/WhyBambiboo";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+
+import artsCraftsPillarImg from "@/assets/arts-crafts-pillar.webp";
+import festivalFieldTripsPillarImg from "@/assets/festival-field-trips-pillar.webp";
+import musicDancePillarImg from "@/assets/music-dance-pillar.webp";
+import natureOutdoorPillarImg from "@/assets/nature-outdoor-pillar.webp";
+import steamPlayPillarImg from "@/assets/steam-play-pillar.webp";
+import yogaMindfulnessPillarImg from "@/assets/yoga-mindfulness-pillar.webp";
+
+export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "BambiBoo Preschool & Daycare Koramangala, Bengaluru" },
+      {
+        name: "description",
+        content:
+          "A warm, play based preschool & daycare in Koramangala for children aged 1.5 – 6 years. Verified safety, joyful learning, and a real neighborhood feel.",
+      },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+  }),
+  component: Home,
+});
+
+const programmes = [
+  { name: "Parent & Toddler", age: "3m - 2y", category: "toddlers", to: "/programmes/parent-toddler", tint: "bg-[#EBF5FF] text-[#0369A1] border border-[#B9E6FE] hover:bg-[#E0F2FE]" },
+  { name: "Playgroup", age: "2 - 3y", category: "toddlers", to: "/programmes/playgroup", tint: "bg-[#ECFDF5] text-[#047857] border border-[#A7F3D0] hover:bg-[#D1FAE5]" },
+  { name: "Nursery", age: "3 - 4y", category: "preschool", to: "/programmes/nursery", tint: "bg-[#EEF2FF] text-[#4338CA] border border-[#C7D2FE] hover:bg-[#E0E7FF]" },
+  { name: "LKG", age: "4 - 5y", category: "preschool", to: "/programmes/lkg", tint: "bg-[#FEFCE8] text-[#B45309] border border-[#FEF08A] hover:bg-[#FEF9C3]" },
+  { name: "UKG", age: "5 - 6y", category: "kindergarten", to: "/programmes/ukg", tint: "bg-[#F5F3FF] text-[#6D28D9] border border-[#DDD6FE] hover:bg-[#EDE9FE]" },
+  { name: "BambiBoo Day Care", age: "2 - 10y", category: "daycare", to: "/programmes/daycare", tint: "bg-[#F0FDFA] text-[#0D9488] border border-[#99F6E4] hover:bg-[#CCFBF1]" },
+];
+
+const pillars = [
+  { icon: Palette, title: "Create", body: "Write, paint, draw, mold, craft with open-ended materials that inspire imagination and self-expression.", image: artsCraftsPillarImg },
+  { icon: Music, title: "Imagine", body: "Stories, songs and dramatic play that nurture language, empathy and a lifelong love for books.", image: musicDancePillarImg },
+  { icon: Trees, title: "Explore", body: "Nature, outdoor play and hands-on experiences that encourage curiosity about the world.", image: natureOutdoorPillarImg },
+  { icon: Rocket, title: "Move", body: "Music, dance, yoga, swing, slide, bounce and movement that build confidence, coordination and joyful expression.", image: yogaMindfulnessPillarImg },
+  { icon: Rocket, title: "Discover", body: "Puzzles, science experiments, gardening, early STEAM and playful problem-solving that develop curious minds.", image: steamPlayPillarImg },
+  { icon: HeartHandshake, title: "Connect", body: "Friendships, festivals and shared experiences that help children build kindness, belonging and confidence.", image: festivalFieldTripsPillarImg },
+];
+
+const trust = [
+  { icon: Lock, label: "Verified Safety Systems" },
+  { icon: Cctv, label: "100% CCTV Live Access" },
+  { icon: Salad, label: "Fresh Menus" },
+  { icon: Bus, label: "GPS Tracked Transport" },
+  { icon: Wind, label: "Air Purified Classrooms" },
+];
+
+const faqs = [
+  { q: "What ages does BambiBoo welcome?", a: "We offer programmes for children from 3 months to 6 years, along with daycare for children up to 12 years." },
+  { q: "What are your school timings?", a: "Our programmes run Monday to Friday, with timings varying by age group. Parent & Toddler sessions are held Monday to Saturday." },
+  { q: "What is your teacher-child ratio?", a: "We keep our groups intentionally small: ● 2:12 for toddlers ● 1:12 for older children. So every child is known, heard and supported." },
+  { q: "Do parents receive updates during the day?", a: "We believe in open communication and keeping parents connected through regular updates and conversations about their child's day." },
+  { q: "Is transport available?", a: "Yes. Transport is available on select routes. Please speak to our team to check availability for your neighbourhood." },
+];
+
+import { useState } from "react";
+
+const categoryFaqs = [
+  { cat: "admissions", q: "What ages does BambiBoo welcome?", a: "We offer programmes for children from 3 months to 6 years, along with daycare for children up to 12 years." },
+  { cat: "timings", q: "What are your school timings?", a: "Our programmes run Monday to Friday, with timings varying by age group. Parent & Toddler sessions are held Monday to Saturday." },
+  { cat: "cctv", q: "Do parents receive updates during the day?", a: "We believe in open communication and keeping parents connected through regular updates and conversations about their child's day." },
+  { cat: "meals", q: "What is your teacher-child ratio?", a: "We keep our groups intentionally small: ● 2:12 for toddlers ● 1:12 for older children. So every child is known, heard and supported." },
+  { cat: "safety", q: "Is transport available?", a: "Yes. Transport is available on select routes. Please speak to our team to check availability for your neighbourhood." },
+  
+  // Timings (5 questions)
+  { cat: "timings", q: "What are the regular school and daycare hours?", a: "Preschool programmes run from 8:30 AM to 12:30 PM (or 1:00 PM for LKG/UKG), Monday to Friday. Extended Daycare operates from 8:30 AM to 6:30 PM, Monday to Saturday." },
+  { cat: "timings", q: "Do you offer flexible or hourly daycare options?", a: "Yes! We offer half-day, full-day, and flexible hourly daycare passes to accommodate parents with unpredictable work schedules or emergency meetings." },
+  { cat: "timings", q: "What is the holiday calendar followed by the school?", a: "We observe standard national & major festival holidays in Karnataka. Our detailed annual holiday calendar is provided at the start of the academic year, and daycare continues to run on non-national optional holidays." },
+  { cat: "timings", q: "What happens if a parent is delayed during evening pickup?", a: "We understand traffic delays in Koramangala! Just send us a quick WhatsApp update. Your child will remain comfortably engaged in our supervised evening play lounge with a warm snack until you arrive." },
+  { cat: "timings", q: "Are Saturday care services available?", a: "Yes. Our extended Daycare and weekend Hobby Clubs run on Saturdays from 8:30 AM to 6:30 PM for working parents who require weekend care." },
+
+  // Live CCTV (5 questions)
+  { cat: "cctv", q: "Is live CCTV access provided to all parents?", a: "Yes. Every verified parent receives secure, encrypted live streaming access to their child's classroom, activity area, dining hall, and play space through our parent app during operating hours." },
+  { cat: "cctv", q: "How is parent CCTV login access kept secure?", a: "Access is protected with multi-factor authentication, device binding, and encrypted streaming protocols. Only pre-registered parents with active credentials can view the live feed." },
+  { cat: "cctv", q: "Which areas of the campus are covered by cameras?", a: "100% of shared spaces—including classrooms, outdoor play yards, hallways, dining spaces, and nap rooms—are under continuous high-definition camera coverage. Washrooms and private change rooms are strictly unmonitored for privacy." },
+  { cat: "cctv", q: "How long is CCTV video footage stored?", a: "All high-definition CCTV video recordings are stored securely on local encrypted servers for 30 days for complete auditability and safety review." },
+  { cat: "cctv", q: "Can grandparents or family members get CCTV access?", a: "Yes, parents can authorize up to two secondary family members (such as grandparents or primary guardians) through our written consent form on the parent portal." },
+
+  // Meals & Nutrition (5 questions)
+  { cat: "meals", q: "What kind of food and meals are served at BambiBoo?", a: "We serve 100% freshly cooked, sugar-free, balanced vegetarian meals prepared daily in our hygienic in-house kitchen. Menus include whole grains, lentils, fresh fruit purees, and vegetable preparations." },
+  { cat: "meals", q: "How do you manage food allergies and dietary restrictions?", a: "Every child has a color-coded meal tag at their table detailing allergies, lactose intolerance, or family dietary preferences. Our kitchen staff cross-checks tags before serving every meal." },
+  { cat: "meals", q: "Are meals included in preschool and daycare programmes?", a: "Daycare includes 3 full meals (breakfast, wholesome lunch, and evening snack). Preschool programmes include a healthy morning fruit & snack break." },
+  { cat: "meals", q: "Is the school kitchen open for parent inspections?", a: "Absolutely! We maintain a 100% open-kitchen policy. Parents are welcome to inspect our kitchen, pantry, and cooking standards during any campus walkthrough." },
+  { cat: "meals", q: "Do you allow children to bring homemade food from home?", a: "Yes, parents who prefer to send home-cooked tiffins are welcome to do so. We provide warmers so your child's home meal is served warm and fresh." },
+
+  // Transport & Safety (5 questions)
+  { cat: "safety", q: "Is school transport available for Koramangala & nearby areas?", a: "Yes! We provide safe, air-conditioned door-to-door transport covering Koramangala, HSR Layout, Indiranagar, and surrounding neighborhood sectors." },
+  { cat: "safety", q: "How are transport vehicles tracked for safety?", a: "All transport vehicles are fitted with real-time GPS tracking, speed governors (capped at 40 km/h), emergency panic buttons, and automated SMS arrival alerts sent directly to your phone." },
+  { cat: "safety", q: "Who accompanies the children inside the transport vehicles?", a: "Every vehicle has a mandatory, background-verified female attendant on board alongside a trained driver to assist children with seatbelts, boarding, and unboarding." },
+  { cat: "safety", q: "What background verification is done for staff and drivers?", a: "100% of drivers, attendants, teachers, and support staff undergo mandatory police background verification, address checks, medical screening, and annual safety recertifications." },
+  { cat: "safety", q: "What emergency medical protocols are in place on campus?", a: "Every staff member is trained in pediatric CPR and first aid. We maintain a dedicated on-site first-aid station and have active medical tie-ups with two leading nearby hospitals for rapid 5-minute emergency response." },
+];
+
+function Home() {
+  const [activeFilter, setActiveFilter] = useState<string>("all");
+  const [faqCategory, setFaqCategory] = useState<string>("admissions");
+
+  const filteredProgrammes = activeFilter === "all"
+    ? programmes
+    : programmes.filter((p) => p.category === activeFilter);
+
+  const filteredFaqs = categoryFaqs.filter((f) => f.cat === faqCategory);
+
+  return (
+    <PageShell>
+      {/* HERO */}
+      <section className="relative overflow-hidden bg-[#FFEBCB] bg-ambient-mesh">
+        {/* Floating Nursery Decorative Elements */}
+        <div className="absolute top-12 left-10 text-2xl animate-float opacity-40 select-none pointer-events-none">⭐</div>
+        <div className="absolute top-1/3 right-12 text-3xl animate-float-slow opacity-30 select-none pointer-events-none">☁️</div>
+        <div className="absolute bottom-12 left-1/4 text-2xl animate-float opacity-35 select-none pointer-events-none">✨</div>
+
+        <div className="absolute -top-24 -right-24 h-96 w-96 blob bg-[#F8D9A8] animate-float-slow" />
+        <div className="absolute top-40 -left-16 h-72 w-72 blob bg-[#FFD48A]/25 animate-float" />
+        <div className="container-page relative grid gap-10 py-14 md:py-20 lg:py-24 lg:grid-cols-12 xl:gap-16 items-center">
+          <div className="lg:col-span-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary shadow-xs backdrop-blur-xs border border-primary/15">
+              <Star className="h-3.5 w-3.5 fill-primary animate-pulse-subtle" /> Play. Wonder. Belong.
+            </div>
+            <h1 className="mt-5 text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.08] text-foreground text-balance">
+              A preschool where{" "}
+              <span className="relative inline-block px-3.5 py-1 font-extrabold text-primary bg-[#F5CFA0]/90 rounded-2xl shadow-md">
+                childhood comes first.
+              </span>
+            </h1>
+            <ul className="mt-6 max-w-xl text-base md:text-lg text-foreground/90 space-y-2 font-medium">
+              <li className="flex items-start gap-2">
+                <span className="shrink-0">🌿</span>
+                <span><strong>Learning Through Play</strong> — Real experiences. Real friendships. Real confidence.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="shrink-0">❤️</span>
+                <span><strong>Small Groups. Big Relationships.</strong> — Every child is seen, heard and encouraged.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="shrink-0">🤍</span>
+                <span><strong>Peace of Mind for Parents.</strong> — Safe care, transparent communication and teachers you can trust.</span>
+              </li>
+            </ul>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <AdmissionDialog>
+                <button className="shimmer-pill inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground shadow-xl shadow-primary/30 hover:brightness-110 hover:-translate-y-0.5 transition-all">
+                  Book a Campus Visit <ArrowRight className="h-4 w-4" />
+                </button>
+              </AdmissionDialog>
+              <Link
+                to="/programmes"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-primary/20 bg-[#FFF6EA] px-6 py-3.5 text-sm font-bold text-primary hover:border-primary hover:bg-white hover:-translate-y-0.5 transition-all shadow-xs"
+              >
+                Explore programmes
+              </Link>
+            </div>
+
+            <div className="mt-10 grid grid-cols-3 gap-4 max-w-md">
+              {[
+                { n: "1:12", l: "Teacher ratio" },
+                { n: "7+", l: "Age programmes" },
+                { n: "100%", l: "CCTV Covered" },
+              ].map((s) => (
+                <div key={s.l} className="group p-3 rounded-2xl bg-white/40 border border-white/60 backdrop-blur-xs transition-all hover:bg-white/70 hover:shadow-sm">
+                  <div className="text-3xl font-extrabold text-primary group-hover:scale-105 transition-transform origin-left">{s.n}</div>
+                  <div className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">{s.l}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="lg:col-span-6 relative">
+            {/* Ambient Radial Glow Behind Hero Carousel */}
+            <div className="absolute -inset-4 bg-gradient-to-tr from-accent/30 via-transparent to-primary/15 rounded-3xl blur-2xl pointer-events-none" />
+            
+            <HeroCarousel />
+
+            {/* Bottom Left Floating Social Proof Badge */}
+            <div className="absolute -bottom-6 -left-6 rounded-3xl bg-[#FFF8EF] border border-white/80 p-4 shadow-xl shadow-primary/10 flex items-center gap-3 max-w-xs z-20 hover:-translate-y-1 transition-transform backdrop-blur-md">
+              <div className="h-10 w-10 rounded-full bg-primary text-primary-foreground grid place-items-center shrink-0 shadow-md">
+                <ShieldCheck className="h-5 w-5" />
+              </div>
+              <div>
+                <div className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Loved by parents</div>
+                <div className="text-sm font-bold text-foreground">4.9 / 5 from 200+ families</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="bg-[#F0CE91] relative">
+        <div className="container-page section-padding grid md:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-start">
+          <div className="md:col-span-5 lg:col-span-5">
+            <div className="text-xs font-bold uppercase tracking-widest text-primary/80">About BambiBoo</div>
+            <h2 className="mt-2 text-3xl md:text-5xl font-black text-balance leading-tight">
+              A place where childhood comes first.
+            </h2>
+            <p className="mt-4 text-xl font-bold italic text-primary">
+              "Safe enough to explore. Warm enough to belong."
+            </p>
+          </div>
+          <div className="md:col-span-7 lg:col-span-7 text-lg text-foreground/85 leading-relaxed max-w-3xl">
+            <p>
+              BambiBoo began with one mother's search for the preschool she wished existed for her own child. Today, that dream has become a place where children play, wonder and belong.
+            </p>
+            <Link to="/about" className="mt-6 inline-flex items-center gap-2 font-extrabold text-primary hover:underline text-lg group">
+              Read Our Story <ArrowRight className="h-5 w-5 group-hover:translate-x-1.5 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY BAMBIBOO */}
+      <WhyBambiboo />
+
+      {/* CORE PROGRAMMES */}
+      <section className="bg-[#FFEBCB]">
+        <div className="container-page section-padding">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+              <div className="text-xs font-bold uppercase tracking-widest text-primary/80">Core programmes</div>
+              <h2 className="mt-2 text-4xl md:text-5xl font-bold text-balance">
+                A path for every age, from{" "}
+                <span className="relative inline-block bg-[#F5CFA0] text-primary px-3 py-0.5 rounded-2xl shadow-xs">
+                  tiny toes
+                  <svg className="absolute -bottom-1.5 left-0 w-full h-2.5 text-primary/70" viewBox="0 0 100 20" preserveAspectRatio="none">
+                    <path d="M 5,14 Q 50,2 95,14" stroke="currentColor" strokeWidth="4" strokeLinecap="round" fill="none" />
+                  </svg>
+                </span>{" "}
+                to big goodbyes.
+              </h2>
+            </div>
+
+            {/* Interactive Age Filter Tabs */}
+            <div className="flex flex-wrap gap-1.5 p-1.5 rounded-2xl bg-[#FFF6EA] border border-white/70 shadow-xs shrink-0 self-start md:self-auto backdrop-blur-xs">
+              {[
+                { id: "all", label: "All Ages" },
+                { id: "toddlers", label: "Toddlers (6M-2.5Y)" },
+                { id: "preschool", label: "Preschool (2Y-4.5Y)" },
+                { id: "kindergarten", label: "UKG (4.5Y-6Y)" },
+                { id: "daycare", label: "Daycare & Clubs" },
+              ].map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveFilter(tab.id)}
+                  className={`rounded-xl px-3.5 py-1.5 text-xs font-bold transition-all ${
+                    activeFilter === tab.id
+                      ? "bg-primary text-primary-foreground shadow-sm"
+                      : "text-foreground/75 hover:bg-secondary/60 hover:text-foreground"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3 xl:gap-8">
+            {filteredProgrammes.map((p) => (
+              <Link
+                key={p.name}
+                to={p.to}
+                className={`master-card group rounded-3xl p-7 relative overflow-hidden flex flex-col justify-between min-h-[230px] border border-white/40 ${p.tint}`}
+              >
+                <div className="absolute -bottom-8 -right-8 h-40 w-40 blob bg-[#FFEBCB]/30 group-hover:scale-110 transition-transform" />
+                <div className="relative">
+                  <div className="inline-flex items-center rounded-full bg-white/95 backdrop-blur px-3 py-1 text-xs font-bold uppercase tracking-wider whitespace-nowrap shadow-xs">{p.age}</div>
+                  <div className="mt-3 text-3xl font-extrabold group-hover:text-primary transition-colors">{p.name}</div>
+                </div>
+                <div className="relative mt-8 inline-flex items-center gap-2 text-sm font-bold">
+                  Explore programme <ArrowRight className="h-4 w-4 group-hover:translate-x-1.5 transition-transform" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* MULTI-LAYERED AESTHETIC SCALLOP DIVIDER TOP */}
+      <div className="w-full overflow-hidden leading-none bg-[#FFEBCB] -mb-1 relative z-10">
+        <svg
+          className="relative block w-full h-12 sm:h-20"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          {/* Soft Golden Accent Background Layer */}
+          <path
+            d="M0,120 L0,55 Q60,15 120,55 Q180,15 240,55 Q300,15 360,55 Q420,15 480,55 Q540,15 600,55 Q660,15 720,55 Q780,15 840,55 Q900,15 960,55 Q1020,15 1080,55 Q1140,15 1200,55 L1200,120 Z"
+            fill="#F5CFA0"
+            opacity="0.6"
+          />
+          {/* Solid Purple Foreground Layer */}
+          <path
+            d="M0,120 L0,70 Q75,25 150,70 Q225,25 300,70 Q375,25 450,70 Q525,25 600,70 Q675,25 750,70 Q825,25 900,70 Q975,25 1050,70 Q1125,25 1200,70 L1200,120 Z"
+            className="fill-primary"
+          />
+        </svg>
+      </div>
+
+      {/* PILLARS */}
+      <section className="bg-primary text-primary-foreground relative">
+        <div className="container-page section-padding">
+          <div className="max-w-2xl">
+            <div className="text-xs font-bold uppercase tracking-widest text-accent">Pillars of care</div>
+            <h2 className="mt-2 text-4xl md:text-5xl font-bold text-balance">
+              The BambiBoo{" "}
+              <span className="bg-accent text-primary px-3 py-0.5 rounded-2xl inline-block shadow-xs">
+                Learning Journey
+              </span>
+            </h2>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:gap-8">
+            {pillars.map((p) => (
+              <div key={p.title} className="master-card group rounded-3xl border border-primary-foreground/20 bg-primary-foreground/5 p-6 md:p-8 flex flex-col justify-between h-full hover:bg-primary-foreground/10 hover:border-accent/40 transition-all duration-300">
+                <div>
+                  <div className="h-12 w-12 rounded-2xl bg-accent text-primary grid place-items-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300 shadow-md">
+                    <p.icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="mt-4 text-xl font-bold">{p.title}</h3>
+                  <p className="mt-2 text-primary-foreground/80 text-sm leading-relaxed">{p.body}</p>
+                </div>
+                {p.image && (
+                  <div className="mt-6 -mx-6 -mb-6 md:-mx-8 md:-mb-8 overflow-hidden rounded-b-[calc(1.5rem-1px)]">
+                    <img
+                      src={p.image}
+                      alt={`${p.title} at BambiBoo`}
+                      loading="lazy"
+                      width={600}
+                      height={208}
+                      className="block h-52 w-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* MULTI-LAYERED AESTHETIC SCALLOP DIVIDER BOTTOM */}
+      <div className="w-full overflow-hidden leading-none bg-primary -mb-1 relative z-10">
+        <svg
+          className="relative block w-full h-12 sm:h-20"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          {/* Soft Golden Accent Background Layer */}
+          <path
+            d="M0,120 L0,45 Q60,5 120,45 Q180,5 240,45 Q300,5 360,45 Q420,5 480,45 Q540,5 600,45 Q660,5 720,45 Q780,5 840,45 Q900,5 960,45 Q1020,5 1080,45 Q1140,5 1200,45 L1200,120 Z"
+            fill="#F5CFA0"
+            opacity="0.5"
+          />
+          {/* Solid Cream Foreground Layer */}
+          <path
+            d="M0,120 L0,65 Q75,20 150,65 Q225,20 300,65 Q375,20 450,65 Q525,20 600,65 Q675,20 750,65 Q825,20 900,65 Q975,20 1050,65 Q1125,20 1200,65 L1200,120 Z"
+            fill="#FFEBCB"
+          />
+        </svg>
+      </div>
+
+      {/* TESTIMONIALS */}
+      <section className="bg-[#FFEBCB]">
+        <div className="container-page section-padding">
+          <div className="text-xs font-bold uppercase tracking-widest text-primary/80">Loved by neighborhood families</div>
+          <h2 className="mt-2 text-4xl md:text-5xl font-bold text-balance">Real parents, measurable milestones.</h2>
+          <Carousel opts={{ align: "start", loop: true }} className="mt-10">
+            <CarouselContent className="-ml-5 lg:-ml-6">
+              {[
+                { name: "Deepthi Srinivasan", meta: "Local Guide · 32 reviews · 28 photos · 10 months ago", quote: "BambiBoo is a very nice school. The teachers and helping staff are very friendly and co operative. It has both Montessori and Pre school curriculum which helps in inculcating the diverse nature of both aspects in the children. It's a rare combination to get schools like this. It is very spacious inside as well for kids to play around. They have lot of activities for children so they learn things in a practical way. All the best to BambiBoo for more successful years ahead." },
+                { name: "Shilpa Ipirti", meta: "1 review · 10 months ago", quote: "The school management is responsive and transparent. Communication with parents is effective and regular. Teachers and staff are approachable, supportive, and always attentive to the well being of children. The school provides quality education with dedicated teachers, well planned lessons, and a focus on overall learning outcomes, creating a nurturing and motivating environment for every child." },
+                { name: "Akshay Kini", meta: "3 reviews · 9 months ago", quote: "Our daughter enjoys going to the preschool. The teachers take good and personal care. They update us on her progress. The curriculum is mixed and has best of both schemes. They conduct different activities and festivals are celebrated with interactivity for kids." },
+                { name: "Rathna Shivashankar", meta: "2 reviews · 10 months ago", quote: "Our child has been attending BambiBoo for several months now, and we are very happy with the experience. The teachers are warm, patient, and truly attentive to each child. The classrooms are clean, safe, and full of engaging activities that support both learning and play." },
+                { name: "Vishnu Devakaran", meta: "4 reviews · 8 months ago", quote: "Wonderful preschool with caring teachers and a beautiful campus. Our little one looks forward to school every day, and we love the regular updates from the team." },
+                { name: "SHIVASHANKAR PALANIYAPPA", meta: "5 reviews · 11 months ago", quote: "BambiBoo has been a great place for our child's early learning journey. The staff is friendly, the environment is safe, and the curriculum balances play and academics beautifully." },
+              ].map((t) => (
+                <CarouselItem key={t.name} className="pl-5 lg:pl-6 md:basis-1/2 lg:basis-1/3">
+                  <Link
+                    to="/parents/testimonials"
+                    className="master-card block h-full rounded-3xl bg-[#FFF6EA] border border-white/60 p-6 md:p-8 flex flex-col justify-between"
+                  >
+                    <div>
+                      <div className="flex gap-1 text-accent">
+                        {Array.from({ length: 5 }).map((_, i) => (
+                          <Star key={i} className="h-4 w-4 fill-current" />
+                        ))}
+                      </div>
+                      <p className="mt-4 text-foreground/85 leading-relaxed line-clamp-6 text-sm md:text-base">"{t.quote}"</p>
+                    </div>
+                    <div className="mt-6 pt-5 border-t border-border/60">
+                      <div className="font-bold text-foreground">{t.name}</div>
+                      <div className="text-xs text-muted-foreground font-medium">{t.meta}</div>
+                    </div>
+                  </Link>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-4" />
+            <CarouselNext className="hidden md:flex -right-4" />
+          </Carousel>
+          <div className="mt-8 text-center">
+            <Link to="/parents/testimonials" className="inline-flex items-center gap-1.5 font-bold text-primary hover:underline">
+              Read more parent stories <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURE 4: INTERACTIVE FAQ QUICK-PILLS ACCORDION */}
+      <section className="bg-[#FFE6C0]">
+        <div className="container-page section-padding grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          <div className="lg:col-span-4">
+            <div className="text-xs font-bold uppercase tracking-widest text-primary/80">FAQ</div>
+            <h2 className="mt-2 text-4xl md:text-5xl font-bold text-balance">Quick answers for busy parents.</h2>
+            <p className="mt-4 text-muted-foreground max-w-md leading-relaxed">Still curious? Reach out we love long conversations about your child.</p>
+
+            {/* Quick Category Filter Pills */}
+            <div className="mt-6 flex flex-wrap gap-2">
+              {[
+                { id: "admissions", label: "Admissions" },
+                { id: "timings", label: "Timings" },
+                { id: "cctv", label: "Live CCTV" },
+                { id: "meals", label: "Meals" },
+                { id: "safety", label: "Transport" },
+              ].map((c) => (
+                <button
+                  key={c.id}
+                  onClick={() => setFaqCategory(c.id)}
+                  className={`rounded-xl px-3.5 py-2 text-xs font-bold transition-all duration-200 ${
+                    faqCategory === c.id
+                      ? "bg-primary text-primary-foreground shadow-md scale-105"
+                      : "bg-[#FFF6EA] text-foreground/75 border border-white/60 hover:bg-white hover:text-primary"
+                  }`}
+                >
+                  {c.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="lg:col-span-8 divide-y divide-border/60 rounded-3xl border border-white/70 bg-[#FFF6EA] shadow-xs overflow-hidden">
+            {filteredFaqs.map((f) => (
+              <details key={f.q} className="group p-6 md:p-7 open:bg-[#FFE6C0]/40 transition-colors">
+                <summary className="flex cursor-pointer list-none items-center justify-between font-bold text-foreground text-lg">
+                  {f.q}
+                  <span className="ml-4 text-primary text-xl transition-transform duration-300 group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-3 text-muted-foreground leading-relaxed text-sm md:text-base">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    </PageShell>
+  );
+}
