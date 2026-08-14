@@ -8,7 +8,7 @@ const paths = [
   "/programmes", "/programmes/parent-toddler", "/programmes/playgroup",
   "/programmes/preschool", "/programmes/lkg", "/programmes/ukg",
   "/programmes/nursery", "/programmes/daycare", "/programmes/hobby-center",
-  "/parents/curriculum", "/parents/admission", "/parents/safety", "/parents/food",
+  "/parents/curriculum", "/parents/admission", "/parents/safety",
   "/parents/daily-routine", "/parents/testimonials", "/parents/faq",
   "/world/at-home", "/world/indoor", "/world/steam", "/world/gallery",
   "/beyond/arts", "/beyond/yoga", "/beyond/field-trips", "/beyond/festivals",

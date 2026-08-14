@@ -29,12 +29,6 @@ const items: Card[] = [
     color: "peach",
   },
   {
-    name: "Food & Nutrition",
-    to: "/parents/food",
-    tagline: "Sugar-free, freshly cooked meals designed by paediatric nutritionists.",
-    color: "butter",
-  },
-  {
     name: "Daily Routine & Care",
     to: "/parents/daily-routine",
     tagline: "A calm Day Care routine, rest support and packing guidance for busy families.",
@@ -106,7 +100,7 @@ export const Route = createFileRoute("/parents/")({
       {
         name: "description",
         content:
-          "Admissions, safety, food, transport, and FAQs everything parents need to know about BambiBoo in Koramangala.",
+          "Admissions, safety, transport, and FAQs everything parents need to know about BambiBoo in Koramangala.",
       },
       { property: "og:title", content: "For Parents BambiBoo" },
       { property: "og:description", content: "Everything parents need, in one calm place." },

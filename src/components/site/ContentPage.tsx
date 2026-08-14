@@ -26,7 +26,6 @@ const defaultBreadcrumbMap: Record<string, { label: string; to?: string }[]> = {
   "About Us": [{ label: "About Us" }],
   "Curriculum & Pedagogy": [{ label: "Parents Corner", to: "/parents" }, { label: "Curriculum & Pedagogy" }],
   "Child Safety Policy": [{ label: "Parents Corner", to: "/parents" }, { label: "Safety & Security" }],
-  "Food & Nutrition": [{ label: "Parents Corner", to: "/parents" }, { label: "Food & Meals" }],
   "Admission Process": [{ label: "Parents Corner", to: "/parents" }, { label: "Admission Process" }],
   "School Transport": [{ label: "Parents Corner", to: "/parents" }, { label: "School Transport" }],
   "Parent Testimonials": [{ label: "Parents Corner", to: "/parents" }, { label: "Parent Testimonials" }],
@@ -45,7 +44,6 @@ const defaultBreadcrumbMap: Record<string, { label: string; to?: string }[]> = {
 const defaultHeroImageMap: Record<string, string> = {
   "Curriculum & Pedagogy": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=85",
   "Child Safety Policy": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=85",
-  "Food & Nutrition": "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=85",
   "BambiBoo at Home": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=1200&q=85",
   "Indoor Environment": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=85",
   "STEAM": "https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=1200&q=85",

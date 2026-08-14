@@ -27,7 +27,6 @@ import { Route as ParentsAdmissionRouteImport } from './routes/parents.admission
 import { Route as ParentsCurriculumRouteImport } from './routes/parents.curriculum'
 import { Route as ParentsDailyRoutineRouteImport } from './routes/parents.daily-routine'
 import { Route as ParentsFaqRouteImport } from './routes/parents.faq'
-import { Route as ParentsFoodRouteImport } from './routes/parents.food'
 import { Route as ParentsSafetyRouteImport } from './routes/parents.safety'
 import { Route as ParentsTestimonialsRouteImport } from './routes/parents.testimonials'
 import { Route as ParentsTransportRouteImport } from './routes/parents.transport'
@@ -138,11 +137,6 @@ const ParentsFaqRoute = ParentsFaqRouteImport.update({
   path: '/parents/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ParentsFoodRoute = ParentsFoodRouteImport.update({
-  id: '/parents/food',
-  path: '/parents/food',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ParentsSafetyRoute = ParentsSafetyRouteImport.update({
   id: '/parents/safety',
   path: '/parents/safety',
@@ -251,7 +245,6 @@ export interface FileRoutesByFullPath {
   '/parents/curriculum': typeof ParentsCurriculumRoute
   '/parents/daily-routine': typeof ParentsDailyRoutineRoute
   '/parents/faq': typeof ParentsFaqRoute
-  '/parents/food': typeof ParentsFoodRoute
   '/parents/safety': typeof ParentsSafetyRoute
   '/parents/testimonials': typeof ParentsTestimonialsRoute
   '/parents/transport': typeof ParentsTransportRoute
@@ -290,7 +283,6 @@ export interface FileRoutesByTo {
   '/parents/curriculum': typeof ParentsCurriculumRoute
   '/parents/daily-routine': typeof ParentsDailyRoutineRoute
   '/parents/faq': typeof ParentsFaqRoute
-  '/parents/food': typeof ParentsFoodRoute
   '/parents/safety': typeof ParentsSafetyRoute
   '/parents/testimonials': typeof ParentsTestimonialsRoute
   '/parents/transport': typeof ParentsTransportRoute
@@ -330,7 +322,6 @@ export interface FileRoutesById {
   '/parents/curriculum': typeof ParentsCurriculumRoute
   '/parents/daily-routine': typeof ParentsDailyRoutineRoute
   '/parents/faq': typeof ParentsFaqRoute
-  '/parents/food': typeof ParentsFoodRoute
   '/parents/safety': typeof ParentsSafetyRoute
   '/parents/testimonials': typeof ParentsTestimonialsRoute
   '/parents/transport': typeof ParentsTransportRoute
@@ -371,7 +362,6 @@ export interface FileRouteTypes {
     | '/parents/curriculum'
     | '/parents/daily-routine'
     | '/parents/faq'
-    | '/parents/food'
     | '/parents/safety'
     | '/parents/testimonials'
     | '/parents/transport'
@@ -410,7 +400,6 @@ export interface FileRouteTypes {
     | '/parents/curriculum'
     | '/parents/daily-routine'
     | '/parents/faq'
-    | '/parents/food'
     | '/parents/safety'
     | '/parents/testimonials'
     | '/parents/transport'
@@ -449,7 +438,6 @@ export interface FileRouteTypes {
     | '/parents/curriculum'
     | '/parents/daily-routine'
     | '/parents/faq'
-    | '/parents/food'
     | '/parents/safety'
     | '/parents/testimonials'
     | '/parents/transport'
@@ -487,7 +475,6 @@ export interface RootRouteChildren {
   ParentsCurriculumRoute: typeof ParentsCurriculumRoute
   ParentsDailyRoutineRoute: typeof ParentsDailyRoutineRoute
   ParentsFaqRoute: typeof ParentsFaqRoute
-  ParentsFoodRoute: typeof ParentsFoodRoute
   ParentsSafetyRoute: typeof ParentsSafetyRoute
   ParentsTestimonialsRoute: typeof ParentsTestimonialsRoute
   ParentsTransportRoute: typeof ParentsTransportRoute
@@ -636,13 +623,6 @@ declare module '@tanstack/react-router' {
       path: '/parents/faq'
       fullPath: '/parents/faq'
       preLoaderRoute: typeof ParentsFaqRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/parents/food': {
-      id: '/parents/food'
-      path: '/parents/food'
-      fullPath: '/parents/food'
-      preLoaderRoute: typeof ParentsFoodRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/parents/safety': {
@@ -801,7 +781,6 @@ const rootRouteChildren: RootRouteChildren = {
   ParentsCurriculumRoute: ParentsCurriculumRoute,
   ParentsDailyRoutineRoute: ParentsDailyRoutineRoute,
   ParentsFaqRoute: ParentsFaqRoute,
-  ParentsFoodRoute: ParentsFoodRoute,
   ParentsSafetyRoute: ParentsSafetyRoute,
   ParentsTestimonialsRoute: ParentsTestimonialsRoute,
   ParentsTransportRoute: ParentsTransportRoute,
