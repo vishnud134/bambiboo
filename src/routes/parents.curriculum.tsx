@@ -43,6 +43,7 @@ function CurriculumPage() {
             "Motor Skills Development",
             "Healthy Habits Club",
             "Cultural celebrations throughout the year",
+            "Creative Arts & Expressive Drama",
           ],
         },
         {
