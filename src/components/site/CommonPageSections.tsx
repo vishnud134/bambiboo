@@ -201,36 +201,39 @@ export function FaqSection() {
 
   return (
     <section className="bg-[#FBF2E7]">
-      <div className="container-page section-padding grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-        <div className="lg:col-span-4">
-          <div className="text-xs font-bold uppercase tracking-widest text-primary/80">FAQ</div>
-          <h2 className="mt-2 text-4xl md:text-5xl font-bold text-balance">Quick answers for busy parents.</h2>
-          <p className="mt-4 text-muted-foreground max-w-md leading-relaxed">Still curious? Reach out we love long conversations about your child.</p>
-
-          <div className="mt-6 flex flex-wrap gap-2">
-            {[
-              { id: "admissions", label: "Admissions" },
-              { id: "timings", label: "Timings" },
-              { id: "cctv", label: "Teachers and Safety" },
-              { id: "meals", label: "Teacher-child ratio" },
-              { id: "safety", label: "Transport" },
-            ].map((c) => (
-              <button
-                key={c.id}
-                onClick={() => setFaqCategory(c.id)}
-                className={`rounded-xl px-3.5 py-2 text-xs font-bold transition-all duration-200 ${
-                  faqCategory === c.id
-                    ? "bg-primary text-primary-foreground shadow-md scale-105"
-                    : "bg-[#FFF6EA] text-foreground/75 border border-white/60 hover:bg-white hover:text-primary"
-                }`}
-              >
-                {c.label}
-              </button>
-            ))}
+      <div className="container-page section-padding">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6">
+          <div>
+            <div className="text-xs font-bold uppercase tracking-widest text-primary/80">FAQ</div>
+            <h2 className="mt-2 text-3xl md:text-5xl font-bold text-balance">Quick answers for busy parents.</h2>
           </div>
+          <p className="text-sm md:text-base text-muted-foreground max-w-md leading-relaxed">Still curious? Reach out we love long conversations about your child.</p>
         </div>
 
-        <div className="lg:col-span-8 divide-y divide-border/60 rounded-3xl border border-white/70 bg-[#FFFDF9] shadow-xs overflow-hidden">
+        {/* Quick Category Filter Pills - ALL IN SAME LINE */}
+        <div className="mt-6 mb-8 flex flex-nowrap items-center gap-2.5 overflow-x-auto pb-3 pt-1 scrollbar-none whitespace-nowrap">
+          {[
+            { id: "admissions", label: "Admissions" },
+            { id: "timings", label: "Timings" },
+            { id: "cctv", label: "Teachers and Safety" },
+            { id: "meals", label: "Teacher-child ratio" },
+            { id: "safety", label: "Transport" },
+          ].map((c) => (
+            <button
+              key={c.id}
+              onClick={() => setFaqCategory(c.id)}
+              className={`shrink-0 rounded-xl px-4 py-2.5 text-xs sm:text-sm font-bold transition-all duration-200 ${
+                faqCategory === c.id
+                  ? "bg-primary text-primary-foreground shadow-md scale-105"
+                  : "bg-[#FFFDF9] text-foreground/75 border border-white/60 hover:bg-white hover:text-primary"
+              }`}
+            >
+              {c.label}
+            </button>
+          ))}
+        </div>
+
+        <div className="divide-y divide-border/60 rounded-3xl border border-white/70 bg-[#FFFDF9] shadow-xs overflow-hidden">
           {filteredFaqs.map((f) => (
             <details key={f.q} className="group p-6 md:p-7 open:bg-[#FBF2E7]/60 transition-colors">
               <summary className="flex cursor-pointer list-none items-center justify-between font-bold text-foreground text-lg">
