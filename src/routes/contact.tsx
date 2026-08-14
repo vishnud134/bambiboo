@@ -8,7 +8,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact BambiBoo Preschool Koramangala" },
-      { name: "description", content: "Call, email, or visit BambiBoo Preschool at 44, 5th Main Rd, 1st Block Koramangala, Koramangala, Bengaluru, Karnataka 560034." },
+      { name: "description", content: "Call, email, or visit BambiBoo Preschool at 44, 5th Main Rd, 1st Block Koramangala, Bengaluru, Karnataka 560034." },
       { property: "og:title", content: "Contact BambiBoo" },
       { property: "og:url", content: "/contact" },
     ],
@@ -39,7 +39,7 @@ function Contact() {
               {[
                 { icon: Phone, label: "Call", value: "+91 99006 39303", href: "tel:+919900639303" },
                 { icon: Mail, label: "Email", value: "hello@bambiboo.in", href: "mailto:hello@bambiboo.in" },
-                { icon: MapPin, label: "Visit", value: "44, 5th Main Rd, 1st Block Koramangala, Koramangala, Bengaluru, Karnataka 560034" },
+                { icon: MapPin, label: "Visit", value: "44, 5th Main Rd, 1st Block Koramangala, Bengaluru, Karnataka 560034" },
                 { icon: Clock, label: "Hours", value: "Mon to Sat · 8:30 AM to 6:30 PM" },
               ].map((c) => (
                 <a
