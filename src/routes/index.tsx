@@ -76,7 +76,7 @@ const faqs = [
   { q: "What ages does BambiBoo welcome?", a: "We offer programmes for children from 3 months to 6 years, along with daycare for children up to 12 years." },
   { q: "What are your school timings?", a: "Our programmes run Monday to Friday, with timings varying by age group. Parent & Toddler sessions are held Monday to Saturday." },
   { q: "What is your teacher-child ratio?", a: "We keep our groups intentionally small: ● 2:12 for toddlers ● 1:12 for older children. So every child is known, heard and supported." },
-  { q: "Do parents receive updates during the day?", a: "We believe in open communication and keeping parents connected through regular updates and conversations about their child's day." },
+  
   { q: "Is transport available?", a: "Yes. Transport is available on select routes. Please speak to our team to check availability for your neighbourhood." },
 ];
 
@@ -84,38 +84,21 @@ import { useState } from "react";
 
 const categoryFaqs = [
   { cat: "admissions", q: "What ages does BambiBoo welcome?", a: "We offer programmes for children from 3 months to 6 years, along with daycare for children up to 12 years." },
+  { cat: "admissions", q: "Can parents visit the school before admission?", a: "Absolutely. We encourage every family to visit our campus, meet our educators, explore the learning spaces and experience the BambiBoo environment before making a decision." },
   { cat: "timings", q: "What are your school timings?", a: "Our programmes run Monday to Friday, with timings varying by age group. Parent & Toddler sessions are held Monday to Saturday." },
-  { cat: "cctv", q: "Do parents receive updates during the day?", a: "We believe in open communication and keeping parents connected through regular updates and conversations about their child's day." },
+  { cat: "timings", q: "Do you offer half-day and full-day Day Care?", a: "Yes. We offer both half-day and full-day Day Care options to support the varying needs of families. Saturday care is available on request." },
+  
   { cat: "meals", q: "What is your teacher-child ratio?", a: "We keep our groups intentionally small: ● 2:12 for toddlers ● 1:12 for older children. So every child is known, heard and supported." },
   { cat: "safety", q: "Is transport available?", a: "Yes. Transport is available on select routes. Please speak to our team to check availability for your neighbourhood." },
   
-  // Timings (5 questions)
-  { cat: "timings", q: "What are the regular school and daycare hours?", a: "Preschool programmes run from 8:30 AM to 12:30 PM (or 1:00 PM for LKG/UKG), Monday to Friday. Extended Daycare operates from 8:30 AM to 6:30 PM, Monday to Saturday." },
-  { cat: "timings", q: "Do you offer flexible or hourly daycare options?", a: "Yes! We offer half-day, full-day, and flexible hourly daycare passes to accommodate parents with unpredictable work schedules or emergency meetings." },
-  { cat: "timings", q: "What is the holiday calendar followed by the school?", a: "We observe standard national & major festival holidays in Karnataka. Our detailed annual holiday calendar is provided at the start of the academic year, and daycare continues to run on non-national optional holidays." },
-  { cat: "timings", q: "What happens if a parent is delayed during evening pickup?", a: "We understand traffic delays in Koramangala! Just send us a quick WhatsApp update. Your child will remain comfortably engaged in our supervised evening play lounge with a warm snack until you arrive." },
-  { cat: "timings", q: "Are Saturday care services available?", a: "Yes. Our extended Daycare and weekend Hobby Clubs run on Saturdays from 8:30 AM to 6:30 PM for working parents who require weekend care." },
+  // Timings: only the primary question retained above
 
-  // Live CCTV (5 questions)
-  { cat: "cctv", q: "Is live CCTV access provided to all parents?", a: "Yes. Every verified parent receives secure, encrypted live streaming access to their child's classroom, activity area, dining hall, and play space through our parent app during operating hours." },
-  { cat: "cctv", q: "How is parent CCTV login access kept secure?", a: "Access is protected with multi-factor authentication, device binding, and encrypted streaming protocols. Only pre-registered parents with active credentials can view the live feed." },
-  { cat: "cctv", q: "Which areas of the campus are covered by cameras?", a: "100% of shared spaces-including classrooms, outdoor play yards, hallways, dining spaces, and nap rooms-are under continuous high-definition camera coverage. Washrooms and private change rooms are strictly unmonitored for privacy." },
-  { cat: "cctv", q: "How long is CCTV video footage stored?", a: "All high-definition CCTV video recordings are stored securely on local encrypted servers for 30 days for complete auditability and safety review." },
-  { cat: "cctv", q: "Can grandparents or family members get CCTV access?", a: "Yes, parents can authorize up to two secondary family members (such as grandparents or primary guardians) through our written consent form on the parent portal." },
+  // Teachers & Safety: only these three questions
+  { cat: "cctv", q: "Do parents receive updates during the day?", a: "We believe in open communication and keeping parents connected through regular updates and conversations about their child's day." },
+  { cat: "cctv", q: "Are your teachers qualified?", a: "Yes. Our educators are qualified, experienced and committed to creating a warm, nurturing environment where every child feels safe, respected and encouraged to grow." },
+  { cat: "cctv", q: "Is the school under CCTV surveillance?", a: "Yes. The campus is covered by CCTV for safety and security. However, we do not provide live CCTV access to parents. Instead, we believe in building trust through open communication and regular updates about your child's day." },
 
-  // Meals & Nutrition (5 questions)
-  { cat: "meals", q: "What kind of food and meals are served at BambiBoo?", a: "We serve 100% freshly cooked, sugar-free, balanced vegetarian meals prepared daily in our hygienic in-house kitchen. Menus include whole grains, lentils, fresh fruit purees, and vegetable preparations." },
-  { cat: "meals", q: "How do you manage food allergies and dietary restrictions?", a: "Every child has a color-coded meal tag at their table detailing allergies, lactose intolerance, or family dietary preferences. Our kitchen staff cross-checks tags before serving every meal." },
-  { cat: "meals", q: "Are meals included in preschool and daycare programmes?", a: "Daycare includes 3 full meals (breakfast, wholesome lunch, and evening snack). Preschool programmes include a healthy morning fruit & snack break." },
-  { cat: "meals", q: "Is the school kitchen open for parent inspections?", a: "Absolutely! We maintain a 100% open-kitchen policy. Parents are welcome to inspect our kitchen, pantry, and cooking standards during any campus walkthrough." },
-  { cat: "meals", q: "Do you allow children to bring homemade food from home?", a: "Yes, parents who prefer to send home-cooked tiffins are welcome to do so. We provide warmers so your child's home meal is served warm and fresh." },
 
-  // Transport & Safety (5 questions)
-  { cat: "safety", q: "Is school transport available for Koramangala & nearby areas?", a: "Yes! We provide safe, air-conditioned door-to-door transport covering Koramangala, HSR Layout, Indiranagar, and surrounding neighborhood sectors." },
-  { cat: "safety", q: "How are transport vehicles tracked for safety?", a: "All transport vehicles are fitted with real-time GPS tracking, speed governors (capped at 40 km/h), emergency panic buttons, and automated SMS arrival alerts sent directly to your phone." },
-  { cat: "safety", q: "Who accompanies the children inside the transport vehicles?", a: "Every vehicle has a mandatory, background-verified female attendant on board alongside a trained driver to assist children with seatbelts, boarding, and unboarding." },
-  { cat: "safety", q: "What background verification is done for staff and drivers?", a: "100% of drivers, attendants, teachers, and support staff undergo mandatory police background verification, address checks, medical screening, and annual safety recertifications." },
-  { cat: "safety", q: "What emergency medical protocols are in place on campus?", a: "Every staff member is trained in pediatric CPR and first aid. We maintain a dedicated on-site first-aid station and have active medical tie-ups with two leading nearby hospitals for rapid 5-minute emergency response." },
 ];
 
 function Home() {
@@ -131,7 +114,7 @@ function Home() {
   return (
     <PageShell>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-[#FFEBCB] bg-ambient-mesh">
+      <section className="relative overflow-hidden bg-[#FBF5EB] bg-ambient-mesh">
         {/* Floating Nursery Decorative Elements */}
         <div className="absolute top-12 left-10 text-2xl animate-float opacity-40 select-none pointer-events-none" aria-hidden="true" />
         <div className="absolute top-1/3 right-12 text-3xl animate-float-slow opacity-30 select-none pointer-events-none" aria-hidden="true" />
@@ -141,8 +124,12 @@ function Home() {
         <div className="absolute top-40 -left-16 h-72 w-72 blob bg-[#FFD48A]/25 animate-float" />
         <div className="container-page relative grid gap-10 py-14 md:py-20 lg:py-24 lg:grid-cols-12 xl:gap-16 items-center">
           <div className="lg:col-span-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary shadow-xs backdrop-blur-xs border border-primary/15">
-              <Star className="h-3.5 w-3.5 fill-primary animate-pulse-subtle" /> Play. Wonder. Belong.
+            <div className="inline-flex items-center gap-2.5 rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary shadow-xs backdrop-blur-xs border border-primary/15">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+              </span>
+              Admissions Open 2026–27 • Koramangala
             </div>
             <h1 className="mt-5 text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.08] text-foreground text-balance">
               A preschool where{" "}
@@ -169,7 +156,7 @@ function Home() {
               </AdmissionDialog>
               <Link
                 to="/programmes"
-                className="inline-flex items-center gap-2 rounded-full border-2 border-primary/20 bg-[#FFF6EA] px-6 py-3.5 text-sm font-bold text-primary hover:border-primary hover:bg-white hover:-translate-y-0.5 transition-all shadow-xs"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-primary/20 bg-[#FFFDF9] px-6 py-3.5 text-sm font-bold text-primary hover:border-primary hover:bg-white hover:-translate-y-0.5 transition-all shadow-xs"
               >
                 Explore programmes
               </Link>
@@ -209,7 +196,7 @@ function Home() {
       </section>
 
       {/* ABOUT */}
-      <section className="bg-[#F0CE91] relative">
+      <section className="bg-[#F6E6C5] relative">
         <div className="container-page section-padding grid md:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-start">
           <div className="md:col-span-5 lg:col-span-5">
             <div className="text-xs font-bold uppercase tracking-widest text-primary/80">About BambiBoo</div>
@@ -374,13 +361,13 @@ function Home() {
           {/* Solid Cream Foreground Layer */}
           <path
             d="M0,120 L0,65 Q75,20 150,65 Q225,20 300,65 Q375,20 450,65 Q525,20 600,65 Q675,20 750,65 Q825,20 900,65 Q975,20 1050,65 Q1125,20 1200,65 L1200,120 Z"
-            fill="#FFEBCB"
+            fill="#FBF5EB"
           />
         </svg>
       </div>
 
       {/* TESTIMONIALS */}
-      <section className="bg-[#FFEBCB]">
+      <section className="bg-[#FBF5EB]">
         <div className="container-page section-padding">
           <div className="text-xs font-bold uppercase tracking-widest text-primary/80">Loved by neighborhood families</div>
           <h2 className="mt-2 text-4xl md:text-5xl font-bold text-balance">Real parents, measurable milestones.</h2>
@@ -397,7 +384,7 @@ function Home() {
                 <CarouselItem key={t.name} className="pl-5 lg:pl-6 md:basis-1/2 lg:basis-1/3">
                   <Link
                     to="/parents/testimonials"
-                    className="master-card block h-full rounded-3xl bg-[#FFF6EA] border border-white/60 p-6 md:p-8 flex flex-col justify-between"
+                    className="master-card block h-full rounded-3xl bg-[#FFFDF9] border border-white/60 p-6 md:p-8 flex flex-col justify-between"
                   >
                     <div>
                       <div className="flex gap-1 text-accent">
@@ -427,7 +414,7 @@ function Home() {
       </section>
 
       {/* FEATURE 4: INTERACTIVE FAQ QUICK-PILLS ACCORDION */}
-      <section className="bg-[#FFE6C0]">
+      <section className="bg-[#FBF2E7]">
         <div className="container-page section-padding grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           <div className="lg:col-span-4">
             <div className="text-xs font-bold uppercase tracking-widest text-primary/80">FAQ</div>
@@ -439,8 +426,8 @@ function Home() {
               {[
                 { id: "admissions", label: "Admissions" },
                 { id: "timings", label: "Timings" },
-                { id: "cctv", label: "Live CCTV" },
-                { id: "meals", label: "Meals" },
+                { id: "cctv", label: "Teachers and Safety" },
+                { id: "meals", label: "Teacher-child ratio" },
                 { id: "safety", label: "Transport" },
               ].map((c) => (
                 <button
@@ -449,7 +436,7 @@ function Home() {
                   className={`rounded-xl px-3.5 py-2 text-xs font-bold transition-all duration-200 ${
                     faqCategory === c.id
                       ? "bg-primary text-primary-foreground shadow-md scale-105"
-                      : "bg-[#FFF6EA] text-foreground/75 border border-white/60 hover:bg-white hover:text-primary"
+                      : "bg-[#FFFDF9] text-foreground/75 border border-white/60 hover:bg-white hover:text-primary"
                   }`}
                 >
                   {c.label}
@@ -458,9 +445,9 @@ function Home() {
             </div>
           </div>
 
-          <div className="lg:col-span-8 divide-y divide-border/60 rounded-3xl border border-white/70 bg-[#FFF6EA] shadow-xs overflow-hidden">
+          <div className="lg:col-span-8 divide-y divide-border/60 rounded-3xl border border-white/70 bg-[#FFFDF9] shadow-xs overflow-hidden">
             {filteredFaqs.map((f) => (
-              <details key={f.q} className="group p-6 md:p-7 open:bg-[#FFE6C0]/40 transition-colors">
+              <details key={f.q} className="group p-6 md:p-7 open:bg-[#FBF2E7]/60 transition-colors">
                 <summary className="flex cursor-pointer list-none items-center justify-between font-bold text-foreground text-lg">
                   {f.q}
                   <span className="ml-4 text-primary text-xl transition-transform duration-300 group-open:rotate-45">+</span>

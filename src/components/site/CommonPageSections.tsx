@@ -66,10 +66,14 @@ const pillars = [
 
 const categoryFaqs = [
   { cat: "admissions", q: "What ages does BambiBoo welcome?", a: "We offer programmes for children from 3 months to 6 years, along with daycare for children up to 12 years." },
+  { cat: "admissions", q: "Can parents visit the school before admission?", a: "Absolutely. We encourage every family to visit our campus, meet our educators, explore the learning spaces and experience the BambiBoo environment before making a decision." },
   { cat: "timings", q: "What are your school timings?", a: "Our programmes run Monday to Friday, with timings varying by age group. Parent & Toddler sessions are held Monday to Saturday." },
-  { cat: "cctv", q: "Do parents receive updates during the day?", a: "We believe in open communication and keeping parents connected through regular updates and conversations about their child's day." },
+  { cat: "timings", q: "Do you offer half-day and full-day Day Care?", a: "Yes. We offer both half-day and full-day Day Care options to support the varying needs of families. Saturday care is available on request." },
   { cat: "meals", q: "What is your teacher-child ratio?", a: "We keep our groups intentionally small: ● 2:12 for toddlers ● 1:12 for older children. So every child is known, heard and supported." },
   { cat: "safety", q: "Is transport available?", a: "Yes. Transport is available on select routes. Please speak to our team to check availability for your neighbourhood." },
+  { cat: "cctv", q: "Do parents receive updates during the day?", a: "We believe in open communication and keeping parents connected through regular updates and conversations about their child's day." },
+  { cat: "cctv", q: "Are your teachers qualified?", a: "Yes. Our educators are qualified, experienced and committed to creating a warm, nurturing environment where every child feels safe, respected and encouraged to grow." },
+  { cat: "cctv", q: "Is the school under CCTV surveillance?", a: "Yes. The campus is covered by CCTV for safety and security. However, we do not provide live CCTV access to parents. Instead, we believe in building trust through open communication and regular updates about your child's day." },
 ];
 
 export function PillarsOfCareSection() {
@@ -133,7 +137,7 @@ export function PillarsOfCareSection() {
       <div className="w-full overflow-hidden leading-none bg-primary -mb-1 relative z-10">
         <svg className="relative block w-full h-12 sm:h-20" viewBox="0 0 1200 120" preserveAspectRatio="none">
           <path d="M0,120 L0,45 Q60,5 120,45 Q180,5 240,45 Q300,5 360,45 Q420,5 480,45 Q540,5 600,45 Q660,5 720,45 Q780,5 840,45 Q900,5 960,45 Q1020,5 1080,45 Q1140,5 1200,45 L1200,120 Z" fill="#F5CFA0" opacity="0.5" />
-          <path d="M0,120 L0,65 Q75,20 150,65 Q225,20 300,65 Q375,20 450,65 Q525,20 600,65 Q675,20 750,65 Q825,20 900,65 Q975,20 1050,65 Q1125,20 1200,65 L1200,120 Z" fill="#FFEBCB" />
+          <path d="M0,120 L0,65 Q75,20 150,65 Q225,20 300,65 Q375,20 450,65 Q525,20 600,65 Q675,20 750,65 Q825,20 900,65 Q975,20 1050,65 Q1125,20 1200,65 L1200,120 Z" fill="#FBF5EB" />
         </svg>
       </div>
     </>
@@ -142,7 +146,7 @@ export function PillarsOfCareSection() {
 
 export function LovedByFamiliesSection() {
   return (
-    <section className="bg-[#FFEBCB]">
+    <section className="bg-[#FBF5EB]">
       <div className="container-page section-padding">
         <div className="text-xs font-bold uppercase tracking-widest text-primary/80">Loved by neighborhood families</div>
         <h2 className="mt-2 text-4xl md:text-5xl font-bold text-balance">Real parents, measurable milestones.</h2>
@@ -159,7 +163,7 @@ export function LovedByFamiliesSection() {
               <CarouselItem key={t.name} className="pl-5 lg:pl-6 md:basis-1/2 lg:basis-1/3">
                 <Link
                   to="/parents/testimonials"
-                  className="master-card block h-full rounded-3xl bg-[#FFF6EA] border border-white/60 p-6 md:p-8 flex flex-col justify-between"
+                  className="master-card block h-full rounded-3xl bg-[#FFFDF9] border border-white/60 p-6 md:p-8 flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex gap-1 text-accent">
@@ -196,7 +200,7 @@ export function FaqSection() {
   const filteredFaqs = categoryFaqs.filter((f) => f.cat === faqCategory);
 
   return (
-    <section className="bg-[#FFE6C0]">
+    <section className="bg-[#FBF2E7]">
       <div className="container-page section-padding grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
         <div className="lg:col-span-4">
           <div className="text-xs font-bold uppercase tracking-widest text-primary/80">FAQ</div>
@@ -207,8 +211,8 @@ export function FaqSection() {
             {[
               { id: "admissions", label: "Admissions" },
               { id: "timings", label: "Timings" },
-              { id: "cctv", label: "Live CCTV" },
-              { id: "meals", label: "Meals" },
+              { id: "cctv", label: "Teachers and Safety" },
+              { id: "meals", label: "Teacher-child ratio" },
               { id: "safety", label: "Transport" },
             ].map((c) => (
               <button
@@ -226,9 +230,9 @@ export function FaqSection() {
           </div>
         </div>
 
-        <div className="lg:col-span-8 divide-y divide-border/60 rounded-3xl border border-white/70 bg-[#FFF6EA] shadow-xs overflow-hidden">
+        <div className="lg:col-span-8 divide-y divide-border/60 rounded-3xl border border-white/70 bg-[#FFFDF9] shadow-xs overflow-hidden">
           {filteredFaqs.map((f) => (
-            <details key={f.q} className="group p-6 md:p-7 open:bg-[#FFE6C0]/40 transition-colors">
+            <details key={f.q} className="group p-6 md:p-7 open:bg-[#FBF2E7]/60 transition-colors">
               <summary className="flex cursor-pointer list-none items-center justify-between font-bold text-foreground text-lg">
                 {f.q}
                 <span className="ml-4 text-primary text-xl transition-transform duration-300 group-open:rotate-45">+</span>

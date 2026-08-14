@@ -64,62 +64,63 @@ select:-webkit-autofill:focus {
 }
 
 :root {
-  color-scheme: light;
+  color-scheme: light !important;
+  supported-color-schemes: light;
   --radius: 1rem;
 
-  /* Richer Warm Almond Background */
-  --background: #F8D9A8;
+  /* Softened clean cream background */
+  --background: #FAF6EE;
   --foreground: #2C2C2C;
 
-  /* Warm Soft Cream Cards */
-  --card: #FFF4E5;
+  /* Lighter crisp cream cards */
+  --card: #FFFDF9;
   --card-foreground: #2C2C2C;
-  --popover: #FFF4E5;
+  --popover: #FFFDF9;
   --popover-foreground: #2C2C2C;
 
-  /* Deep BambiBoo purple (darkened to deep royal velvet purple) */
-  --primary: #430E6C;
-  --primary-foreground: #F8D9A8;
+  /* Primary purple */
+  --primary: #4C167F;
+  --primary-foreground: #FAF6EE;
 
-  /* Secondary Background */
-  --secondary: #F5CFA0;
+  /* Secondary Background (softened) */
+  --secondary: #F4E7DA;
   --secondary-foreground: #5A2D7A;
 
-  /* Alternate Section Background */
-  --muted: #F8D9A8;
+  /* Alternate Section Background (softened) */
+  --muted: #FAF6EE;
   --muted-foreground: #6B4A4A;
 
-  /* Soft Highlight & Decorative Glow */
-  --accent: #F7CB8B;
+  /* Soft Highlight & Decorative Glow (softened) */
+  --accent: #F5E6CE;
   --accent-foreground: #5A2D7A;
 
   --destructive: #C24B1B;
-  --destructive-foreground: #F8D9A8;
+  --destructive-foreground: #F5E6CE;
 
-  /* Warm Borders */
-  --border: rgba(67,14,108,0.32);
-  --input: rgba(67,14,108,0.35);
-  --ring: #430E6C;
+  /* Warm Borders (softened) */
+  --border: rgba(76,22,122,0.22);
+  --input: rgba(76,22,122,0.20);
+  --ring: #4C157F;
 
-  /* Extended palette */
-  --cream: #F8D9A8;
-  --butter: #F7CB8B;
-  --highlight: #F5C27B;
-  --muted-beige: #EDD0A1;
-  --berry: #43106C;
+  /* Extended palette (softened warmth) */
+  --cream: #FAF6EE;
+  --butter: #F5E6CE;
+  --highlight: #F3DEC3;
+  --muted-beige: #EFE4D6;
+  --berry: #4A167F;
   --mint: #6FD6A2;
   --coral: #F09A66;
   --sky: #6EA8FF;
   --success: #2EA86B;
   --success-foreground: #FFFFFF;
 
-  --sidebar: #F8D9A8;
+  --sidebar: #F5E6CE;
   --sidebar-foreground: #2C2C2C;
   --sidebar-primary: #430E6C;
-  --sidebar-primary-foreground: #F8D9A8;
-  --sidebar-accent: #F5CFA0;
+  --sidebar-primary-foreground: #F5E6CE;
+  --sidebar-accent: #F3DEC3;
   --sidebar-accent-foreground: #5A2D7A;
-  --sidebar-border: #DDB886;
+  --sidebar-border: #E0CDB7;
   --sidebar-ring: #430E6C;
 
   --chart-1: #430E6C;
@@ -135,6 +136,8 @@ select:-webkit-autofill:focus {
   }
 
   html, body {
+    color-scheme: light !important;
+    forced-color-adjust: none;
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);

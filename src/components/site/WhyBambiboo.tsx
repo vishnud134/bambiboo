@@ -61,17 +61,17 @@ export function WhyBambiboo({ className = "" }: { className?: string }) {
               <Link
                 key={item.label}
                 to={item.href}
-                className="group flex flex-col justify-between h-full rounded-3xl bg-[#6722A9] text-white p-5 shadow-md border border-[#6722A9]/30 hover:shadow-xl hover:bg-[#581c93] hover:-translate-y-1 transition-all duration-300 min-h-[170px]"
+                className="master-card group flex flex-col justify-between h-full rounded-3xl bg-gradient-to-br from-[#6722A9] to-[#51178B] text-white p-5 shadow-lg border border-[#7A2DC2]/30 hover:border-amber-300/40 min-h-[170px]"
               >
                 <div>
-                  <div className="h-10 w-10 rounded-2xl bg-white/20 text-white grid place-items-center mb-4 group-hover:scale-110 transition-transform">
+                  <div className="h-10 w-10 rounded-2xl bg-white/20 border border-white/30 backdrop-blur-xs text-amber-200 grid place-items-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-xs">
                     <IconComponent className="h-5 w-5" />
                   </div>
                   <h3 className="text-lg font-bold leading-snug">{item.label}</h3>
-                  <p className="text-xs text-white/80 mt-1 font-medium">{item.sub}</p>
+                  <p className="text-xs text-white/80 mt-1 font-medium leading-relaxed">{item.sub}</p>
                 </div>
-                <div className="mt-4 text-xs font-bold text-amber-200 flex items-center gap-1 group-hover:gap-2 transition-all">
-                  Learn more <span aria-hidden>→</span>
+                <div className="mt-4 text-xs font-bold text-amber-200 flex items-center gap-1 group-hover:gap-2 transition-all duration-300">
+                  Learn more <span className="inline-block group-hover:translate-x-1 transition-transform" aria-hidden>→</span>
                 </div>
               </Link>
             );

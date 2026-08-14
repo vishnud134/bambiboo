@@ -57,7 +57,7 @@ const nav: NavGroup[] = [
 export function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-50 border-b border-[#E5BE82]/60 bg-[#F8D196]/95 backdrop-blur-md shadow-sm">
+    <header className="sticky top-0 z-50 border-b border-[#E8D5B8]/60 bg-[#F6E8D3]/95 backdrop-blur-md shadow-sm">
       <div className="container-page-wide flex items-center justify-between gap-4 sm:gap-6 py-2.5 sm:py-3.5">
         <Logo />
         <nav className="hidden lg:flex flex-1 items-center justify-center gap-1 px-2">
@@ -147,7 +147,7 @@ export function Header() {
             <Phone className="h-4 w-4 text-primary" /> +91 99006 39303
           </a>
           <AdmissionDialog>
-            <button className="rounded-full bg-primary px-4 py-2 text-sm font-bold text-[#FFF6EA] shadow-lg shadow-primary/30 hover:brightness-110 transition whitespace-nowrap">
+            <button className="shimmer-pill inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-bold text-[#FFF6EA] shadow-lg shadow-primary/30 hover:brightness-110 hover:-translate-y-0.5 transition-all whitespace-nowrap">
               Book a Visit
             </button>
           </AdmissionDialog>

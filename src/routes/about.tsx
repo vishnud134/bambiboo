@@ -75,7 +75,7 @@ export const Route = createFileRoute("/about")({
                 Inspired by the <strong>Reggio Emilia</strong> philosophy, we see the environment as the <strong>third teacher</strong>. Spaces filled with open-ended materials, natural light and real objects invite children to explore, imagine, create and think independently. Relationships anchor everything we do: trust, respect, inclusivity and collaboration create the foundation for meaningful learning.
               </p>
               <p className="mt-3 font-semibold text-primary">
-                We believe children know how to be completely present in the moment. Our role is not to rush childhood, but to protect that presence. Because technology will find our children. Childhood won't wait.
+                "We believe children know how to be completely present in the moment. Our role is not to rush childhood, but to protect that presence. Because technology will find our children. Childhood won't wait."
               </p>
             </>
           ),

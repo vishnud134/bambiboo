@@ -78,6 +78,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "color-scheme", content: "light" },
+      { name: "supported-color-schemes", content: "light" },
+      { name: "theme-color", content: "#FBEFD6" },
       { title: "BambiBoo Preschool & Daycare Koramangala, Bengaluru" },
       {
         name: "description",
