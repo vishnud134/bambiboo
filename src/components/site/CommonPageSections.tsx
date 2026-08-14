@@ -65,15 +65,40 @@ const pillars = [
 ];
 
 const categoryFaqs = [
+  // 1. Admissions (5 questions)
   { cat: "admissions", q: "What ages does BambiBoo welcome?", a: "We offer programmes for children from 3 months to 6 years, along with daycare for children up to 12 years." },
   { cat: "admissions", q: "Can parents visit the school before admission?", a: "Absolutely. We encourage every family to visit our campus, meet our educators, explore the learning spaces and experience the BambiBoo environment before making a decision." },
+  { cat: "admissions", q: "Do admissions remain open throughout the year?", a: "Yes, admissions remain open throughout the year subject to seat availability. We recommend scheduling a campus visit to confirm enrollment for your preferred age group." },
+  { cat: "admissions", q: "What documents are required for the admission process?", a: "Parents need to submit a copy of the child's birth certificate, immunisation records, recent passport-size photographs, and Aadhaar card copies of both parents." },
+  { cat: "admissions", q: "What is included in the child's welcome kit upon admission?", a: "Once admission is confirmed, every child receives a welcome kit containing learning books, customized school bag, uniform set, student diary, and ID card." },
+
+  // 2. Timings (5 questions)
   { cat: "timings", q: "What are your school timings?", a: "Our programmes run Monday to Friday, with timings varying by age group. Parent & Toddler sessions are held Monday to Saturday." },
   { cat: "timings", q: "Do you offer half-day and full-day Day Care?", a: "Yes. We offer both half-day and full-day Day Care options to support the varying needs of families. Saturday care is available on request." },
-  { cat: "meals", q: "What is your teacher-child ratio?", a: "We keep our groups intentionally small: ● 2:12 for toddlers ● 1:12 for older children. So every child is known, heard and supported." },
-  { cat: "safety", q: "Is transport available?", a: "Yes. Transport is available on select routes. Please speak to our team to check availability for your neighbourhood." },
+  { cat: "timings", q: "What are the daycare operating hours?", a: "Daycare operates from 8:30 AM to 6:30 PM, Monday through Saturday, providing structured play, meal times, rest/nap periods, and supervised evening activities." },
+  { cat: "timings", q: "Is Saturday care available for preschool or daycare children?", a: "Saturday daycare and weekend Parent-Toddler engagement sessions are available upon request to assist parents with flexible weekend schedules." },
+  { cat: "timings", q: "How are late pickups handled for daycare children?", a: "We understand traffic delays in Koramangala. We provide extended evening care till 7:00 PM under continuous teacher supervision with prior notification from parents." },
+
+  // 3. Teachers and Safety (5 questions)
   { cat: "cctv", q: "Do parents receive updates during the day?", a: "We believe in open communication and keeping parents connected through regular updates and conversations about their child's day." },
   { cat: "cctv", q: "Are your teachers qualified?", a: "Yes. Our educators are qualified, experienced and committed to creating a warm, nurturing environment where every child feels safe, respected and encouraged to grow." },
   { cat: "cctv", q: "Is the school under CCTV surveillance?", a: "Yes. The campus is covered by CCTV for safety and security. However, we do not provide live CCTV access to parents. Instead, we believe in building trust through open communication and regular updates about your child's day." },
+  { cat: "cctv", q: "What safety and access control measures are in place on campus?", a: "We enforce strict security protocols, including gated access, verified pickup authorization, mandatory visitor logs, child-safe rounded furniture, and finger-pinch guards on all doors." },
+  { cat: "cctv", q: "What emergency medical protocols are followed on campus?", a: "Every staff member is trained in pediatric CPR and first aid. We maintain a dedicated on-site first-aid station and have active medical tie-ups with two leading nearby hospitals for rapid 5-minute emergency response." },
+
+  // 4. Teacher-child ratio (5 questions)
+  { cat: "meals", q: "What is your teacher-child ratio?", a: "We keep our groups intentionally small: ● 2:12 for toddlers ● 1:12 for older children. So every child is known, heard and supported." },
+  { cat: "meals", q: "How many support staff and helpers are assigned to each classroom?", a: "Each classroom has a dedicated lead teacher accompanied by a trained helper/nanny to assist with hygiene, bathroom breaks, and classroom activities." },
+  { cat: "meals", q: "How does a small ratio benefit my child's learning journey?", a: "Intentionally small group sizes allow our educators to observe each child's unique learning pace, foster deeper emotional bonds, and tailor developmental milestones." },
+  { cat: "meals", q: "Are helpers and support staff trained in hygiene and pediatric care?", a: "Yes. All support staff undergo regular training in child handling, hygiene standards, sanitation protocols, and respectful caregiving." },
+  { cat: "meals", q: "How are toddlers assisted during meal and toilet transition times?", a: "Teachers and dedicated nannies provide gentle, step-by-step guidance during toilet training and meal times, encouraging self-help skills while ensuring comfort and cleanliness." },
+
+  // 5. Transport (5 questions)
+  { cat: "safety", q: "Is transport available?", a: "Yes. Transport is available on select routes. Please speak to our team to check availability for your neighbourhood." },
+  { cat: "safety", q: "Is school transport available for Koramangala & nearby areas?", a: "Yes! We provide safe, air-conditioned door-to-door transport covering Koramangala, HSR Layout, Indiranagar, and surrounding neighborhood sectors." },
+  { cat: "safety", q: "How are transport vehicles tracked for safety?", a: "All transport vehicles are fitted with real-time GPS tracking, speed governors (capped at 40 km/h), emergency panic buttons, and automated SMS arrival alerts sent directly to your phone." },
+  { cat: "safety", q: "Who accompanies the children inside the transport vehicles?", a: "Every vehicle has a mandatory, background-verified female attendant on board alongside a trained driver to assist children with seatbelts, boarding, and unboarding." },
+  { cat: "safety", q: "What background verification is done for staff and drivers?", a: "100% of drivers, attendants, teachers, and support staff undergo mandatory police background verification, address checks, medical screening, and annual safety recertifications." },
 ];
 
 export function PillarsOfCareSection() {
