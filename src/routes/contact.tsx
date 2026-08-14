@@ -75,7 +75,7 @@ function Contact() {
               There's no better way to experience BambiBoo than to visit us.
             </h2>
             <p className="mt-4 text-sm md:text-base text-muted-foreground max-w-2xl leading-relaxed">
-              Join us for a 30-minute guided campus walkthrough, meet our teachers, explore our learning spaces and bring your little one along—we'd love to meet them too.
+              Join us for a 30-minute guided campus walkthrough, meet our teachers, explore our learning spaces and bring your little one along-we'd love to meet them too.
             </p>
           </div>
           <div className="lg:col-span-4 flex items-start lg:justify-end">
@@ -102,7 +102,7 @@ function Contact() {
               </h2>
             </div>
             <p className="text-sm text-muted-foreground max-w-md">
-              Located at 44, 5th Main Rd, 1st Block Koramangala — easily accessible from HSR Layout, Ejipura, and Indiranagar.
+              Located at 44, 5th Main Rd, 1st Block Koramangala - easily accessible from HSR Layout, Ejipura, and Indiranagar.
             </p>
           </div>
 

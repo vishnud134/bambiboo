@@ -30,7 +30,7 @@ export const Route = createFileRoute("/about")({
       showHeroForm
       eyebrow="About Us"
       title="A place where childhood comes first."
-      intro="BambiBoo is an initiative of Ananta Educational Trust, founded with one simple purpose—to make high-quality early childhood education nurturing, accessible and affordable. We are creating a space where every child feels included, every parent feels reassured, and learning happens through joy rather than pressure."
+      intro="BambiBoo is an initiative of Ananta Educational Trust, founded with one simple purpose-to make high-quality early childhood education nurturing, accessible and affordable. We are creating a space where every child feels included, every parent feels reassured, and learning happens through joy rather than pressure."
       heroNote={`Every decision we make begins with one question: "Will this help a child grow with joy?" Because technology will find our children. Childhood won't wait.`}
       sections={[
         {
@@ -50,12 +50,12 @@ export const Route = createFileRoute("/about")({
                 Years later, as a young mother in Bengaluru, I found myself searching for a preschool that felt the way my childhood had felt. A place where my son would feel safe, where he would be excited to go every morning, where he would come home with muddy shoes, new songs, funny stories and a smile on his face. I couldn't find that place.
               </p>
               <p className="mt-2">
-                At that time, I was at the peak of my corporate career. Walking away wasn't an easy decision, but motherhood changed what success meant to me. When I looked at early childhood education again years later, I realized parents were still facing the same questions. That is why I started BambiBoo—not to build another preschool, but to create the place I had once wished existed for my own child.
+                At that time, I was at the peak of my corporate career. Walking away wasn't an easy decision, but motherhood changed what success meant to me. When I looked at early childhood education again years later, I realized parents were still facing the same questions. That is why I started BambiBoo-not to build another preschool, but to create the place I had once wished existed for my own child.
               </p>
               <div className="mt-4 p-4 rounded-2xl bg-amber-100/80 border border-amber-300 font-bold text-primary italic">
                 "I didn't start BambiBoo to build another preschool. I started it to create the place I had once wished existed for my own child."
               </div>
-              <p className="mt-4 font-bold text-foreground">Mukula Joglekar — Founder, BambiBoo Preschool</p>
+              <p className="mt-4 font-bold text-foreground">Mukula Joglekar - Founder, BambiBoo Preschool</p>
             </>
           ),
         },
@@ -166,7 +166,7 @@ export const Route = createFileRoute("/about")({
           body: (
             <>
               <p>
-                Our first BambiBoo campus is tucked away on a quiet, tree-lined street in 1st Block, Koramangala—just minutes away from the energy of Koramangala, ST Bed, Ejipura and HSR.
+                Our first BambiBoo campus is tucked away on a quiet, tree-lined street in 1st Block, Koramangala-just minutes away from the energy of Koramangala, ST Bed, Ejipura and HSR.
               </p>
               <p className="mt-3 font-semibold text-white/90">
                 Located at 44, 5th Main Road, 1st Block, Koramangala, Bengaluru, we're within walking distance of iconic Wipro Park, making us easy to reach while feeling wonderfully removed from the city's rush.

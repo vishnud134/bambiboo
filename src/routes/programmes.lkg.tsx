@@ -37,7 +37,7 @@ const info: ProgrammeInfo = {
     { title: "Creativity Every Day", body: "Art, music, storytelling and imaginative play continue to nurture creativity alongside structured learning." },
   ],
   developmentTitle: "Holistic Development",
-  developmentDescription: "Preparing children for school—and for life. Every experience strengthens the skills children need to thrive.",
+  developmentDescription: "Preparing children for school-and for life. Every experience strengthens the skills children need to thrive.",
   development: [
     "Early literacy and numeracy",
     "Critical thinking and problem-solving",

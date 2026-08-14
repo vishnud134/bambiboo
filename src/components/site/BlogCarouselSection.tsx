@@ -34,7 +34,7 @@ export const blogPosts: BlogPost[] = [
     content: (
       <div className="prose prose-lg max-w-none text-foreground">
         <p>
-          Starting preschool is a big milestone—not just for your child, but for the whole family. A new environment, unfamiliar faces, and a different routine can make the first day exciting and, sometimes, a little overwhelming.
+          Starting preschool is a big milestone-not just for your child, but for the whole family. A new environment, unfamiliar faces, and a different routine can make the first day exciting and, sometimes, a little overwhelming.
         </p>
 
         <p>
@@ -48,7 +48,7 @@ export const blogPosts: BlogPost[] = [
           Start talking about preschool a few days or weeks before the first day. Keep the conversation light, positive, and age-appropriate.
         </p>
         <p>
-          You can tell your child about the fun things they may experience—playing with other children, listening to stories, singing songs, drawing, exploring, and meeting their teachers.
+          You can tell your child about the fun things they may experience-playing with other children, listening to stories, singing songs, drawing, exploring, and meeting their teachers.
         </p>
 
         <h3>2. Introduce a Preschool Routine</h3>
@@ -113,7 +113,7 @@ export const blogPosts: BlogPost[] = [
 
         <h3>8. Stay Calm and Confident</h3>
         <p>
-          Children often pick up on their parents' emotions. Try to communicate confidence and reassurance — your calm presence helps your child feel that preschool is a safe and positive place.
+          Children often pick up on their parents' emotions. Try to communicate confidence and reassurance - your calm presence helps your child feel that preschool is a safe and positive place.
         </p>
 
         <h3>9. Don't Compare Your Child With Others</h3>
@@ -123,11 +123,11 @@ export const blogPosts: BlogPost[] = [
 
         <h3>10. Celebrate Their First Preschool Experience</h3>
         <p>
-          After school, ask simple, positive questions about their day and celebrate small achievements—entering the classroom, meeting a teacher, playing with another child, or trying something new.
+          After school, ask simple, positive questions about their day and celebrate small achievements-entering the classroom, meeting a teacher, playing with another child, or trying something new.
         </p>
 
         <p className="mt-6 pt-4 border-t border-border/60">
-          With a little preparation, a familiar routine, positive conversations, and lots of reassurance, parents can help make this transition easier and more enjoyable. Every child is different—give them time and space to settle in, trust the process, and celebrate every little step forward.
+          With a little preparation, a familiar routine, positive conversations, and lots of reassurance, parents can help make this transition easier and more enjoyable. Every child is different-give them time and space to settle in, trust the process, and celebrate every little step forward.
         </p>
       </div>
     ),
@@ -168,7 +168,7 @@ export const blogPosts: BlogPost[] = [
     category: "Child Development",
     date: "Jul 08, 2026",
     readTime: "4 min read",
-    excerpt: "Outdoor play isn't just recess—it's sensory integration, physical balance, and social negotiation in action.",
+    excerpt: "Outdoor play isn't just recess-it's sensory integration, physical balance, and social negotiation in action.",
     image: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80",
     content: "",
   },

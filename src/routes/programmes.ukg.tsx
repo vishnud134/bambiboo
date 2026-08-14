@@ -18,7 +18,7 @@ const info: ProgrammeInfo = {
   name: "UKG (Upper Kindergarten)",
   ageRange: "5 to 6 years",
   tagline: "Preparing children for school while nurturing joyful, confident learners.",
-  intro: "UKG is the final step in your child's preschool journey—and the beginning of a lifetime of learning. By this stage, children are confident communicators, independent thinkers and eager explorers. Our UKG programme prepares them for primary school without losing sight of what matters most: curiosity, creativity and the joy of childhood. Through projects, collaborative learning, storytelling, early academics and real-world experiences, children strengthen the skills they need for school while developing the confidence to embrace new challenges with enthusiasm. At BambiBoo, we don't simply prepare children for the next classroom—we help them become capable, kind and curious learners for life.",
+  intro: "UKG is the final step in your child's preschool journey-and the beginning of a lifetime of learning. By this stage, children are confident communicators, independent thinkers and eager explorers. Our UKG programme prepares them for primary school without losing sight of what matters most: curiosity, creativity and the joy of childhood. Through projects, collaborative learning, storytelling, early academics and real-world experiences, children strengthen the skills they need for school while developing the confidence to embrace new challenges with enthusiasm. At BambiBoo, we don't simply prepare children for the next classroom-we help them become capable, kind and curious learners for life.",
   image: ukgImg,
   ratio: "1:12",
   hours: "9:30 AM – 1:00 PM (Mon–Fri)",
