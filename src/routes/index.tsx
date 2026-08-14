@@ -151,7 +151,7 @@ function Home() {
             </div>
             <h1 className="mt-5 text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.08] text-foreground text-balance">
               A preschool where{" "}
-              <span className="relative inline-block px-3.5 py-1 font-extrabold text-primary bg-[#F5CFA0]/90 rounded-2xl shadow-md">
+              <span className="relative inline-block px-3.5 py-1 font-extrabold text-primary bg-[#F5CFA0]/90 rounded-2xl shadow-md animate-float">
                 childhood comes first.
               </span>
             </h1>
@@ -247,7 +247,7 @@ function Home() {
               <div className="text-xs font-bold uppercase tracking-widest text-primary/80">Core programmes</div>
               <h2 className="mt-2 text-4xl md:text-5xl font-bold text-balance">
                 A path for every age, from{" "}
-                <span className="relative inline-block bg-[#F5CFA0] text-primary px-3 py-0.5 rounded-2xl shadow-xs">
+                <span className="relative inline-block bg-[#F5CFA0] text-primary px-3 py-0.5 rounded-2xl shadow-xs animate-float-slow">
                   tiny toes
                   <svg className="absolute -bottom-1.5 left-0 w-full h-2.5 text-primary/70" viewBox="0 0 100 20" preserveAspectRatio="none">
                     <path d="M 5,14 Q 50,2 95,14" stroke="currentColor" strokeWidth="4" strokeLinecap="round" fill="none" />
@@ -443,7 +443,7 @@ function Home() {
           </div>
 
           {/* Quick Category Filter Pills - ALL IN SAME LINE */}
-          <div className="mt-6 mb-8 flex flex-nowrap items-center gap-2.5 overflow-x-auto pb-3 pt-1 scrollbar-none whitespace-nowrap">
+          <div className="mt-6 mb-8 flex flex-nowrap items-center gap-2.5 overflow-x-auto px-3 pb-3 pt-1.5 scrollbar-none whitespace-nowrap">
             {[
               { id: "admissions", label: "Admissions" },
               { id: "timings", label: "Timings" },
@@ -454,11 +454,12 @@ function Home() {
               <button
                 key={c.id}
                 onClick={() => setFaqCategory(c.id)}
-                className={`shrink-0 rounded-xl px-4 py-2.5 text-xs sm:text-sm font-bold transition-all duration-200 ${
+                className={`shrink-0 px-6 py-2.5 text-xs sm:text-sm font-bold transition-all duration-200 inline-flex items-center justify-center ${
                   faqCategory === c.id
-                    ? "bg-primary text-primary-foreground shadow-md scale-105"
+                    ? "bg-primary text-primary-foreground"
                     : "bg-[#FFFDF9] text-foreground/75 border border-white/60 hover:bg-white hover:text-primary"
                 }`}
+                style={{ borderRadius: "9999px", boxShadow: "none" }}
               >
                 {c.label}
               </button>
