@@ -21,7 +21,7 @@ export function AdmissionDialog({
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="max-w-lg overflow-hidden bg-[#F8D196] border border-[#E5BE82] rounded-[32px] p-5 sm:p-6 shadow-2xl">
+      <DialogContent className="max-w-lg overflow-hidden bg-[#F6E8D3] border border-[#E8D5B8] rounded-[32px] p-5 sm:p-6 shadow-2xl">
         <DialogHeader className="mb-1">
           <DialogTitle className="text-xl sm:text-2xl font-extrabold text-[#2C0A4B]">
             Book your visit

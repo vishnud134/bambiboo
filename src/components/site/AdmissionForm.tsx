@@ -80,7 +80,7 @@ export function AdmissionForm({
 
   if (submitted) {
     return (
-      <div className="rounded-[32px] border border-[#430E6C]/30 bg-[#F8D196] p-8 text-center shadow-lg">
+      <div className="rounded-[32px] border border-[#430E6C]/30 bg-[#F6E8D3] p-8 text-center shadow-lg">
         <CheckCircle2 className="mx-auto h-12 w-12 text-[#430E6C]" />
         <h3 className="mt-4 text-2xl font-black text-[#2C0A4B]">Enquiry received</h3>
         <p className="mt-2 text-[#430E6C]/80 font-medium">
@@ -115,7 +115,7 @@ export function AdmissionForm({
       className={
         isDialog
           ? "bg-transparent"
-          : "max-w-2xl w-full rounded-[36px] border border-[#E5BE82]/80 bg-[#F8D196] p-7 sm:p-9 md:p-10 shadow-xl"
+          : "max-w-2xl w-full rounded-[36px] border border-[#E8D5B8]/80 bg-[#F6E8D3] p-7 sm:p-9 md:p-10 shadow-xl"
       }
     >
       {!isDialog && (

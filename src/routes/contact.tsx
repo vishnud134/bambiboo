@@ -20,8 +20,8 @@ export const Route = createFileRoute("/contact")({
 function Contact() {
   return (
     <PageShell>
-      <section className="bg-[#FFECCB] relative overflow-hidden py-10 md:py-16">
-        <div className="absolute -top-20 -right-16 h-72 w-72 blob bg-[#F8D9A8]" />
+      <section className="bg-[#FBF5EB] relative overflow-hidden py-10 md:py-16">
+        <div className="absolute -top-20 -right-16 h-72 w-72 blob bg-[#F5E6CE]" />
         <div className="container-page relative grid gap-8 lg:grid-cols-12 lg:gap-12 xl:gap-14 items-start">
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
@@ -45,7 +45,7 @@ function Contact() {
                 <a
                   key={c.label}
                   href={c.href}
-                  className="flex items-center gap-4 rounded-3xl border border-[#E5BE82]/80 bg-[#FFF6EA] p-3.5 md:p-4 hover:border-primary/50 transition shadow-sm hover:shadow-md"
+                  className="flex items-center gap-4 rounded-3xl border border-[#E8D5B8]/80 bg-[#FFFDF9] p-3.5 md:p-4 hover:border-primary/50 transition shadow-sm hover:shadow-md"
                 >
                   <div className="h-10 w-10 rounded-2xl bg-primary text-primary-foreground grid place-items-center shrink-0 shadow-xs">
                     <c.icon className="h-4 w-4" />
@@ -65,7 +65,7 @@ function Contact() {
         </div>
       </section>
 
-      <section className="bg-[#FEF4DD] py-12 md:py-16">
+      <section className="bg-[#FAF5EC] py-12 md:py-16">
         <div className="container-page grid gap-8 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-8">
             <div className="text-xs font-bold uppercase tracking-widest text-primary/75 mb-1">
