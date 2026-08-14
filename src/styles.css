@@ -19,7 +19,7 @@ select:-webkit-autofill:focus {
 
 @custom-variant dark (&:is(.dark *));
 
-/* BambiBoo design system — warm, playful, trust-forward preschool */
+/* BambiBoo design system - warm, playful, trust-forward preschool */
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
