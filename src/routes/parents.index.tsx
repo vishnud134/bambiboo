@@ -41,12 +41,6 @@ const items: Card[] = [
     color: "sky",
   },
   {
-    name: "Calendar & Holidays",
-    to: "/parents/calendar",
-    tagline: "Term dates, festival breaks and school events at a glance.",
-    color: "lilac",
-  },
-  {
     name: "FAQ",
     to: "/parents/faq",
     tagline: "Answers to the questions parents ask most before joining BambiBoo.",
@@ -112,7 +106,7 @@ export const Route = createFileRoute("/parents/")({
       {
         name: "description",
         content:
-          "Admissions, safety, food, transport, calendar and FAQs everything parents need to know about BambiBoo in Koramangala.",
+          "Admissions, safety, food, transport, and FAQs everything parents need to know about BambiBoo in Koramangala.",
       },
       { property: "og:title", content: "For Parents BambiBoo" },
       { property: "og:description", content: "Everything parents need, in one calm place." },

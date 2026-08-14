@@ -24,7 +24,6 @@ import { Route as BlogsPostIdRouteImport } from './routes/blogs.$postId'
 import { Route as BlogsPreschoolReadinessguideRouteImport } from './routes/blogs.preschool-readinessguide'
 import { Route as ParentsIndexRouteImport } from './routes/parents.index'
 import { Route as ParentsAdmissionRouteImport } from './routes/parents.admission'
-import { Route as ParentsCalendarRouteImport } from './routes/parents.calendar'
 import { Route as ParentsCurriculumRouteImport } from './routes/parents.curriculum'
 import { Route as ParentsDailyRoutineRouteImport } from './routes/parents.daily-routine'
 import { Route as ParentsFaqRouteImport } from './routes/parents.faq'
@@ -122,11 +121,6 @@ const ParentsIndexRoute = ParentsIndexRouteImport.update({
 const ParentsAdmissionRoute = ParentsAdmissionRouteImport.update({
   id: '/parents/admission',
   path: '/parents/admission',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ParentsCalendarRoute = ParentsCalendarRouteImport.update({
-  id: '/parents/calendar',
-  path: '/parents/calendar',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ParentsCurriculumRoute = ParentsCurriculumRouteImport.update({
@@ -254,7 +248,6 @@ export interface FileRoutesByFullPath {
   '/blogs/$postId': typeof BlogsPostIdRoute
   '/blogs/preschool-readinessguide': typeof BlogsPreschoolReadinessguideRoute
   '/parents/admission': typeof ParentsAdmissionRoute
-  '/parents/calendar': typeof ParentsCalendarRoute
   '/parents/curriculum': typeof ParentsCurriculumRoute
   '/parents/daily-routine': typeof ParentsDailyRoutineRoute
   '/parents/faq': typeof ParentsFaqRoute
@@ -294,7 +287,6 @@ export interface FileRoutesByTo {
   '/blogs/$postId': typeof BlogsPostIdRoute
   '/blogs/preschool-readinessguide': typeof BlogsPreschoolReadinessguideRoute
   '/parents/admission': typeof ParentsAdmissionRoute
-  '/parents/calendar': typeof ParentsCalendarRoute
   '/parents/curriculum': typeof ParentsCurriculumRoute
   '/parents/daily-routine': typeof ParentsDailyRoutineRoute
   '/parents/faq': typeof ParentsFaqRoute
@@ -335,7 +327,6 @@ export interface FileRoutesById {
   '/blogs/$postId': typeof BlogsPostIdRoute
   '/blogs/preschool-readinessguide': typeof BlogsPreschoolReadinessguideRoute
   '/parents/admission': typeof ParentsAdmissionRoute
-  '/parents/calendar': typeof ParentsCalendarRoute
   '/parents/curriculum': typeof ParentsCurriculumRoute
   '/parents/daily-routine': typeof ParentsDailyRoutineRoute
   '/parents/faq': typeof ParentsFaqRoute
@@ -377,7 +368,6 @@ export interface FileRouteTypes {
     | '/blogs/$postId'
     | '/blogs/preschool-readinessguide'
     | '/parents/admission'
-    | '/parents/calendar'
     | '/parents/curriculum'
     | '/parents/daily-routine'
     | '/parents/faq'
@@ -417,7 +407,6 @@ export interface FileRouteTypes {
     | '/blogs/$postId'
     | '/blogs/preschool-readinessguide'
     | '/parents/admission'
-    | '/parents/calendar'
     | '/parents/curriculum'
     | '/parents/daily-routine'
     | '/parents/faq'
@@ -457,7 +446,6 @@ export interface FileRouteTypes {
     | '/blogs/$postId'
     | '/blogs/preschool-readinessguide'
     | '/parents/admission'
-    | '/parents/calendar'
     | '/parents/curriculum'
     | '/parents/daily-routine'
     | '/parents/faq'
@@ -496,7 +484,6 @@ export interface RootRouteChildren {
   BeyondMusicRoute: typeof BeyondMusicRoute
   BeyondYogaRoute: typeof BeyondYogaRoute
   ParentsAdmissionRoute: typeof ParentsAdmissionRoute
-  ParentsCalendarRoute: typeof ParentsCalendarRoute
   ParentsCurriculumRoute: typeof ParentsCurriculumRoute
   ParentsDailyRoutineRoute: typeof ParentsDailyRoutineRoute
   ParentsFaqRoute: typeof ParentsFaqRoute
@@ -628,13 +615,6 @@ declare module '@tanstack/react-router' {
       path: '/parents/admission'
       fullPath: '/parents/admission'
       preLoaderRoute: typeof ParentsAdmissionRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/parents/calendar': {
-      id: '/parents/calendar'
-      path: '/parents/calendar'
-      fullPath: '/parents/calendar'
-      preLoaderRoute: typeof ParentsCalendarRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/parents/curriculum': {
@@ -818,7 +798,6 @@ const rootRouteChildren: RootRouteChildren = {
   BeyondMusicRoute: BeyondMusicRoute,
   BeyondYogaRoute: BeyondYogaRoute,
   ParentsAdmissionRoute: ParentsAdmissionRoute,
-  ParentsCalendarRoute: ParentsCalendarRoute,
   ParentsCurriculumRoute: ParentsCurriculumRoute,
   ParentsDailyRoutineRoute: ParentsDailyRoutineRoute,
   ParentsFaqRoute: ParentsFaqRoute,

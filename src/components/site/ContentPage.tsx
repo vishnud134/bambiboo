@@ -27,7 +27,6 @@ const defaultBreadcrumbMap: Record<string, { label: string; to?: string }[]> = {
   "Curriculum & Pedagogy": [{ label: "Parents Corner", to: "/parents" }, { label: "Curriculum & Pedagogy" }],
   "Child Safety Policy": [{ label: "Parents Corner", to: "/parents" }, { label: "Safety & Security" }],
   "Food & Nutrition": [{ label: "Parents Corner", to: "/parents" }, { label: "Food & Meals" }],
-  "Calendar & Holidays": [{ label: "Parents Corner", to: "/parents" }, { label: "Calendar & Holidays" }],
   "Admission Process": [{ label: "Parents Corner", to: "/parents" }, { label: "Admission Process" }],
   "School Transport": [{ label: "Parents Corner", to: "/parents" }, { label: "School Transport" }],
   "Parent Testimonials": [{ label: "Parents Corner", to: "/parents" }, { label: "Parent Testimonials" }],
