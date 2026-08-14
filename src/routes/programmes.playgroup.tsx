@@ -68,11 +68,12 @@ const info: ProgrammeInfo = {
   schedule: [
     { time: "9:30 AM", block: "Warm welcome & free exploration" },
     { time: "10:00 AM", block: "Circle time with songs, stories and conversation" },
-    { time: "10:30 AM", block: "Learning through play and hands-on experiences" },
-    { time: "11:15 AM", block: "Snack & social time" },
-    { time: "11:30 AM", block: "Outdoor play, movement or nature exploration" },
-    { time: "12:00 PM", block: "Creative experiences – art, music or sensory play" },
-    { time: "12:20 PM", block: "Reflection, goodbye circle & home time" },
+    { time: "10:30 AM", block: "Guided learning corners & hands-on play" },
+    { time: "11:00 AM", block: "Snack & social mealtime" },
+    { time: "11:20 AM", block: "Outdoor play, movement & nature exploration" },
+    { time: "11:50 AM", block: "Creative experiences – art, music & sensory play" },
+    { time: "12:10 PM", block: "Story recap, movement games & reflection" },
+    { time: "12:25 PM", block: "Goodbye circle & home time" },
   ],
   activities: [
     "Baby sensory baskets",

@@ -236,7 +236,7 @@ export function FaqSection() {
         </div>
 
         {/* Quick Category Filter Pills - ALL IN SAME LINE */}
-        <div className="mt-6 mb-8 flex flex-nowrap items-center gap-2.5 overflow-x-auto pb-3 pt-1 scrollbar-none whitespace-nowrap">
+        <div className="mt-6 mb-8 flex flex-nowrap items-center gap-2.5 overflow-x-auto px-3 pb-3 pt-1.5 scrollbar-none whitespace-nowrap">
           {[
             { id: "admissions", label: "Admissions" },
             { id: "timings", label: "Timings" },
@@ -247,11 +247,12 @@ export function FaqSection() {
             <button
               key={c.id}
               onClick={() => setFaqCategory(c.id)}
-              className={`shrink-0 rounded-xl px-4 py-2.5 text-xs sm:text-sm font-bold transition-all duration-200 ${
+              className={`shrink-0 px-6 py-2.5 text-xs sm:text-sm font-bold transition-all duration-200 inline-flex items-center justify-center ${
                 faqCategory === c.id
-                  ? "bg-primary text-primary-foreground shadow-md scale-105"
+                  ? "bg-primary text-primary-foreground"
                   : "bg-[#FFFDF9] text-foreground/75 border border-white/60 hover:bg-white hover:text-primary"
               }`}
+              style={{ borderRadius: "9999px", boxShadow: "none" }}
             >
               {c.label}
             </button>

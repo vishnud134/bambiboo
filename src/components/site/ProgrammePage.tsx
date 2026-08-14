@@ -303,19 +303,25 @@ export function ProgrammePage({ info, showHeroForm }: { info: ProgrammeInfo; sho
           <h2 className="mt-2 text-3xl md:text-4xl font-bold">{info.scheduleSubtitle || "Programme schedule"}</h2>
           <div className="mt-8 grid gap-3 md:grid-cols-2">
             {info.schedule.map((s) => {
-              const isHighlighted = s.block === "Breakfast + hydration" || s.block === "Day ends";
+              const isHighlighted =
+                s.block.includes("Breakfast") ||
+                s.block.includes("Snack") ||
+                s.block.includes("Goodbye") ||
+                s.block.includes("Day ends");
               return (
                 <div
                   key={s.time}
                   className={cn(
-                    "flex items-center gap-4 rounded-2xl border p-4 transition",
+                    "flex items-center gap-4 rounded-2xl border p-4 transition hover:bg-primary-foreground/10",
                     isHighlighted
-                      ? "border-primary-foreground/30 bg-primary-foreground/20"
+                      ? "border-accent/40 bg-primary-foreground/15 shadow-sm"
                       : "border-primary-foreground/15 bg-primary-foreground/5"
                   )}
                 >
-                  <div className="rounded-xl bg-accent px-3 py-1.5 text-primary font-bold text-sm">{s.time}</div>
-                  <div className="text-primary-foreground/90">{s.block}</div>
+                  <div className="rounded-xl bg-accent px-3 py-1.5 text-primary font-bold text-sm shrink-0 whitespace-nowrap">
+                    {s.time}
+                  </div>
+                  <div className="text-primary-foreground/90 text-sm md:text-base leading-relaxed">{s.block}</div>
                 </div>
               );
             })}

@@ -67,7 +67,9 @@ function BlogPostPage() {
                   srcSet={hi.srcSet}
                   sizes="(min-width:1024px) 1200px, 100vw"
                   alt={post.title}
-                  className="w-full h-[360px] object-cover"
+                  className="w-full h-[360px] md:h-[450px] object-cover object-center"
+                  loading="eager"
+                  decoding="async"
                 />
               );
             })()}

@@ -8,6 +8,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import preschoolProgImg from "@/assets/bambiboo/preschool-prog-hd.jpg";
+import curriculumHeroImg from "@/assets/bambiboo/curriculum-hero-hd.jpg";
 
 export type BlogPost = {
   id: string;
@@ -28,7 +30,7 @@ export const blogPosts: BlogPost[] = [
     date: "Aug 2, 2026",
     readTime: "4 min read",
     excerpt: "Transitioning to preschool is a big milestone for toddlers and parents alike. Discover 5 gentle routines to make day one full of smiles.",
-    image: "https://www.ameyaworldschool.in/idea/2022/11/9-Tips-for-teaching-kids-Adjectives-in-a-fun-way.jpg",
+    image: preschoolProgImg,
     content: (
       <div className="prose prose-lg max-w-none text-foreground">
         <p>
@@ -39,7 +41,9 @@ export const blogPosts: BlogPost[] = [
           The good news is that a little preparation can help your child feel more confident and comfortable. Here are some simple ways parents can prepare their child for a happy and positive preschool experience.
         </p>
 
-        <h2>1. Talk About Preschool Positively</h2>
+        <h2>Essential Steps for a Smooth Preschool Transition</h2>
+
+        <h3>1. Talk About Preschool Positively</h3>
         <p>
           Start talking about preschool a few days or weeks before the first day. Keep the conversation light, positive, and age-appropriate.
         </p>
@@ -47,7 +51,7 @@ export const blogPosts: BlogPost[] = [
           You can tell your child about the fun things they may experience—playing with other children, listening to stories, singing songs, drawing, exploring, and meeting their teachers.
         </p>
 
-        <h2>2. Introduce a Preschool Routine</h2>
+        <h3>2. Introduce a Preschool Routine</h3>
         <p>
           Children often feel more comfortable when they know what to expect. Before preschool begins, gradually introduce a routine similar to their school schedule.
         </p>
@@ -63,7 +67,7 @@ export const blogPosts: BlogPost[] = [
         </ul>
         <p>A predictable routine can make the transition from home to preschool much smoother.</p>
 
-        <h2>3. Practice Being Away From Parents</h2>
+        <h3>3. Practice Being Away From Parents</h3>
         <p>
           If your child has rarely spent time away from you, the first day can feel like a big change.
         </p>
@@ -71,42 +75,58 @@ export const blogPosts: BlogPost[] = [
           Before preschool starts, allow your child to spend short periods with grandparents, relatives, trusted caregivers, or during playdates. Gradually increasing these periods can help your child become comfortable being away from you.
         </p>
 
-        <h2>4. Help Your Child Become More Independent</h2>
+        <h3>4. Help Your Child Become More Independent</h3>
         <p>
           Encourage your child to practise simple everyday tasks such as eating independently, drinking from their bottle, washing hands, putting toys away, wearing or removing simple footwear, telling an adult when they need the toilet, and carrying their small backpack.
         </p>
 
-        <h2>5. Visit the Preschool Before the First Day</h2>
+        <h3>5. Visit the Preschool Before the First Day</h3>
         <p>
           If possible, take your child to visit the preschool beforehand. Let them see the classroom, play area, teachers, and other children. Familiar surroundings can make the first day feel less unfamiliar.
         </p>
 
-        <h2>6. Let Your Child Help Prepare</h2>
+        {/* Featured In-Article HD Image */}
+        <figure className="my-8 overflow-hidden rounded-2xl border border-primary/15 shadow-md">
+          <img
+            src={curriculumHeroImg}
+            alt="Children happily discovering and playing in a preschool classroom"
+            className="w-full h-[340px] md:h-[420px] object-cover object-center"
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="bg-[#FFF6EA] px-4 py-3 text-center text-xs font-semibold text-muted-foreground border-t border-border/40">
+            Visiting the preschool classroom and meeting teachers beforehand builds confidence and joyful anticipation.
+          </figcaption>
+        </figure>
+
+        <h2>Building Independence & Emotional Security</h2>
+
+        <h3>6. Let Your Child Help Prepare</h3>
         <p>
           Make preparation exciting by involving your child. Let them choose a small backpack, water bottle, or other age-appropriate school essentials. Allow them to help pack their bag the night before.
         </p>
 
-        <h2>7. Don't Make Goodbyes Too Long</h2>
+        <h3>7. Don't Make Goodbyes Too Long</h3>
         <p>
           The first goodbye can be emotional. Give them a warm hug, reassure them that they are safe, and say goodbye confidently. Avoid repeatedly returning after saying goodbye, as this can make separation more difficult.
         </p>
 
-        <h2>8. Stay Calm and Confident</h2>
+        <h3>8. Stay Calm and Confident</h3>
         <p>
           Children often pick up on their parents' emotions. Try to communicate confidence and reassurance — your calm presence helps your child feel that preschool is a safe and positive place.
         </p>
 
-        <h2>9. Don't Compare Your Child With Others</h2>
+        <h3>9. Don't Compare Your Child With Others</h3>
         <p>
           Every child adjusts at their own pace. Give your child time, patience, encouragement, and plenty of reassurance.
         </p>
 
-        <h2>10. Celebrate Their First Preschool Experience</h2>
+        <h3>10. Celebrate Their First Preschool Experience</h3>
         <p>
           After school, ask simple, positive questions about their day and celebrate small achievements—entering the classroom, meeting a teacher, playing with another child, or trying something new.
         </p>
 
-        <p>
+        <p className="mt-6 pt-4 border-t border-border/60">
           With a little preparation, a familiar routine, positive conversations, and lots of reassurance, parents can help make this transition easier and more enjoyable. Every child is different—give them time and space to settle in, trust the process, and celebrate every little step forward.
         </p>
       </div>
