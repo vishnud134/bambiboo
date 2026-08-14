@@ -35,10 +35,16 @@ const items: Card[] = [
     color: "sky",
   },
   {
+    name: "Parent Testimonials",
+    to: "/parents/testimonials",
+    tagline: "Heartfelt stories and experiences shared by BambiBoo families.",
+    color: "berry",
+  },
+  {
     name: "FAQ",
     to: "/parents/faq",
     tagline: "Answers to the questions parents ask most before joining BambiBoo.",
-    color: "sky",
+    color: "lilac",
   },
 ];
 
