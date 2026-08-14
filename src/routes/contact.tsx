@@ -25,34 +25,35 @@ function Contact() {
         <div className="container-page relative grid gap-8 lg:grid-cols-12 lg:gap-12 xl:gap-14 items-start">
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
-              <Breadcrumb items={[{ label: "Contact Us" }]} className="mb-4 text-xs font-semibold text-primary/80" />
+              <Breadcrumb items={[{ label: "Contact Us" }]} className="mb-3 text-xs font-semibold text-primary/80" />
               <div className="text-xs font-bold uppercase tracking-widest text-primary">Contact</div>
-              <h1 className="mt-2 text-4xl md:text-5xl font-black text-balance">
+              <h1 className="mt-1.5 text-3xl sm:text-4xl md:text-5xl font-black text-balance leading-tight">
                 Let's talk about your little one.
               </h1>
-              <p className="mt-3 text-base md:text-lg text-foreground/80 leading-relaxed">
+              <p className="mt-3 text-xs sm:text-sm md:text-base text-foreground/80 leading-relaxed max-w-xl">
                 Choosing a preschool is a big decision, and we'd love to help you make it with confidence. Whether you have questions, would like to visit our campus or simply want to understand if BambiBoo is the right fit for your family, we're just a conversation away. Fill in the form below and our admissions team will get back to you within one working day. Prefer a phone call? We'd love that too.
               </p>
             </div>
 
-            <div className="mt-8 flex flex-col gap-3.5">
+            <div className="mt-6 flex flex-col gap-2.5">
               {[
                 { icon: Phone, label: "Call", value: "+91 99006 39303", href: "tel:+919900639303" },
                 { icon: Mail, label: "Email", value: "hello@bambiboo.in", href: "mailto:hello@bambiboo.in" },
                 { icon: MapPin, label: "Visit", value: "44, 5th Main Rd, 1st Block Koramangala, Bengaluru, Karnataka 560034" },
-                { icon: Clock, label: "Hours", value: "Mon to Sat · 8:30 AM to 6:30 PM" },
+                { icon: Clock, label: "Hours", value: "Mon to Sat - 8:30 AM to 6:30 PM" },
               ].map((c) => (
                 <a
                   key={c.label}
                   href={c.href}
-                  className="flex items-center gap-4 rounded-3xl border border-[#E8D5B8]/80 bg-[#FFFDF9] p-3.5 md:p-4 hover:border-primary/50 transition shadow-sm hover:shadow-md"
+                  className="flex items-center gap-3 rounded-full border border-[#E8D5B8]/80 bg-[#FFFDF9] px-4 py-2.5 hover:border-primary/50 transition shadow-2xs hover:shadow-sm group"
+                  style={{ borderRadius: "9999px" }}
                 >
-                  <div className="h-10 w-10 rounded-2xl bg-primary text-primary-foreground grid place-items-center shrink-0 shadow-xs">
-                    <c.icon className="h-4 w-4" />
+                  <div className="h-8 w-8 rounded-full bg-primary text-primary-foreground grid place-items-center shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
+                    <c.icon className="h-3.5 w-3.5" />
                   </div>
-                  <div>
-                    <div className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{c.label}</div>
-                    <div className="mt-0.5 text-xs md:text-sm font-bold text-foreground">{c.value}</div>
+                  <div className="min-w-0 flex-1">
+                    <div className="text-[10px] font-extrabold uppercase tracking-wider text-muted-foreground leading-none">{c.label}</div>
+                    <div className="mt-0.5 text-xs md:text-xs sm:text-xs font-bold text-foreground truncate">{c.value}</div>
                   </div>
                 </a>
               ))}
