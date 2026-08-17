@@ -288,8 +288,12 @@ export function ProgrammePage({ info, showHeroForm }: { info: ProgrammeInfo; sho
             </div>
             <ul className="md:col-span-7 lg:col-span-8 grid gap-4 sm:grid-cols-2">
               {info.development.map((d) => (
-                <li key={d} className="rounded-2xl border border-border bg-card p-4 text-sm flex items-start gap-3">
-                  <Heart className="h-4 w-4 text-primary shrink-0 mt-1" /> {d}
+                <li
+                  key={d}
+                  className="group master-card-premium rounded-2xl border border-amber-200/50 bg-[#FFFDF9] p-4.5 text-sm font-semibold flex items-start gap-3.5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-amber-300 hover:bg-white"
+                >
+                  <Heart className="h-4.5 w-4.5 text-primary shrink-0 mt-0.5 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300" />
+                  <span className="text-foreground/90 group-hover:text-foreground transition-colors">{d}</span>
                 </li>
               ))}
             </ul>
@@ -381,11 +385,14 @@ export function ProgrammePage({ info, showHeroForm }: { info: ProgrammeInfo; sho
           <div className="container-page py-10 md:py-14">
             <div className="text-xs font-bold uppercase tracking-widest text-primary/80">Development activities</div>
             <h2 className="mt-2 text-3xl md:text-4xl font-bold">Hands, feet, voice, imagination all in play.</h2>
-            <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-8 grid gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
               {info.activities.map((a) => (
-                <div key={a} className="rounded-2xl bg-card border border-border p-5 text-sm">
-                  <span className="mr-2 inline-block h-2 w-2 rounded-full bg-primary" />
-                  {a}
+                <div
+                  key={a}
+                  className="group master-card-premium rounded-2xl border border-amber-200/50 bg-[#FFFDF9] p-4.5 text-sm font-semibold flex items-center gap-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-amber-300 hover:bg-white"
+                >
+                  <span className="h-2 w-2 rounded-full bg-primary shrink-0 group-hover:scale-150 group-hover:bg-amber-500 transition-all duration-300" />
+                  <span className="text-foreground/90 group-hover:text-foreground transition-colors">{a}</span>
                 </div>
               ))}
             </div>
