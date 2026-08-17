@@ -79,15 +79,15 @@ function Testimonials() {
       <section className="bg-background">
         <div className="container-page py-10 md:py-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {items.map((t) => (
-            <div key={t.name} className="rounded-3xl bg-card border border-border p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+            <div key={t.name} className="master-card-premium rounded-3xl p-6 flex flex-col justify-between hover:shadow-xl transition-all duration-400">
               <div>
                 <div className="flex items-center justify-between gap-2">
-                  <div className="flex gap-1 text-accent">
+                  <div className="flex gap-1 text-amber-500">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star key={i} className="h-4 w-4 fill-current" />
                     ))}
                   </div>
-                  <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 px-2.5 py-0.5 text-[10.5px] font-bold">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50/90 text-emerald-700 border border-emerald-200/80 px-2.5 py-0.5 text-[10.5px] font-extrabold shadow-2xs">
                     <svg className="h-3 w-3 fill-current" viewBox="0 0 24 24">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                     </svg>
@@ -97,18 +97,18 @@ function Testimonials() {
                 <p className="mt-4 text-foreground/85 leading-relaxed text-sm md:text-base">"{t.quote}"</p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-border/60 flex items-center gap-3.5">
+              <div className="mt-6 pt-4 border-t border-amber-200/50 flex items-center gap-3.5">
                 <div className="relative shrink-0">
                   <img
                     src={t.avatar}
                     alt={t.name}
-                    className="h-12 w-12 rounded-full object-cover border border-border/80 shadow-xs"
+                    className="h-12 w-12 rounded-full object-cover border-2 border-white shadow-sm"
                     loading="lazy"
                   />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <div className="font-bold text-foreground truncate text-sm md:text-base">{t.name}</div>
-                  <div className="text-xs text-muted-foreground truncate">{t.meta}</div>
+                  <div className="font-extrabold text-foreground truncate text-sm md:text-base">{t.name}</div>
+                  <div className="text-xs text-muted-foreground truncate font-medium">{t.meta}</div>
                 </div>
               </div>
             </div>

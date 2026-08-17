@@ -277,18 +277,18 @@ export function ContentPage({
                   )}
                 </div>
                 {s.bullets && (
-                  <ul className="grid gap-3 sm:grid-cols-2">
+                  <ul className="grid gap-3.5 sm:grid-cols-2">
                     {s.bullets.map((b) => (
                       <li
                         key={b}
-                        className={`master-card flex items-start gap-3 rounded-2xl border p-4 text-sm font-medium transition-all duration-300 ${
+                        className={`master-card-premium flex items-start gap-3.5 rounded-2xl p-4.5 text-sm font-semibold transition-all duration-300 ${
                           s.tone === "berry"
-                            ? "border-primary-foreground/20 bg-primary-foreground/5 hover:bg-primary-foreground/10"
-                            : "border-white/60 bg-card shadow-xs hover:border-primary/40"
+                            ? "border-primary-foreground/20 bg-primary-foreground/10 text-white hover:bg-primary-foreground/15"
+                            : "border-amber-200/50 bg-[#FFFDF9] hover:border-amber-300"
                         }`}
                       >
-                        <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-success text-success-foreground shadow-xs">
-                          <Check className="h-3 w-3" />
+                        <span className="mt-0.5 inline-flex h-5.5 w-5.5 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white shadow-xs">
+                          <Check className="h-3.5 w-3.5" />
                         </span>
                         {b}
                       </li>

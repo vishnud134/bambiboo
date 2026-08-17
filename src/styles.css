@@ -374,4 +374,26 @@ select:-webkit-autofill:focus {
 .scroll-reveal.is-visible > *:nth-child(4) { transition-delay: 240ms; }
 .scroll-reveal.is-visible > *:nth-child(5) { transition-delay: 320ms; }
 
+/* Premium Glassmorphic & Elevated Card Utilities */
+.master-card-premium {
+  background: #FFFDF9;
+  border: 1px solid rgba(245, 207, 160, 0.45);
+  box-shadow: 0 10px 30px -10px rgba(67, 14, 108, 0.04), 0 4px 12px -2px rgba(0, 0, 0, 0.02);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.master-card-premium:hover {
+  transform: translateY(-4px);
+  border-color: rgba(245, 207, 160, 0.85);
+  box-shadow: 0 20px 40px -12px rgba(67, 14, 108, 0.12), 0 8px 20px -4px rgba(245, 207, 160, 0.25);
+}
+
+.glass-card {
+  background: rgba(255, 253, 249, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.03);
+}
+
 

@@ -115,7 +115,7 @@ export function AdmissionForm({
       className={
         isDialog
           ? "bg-transparent w-full"
-          : "max-w-2xl w-full rounded-2xl sm:rounded-[36px] border border-[#E8D5B8]/80 bg-[#F6E8D3] p-4.5 sm:p-8 md:p-10 shadow-xl overflow-hidden"
+          : "max-w-2xl w-full rounded-2xl sm:rounded-[36px] border border-[#E8D5B8] bg-[#F6E8D3]/95 backdrop-blur-md p-4.5 sm:p-8 md:p-10 shadow-2xl shadow-purple-950/10 overflow-hidden"
       }
     >
       {!isDialog && (
@@ -160,7 +160,7 @@ export function AdmissionForm({
         type="submit"
         className={`${
           isDialog ? "mt-4 h-[46px]" : "mt-6 h-[52px]"
-        } inline-flex w-full items-center justify-center gap-2 rounded-full px-6 text-sm font-extrabold text-white transition-all duration-250 ease-out hover:brightness-110 active:scale-[0.99] shadow-md shadow-purple-900/20 cursor-pointer`}
+        } inline-flex w-full items-center justify-center gap-2 rounded-full px-6 text-sm font-extrabold text-white transition-all duration-250 ease-out hover:brightness-110 active:scale-[0.99] shadow-lg shadow-purple-900/25 hover:shadow-purple-900/40 hover:-translate-y-0.5 cursor-pointer`}
         style={{
           backgroundColor: "#8326B5",
         }}
