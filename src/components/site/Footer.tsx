@@ -90,7 +90,7 @@ export function Footer() {
           <div className="mb-1.5 text-xs font-bold uppercase tracking-wider text-primary">Get in touch</div>
           <div className="space-y-[2px] text-xs md:text-sm">
             <div className="flex items-start gap-2 py-[1px]"><Phone className="h-3.5 w-3.5 mt-0.5 text-primary shrink-0" /> +91 99006 39303</div>
-            <div className="flex items-start gap-2 py-[1px]"><Mail className="h-3.5 w-3.5 mt-0.5 text-primary shrink-0" /> hello@bambiboo.in</div>
+            <div className="flex items-start gap-2 py-[1px]"><Mail className="h-3.5 w-3.5 mt-0.5 text-primary shrink-0" /> info@bambiboo.com</div>
             <div className="flex items-start gap-2 py-[1px]"><MapPin className="h-3.5 w-3.5 mt-0.5 text-primary shrink-0" /> 44, 5th Main Rd, 1st Block Koramangala, Bengaluru 560034</div>
             <div className="flex items-start gap-2 py-[1px]"><Clock className="h-3.5 w-3.5 mt-0.5 text-primary shrink-0" /> Mon to Sat · 8:30 AM to 6:30 PM</div>
           </div>

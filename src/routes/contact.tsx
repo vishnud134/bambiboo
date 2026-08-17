@@ -38,7 +38,7 @@ function Contact() {
             <div className="mt-6 flex flex-col gap-2.5 sm:gap-3">
               {[
                 { icon: Phone, label: "Call", value: "+91 99006 39303", href: "tel:+919900639303" },
-                { icon: Mail, label: "Email", value: "hello@bambiboo.in", href: "mailto:hello@bambiboo.in" },
+                { icon: Mail, label: "Email", value: "info@bambiboo.com", href: "mailto:info@bambiboo.com" },
                 { icon: MapPin, label: "Visit", value: "44, 5th Main Rd, 1st Block Koramangala, Bengaluru, Karnataka 560034" },
                 { icon: Clock, label: "Hours", value: "Mon to Sat - 8:30 AM to 6:30 PM" },
               ].map((c) => (
