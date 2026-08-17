@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/site/ContentPage";
 import daycareImg from "@/assets/bambiboo/daycare-prog.jpg";
 import dailyRoutineBagsImg from "@/assets/bambiboo/daily-routine-bags.png";
+import napImg from "@/assets/bambiboo/daily-routine-nap.jpg";
 
 export const Route = createFileRoute("/parents/daily-routine")({
   head: () => ({
@@ -51,6 +52,7 @@ export const Route = createFileRoute("/parents/daily-routine")({
         {
           eyebrow: "Rest Time",
           title: "Do children have nap facilities in Day Care?",
+          image: napImg,
           body: (
             <p>
               Yes. Our Day Care programme includes dedicated rest time in a calm, comfortable environment so children can
