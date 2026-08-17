@@ -15,7 +15,7 @@ export const Route = createFileRoute("/programmes/lkg")({
 });
 
 const info: ProgrammeInfo = {
-  name: "LKG",
+  name: "LKG (Lower Kindergarten)",
   ageRange: "4 to 5 years",
   tagline: "Building confidence, communication and a love for learning.",
   intro: "LKG is where curiosity becomes confidence. By now, children are eager to ask bigger questions, solve problems, express their ideas and take on new challenges. Our LKG programme builds strong foundations for school while protecting the joy of childhood. Through meaningful play, projects, stories, conversations and hands-on exploration, children develop early literacy, numeracy, critical thinking and social skills. More importantly, they learn to believe in themselves. At BambiBoo, school readiness isn't about finishing worksheets. It's about nurturing children who are confident, curious and excited to learn.",
