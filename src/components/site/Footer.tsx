@@ -32,7 +32,7 @@ export function Footer() {
               <Instagram className="h-4.5 w-4.5" />
             </a>
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/people/BambiBoo-PreSchool/61573348333176/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
