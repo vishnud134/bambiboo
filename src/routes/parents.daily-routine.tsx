@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/site/ContentPage";
 import daycareImg from "@/assets/bambiboo/daycare-prog.jpg";
+import dailyRoutineBagsImg from "@/assets/bambiboo/daily-routine-bags.png";
 
 export const Route = createFileRoute("/parents/daily-routine")({
   head: () => ({
@@ -29,6 +30,7 @@ export const Route = createFileRoute("/parents/daily-routine")({
         {
           eyebrow: "Daily Routine",
           title: "What should my child bring every day?",
+          image: dailyRoutineBagsImg,
           body: (
             <p>
               Children should bring a labelled water bottle, a spare set of clothes and any personal essentials. Day Care
