@@ -59,7 +59,7 @@ function Contact() {
             </div>
           </div>
 
-          <div className="lg:col-span-7 flex justify-center lg:justify-end w-full" id="contact-form">
+          <div className="lg:col-span-7 flex justify-center lg:justify-end w-full scroll-mt-24 sm:scroll-mt-28 md:scroll-mt-32" id="contact-form">
             <AdmissionForm variant="card" />
           </div>
         </div>
@@ -81,7 +81,18 @@ function Contact() {
           <div className="lg:col-span-4 flex items-center justify-start lg:justify-end w-full">
             <a
               href="#contact-form"
-              className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 hover:brightness-105 transition"
+              onClick={(e) => {
+                e.preventDefault();
+                const elem = document.getElementById("contact-form");
+                if (elem) {
+                  elem.scrollIntoView({ behavior: "smooth", block: "start" });
+                  const firstInput = elem.querySelector("input") as HTMLInputElement | null;
+                  if (firstInput) {
+                    setTimeout(() => firstInput.focus(), 350);
+                  }
+                }
+              }}
+              className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 hover:brightness-105 transition cursor-pointer"
             >
               Book a Visit
             </a>
