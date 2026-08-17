@@ -2,11 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Star } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 
-import deepthiAvatar from "@/assets/bambiboo/avatars/deepthi.jpg";
-import shilpaAvatar from "@/assets/bambiboo/avatars/shilpa.jpg";
-import akshayAvatar from "@/assets/bambiboo/avatars/akshay.jpg";
-import rathnaAvatar from "@/assets/bambiboo/avatars/rathna.jpg";
-import shivashankarAvatar from "@/assets/bambiboo/avatars/shivashankar.jpg";
+import deepthiAvatar from "@/assets/bambiboo/avatars/deepthi.png";
+import shilpaAvatar from "@/assets/bambiboo/avatars/shilpa.png";
+import akshayAvatar from "@/assets/bambiboo/avatars/akshay.png";
+import rathnaAvatar from "@/assets/bambiboo/avatars/rathna.png";
+import shivashankarAvatar from "@/assets/bambiboo/avatars/shivashankar.png";
 import vishnuAvatar from "@/assets/bambiboo/avatars/vishnu.jpg";
 
 export const Route = createFileRoute("/parents/testimonials")({
@@ -25,42 +25,36 @@ const items = [
   {
     name: "Deepthi Srinivasan",
     avatar: deepthiAvatar,
-    isLocalGuide: true,
     meta: "Local Guide · 32 reviews · 28 photos · 10 months ago",
     quote: "BambiBoo is a very nice school. The teachers and helping staff are very friendly and co operative. It has both Montessori and Pre school curriculum which helps in inculcating the diverse nature of both aspects in the children. It's a rare combination to get schools like this. It is very spacious inside as well for kids to play around. They have lot of activities for children so they learn things in a practical way. All the best to BambiBoo for more successful years ahead.",
   },
   {
     name: "Shilpa Ipirti",
     avatar: shilpaAvatar,
-    isLocalGuide: false,
     meta: "1 review · 10 months ago",
     quote: "The school management is responsive and transparent. Communication with parents is effective and regular. Teachers and staff are approachable, supportive, and always attentive to the well being of children. The school provides quality education with dedicated teachers, well planned lessons, and a focus on overall learning outcomes, creating a nurturing and motivating environment for every child.",
   },
   {
     name: "Akshay Kini",
     avatar: akshayAvatar,
-    isLocalGuide: false,
     meta: "3 reviews · 9 months ago",
     quote: "Our daughter enjoys going to the preschool. The teachers take good and personal care. They update us on her progress. The curriculum is mixed and has best of both schemes. They conduct different activities and festivals are celebrated with interactivity for kids.",
   },
   {
     name: "Rathna Shivashankar",
     avatar: rathnaAvatar,
-    isLocalGuide: true,
     meta: "Local Guide · 1 review · 1 photo · 10 months ago",
     quote: "Good teaching and children care taking system good and nice",
   },
   {
     name: "Shivashankar Palaniyappa",
     avatar: shivashankarAvatar,
-    isLocalGuide: true,
     meta: "Local Guide · 16 reviews · 15 photos · 10 months ago",
     quote: "Activity, neet and clean place, Good teachers.",
   },
   {
     name: "Vishnu Devakaran",
     avatar: vishnuAvatar,
-    isLocalGuide: false,
     meta: "3 reviews · 6 months ago",
     quote: "Excellent preschool! The staff is caring, professional, and always welcoming. The curriculum is well balanced with academics, play, and creative activities. My child enjoys going to school every day and has become more confident and independent. I highly recommend BambiBoo Preschool to any parent looking for a safe and nurturing place for their little one.",
   },
@@ -108,17 +102,9 @@ function Testimonials() {
                   <img
                     src={t.avatar}
                     alt={t.name}
-                    className="h-12 w-12 rounded-full object-cover border-2 border-primary/20 shadow-xs"
+                    className="h-12 w-12 rounded-full object-cover border border-border/80 shadow-xs"
                     loading="lazy"
                   />
-                  {t.isLocalGuide && (
-                    <div
-                      className="absolute -bottom-0.5 -right-0.5 h-5 w-5 rounded-full bg-[#EA4335] text-white grid place-items-center text-[10px] font-black border-2 border-white shadow-xs"
-                      title="Google Local Guide"
-                    >
-                      ★
-                    </div>
-                  )}
                 </div>
                 <div className="min-w-0 flex-1">
                   <div className="font-bold text-foreground truncate text-sm md:text-base">{t.name}</div>
