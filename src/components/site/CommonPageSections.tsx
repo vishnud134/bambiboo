@@ -240,18 +240,18 @@ export function FaqSection() {
   const filteredFaqs = categoryFaqs.filter((f) => f.cat === faqCategory);
 
   return (
-    <section className="bg-[#FBF2E7]">
-      <div className="container-page section-padding">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6">
+    <section className="bg-[#FBF2E7] py-10 md:py-14">
+      <div className="container-page max-w-4xl mx-auto">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
           <div>
             <div className="text-xs font-bold uppercase tracking-widest text-primary/80">FAQ</div>
-            <h2 className="mt-2 text-3xl md:text-5xl font-bold text-balance">Quick answers for busy parents.</h2>
+            <h2 className="mt-1.5 text-2xl md:text-3xl font-bold text-balance">Quick answers for busy parents.</h2>
           </div>
-          <p className="text-sm md:text-base text-muted-foreground max-w-md leading-relaxed">Still curious? Reach out we love long conversations about your child.</p>
+          <p className="text-xs sm:text-sm text-muted-foreground max-w-xs leading-relaxed">Still curious? Reach out we love long conversations about your child.</p>
         </div>
 
         {/* Quick Category Filter Pills - ALL IN SAME LINE */}
-        <div className="mt-6 mb-8 flex flex-nowrap items-center gap-2.5 overflow-x-auto px-3 pb-3 pt-1.5 scrollbar-none whitespace-nowrap">
+        <div className="mt-4 mb-6 flex flex-nowrap items-center gap-2 overflow-x-auto px-1 pb-2 scrollbar-none whitespace-nowrap">
           {[
             { id: "admissions", label: "Admissions" },
             { id: "timings", label: "Timings" },
@@ -262,26 +262,25 @@ export function FaqSection() {
             <button
               key={c.id}
               onClick={() => setFaqCategory(c.id)}
-              className={`shrink-0 px-6 py-2.5 text-xs sm:text-sm font-bold transition-all duration-200 inline-flex items-center justify-center ${
+              className={`shrink-0 px-4.5 py-2 text-xs font-bold transition-all duration-200 inline-flex items-center justify-center rounded-full ${
                 faqCategory === c.id
-                  ? "bg-primary text-primary-foreground"
+                  ? "bg-primary text-primary-foreground shadow-2xs"
                   : "bg-[#FFFDF9] text-foreground/75 border border-white/60 hover:bg-white hover:text-primary"
               }`}
-              style={{ borderRadius: "9999px", boxShadow: "none" }}
             >
               {c.label}
             </button>
           ))}
         </div>
 
-        <div className="divide-y divide-border/60 rounded-3xl border border-white/70 bg-[#FFFDF9] shadow-xs overflow-hidden">
+        <div className="divide-y divide-border/60 rounded-2xl border border-white/80 bg-[#FFFDF9] shadow-xs overflow-hidden max-w-3xl mx-auto">
           {filteredFaqs.map((f) => (
-            <details key={f.q} className="group p-6 md:p-7 open:bg-[#FBF2E7]/60 transition-colors">
-              <summary className="flex cursor-pointer list-none items-center justify-between font-bold text-foreground text-lg">
+            <details key={f.q} className="group p-4.5 sm:px-6 open:bg-[#FBF2E7]/60 transition-colors">
+              <summary className="flex cursor-pointer list-none items-center justify-between font-bold text-foreground text-sm sm:text-base">
                 {f.q}
-                <span className="ml-4 text-primary text-xl transition-transform duration-300 group-open:rotate-45">+</span>
+                <span className="ml-3 text-primary text-lg transition-transform duration-300 group-open:rotate-45">+</span>
               </summary>
-              <p className="mt-3 text-muted-foreground leading-relaxed text-sm md:text-base">{f.a}</p>
+              <p className="mt-2.5 text-muted-foreground leading-relaxed text-xs sm:text-sm">{f.a}</p>
             </details>
           ))}
         </div>
