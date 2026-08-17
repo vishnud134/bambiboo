@@ -90,8 +90,8 @@ export function Header() {
                     <ChevronDown className="h-3.5 w-3.5" />
                   </button>
                 )}
-                <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full pt-2 transition">
-                  <div className="min-w-64 rounded-2xl border border-border bg-card p-2 shadow-xl shadow-primary/10">
+                <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full pt-2 transition-all duration-200 ease-out z-50">
+                  <div className="min-w-64 rounded-2xl border border-[#E8D5B8] bg-[#FFFDF9] p-2.5 shadow-2xl shadow-purple-950/10 backdrop-blur-md">
                     {item.children.map((c) =>
                       c.to.startsWith("http") ? (
                         <a
@@ -99,17 +99,19 @@ export function Header() {
                           href={c.to}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block rounded-xl px-3 py-2 text-sm text-foreground/85 hover:bg-secondary hover:text-primary whitespace-nowrap"
+                          className="group/item flex items-center justify-between rounded-xl px-3.5 py-2.5 text-sm font-semibold text-foreground/85 hover:bg-[#FFF6EA] hover:text-primary hover:translate-x-1.5 transition-all duration-200 whitespace-nowrap"
                         >
-                          {c.label}
+                          <span>{c.label}</span>
+                          <span className="text-primary opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-200 font-bold">→</span>
                         </a>
                       ) : (
                         <Link
                           key={c.to}
                           to={c.to}
-                          className="block rounded-xl px-3 py-2 text-sm text-foreground/85 hover:bg-secondary hover:text-primary whitespace-nowrap"
+                          className="group/item flex items-center justify-between rounded-xl px-3.5 py-2.5 text-sm font-semibold text-foreground/85 hover:bg-[#FFF6EA] hover:text-primary hover:translate-x-1.5 transition-all duration-200 whitespace-nowrap"
                         >
-                          {c.label}
+                          <span>{c.label}</span>
+                          <span className="text-primary opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-200 font-bold">→</span>
                         </Link>
                       ),
                     )}

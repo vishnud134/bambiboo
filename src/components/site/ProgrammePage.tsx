@@ -260,13 +260,16 @@ export function ProgrammePage({ info, showHeroForm }: { info: ProgrammeInfo; sho
             {info.features.map((f, i) => {
               const FeatureIcon = getFeatureIcon(f.title);
               return (
-                <div key={f.title} className="rounded-3xl bg-[#FFF6EA] border border-[#F8D196]/50 p-6 shadow-sm hover:shadow-xl hover:shadow-black/20 transition flex flex-col justify-between h-full">
+                <div
+                  key={f.title}
+                  className="group master-card-premium rounded-3xl bg-[#FFF6EA] border border-[#F8D196]/60 p-6 shadow-sm hover:shadow-2xl hover:shadow-purple-950/20 hover:-translate-y-2 hover:border-[#F8D196] hover:bg-white transition-all duration-350 flex flex-col justify-between h-full cursor-default"
+                >
                   <div>
-                    <div className={`h-10 w-10 rounded-2xl grid place-items-center ${i % 2 === 0 ? "bg-accent text-primary" : "bg-primary text-primary-foreground"}`}>
+                    <div className={`h-10 w-10 rounded-2xl grid place-items-center ${i % 2 === 0 ? "bg-accent text-primary" : "bg-primary text-primary-foreground"} group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300 shadow-xs`}>
                       <FeatureIcon className="h-5 w-5" />
                     </div>
-                    <h3 className="mt-4 text-lg font-bold text-[#430E6C]">{f.title}</h3>
-                    <p className="mt-2 text-sm text-[#430E6C]/80 leading-relaxed">{f.body}</p>
+                    <h3 className="mt-4 text-lg font-bold text-[#430E6C] group-hover:text-primary transition-colors">{f.title}</h3>
+                    <p className="mt-2 text-sm text-[#430E6C]/85 leading-relaxed">{f.body}</p>
                   </div>
                 </div>
               );
