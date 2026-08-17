@@ -47,6 +47,19 @@ function CurriculumPage() {
           ],
         },
         {
+          eyebrow: "Progress & Transparency",
+          title: "Milestone tracking without pressure.",
+          tone: "berry",
+          image: progressImg,
+          bulletStyle: "ticks",
+          bullets: [
+            "Daily teacher observation notes and individual photo updates shared with parents",
+            "Comprehensive termly milestone portfolio tracking cognitive, social, and motor growth",
+            "Regular parent-teacher dialogues to align home routines with school milestones",
+            "Smooth transition pathways into primary school boards (CBSE, ICSE, IB & Cambridge)",
+          ],
+        },
+        {
           title: "Preparing children for primary school",
           tone: "cream",
           image: environmentImg,
@@ -60,19 +73,6 @@ function CurriculumPage() {
               </p>
             </div>
           ),
-        },
-        {
-          eyebrow: "Progress & Transparency",
-          title: "Milestone tracking without pressure.",
-          tone: "berry",
-          image: progressImg,
-          bulletStyle: "ticks",
-          bullets: [
-            "Daily teacher observation notes and individual photo updates shared with parents",
-            "Comprehensive termly milestone portfolio tracking cognitive, social, and motor growth",
-            "Regular parent-teacher dialogues to align home routines with school milestones",
-            "Smooth transition pathways into primary school boards (CBSE, ICSE, IB & Cambridge)",
-          ],
         },
       ]}
     />
