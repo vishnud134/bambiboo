@@ -6,15 +6,16 @@ import { ScrollProgress } from "./ScrollProgress";
 import { BackToTop } from "./BackToTop";
 import { FloatingContactButtons } from "./FloatingContactButtons";
 import { BlogCarouselSection } from "./BlogCarouselSection";
+import { ScrollRevealProvider } from "./ScrollReveal";
 
 const excludedBlogRoutes = [
   "/programmes",
   "/parents",
   "/world",
   "/beyond",
-    "/contact",
+  "/contact",
   "/parents/faq",
-    "/blogs",
+  "/blogs",
 ];
 
 export function PageShell({ children }: { children: ReactNode }) {
@@ -28,8 +29,10 @@ export function PageShell({ children }: { children: ReactNode }) {
     <div className="flex min-h-screen flex-col relative overflow-x-clip">
       <ScrollProgress />
       <Header />
-      <main className="flex-1">{children}</main>
-      {showBlog && <BlogCarouselSection />}
+      <ScrollRevealProvider>
+        <main className="flex-1">{children}</main>
+        {showBlog && <BlogCarouselSection />}
+      </ScrollRevealProvider>
       <Footer />
       <FloatingContactButtons />
       <BackToTop />
