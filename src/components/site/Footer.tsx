@@ -41,7 +41,7 @@ export function Footer() {
               <Facebook className="h-4.5 w-4.5" />
             </a>
             <a
-              href="https://youtube.com"
+              href="https://www.youtube.com/@AnantaEducationalTrust"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
