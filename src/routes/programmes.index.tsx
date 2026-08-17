@@ -65,7 +65,7 @@ const programmes: Card[] = [
 const colorMap: Record<Card["color"], string> = {
   sky: "bg-[#EBF5FF] text-[#0369A1] border-[#B9E6FE] hover:bg-[#E0F2FE]",
   mint: "bg-[#ECFDF5] text-[#047857] border-[#A7F3D0] hover:bg-[#D1FAE5]",
-  coral: "bg-[#FFF1F2] text-[#E11D48] border-[#FECDD3] hover:bg-[#FFE4E6]",
+  coral: "bg-[#FFF8F0] text-[#D97706] border-[#FDE68A] hover:bg-[#FEF3C7]",
   amber: "bg-[#FEFCE8] text-[#B45309] border-[#FEF08A] hover:bg-[#FEF9C3]",
   lavender: "bg-[#F5F3FF] text-[#6D28D9] border-[#DDD6FE] hover:bg-[#EDE9FE]",
   indigo: "bg-[#EEF2FF] text-[#4338CA] border-[#C7D2FE] hover:bg-[#E0E7FF]",
