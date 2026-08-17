@@ -23,6 +23,13 @@ import festivalFieldTripsPillarImg from "@/assets/festival-field-trips-pillar.we
 import musicDancePillarImg from "@/assets/music-dance-pillar.webp";
 import natureOutdoorPillarImg from "@/assets/nature-outdoor-pillar.webp";
 import steamPlayPillarImg from "@/assets/steam-play-pillar.webp";
+
+import deepthiAvatar from "@/assets/bambiboo/avatars/deepthi.png";
+import shilpaAvatar from "@/assets/bambiboo/avatars/shilpa.png";
+import akshayAvatar from "@/assets/bambiboo/avatars/akshay.png";
+import rathnaAvatar from "@/assets/bambiboo/avatars/rathna.png";
+import shivashankarAvatar from "@/assets/bambiboo/avatars/shivashankar.png";
+import vishnuAvatar from "@/assets/bambiboo/avatars/vishnu.png";
 import yogaMindfulnessPillarImg from "@/assets/yoga-mindfulness-pillar.webp";
 
 const pillars = [
@@ -178,12 +185,12 @@ export function LovedByFamiliesSection() {
         <Carousel opts={{ align: "start", loop: true }} className="mt-10">
           <CarouselContent className="-ml-5 lg:-ml-6">
             {[
-              { name: "Deepthi Srinivasan", meta: "Local Guide · 32 reviews · 28 photos · 10 months ago", quote: "BambiBoo is a very nice school. The teachers and helping staff are very friendly and co operative. It has both Montessori and Pre school curriculum which helps in inculcating the diverse nature of both aspects in the children. It's a rare combination to get schools like this. It is very spacious inside as well for kids to play around. They have lot of activities for children so they learn things in a practical way. All the best to BambiBoo for more successful years ahead." },
-              { name: "Shilpa Ipirti", meta: "1 review · 10 months ago", quote: "The school management is responsive and transparent. Communication with parents is effective and regular. Teachers and staff are approachable, supportive, and always attentive to the well being of children. The school provides quality education with dedicated teachers, well planned lessons, and a focus on overall learning outcomes, creating a nurturing and motivating environment for every child." },
-              { name: "Akshay Kini", meta: "3 reviews · 9 months ago", quote: "Our daughter enjoys going to the preschool. The teachers take good and personal care. They update us on her progress. The curriculum is mixed and has best of both schemes. They conduct different activities and festivals are celebrated with interactivity for kids." },
-              { name: "Rathna Shivashankar", meta: "2 reviews · 10 months ago", quote: "Our child has been attending BambiBoo for several months now, and we are very happy with the experience. The teachers are warm, patient, and truly attentive to each child. The classrooms are clean, safe, and full of engaging activities that support both learning and play." },
-              { name: "Vishnu Devakaran", meta: "4 reviews · 8 months ago", quote: "Wonderful preschool with caring teachers and a beautiful campus. Our little one looks forward to school every day, and we love the regular updates from the team." },
-              { name: "SHIVASHANKAR PALANIYAPPA", meta: "5 reviews · 11 months ago", quote: "BambiBoo has been a great place for our child's early learning journey. The staff is friendly, the environment is safe, and the curriculum balances play and academics beautifully." },
+              { name: "Deepthi Srinivasan", avatar: deepthiAvatar, meta: "Local Guide · 32 reviews · 28 photos · 10 months ago", quote: "BambiBoo is a very nice school. The teachers and helping staff are very friendly and co operative. It has both Montessori and Pre school curriculum which helps in inculcating the diverse nature of both aspects in the children. It's a rare combination to get schools like this. It is very spacious inside as well for kids to play around. They have lot of activities for children so they learn things in a practical way. All the best to BambiBoo for more successful years ahead." },
+              { name: "Shilpa Ipirti", avatar: shilpaAvatar, meta: "1 review · 10 months ago", quote: "The school management is responsive and transparent. Communication with parents is effective and regular. Teachers and staff are approachable, supportive, and always attentive to the well being of children. The school provides quality education with dedicated teachers, well planned lessons, and a focus on overall learning outcomes, creating a nurturing and motivating environment for every child." },
+              { name: "Akshay Kini", avatar: akshayAvatar, meta: "3 reviews · 9 months ago", quote: "Our daughter enjoys going to the preschool. The teachers take good and personal care. They update us on her progress. The curriculum is mixed and has best of both schemes. They conduct different activities and festivals are celebrated with interactivity for kids." },
+              { name: "Rathna Shivashankar", avatar: rathnaAvatar, meta: "Local Guide · 1 review · 1 photo · 10 months ago", quote: "Good teaching and children care taking system good and nice" },
+              { name: "Shivashankar Palaniyappa", avatar: shivashankarAvatar, meta: "Local Guide · 16 reviews · 15 photos · 10 months ago", quote: "Activity, neet and clean place, Good teachers." },
+              { name: "Vishnu Devakaran", avatar: vishnuAvatar, meta: "3 reviews · 6 months ago", quote: "Excellent preschool! The staff is caring, professional, and always welcoming. The curriculum is well balanced with academics, play, and creative activities. My child enjoys going to school every day and has become more confident and independent. I highly recommend BambiBoo Preschool to any parent looking for a safe and nurturing place for their little one." },
             ].map((t) => (
               <CarouselItem key={t.name} className="pl-5 lg:pl-6 md:basis-1/2 lg:basis-1/3">
                 <Link
@@ -198,9 +205,17 @@ export function LovedByFamiliesSection() {
                     </div>
                     <p className="mt-4 text-foreground/85 leading-relaxed line-clamp-6 text-sm md:text-base">"{t.quote}"</p>
                   </div>
-                  <div className="mt-6 pt-5 border-t border-border/60">
-                    <div className="font-bold text-foreground">{t.name}</div>
-                    <div className="text-xs text-muted-foreground font-medium">{t.meta}</div>
+                  <div className="mt-6 pt-5 border-t border-border/60 flex items-center gap-3.5">
+                    <img
+                      src={t.avatar}
+                      alt={t.name}
+                      className="h-11 w-11 rounded-full object-cover border border-border/80 shadow-2xs shrink-0"
+                      loading="lazy"
+                    />
+                    <div className="min-w-0 flex-1">
+                      <div className="font-bold text-foreground truncate">{t.name}</div>
+                      <div className="text-xs text-muted-foreground font-medium truncate">{t.meta}</div>
+                    </div>
                   </div>
                 </Link>
               </CarouselItem>

@@ -2,6 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ProgrammePage, type ProgrammeInfo } from "@/components/site/ProgrammePage";
 
 import nurseryImg from "@/assets/bambiboo/nursery-prog.jpg";
+import deepthiAvatar from "@/assets/bambiboo/avatars/deepthi.png";
+import shilpaAvatar from "@/assets/bambiboo/avatars/shilpa.png";
+import akshayAvatar from "@/assets/bambiboo/avatars/akshay.png";
+import rathnaAvatar from "@/assets/bambiboo/avatars/rathna.png";
+import shivashankarAvatar from "@/assets/bambiboo/avatars/shivashankar.png";
+import vishnuAvatar from "@/assets/bambiboo/avatars/vishnu.png";
 
 const info: ProgrammeInfo = {
   name: "Nursery",
@@ -82,12 +88,12 @@ const info: ProgrammeInfo = {
     "Festival celebrations & cooking days",
   ],
   testimonials: [
-    { name: "Deepthi Srinivasan", meta: "Local Guide · 32 reviews · 28 photos · 10 months ago", quote: "BambiBoo is a very nice school. The teachers and helping staff are very friendly and co operative. It has both Montessori and Pre school curriculum which helps in inculcating the diverse nature of both aspects in the children. It's a rare combination to get schools like this. It is very spacious inside as well for kids to play around. They have lot of activities for children so they learn things in a practical way." },
-    { name: "Shilpa Ipirti", meta: "1 review · 10 months ago", quote: "The school management is responsive and transparent. Communication with parents is effective and regular. Teachers and staff are approachable, supportive, and always attentive to the well being of children. The school provides quality education with dedicated teachers, well planned lessons, and a focus on overall learning outcomes." },
-    { name: "Akshay Kini", meta: "3 reviews · 9 months ago", quote: "Our daughter enjoys going to the preschool. The teachers take good and personal care. They update us on her progress. The curriculum is mixed and has best of both schemes. They conduct different activities and festivals are celebrated with interactivity for kids." },
-    { name: "Rathna Shivashankar", meta: "Local Guide · 1 review · 1 photo · 10 months ago", quote: "Good teaching and children care taking system good and nice" },
-    { name: "Shivashankar Palaniyappa", meta: "Local Guide · 16 reviews · 15 photos · 10 months ago", quote: "Activity, neet and clean place, Good teachers." },
-    { name: "Vishnu Devakaran", meta: "3 reviews", quote: "Excellent preschool! The staff is caring, professional, and always welcoming. The curriculum is well balanced with academics, play, and creative activities. My child enjoys going to school every day and has become more confident and independent. I highly recommend BambiBoo Preschool to any parent looking for a safe and nurturing place for their little one." },
+    { name: "Deepthi Srinivasan", avatar: deepthiAvatar, meta: "Local Guide · 32 reviews · 28 photos · 10 months ago", quote: "BambiBoo is a very nice school. The teachers and helping staff are very friendly and co operative. It has both Montessori and Pre school curriculum which helps in inculcating the diverse nature of both aspects in the children. It's a rare combination to get schools like this. It is very spacious inside as well for kids to play around. They have lot of activities for children so they learn things in a practical way." },
+    { name: "Shilpa Ipirti", avatar: shilpaAvatar, meta: "1 review · 10 months ago", quote: "The school management is responsive and transparent. Communication with parents is effective and regular. Teachers and staff are approachable, supportive, and always attentive to the well being of children. The school provides quality education with dedicated teachers, well planned lessons, and a focus on overall learning outcomes." },
+    { name: "Akshay Kini", avatar: akshayAvatar, meta: "3 reviews · 9 months ago", quote: "Our daughter enjoys going to the preschool. The teachers take good and personal care. They update us on her progress. The curriculum is mixed and has best of both schemes. They conduct different activities and festivals are celebrated with interactivity for kids." },
+    { name: "Rathna Shivashankar", avatar: rathnaAvatar, meta: "Local Guide · 1 review · 1 photo · 10 months ago", quote: "Good teaching and children care taking system good and nice" },
+    { name: "Shivashankar Palaniyappa", avatar: shivashankarAvatar, meta: "Local Guide · 16 reviews · 15 photos · 10 months ago", quote: "Activity, neet and clean place, Good teachers." },
+    { name: "Vishnu Devakaran", avatar: vishnuAvatar, meta: "3 reviews · 6 months ago", quote: "Excellent preschool! The staff is caring, professional, and always welcoming. The curriculum is well balanced with academics, play, and creative activities. My child enjoys going to school every day and has become more confident and independent. I highly recommend BambiBoo Preschool to any parent looking for a safe and nurturing place for their little one." },
   ],
 };
 

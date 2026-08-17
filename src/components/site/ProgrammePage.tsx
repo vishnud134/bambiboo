@@ -82,7 +82,7 @@ export type ProgrammeInfo = {
   scheduleSubtitle?: string;
   schedule: { time: string; block: string }[];
   activities: string[];
-  testimonials?: { name: string; meta: string; quote: string }[];
+  testimonials?: { name: string; meta: string; quote: string; avatar?: string }[];
   color: "berry" | "coral" | "sky" | "mint" | "butter";
 };
 
@@ -350,9 +350,19 @@ export function ProgrammePage({ info, showHeroForm }: { info: ProgrammeInfo; sho
                         ))}
                       </div>
                       <p className="mt-4 flex-1 text-foreground/85 leading-relaxed">"{t.quote}"</p>
-                      <div className="mt-5 pt-5 border-t border-border">
-                        <div className="font-bold">{t.name}</div>
-                        <div className="text-xs text-muted-foreground">{t.meta}</div>
+                      <div className="mt-5 pt-5 border-t border-border flex items-center gap-3.5">
+                        {t.avatar && (
+                          <img
+                            src={t.avatar}
+                            alt={t.name}
+                            className="h-11 w-11 rounded-full object-cover border border-border/80 shadow-2xs shrink-0"
+                            loading="lazy"
+                          />
+                        )}
+                        <div className="min-w-0 flex-1">
+                          <div className="font-bold truncate">{t.name}</div>
+                          <div className="text-xs text-muted-foreground truncate">{t.meta}</div>
+                        </div>
                       </div>
                     </Link>
                   </CarouselItem>
