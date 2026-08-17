@@ -22,7 +22,6 @@ import { PageShell } from "@/components/site/PageShell";
 import { HeroCarousel } from "@/components/site/HeroCarousel";
 import { AdmissionDialog } from "@/components/site/AdmissionDialog";
 import { WhyBambiboo } from "@/components/site/WhyBambiboo";
-import { ProgrammeFinder } from "@/components/site/ProgrammeFinder";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 import deepthiAvatar from "@/assets/bambiboo/avatars/deepthi.png";
@@ -246,9 +245,6 @@ function Home() {
 
       {/* WHY BAMBIBOO */}
       <WhyBambiboo />
-
-      {/* INTERACTIVE PROGRAMME FINDER */}
-      <ProgrammeFinder />
 
       {/* CORE PROGRAMMES */}
       <section className="bg-[#FFEBCB]">
