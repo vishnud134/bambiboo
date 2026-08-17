@@ -15,7 +15,7 @@ export const Route = createFileRoute("/programmes/playgroup")({
 });
 
 const info: ProgrammeInfo = {
-  name: "Playgroup (2–3 Years)",
+  name: "Playgroup",
   ageRange: "Age 2 – 3 Years",
   tagline: "A joyful first step into independence, friendships and discovery.",
   intro: "Playgroup is where children take their first confident steps into the world on their own. For many children, this is their first experience away from home. We make that transition gentle, reassuring and joyful. Through play, stories, music, movement and everyday routines, children begin to build confidence, form friendships and discover the excitement of learning alongside others. There is no pressure to 'perform.' Every day is about exploring, asking questions, trying new things and feeling safe enough to grow at their own pace.",
