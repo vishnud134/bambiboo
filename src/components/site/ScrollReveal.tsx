@@ -5,9 +5,9 @@ export function ScrollRevealProvider({ children }: { children: React.ReactNode }
   const location = useLocation();
 
   useEffect(() => {
-    // Select sections, cards, and major container blocks across the page
+    // Select only inner content items (cards, content wrappers) and NOT section background containers
     const elements = document.querySelectorAll(
-      "section, article, .master-card, .scroll-reveal-item"
+      ".container-page > *, .master-card, .scroll-reveal-item"
     );
 
     const observer = new IntersectionObserver(
