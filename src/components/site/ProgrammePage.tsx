@@ -74,6 +74,7 @@ export type ProgrammeInfo = {
   features: { title: string; body: string }[];
   development?: string[];
   developmentTitle?: string;
+  developmentDescription?: string;
   learningExperiencesTitle?: string;
   learningExperiencesDescription?: string;
   learningExperiences?: string[];
@@ -282,7 +283,7 @@ export function ProgrammePage({ info, showHeroForm }: { info: ProgrammeInfo; sho
               <div className="text-xs font-bold uppercase tracking-widest text-primary/80">Holistic development</div>
               <h2 className="mt-2 text-3xl md:text-4xl font-bold text-balance">{info.developmentTitle || "Five domains, one child."}</h2>
               <p className="mt-4 text-muted-foreground max-w-md">
-                Every activity is mapped to specific developmental outcomes so parents know exactly what their child is growing into.
+                {info.developmentDescription || "Every activity is mapped to specific developmental outcomes so parents know exactly what their child is growing into."}
               </p>
             </div>
             <ul className="md:col-span-7 lg:col-span-8 grid gap-4 sm:grid-cols-2">

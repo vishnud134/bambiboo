@@ -1,4 +1,4 @@
-import { createFileRoute, useParams } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/site/PageShell";
 import { blogPosts } from "@/components/site/BlogCarouselSection";
 import { BlogTOC } from "@/components/site/BlogTOC";
@@ -18,14 +18,13 @@ export const Route = createFileRoute("/blogs/$postId")({
 });
 
 function BlogPostPage() {
-  const params = useParams() as any;
-  const id = params?.postId;
-  const post = blogPosts.find((p) => p.id === id);
+  const { postId } = Route.useParams();
+  const post = blogPosts.find((p) => p.id === postId);
 
   // Prefer higher-res Unsplash images when available
-  const makeHighRes = (url: string) => {
+  const makeHighRes = (url: string): { src: string; srcSet?: string } => {
     try {
-      if (!url) return url;
+      if (!url) return { src: url };
       if (url.includes("images.unsplash.com")) {
         // replace any w=... param with higher value
         if (/w=\d+/.test(url)) {
@@ -114,7 +113,7 @@ function BlogPostPage() {
                 <div className="text-xs text-muted-foreground">Related posts</div>
                 <ul className="mt-3 space-y-2">
                   {blogPosts.slice(1,4).map((p) => (
-                    <li key={p.id}><a href={`/blogs/${p.id}`} className="text-sm text-primary hover:underline">{p.title}</a></li>
+                    <li key={p.id}><Link to="/blogs/$postId" params={{ postId: p.id }} className="text-sm text-primary hover:underline">{p.title}</Link></li>
                   ))}
                 </ul>
               </div>

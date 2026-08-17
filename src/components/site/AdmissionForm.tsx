@@ -114,15 +114,15 @@ export function AdmissionForm({
       noValidate
       className={
         isDialog
-          ? "bg-transparent"
-          : "max-w-2xl w-full rounded-[36px] border border-[#E8D5B8]/80 bg-[#F6E8D3] p-7 sm:p-9 md:p-10 shadow-xl"
+          ? "bg-transparent w-full"
+          : "max-w-2xl w-full rounded-2xl sm:rounded-[36px] border border-[#E8D5B8]/80 bg-[#F6E8D3] p-4.5 sm:p-8 md:p-10 shadow-xl overflow-hidden"
       }
     >
       {!isDialog && (
-        <div className="mb-6">
+        <div className="mb-5 sm:mb-6">
           <p className="text-[11px] uppercase tracking-widest text-[#430E6C] font-extrabold">ADMISSION ENQUIRY</p>
-          <h3 className="mt-1 text-2xl sm:text-3xl font-extrabold text-[#2C0A4B]">Tell us about your little one</h3>
-          <p className="mt-1 text-xs sm:text-sm text-[#430E6C]/80 font-medium">
+          <h3 className="mt-1 text-xl sm:text-3xl font-extrabold text-[#2C0A4B]">Tell us about your little one</h3>
+          <p className="mt-1 text-xs sm:text-sm text-[#430E6C]/80 font-medium leading-relaxed">
             Fill this in and we'll get back within one working day.
           </p>
         </div>
@@ -199,7 +199,7 @@ function FloatingField({
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder={floated ? "" : label}
-          className={`peer h-full w-full rounded-[22px] bg-transparent px-4 text-[13.5px] font-semibold text-[#2C2C2C] outline-none ${
+          className={`peer h-full w-full rounded-[22px] bg-transparent ${isDate ? "pl-4 pr-9" : "px-4"} text-[13.5px] font-semibold text-[#2C2C2C] outline-none ${
             floated ? (compact ? "pt-3.5 pb-0.5" : "pt-4 pb-1") : "py-2"
           } focus:pt-4 focus:pb-1 placeholder:text-gray-400 placeholder:font-normal`}
         />
@@ -245,7 +245,7 @@ function FloatingSelect({
         <select
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className={`peer h-full w-full appearance-none rounded-[22px] bg-transparent px-4 text-[13.5px] font-semibold text-[#2C2C2C] outline-none cursor-pointer ${
+          className={`peer h-full w-full appearance-none rounded-[22px] bg-transparent pl-4 pr-9 text-[13.5px] font-semibold text-[#2C2C2C] outline-none cursor-pointer ${
             floated ? (compact ? "pt-3.5 pb-0.5" : "pt-4 pb-1") : "py-2"
           } focus:pt-4 focus:pb-1`}
         >

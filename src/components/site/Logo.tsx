@@ -10,7 +10,7 @@ export function Logo({ className = "h-12 sm:h-14 lg:h-16 w-auto" }: { className?
         className={className}
         width={240}
         height={64}
-        fetchpriority="high"
+        fetchPriority="high"
       />
     </Link>
   );
