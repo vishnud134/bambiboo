@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/site/ContentPage";
-import daycareImg from "@/assets/bambiboo/daycare-prog.jpg";
+import dailyRoutineHeroImg from "@/assets/bambiboo/daily-routine-hero.jpg";
 import dailyRoutineBagsImg from "@/assets/bambiboo/daily-routine-bags.png";
 import napImg from "@/assets/bambiboo/daily-routine-nap.jpg";
 
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/parents/daily-routine")({
       eyebrow="Daily Routine & Care"
       title="A calm routine for Day Care families."
       intro="Our Day Care programme blends familiar routines, comfort items and restful breaks so children feel at ease, nourished and ready to learn."
-      heroImage={daycareImg}
+      heroImage={dailyRoutineHeroImg}
       breadcrumbItems={[
         { label: "Parents Corner", to: "/parents" },
         { label: "Daily Routine & Care" },
