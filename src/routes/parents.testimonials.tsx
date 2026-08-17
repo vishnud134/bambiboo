@@ -7,7 +7,7 @@ import shilpaAvatar from "@/assets/bambiboo/avatars/shilpa.png";
 import akshayAvatar from "@/assets/bambiboo/avatars/akshay.png";
 import rathnaAvatar from "@/assets/bambiboo/avatars/rathna.png";
 import shivashankarAvatar from "@/assets/bambiboo/avatars/shivashankar.png";
-import vishnuAvatar from "@/assets/bambiboo/avatars/vishnu.jpg";
+import vishnuAvatar from "@/assets/bambiboo/avatars/vishnu.png";
 
 export const Route = createFileRoute("/parents/testimonials")({
   head: () => ({
