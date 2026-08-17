@@ -3,6 +3,7 @@ import { ContentPage } from "@/components/site/ContentPage";
 import dailyRoutineHeroImg from "@/assets/bambiboo/daily-routine-hero.jpg";
 import dailyRoutineBagsImg from "@/assets/bambiboo/daily-routine-bags.png";
 import napImg from "@/assets/bambiboo/daily-routine-nap.jpg";
+import mealsImg from "@/assets/bambiboo/daily-routine-meals.jpg";
 
 export const Route = createFileRoute("/parents/daily-routine")({
   head: () => ({
@@ -42,6 +43,8 @@ export const Route = createFileRoute("/parents/daily-routine")({
         {
           eyebrow: "Meals",
           title: "Does BambiBoo provide meals?",
+          image: mealsImg,
+          imagePosition: "left",
           body: (
             <p>
               No. Families provide breakfast, lunch and snacks from home so children enjoy familiar food that suits their
