@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { z } from "zod";
-import { CheckCircle2, Send, Calendar, ChevronDown } from "lucide-react";
+import { CheckCircle2, Send, Calendar, ChevronDown, Loader2 } from "lucide-react";
+
+const GOOGLE_APPS_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbwEX2ByE0m3PDLOYzkXrNPrQvJJ6IXsaReZQzntNoP-QadNVuUerpbQ0oS1QTCFPhKd/exec";
 
 const schema = z.object({
   parentName: z.string().trim().min(2, "Please enter your name").max(80),
@@ -56,14 +59,18 @@ export function AdmissionForm({
     message: "",
   });
   const [errors, setErrors] = useState<FieldErrors>({});
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const isDialog = variant === "dialog";
 
   const set = <K extends keyof FormValues>(k: K, v: FormValues[K]) =>
     setValues((s) => ({ ...s, [k]: v }));
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (submitting) return;
+
     const parsed = schema.safeParse(values);
     if (!parsed.success) {
       const fieldErrs: FieldErrors = {};
@@ -74,8 +81,83 @@ export function AdmissionForm({
       setErrors(fieldErrs);
       return;
     }
+
     setErrors({});
-    setSubmitted(true);
+    setSubmitError(null);
+    setSubmitting(true);
+
+    const payload = {
+      parentName: values.parentName.trim(),
+      phone: values.phone.trim(),
+      email: values.email.trim(),
+      childName: values.childName.trim(),
+      childDOB: values.childDob,
+      programme: values.programme,
+      preferredStartDate: values.startDate || "",
+    };
+
+    try {
+      const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (response.ok || response.status === 0 || response.type === "opaque") {
+        try {
+          const data = await response.json();
+          if (data && data.success === false) {
+            setSubmitError("Something went wrong. Please try again.");
+            setSubmitting(false);
+            return;
+          }
+        } catch {
+          // If response cannot be parsed as JSON, HTTP 200/302 was received and processed
+        }
+        setSubmitted(true);
+        setValues({
+          parentName: "",
+          email: "",
+          phone: "",
+          childName: "",
+          childDob: "",
+          programme: "",
+          startDate: "",
+          message: "",
+        });
+      } else {
+        setSubmitError("Something went wrong. Please try again.");
+      }
+    } catch {
+      // Fallback with no-cors if CORS restriction occurs in restrictive browsers
+      try {
+        await fetch(GOOGLE_APPS_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8",
+          },
+          body: JSON.stringify(payload),
+        });
+        setSubmitted(true);
+        setValues({
+          parentName: "",
+          email: "",
+          phone: "",
+          childName: "",
+          childDob: "",
+          programme: "",
+          startDate: "",
+          message: "",
+        });
+      } catch {
+        setSubmitError("Something went wrong. Please try again.");
+      }
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -84,11 +166,12 @@ export function AdmissionForm({
         <CheckCircle2 className="mx-auto h-12 w-12 text-[#430E6C]" />
         <h3 className="mt-4 text-2xl font-black text-[#2C0A4B]">Enquiry received</h3>
         <p className="mt-2 text-[#430E6C]/80 font-medium">
-          Thank you, {values.parentName.split(" ")[0]}. Our admissions lead will reach out within one working day.
+          Thank you! Your enquiry has been submitted successfully. Our admissions team will get back to you shortly.
         </p>
         <button
           onClick={() => {
             setSubmitted(false);
+            setSubmitError(null);
             setValues({
               parentName: "",
               email: "",
@@ -100,7 +183,7 @@ export function AdmissionForm({
               message: "",
             });
           }}
-          className="mt-6 rounded-full border border-[#430E6C] px-6 py-2.5 text-xs font-bold text-[#430E6C] hover:bg-[#430E6C] hover:text-white transition-all shadow-xs"
+          className="mt-6 rounded-full border border-[#430E6C] px-6 py-2.5 text-xs font-bold text-[#430E6C] hover:bg-[#430E6C] hover:text-white transition-all shadow-xs cursor-pointer"
         >
           Submit another enquiry
         </button>
@@ -156,16 +239,31 @@ export function AdmissionForm({
         )}
       </div>
 
+      {submitError && (
+        <div className="mt-4 p-3 rounded-2xl bg-red-50 border border-red-200 text-center text-xs font-bold text-red-600">
+          {submitError}
+        </div>
+      )}
+
       <button
         type="submit"
+        disabled={submitting}
         className={`${
           isDialog ? "mt-4 h-[46px]" : "mt-6 h-[52px]"
-        } inline-flex w-full items-center justify-center gap-2 rounded-full px-6 text-sm font-extrabold text-white transition-all duration-250 ease-out hover:brightness-110 active:scale-[0.99] shadow-lg shadow-purple-900/25 hover:shadow-purple-900/40 hover:-translate-y-0.5 cursor-pointer`}
+        } inline-flex w-full items-center justify-center gap-2 rounded-full px-6 text-sm font-extrabold text-white transition-all duration-250 ease-out hover:brightness-110 active:scale-[0.99] shadow-lg shadow-purple-900/25 hover:shadow-purple-900/40 hover:-translate-y-0.5 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed`}
         style={{
           backgroundColor: "#8326B5",
         }}
       >
-        <Send className="h-4 w-4" /> Send enquiry
+        {submitting ? (
+          <>
+            <Loader2 className="h-4 w-4 animate-spin" /> Sending...
+          </>
+        ) : (
+          <>
+            <Send className="h-4 w-4" /> Send enquiry
+          </>
+        )}
       </button>
     </form>
   );
