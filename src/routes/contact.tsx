@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import { AdmissionForm } from "@/components/site/AdmissionForm";
+import { AdmissionDialog } from "@/components/site/AdmissionDialog";
 import { Breadcrumb } from "@/components/site/Breadcrumb";
 
 export const Route = createFileRoute("/contact")({
@@ -45,7 +46,7 @@ function Contact() {
                 <a
                   key={c.label}
                   href={c.href}
-                  className="flex items-start sm:items-center gap-3 rounded-2xl sm:rounded-full border border-[#E8D5B8]/80 bg-[#FFFDF9] p-3 sm:px-4 sm:py-2.5 hover:border-primary/50 transition shadow-2xs hover:shadow-sm group"
+                  className="flex items-start sm:items-center gap-3 rounded-2xl sm:rounded-full border border-border/80 bg-white p-3 sm:px-4 sm:py-2.5 hover:border-primary/50 transition shadow-2xs hover:shadow-sm group"
                 >
                   <div className="h-8 w-8 rounded-full bg-primary text-primary-foreground grid place-items-center shrink-0 shadow-2xs group-hover:scale-105 transition-transform mt-0.5 sm:mt-0">
                     <c.icon className="h-3.5 w-3.5" />
@@ -65,7 +66,7 @@ function Contact() {
         </div>
       </section>
 
-      <section className="bg-[#FAF5EC] py-8 sm:py-12 md:py-16">
+      <section className="bg-[#F8FAFC] py-8 sm:py-12 md:py-16">
         <div className="container-page grid gap-6 sm:gap-8 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-8">
             <div className="text-xs font-bold uppercase tracking-widest text-primary/75 mb-1">
@@ -79,23 +80,13 @@ function Contact() {
             </p>
           </div>
           <div className="lg:col-span-4 flex items-center justify-start lg:justify-end w-full">
-            <a
-              href="#contact-form"
-              onClick={(e) => {
-                e.preventDefault();
-                const elem = document.getElementById("contact-form");
-                if (elem) {
-                  elem.scrollIntoView({ behavior: "smooth", block: "start" });
-                  const firstInput = elem.querySelector("input") as HTMLInputElement | null;
-                  if (firstInput) {
-                    setTimeout(() => firstInput.focus(), 350);
-                  }
-                }
-              }}
-              className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 hover:brightness-105 transition cursor-pointer"
-            >
-              Book a Visit
-            </a>
+            <AdmissionDialog>
+              <button
+                className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 hover:brightness-105 transition cursor-pointer"
+              >
+                Book a Visit
+              </button>
+            </AdmissionDialog>
           </div>
         </div>
       </section>
