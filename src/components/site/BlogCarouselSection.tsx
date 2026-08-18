@@ -105,7 +105,7 @@ export const blogPosts: BlogPost[] = [
             loading="eager"
             decoding="async"
           />
-          <figcaption className="bg-[#FFF6EA] px-4 py-3 text-center text-xs font-semibold text-muted-foreground border-t border-border/40">
+          <figcaption className="bg-slate-50 px-4 py-3 text-center text-xs font-semibold text-muted-foreground border-t border-border/40">
             Visiting the preschool classroom and meeting teachers beforehand builds confidence and joyful anticipation.
           </figcaption>
         </figure>
@@ -191,7 +191,7 @@ export const blogPosts: BlogPost[] = [
             loading="lazy"
             decoding="async"
           />
-          <figcaption className="bg-[#FFF6EA] px-4 py-3 text-center text-xs font-semibold text-muted-foreground border-t border-border/40">
+          <figcaption className="bg-slate-50 px-4 py-3 text-center text-xs font-semibold text-muted-foreground border-t border-border/40">
             A blended environment provides structured Montessori material shelves alongside collaborative play zones.
           </figcaption>
         </figure>
@@ -258,7 +258,7 @@ export const blogPosts: BlogPost[] = [
             loading="lazy"
             decoding="async"
           />
-          <figcaption className="bg-[#FFF6EA] px-4 py-3 text-center text-xs font-semibold text-muted-foreground border-t border-border/40">
+          <figcaption className="bg-slate-50 px-4 py-3 text-center text-xs font-semibold text-muted-foreground border-t border-border/40">
             Hands-on building activities foster spatial reasoning, resilience, and early engineering skills.
           </figcaption>
         </figure>
@@ -312,7 +312,7 @@ export const blogPosts: BlogPost[] = [
             loading="lazy"
             decoding="async"
           />
-          <figcaption className="bg-[#FFF6EA] px-4 py-3 text-center text-xs font-semibold text-muted-foreground border-t border-border/40">
+          <figcaption className="bg-slate-50 px-4 py-3 text-center text-xs font-semibold text-muted-foreground border-t border-border/40">
             Enjoying fresh, colorful whole foods and fruit smoothies together builds lifelong healthy eating habits.
           </figcaption>
         </figure>
@@ -375,7 +375,7 @@ export const blogPosts: BlogPost[] = [
             loading="lazy"
             decoding="async"
           />
-          <figcaption className="bg-[#FFF6EA] px-4 py-3 text-center text-xs font-semibold text-muted-foreground border-t border-border/40">
+          <figcaption className="bg-slate-50 px-4 py-3 text-center text-xs font-semibold text-muted-foreground border-t border-border/40">
             Outdoor nature walks build environmental curiosity, spatial confidence, and physical coordination.
           </figcaption>
         </figure>
@@ -431,7 +431,7 @@ export const blogPosts: BlogPost[] = [
             loading="lazy"
             decoding="async"
           />
-          <figcaption className="bg-[#FFF6EA] px-4 py-3 text-center text-xs font-semibold text-muted-foreground border-t border-border/40">
+          <figcaption className="bg-slate-50 px-4 py-3 text-center text-xs font-semibold text-muted-foreground border-t border-border/40">
             Soft-edged furniture, anti-skid flooring, and monitored spaces keep children secure while they explore.
           </figcaption>
         </figure>
@@ -467,7 +467,7 @@ export const blogPosts: BlogPost[] = [
 
 export function BlogCarouselSection({ className = "" }: { className?: string }) {
   return (
-    <section className={`bg-[#FFEBCB] py-12 md:py-16 border-t border-[#E5BE82]/50 ${className}`}>
+    <section className={`bg-[#FAFAFC] py-12 md:py-16 border-t border-border/60 ${className}`}>
       <div className="container-page">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 md:mb-10">
@@ -490,10 +490,10 @@ export function BlogCarouselSection({ className = "" }: { className?: string }) 
           <CarouselContent className="-ml-5 lg:-ml-6">
             {blogPosts.map((post) => (
               <CarouselItem key={post.id} className="pl-5 lg:pl-6 md:basis-1/2 lg:basis-1/3">
-                <article className="master-card group h-full rounded-3xl bg-[#FFF6EA] border border-white/70 overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                <article className="master-card group h-full rounded-3xl bg-white border border-border/60 overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
                   <div>
                     {/* Cover Image */}
-                    <div className="relative h-48 w-full overflow-hidden bg-[#FFE6C0]">
+                    <div className="relative h-48 w-full overflow-hidden bg-slate-100">
                       <img
                         src={post.image}
                         alt={post.title}

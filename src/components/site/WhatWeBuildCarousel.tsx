@@ -25,7 +25,7 @@ export function WhatWeBuildCarousel({ items }: { items: BuildItem[] }) {
 
   return (
     <div
-      className="relative w-full max-w-md lg:max-w-[450px] lg:mr-auto overflow-hidden rounded-3xl border border-white/60 bg-[#FFF6EA] shadow-md master-card group"
+      className="relative w-full max-w-md lg:max-w-[450px] lg:mr-auto overflow-hidden rounded-3xl border border-border/60 bg-white shadow-md master-card group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -71,7 +71,7 @@ export function WhatWeBuildCarousel({ items }: { items: BuildItem[] }) {
       </div>
 
       {/* Caption & Indicators */}
-      <div className="p-5 md:p-6 bg-[#FFF6EA] flex flex-col justify-between min-h-[100px]">
+      <div className="p-5 md:p-6 bg-white flex flex-col justify-between min-h-[100px]">
         <div className="relative min-h-[48px] flex items-center">
           {items.map((item, index) => {
             const isActive = index === currentIndex;

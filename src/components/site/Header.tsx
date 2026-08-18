@@ -57,7 +57,7 @@ const nav: NavGroup[] = [
 export function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-50 border-b border-[#E8D5B8]/60 bg-[#F6E8D3]/95 backdrop-blur-md shadow-sm">
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-white/95 backdrop-blur-md shadow-xs">
       <div className="container-page-wide flex items-center justify-between gap-4 sm:gap-6 py-2.5 sm:py-3.5">
         <Logo />
         <nav className="hidden lg:flex flex-1 items-center justify-center gap-1 px-2">
@@ -91,7 +91,7 @@ export function Header() {
                   </button>
                 )}
                 <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full pt-2 transition-all duration-200 ease-out z-50">
-                  <div className="min-w-64 rounded-2xl border border-[#E8D5B8] bg-[#FFFDF9] p-2.5 shadow-2xl shadow-purple-950/10 backdrop-blur-md">
+                  <div className="min-w-64 rounded-2xl border border-border/80 bg-white p-2.5 shadow-2xl shadow-purple-950/10 backdrop-blur-md">
                     {item.children.map((c) =>
                       c.to.startsWith("http") ? (
                         <a
@@ -99,7 +99,7 @@ export function Header() {
                           href={c.to}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="group/item flex items-center justify-between rounded-xl px-3.5 py-2.5 text-sm font-semibold text-foreground/85 hover:bg-[#FFF6EA] hover:text-primary hover:translate-x-1.5 transition-all duration-200 whitespace-nowrap"
+                          className="group/item flex items-center justify-between rounded-xl px-3.5 py-2.5 text-sm font-semibold text-foreground/85 hover:bg-primary/5 hover:text-primary hover:translate-x-1.5 transition-all duration-200 whitespace-nowrap"
                         >
                           <span>{c.label}</span>
                           <span className="text-primary opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-200 font-bold">→</span>
@@ -108,7 +108,7 @@ export function Header() {
                         <Link
                           key={c.to}
                           to={c.to}
-                          className="group/item flex items-center justify-between rounded-xl px-3.5 py-2.5 text-sm font-semibold text-foreground/85 hover:bg-[#FFF6EA] hover:text-primary hover:translate-x-1.5 transition-all duration-200 whitespace-nowrap"
+                          className="group/item flex items-center justify-between rounded-xl px-3.5 py-2.5 text-sm font-semibold text-foreground/85 hover:bg-primary/5 hover:text-primary hover:translate-x-1.5 transition-all duration-200 whitespace-nowrap"
                         >
                           <span>{c.label}</span>
                           <span className="text-primary opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-200 font-bold">→</span>
@@ -144,12 +144,12 @@ export function Header() {
         <div className="hidden lg:flex items-center gap-2 shrink-0">
           <a
             href="tel:+919900639303"
-            className="hidden xl:inline-flex items-center gap-2 rounded-full border border-border bg-[#FFF6EA] px-3.5 py-2 text-sm font-semibold text-foreground hover:border-primary hover:text-primary transition shadow-xs hover:shadow-sm"
+            className="hidden xl:inline-flex items-center gap-2 rounded-full border border-border/80 bg-secondary px-3.5 py-2 text-sm font-semibold text-foreground hover:border-primary hover:text-primary transition shadow-2xs hover:shadow-xs"
           >
             <Phone className="h-4 w-4 text-primary" /> +91 99006 39303
           </a>
           <AdmissionDialog>
-            <button className="shimmer-pill inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-bold text-[#FFF6EA] shadow-lg shadow-primary/30 hover:brightness-110 hover:-translate-y-0.5 transition-all whitespace-nowrap">
+            <button className="shimmer-pill inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-bold text-white shadow-md shadow-primary/20 hover:brightness-110 hover:-translate-y-0.5 transition-all whitespace-nowrap">
               Book a Visit
             </button>
           </AdmissionDialog>

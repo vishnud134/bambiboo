@@ -103,8 +103,8 @@ function FAQ() {
 
   return (
     <PageShell>
-      <section className="bg-[#FFECCB] relative overflow-hidden">
-        <div className="absolute -top-20 -right-16 h-72 w-72 blob bg-[#F8D9A8]" />
+      <section className="bg-[#FAFAFC] relative overflow-hidden">
+        <div className="absolute -top-20 -right-16 h-72 w-72 blob bg-primary/5" />
         <div className="container-page relative py-12 md:py-16">
           <Breadcrumb items={[{ label: "Parents Corner", to: "/parents" }, { label: "FAQ" }]} className="mb-4 text-xs font-semibold text-primary/80" />
           
@@ -127,7 +127,7 @@ function FAQ() {
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="Search questions (e.g. CCTV, fees, meals, timings)..."
-                  className="w-full rounded-2xl border border-border bg-[#FFF6EA] pl-12 pr-10 py-3.5 text-sm font-semibold text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 shadow-xs"
+                  className="w-full rounded-2xl border border-border/80 bg-white pl-12 pr-10 py-3.5 text-sm font-semibold text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 shadow-xs"
                 />
                 {query && (
                   <button

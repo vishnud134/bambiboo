@@ -129,9 +129,9 @@ export function ProgrammePage({ info, showHeroForm }: { info: ProgrammeInfo; sho
   return (
     <PageShell>
       {/* Hero */}
-      <section className="bg-[#FFECCB] text-[#430E6C] relative overflow-hidden">
-        <div className="absolute -top-20 -right-16 h-72 w-72 blob bg-[#F8D9A8]" />
-        <div className="absolute -bottom-24 -left-10 h-64 w-64 blob bg-primary/10" />
+      <section className="bg-[#FAFAFC] text-[#430E6C] relative overflow-hidden">
+        <div className="absolute -top-20 -right-16 h-72 w-72 blob bg-primary/5" />
+        <div className="absolute -bottom-24 -left-10 h-64 w-64 blob bg-primary/5" />
         {showHeroForm ? (
           <div className="container-page relative py-12 md:py-16 lg:py-20 grid lg:grid-cols-12 gap-8 lg:gap-14 xl:gap-16 items-start">
             <div className="lg:col-span-7 flex flex-col gap-6">
@@ -262,7 +262,7 @@ export function ProgrammePage({ info, showHeroForm }: { info: ProgrammeInfo; sho
               return (
                 <div
                   key={f.title}
-                  className="group master-card-premium rounded-3xl bg-[#FFF6EA] border border-[#F8D196]/60 p-6 shadow-sm hover:shadow-2xl hover:shadow-purple-950/20 hover:-translate-y-2 hover:border-[#F8D196] hover:bg-white transition-all duration-350 flex flex-col justify-between h-full cursor-default"
+                  className="group master-card-premium rounded-3xl bg-white border border-border/60 p-6 shadow-sm hover:shadow-2xl hover:shadow-purple-950/20 hover:-translate-y-2 hover:border-primary/40 transition-all duration-350 flex flex-col justify-between h-full cursor-default"
                 >
                   <div>
                     <div className={`h-10 w-10 rounded-2xl grid place-items-center ${i % 2 === 0 ? "bg-accent text-primary" : "bg-primary text-primary-foreground"} group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300 shadow-xs`}>
@@ -293,7 +293,7 @@ export function ProgrammePage({ info, showHeroForm }: { info: ProgrammeInfo; sho
               {info.development.map((d) => (
                 <li
                   key={d}
-                  className="group master-card-premium rounded-2xl border border-amber-200/50 bg-[#FFFDF9] p-4.5 text-sm font-semibold flex items-start gap-3.5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-amber-300 hover:bg-white"
+                  className="group master-card-premium rounded-2xl border border-border/60 bg-white p-4.5 text-sm font-semibold flex items-start gap-3.5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-primary/40"
                 >
                   <Heart className="h-4.5 w-4.5 text-primary shrink-0 mt-0.5 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300" />
                   <span className="text-foreground/90 group-hover:text-foreground transition-colors">{d}</span>
@@ -307,7 +307,7 @@ export function ProgrammePage({ info, showHeroForm }: { info: ProgrammeInfo; sho
       {/* Schedule */}
       <section className="bg-primary text-primary-foreground">
         <div className="container-page py-10 md:py-14">
-          <div className="text-xs font-bold uppercase tracking-widest text-accent">{info.scheduleTitle || "A day at BambiBoo"}</div>
+          <div className="text-xs font-bold uppercase tracking-widest text-amber-300">{info.scheduleTitle || "A day at BambiBoo"}</div>
           <h2 className="mt-2 text-3xl md:text-4xl font-bold">{info.scheduleSubtitle || "Programme schedule"}</h2>
           <div className="mt-8 grid gap-3 md:grid-cols-2">
             {info.schedule.map((s) => {
@@ -322,11 +322,11 @@ export function ProgrammePage({ info, showHeroForm }: { info: ProgrammeInfo; sho
                   className={cn(
                     "flex items-center gap-4 rounded-2xl border p-4 transition hover:bg-primary-foreground/10",
                     isHighlighted
-                      ? "border-accent/40 bg-primary-foreground/15 shadow-sm"
+                      ? "border-amber-300/40 bg-primary-foreground/15 shadow-sm"
                       : "border-primary-foreground/15 bg-primary-foreground/5"
                   )}
                 >
-                  <div className="rounded-xl bg-accent px-3 py-1.5 text-primary font-bold text-sm shrink-0 whitespace-nowrap">
+                  <div className="rounded-xl bg-amber-300 px-3 py-1.5 text-primary font-bold text-sm shrink-0 whitespace-nowrap">
                     {s.time}
                   </div>
                   <div className="text-primary-foreground/90 text-sm md:text-base leading-relaxed">{s.block}</div>
@@ -351,7 +351,7 @@ export function ProgrammePage({ info, showHeroForm }: { info: ProgrammeInfo; sho
                       to="/parents/testimonials"
                       className="h-full rounded-3xl bg-card border border-border p-6 flex flex-col hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 transition"
                     >
-                      <div className="flex gap-1 text-accent">
+                      <div className="flex gap-1 text-amber-500">
                         {Array.from({ length: 5 }).map((_, i) => (
                           <Star key={i} className="h-4 w-4 fill-current" />
                         ))}
@@ -392,9 +392,9 @@ export function ProgrammePage({ info, showHeroForm }: { info: ProgrammeInfo; sho
               {info.activities.map((a) => (
                 <div
                   key={a}
-                  className="group master-card-premium rounded-2xl border border-amber-200/50 bg-[#FFFDF9] p-4.5 text-sm font-semibold flex items-center gap-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-amber-300 hover:bg-white"
+                  className="group master-card-premium rounded-2xl border border-border/60 bg-white p-4.5 text-sm font-semibold flex items-center gap-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-primary/40"
                 >
-                  <span className="h-2 w-2 rounded-full bg-primary shrink-0 group-hover:scale-150 group-hover:bg-amber-500 transition-all duration-300" />
+                  <span className="h-2 w-2 rounded-full bg-primary shrink-0 group-hover:scale-150 group-hover:bg-purple-600 transition-all duration-300" />
                   <span className="text-foreground/90 group-hover:text-foreground transition-colors">{a}</span>
                 </div>
               ))}
@@ -404,7 +404,7 @@ export function ProgrammePage({ info, showHeroForm }: { info: ProgrammeInfo; sho
       )}
 
       {/* CTA */}
-      <section className="bg-[#FFEBCB] pt-10 md:pt-14 pb-11">
+      <section className="bg-slate-50 pt-10 md:pt-14 pb-11">
         <div className="container-page">
           <div className="rounded-[40px] bg-[#3D1C84] p-10 md:p-14 text-primary-foreground relative overflow-hidden">
             <div className="absolute top-0 right-0 h-full w-1/3 bg-[#8F6584]" style={{ clipPath: "ellipse(75% 120% at 100% 0%)" }} />

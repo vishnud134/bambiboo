@@ -139,14 +139,14 @@ function Home() {
   return (
     <PageShell>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-[#FBF5EB] bg-ambient-mesh">
+      <section className="relative overflow-hidden bg-[#FAFAFC] bg-ambient-mesh">
         {/* Floating Nursery Decorative Elements */}
         <div className="absolute top-12 left-10 text-2xl animate-float opacity-40 select-none pointer-events-none" aria-hidden="true" />
         <div className="absolute top-1/3 right-12 text-3xl animate-float-slow opacity-30 select-none pointer-events-none" aria-hidden="true" />
         <div className="absolute bottom-12 left-1/4 text-2xl animate-float opacity-35 select-none pointer-events-none" aria-hidden="true" />
 
-        <div className="absolute -top-24 -right-24 h-96 w-96 blob bg-[#F8D9A8] animate-float-slow" />
-        <div className="absolute top-40 -left-16 h-72 w-72 blob bg-[#FFD48A]/25 animate-float" />
+        <div className="absolute -top-24 -right-24 h-96 w-96 blob bg-primary/5 animate-float-slow" />
+        <div className="absolute top-40 -left-16 h-72 w-72 blob bg-primary/5 animate-float" />
         <div className="container-page relative grid gap-10 py-14 md:py-20 lg:py-24 lg:grid-cols-12 xl:gap-16 items-center">
           <div className="lg:col-span-6">
             <div className="inline-flex items-center gap-2.5 rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary shadow-xs backdrop-blur-xs border border-primary/15">
@@ -158,7 +158,7 @@ function Home() {
             </div>
             <h1 className="mt-5 text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.08] text-foreground text-balance">
               A preschool where{" "}
-              <span className="relative inline-block px-3.5 py-1 font-extrabold text-primary bg-[#F5CFA0]/90 rounded-2xl shadow-md animate-float">
+              <span className="relative inline-block px-3.5 py-1 font-extrabold text-primary bg-primary/10 rounded-2xl border border-primary/20 shadow-xs animate-float">
                 childhood comes first.
               </span>
             </h1>
@@ -181,7 +181,7 @@ function Home() {
               </AdmissionDialog>
               <Link
                 to="/programmes"
-                className="inline-flex items-center gap-2 rounded-full border-2 border-primary/20 bg-[#FFFDF9] px-6 py-3.5 text-sm font-bold text-primary hover:border-primary hover:bg-white hover:-translate-y-0.5 transition-all shadow-xs"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-primary/20 bg-white px-6 py-3.5 text-sm font-bold text-primary hover:border-primary hover:bg-slate-50 hover:-translate-y-0.5 transition-all shadow-xs"
               >
                 Explore programmes
               </Link>
@@ -193,7 +193,7 @@ function Home() {
                 { n: "7+", l: "Age programmes" },
                 { n: "100%", l: "CCTV Covered" },
               ].map((s) => (
-                <div key={s.l} className="group p-3 rounded-2xl bg-white/40 border border-white/60 backdrop-blur-xs transition-all hover:bg-white/70 hover:shadow-sm">
+                <div key={s.l} className="group p-3 rounded-2xl bg-white/60 border border-border/60 backdrop-blur-xs transition-all hover:bg-white hover:shadow-sm">
                   <div className="text-3xl font-extrabold text-primary group-hover:scale-105 transition-transform origin-left">{s.n}</div>
                   <div className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">{s.l}</div>
                 </div>
@@ -221,7 +221,7 @@ function Home() {
       </section>
 
       {/* ABOUT */}
-      <section className="bg-[#F6E6C5] relative">
+      <section className="bg-[#F8FAFC] relative">
         <div className="container-page section-padding grid md:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-start">
           <div className="md:col-span-5 lg:col-span-5">
             <div className="text-xs font-bold uppercase tracking-widest text-primary/80">About BambiBoo</div>
@@ -247,14 +247,14 @@ function Home() {
       <WhyBambiboo />
 
       {/* CORE PROGRAMMES */}
-      <section className="bg-[#FFEBCB]">
+      <section className="bg-[#FAFAFC]">
         <div className="container-page section-padding">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
               <div className="text-xs font-bold uppercase tracking-widest text-primary/80">Core programmes</div>
               <h2 className="mt-2 text-4xl md:text-5xl font-bold text-balance">
                 A path for every age, from{" "}
-                <span className="relative inline-block bg-[#F5CFA0] text-primary px-3 py-0.5 rounded-2xl shadow-xs animate-float-slow">
+                <span className="relative inline-block bg-primary/10 text-primary px-3 py-0.5 rounded-2xl border border-primary/20 shadow-xs animate-float-slow">
                   tiny toes
                   <svg className="absolute -bottom-1.5 left-0 w-full h-2.5 text-primary/70" viewBox="0 0 100 20" preserveAspectRatio="none">
                     <path d="M 5,14 Q 50,2 95,14" stroke="currentColor" strokeWidth="4" strokeLinecap="round" fill="none" />
@@ -265,7 +265,7 @@ function Home() {
             </div>
 
             {/* Interactive Age Filter Tabs */}
-            <div className="flex flex-wrap gap-1.5 p-1.5 rounded-2xl bg-[#FFF6EA] border border-white/70 shadow-xs shrink-0 self-start md:self-auto backdrop-blur-xs">
+            <div className="flex flex-wrap gap-1.5 p-1.5 rounded-2xl bg-white border border-border/60 shadow-xs shrink-0 self-start md:self-auto backdrop-blur-xs">
               {[
                 { id: "all", label: "All Ages" },
                 { id: "toddlers", label: "Toddlers (6M-2.5Y)" },
@@ -295,7 +295,7 @@ function Home() {
                 to={p.to}
                 className={`master-card group rounded-3xl p-7 relative overflow-hidden flex flex-col justify-between min-h-[230px] border border-white/40 ${p.tint}`}
               >
-                <div className="absolute -bottom-8 -right-8 h-40 w-40 blob bg-[#FFEBCB]/30 group-hover:scale-110 transition-transform" />
+                <div className="absolute -bottom-8 -right-8 h-40 w-40 blob bg-primary/5 group-hover:scale-110 transition-transform" />
                 <div className="relative">
                   <div className="inline-flex items-center rounded-full bg-white/95 backdrop-blur px-3 py-1 text-xs font-bold uppercase tracking-wider whitespace-nowrap shadow-xs">{p.age}</div>
                   <div className="mt-3 text-3xl font-extrabold group-hover:text-primary transition-colors">{p.name}</div>
@@ -310,17 +310,17 @@ function Home() {
       </section>
 
       {/* MULTI-LAYERED AESTHETIC SCALLOP DIVIDER TOP */}
-      <div className="w-full overflow-hidden leading-none bg-[#FFEBCB] -mb-1 relative z-10">
+      <div className="w-full overflow-hidden leading-none bg-[#FAFAFC] -mb-1 relative z-10">
         <svg
           className="relative block w-full h-12 sm:h-20"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
         >
-          {/* Soft Golden Accent Background Layer */}
+          {/* Soft Slate Accent Background Layer */}
           <path
             d="M0,120 L0,55 Q60,15 120,55 Q180,15 240,55 Q300,15 360,55 Q420,15 480,55 Q540,15 600,55 Q660,15 720,55 Q780,15 840,55 Q900,15 960,55 Q1020,15 1080,55 Q1140,15 1200,55 L1200,120 Z"
-            fill="#F5CFA0"
-            opacity="0.6"
+            fill="#CBD5E1"
+            opacity="0.4"
           />
           {/* Solid Purple Foreground Layer */}
           <path
@@ -377,22 +377,22 @@ function Home() {
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
         >
-          {/* Soft Golden Accent Background Layer */}
+          {/* Soft Slate Accent Background Layer */}
           <path
             d="M0,120 L0,45 Q60,5 120,45 Q180,5 240,45 Q300,5 360,45 Q420,5 480,45 Q540,5 600,45 Q660,5 720,45 Q780,5 840,45 Q900,5 960,45 Q1020,5 1080,45 Q1140,5 1200,45 L1200,120 Z"
-            fill="#F5CFA0"
-            opacity="0.5"
+            fill="#CBD5E1"
+            opacity="0.4"
           />
-          {/* Solid Cream Foreground Layer */}
+          {/* Solid White Foreground Layer */}
           <path
             d="M0,120 L0,65 Q75,20 150,65 Q225,20 300,65 Q375,20 450,65 Q525,20 600,65 Q675,20 750,65 Q825,20 900,65 Q975,20 1050,65 Q1125,20 1200,65 L1200,120 Z"
-            fill="#FBF5EB"
+            fill="#FAFAFC"
           />
         </svg>
       </div>
 
       {/* TESTIMONIALS */}
-      <section className="bg-[#FBF5EB]">
+      <section className="bg-[#FAFAFC]">
         <div className="container-page section-padding">
           <div className="text-xs font-bold uppercase tracking-widest text-primary/80">Loved by neighborhood families</div>
           <h2 className="mt-2 text-4xl md:text-5xl font-bold text-balance">Real parents, measurable milestones.</h2>
@@ -409,10 +409,10 @@ function Home() {
                 <CarouselItem key={t.name} className="pl-5 lg:pl-6 md:basis-1/2 lg:basis-1/3">
                   <Link
                     to="/parents/testimonials"
-                    className="master-card block h-full rounded-3xl bg-[#FFFDF9] border border-white/60 p-6 md:p-8 flex flex-col justify-between"
+                    className="master-card block h-full rounded-3xl bg-white border border-border/60 p-6 md:p-8 flex flex-col justify-between"
                   >
                     <div>
-                      <div className="flex gap-1 text-accent">
+                      <div className="flex gap-1 text-amber-500">
                         {Array.from({ length: 5 }).map((_, i) => (
                           <Star key={i} className="h-4 w-4 fill-current" />
                         ))}
@@ -447,7 +447,7 @@ function Home() {
       </section>
 
       {/* FEATURE 4: INTERACTIVE FAQ QUICK-PILLS ACCORDION */}
-      <section className="bg-[#FBF2E7]">
+      <section className="bg-[#F8FAFC]">
         <div className="container-page section-padding">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6">
             <div>

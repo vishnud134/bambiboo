@@ -63,8 +63,8 @@ const items = [
 function Testimonials() {
   return (
     <PageShell>
-      <section className="bg-[#FFECCB] relative overflow-hidden">
-        <div className="absolute -top-20 -right-16 h-72 w-72 blob bg-[#F8D9A8]" />
+      <section className="bg-[#FAFAFC] relative overflow-hidden">
+        <div className="absolute -top-20 -right-16 h-72 w-72 blob bg-primary/5" />
         <div className="container-page relative py-12 md:py-16">
           <div className="text-xs font-bold uppercase tracking-widest text-primary">Testimonials</div>
           <h1 className="mt-3 text-5xl md:text-6xl font-extrabold text-balance max-w-3xl">

@@ -89,7 +89,7 @@ export function ProgrammeFinder() {
   const activeGroup = ageGroups.find((g) => g.id === selectedId) || ageGroups[1];
 
   return (
-    <section className="bg-gradient-to-b from-[#FFFDF9] to-[#FAF6EE] py-12 md:py-20 border-y border-border/40">
+    <section className="bg-[#FAFAFC] py-12 md:py-20 border-y border-border/60">
       <div className="container-page">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
@@ -157,7 +157,7 @@ export function ProgrammeFinder() {
 
             {/* Details Grid */}
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-              <div className="flex items-start gap-3 p-4 rounded-2xl bg-[#FFF6EA] border border-border/40">
+              <div className="flex items-start gap-3 p-4 rounded-2xl bg-slate-50 border border-border/60">
                 <Clock className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                 <div>
                   <div className="text-xs font-bold uppercase text-muted-foreground">Timings</div>
@@ -165,7 +165,7 @@ export function ProgrammeFinder() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 p-4 rounded-2xl bg-[#FFF6EA] border border-border/40">
+              <div className="flex items-start gap-3 p-4 rounded-2xl bg-slate-50 border border-border/60">
                 <Users className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                 <div>
                   <div className="text-xs font-bold uppercase text-muted-foreground">Teacher Ratio</div>
@@ -173,7 +173,7 @@ export function ProgrammeFinder() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 p-4 rounded-2xl bg-[#FFF6EA] border border-border/40">
+              <div className="flex items-start gap-3 p-4 rounded-2xl bg-slate-50 border border-border/60">
                 <Calendar className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                 <div>
                   <div className="text-xs font-bold uppercase text-muted-foreground">Admissions</div>

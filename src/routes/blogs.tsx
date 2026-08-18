@@ -90,7 +90,7 @@ function BlogsPage() {
 
               <aside className="lg:col-span-1">
                 <div className="sticky top-24 space-y-4">
-                  <div className="rounded-xl bg-[#FFF6EA] p-4 border border-white/60">
+                  <div className="rounded-xl bg-white p-4 border border-border/60">
                     <div className="text-xs text-muted-foreground">About this article</div>
                     <div className="mt-2 text-sm text-foreground">{post.excerpt}</div>
                   </div>
@@ -128,8 +128,8 @@ function BlogsPage() {
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {blogPosts.map((post) => (
-            <article key={post.id} className="master-card group h-full rounded-3xl bg-[#FFF6EA] border border-white/70 overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <div className="relative h-44 w-full overflow-hidden bg-[#FFE6C0]">
+            <article key={post.id} className="master-card group h-full rounded-3xl bg-white border border-border/60 overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <div className="relative h-44 w-full overflow-hidden bg-slate-100">
                 <img src={post.image} alt={post.title} className="h-full w-full object-cover object-center" />
               </div>
               <div className="p-5">

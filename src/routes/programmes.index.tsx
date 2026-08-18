@@ -76,8 +76,8 @@ const colorMap: Record<Card["color"], string> = {
 function ProgrammesIndex() {
   return (
     <PageShell>
-      <section className="bg-[#FFECCB] relative overflow-hidden py-12 md:py-16">
-        <div className="absolute -top-20 -right-16 h-72 w-72 blob bg-[#F8D9A8]" />
+      <section className="bg-[#FAFAFC] relative overflow-hidden py-12 md:py-16">
+        <div className="absolute -top-20 -right-16 h-72 w-72 blob bg-primary/5" />
         <div className="container-page relative">
           <Breadcrumb items={[{ label: "Programmes" }]} className="text-foreground" />
         <div className="mt-4 max-w-3xl">

@@ -35,9 +35,9 @@ function AdmissionPage() {
   return (
     <PageShell>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#FFECCB]">
-        <div className="absolute -top-20 -right-16 h-72 w-72 blob bg-[#F8D9A8]" />
-        <div className="absolute -bottom-24 -left-10 h-64 w-64 blob bg-primary/10" />
+      <section className="relative overflow-hidden bg-[#FAFAFC]">
+        <div className="absolute -top-20 -right-16 h-72 w-72 blob bg-primary/5" />
+        <div className="absolute -bottom-24 -left-10 h-64 w-64 blob bg-primary/5" />
         <div className="container-page relative py-12 md:py-16 grid lg:grid-cols-12 gap-8 md:gap-12 items-center">
           <div className="lg:col-span-7 flex flex-col justify-center">
             <Breadcrumb items={[{ label: "Parents Corner", to: "/parents" }, { label: "Admission Process" }]} className="mb-4 text-xs font-semibold text-primary/80" />

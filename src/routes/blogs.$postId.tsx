@@ -105,7 +105,7 @@ function BlogPostPage() {
           <aside className="lg:col-span-1">
               <div className="sticky top-24 space-y-4">
                 <BlogTOC selector=".post-content" />
-              <div className="rounded-xl bg-[#FFF6EA] p-4 border border-white/60">
+              <div className="rounded-xl bg-white p-4 border border-border/60">
                 <div className="text-xs text-muted-foreground">About this article</div>
                 <div className="mt-2 text-sm text-foreground">{post.excerpt}</div>
               </div>

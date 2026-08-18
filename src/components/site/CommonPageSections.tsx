@@ -112,9 +112,9 @@ export function PillarsOfCareSection() {
   return (
     <>
       {/* MULTI-LAYERED SCALLOP DIVIDER TOP */}
-      <div className="w-full overflow-hidden leading-none bg-[#FFEBCB] -mb-1 relative z-10">
+      <div className="w-full overflow-hidden leading-none bg-[#FAFAFC] -mb-1 relative z-10">
         <svg className="relative block w-full h-12 sm:h-20" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,120 L0,55 Q60,15 120,55 Q180,15 240,55 Q300,15 360,55 Q420,15 480,55 Q540,15 600,55 Q660,15 720,55 Q780,15 840,55 Q900,15 960,55 Q1020,15 1080,55 Q1140,15 1200,55 L1200,120 Z" fill="#F5CFA0" opacity="0.6" />
+          <path d="M0,120 L0,55 Q60,15 120,55 Q180,15 240,55 Q300,15 360,55 Q420,15 480,55 Q540,15 600,55 Q660,15 720,55 Q780,15 840,55 Q900,15 960,55 Q1020,15 1080,55 Q1140,15 1200,55 L1200,120 Z" fill="#CBD5E1" opacity="0.4" />
           <path d="M0,120 L0,70 Q75,25 150,70 Q225,25 300,70 Q375,25 450,70 Q525,25 600,70 Q675,25 750,70 Q825,25 900,70 Q975,25 1050,70 Q1125,25 1200,70 L1200,120 Z" className="fill-primary" />
         </svg>
       </div>
@@ -123,10 +123,10 @@ export function PillarsOfCareSection() {
       <section className="bg-primary text-primary-foreground relative">
         <div className="container-page section-padding">
           <div className="max-w-2xl">
-            <div className="text-xs font-bold uppercase tracking-widest text-accent">Pillars of care</div>
+            <div className="text-xs font-bold uppercase tracking-widest text-amber-300">Pillars of care</div>
             <h2 className="mt-2 text-4xl md:text-5xl font-bold text-balance">
               Every Day,{" "}
-              <span className="bg-accent text-primary px-3 py-0.5 rounded-2xl inline-block shadow-xs">
+              <span className="bg-amber-300 text-primary px-3 py-0.5 rounded-2xl inline-block shadow-xs">
                 Full of Wonder.
               </span>
             </h2>
@@ -138,9 +138,9 @@ export function PillarsOfCareSection() {
             {pillars.map((p) => {
               const IconComponent = p.icon;
               return (
-                <div key={p.title} className="master-card group rounded-3xl border border-primary-foreground/20 bg-primary-foreground/5 p-6 md:p-8 flex flex-col justify-between h-full hover:bg-primary-foreground/10 hover:border-accent/40 transition-all duration-300">
+                <div key={p.title} className="master-card group rounded-3xl border border-primary-foreground/20 bg-primary-foreground/5 p-6 md:p-8 flex flex-col justify-between h-full hover:bg-primary-foreground/10 hover:border-amber-300/40 transition-all duration-300">
                   <div>
-                    <div className="h-12 w-12 rounded-2xl bg-accent text-primary grid place-items-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300 shadow-md">
+                    <div className="h-12 w-12 rounded-2xl bg-amber-300 text-primary grid place-items-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300 shadow-md">
                       <IconComponent className="h-6 w-6" />
                     </div>
                     <h3 className="mt-4 text-xl font-bold">{p.title}</h3>
@@ -168,8 +168,8 @@ export function PillarsOfCareSection() {
       {/* MULTI-LAYERED SCALLOP DIVIDER BOTTOM */}
       <div className="w-full overflow-hidden leading-none bg-primary -mb-1 relative z-10">
         <svg className="relative block w-full h-12 sm:h-20" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,120 L0,45 Q60,5 120,45 Q180,5 240,45 Q300,5 360,45 Q420,5 480,45 Q540,5 600,45 Q660,5 720,45 Q780,5 840,45 Q900,5 960,45 Q1020,5 1080,45 Q1140,5 1200,45 L1200,120 Z" fill="#F5CFA0" opacity="0.5" />
-          <path d="M0,120 L0,65 Q75,20 150,65 Q225,20 300,65 Q375,20 450,65 Q525,20 600,65 Q675,20 750,65 Q825,20 900,65 Q975,20 1050,65 Q1125,20 1200,65 L1200,120 Z" fill="#FBF5EB" />
+          <path d="M0,120 L0,45 Q60,5 120,45 Q180,5 240,45 Q300,5 360,45 Q420,5 480,45 Q540,5 600,45 Q660,5 720,45 Q780,5 840,45 Q900,5 960,45 Q1020,5 1080,45 Q1140,5 1200,45 L1200,120 Z" fill="#CBD5E1" opacity="0.4" />
+          <path d="M0,120 L0,65 Q75,20 150,65 Q225,20 300,65 Q375,20 450,65 Q525,20 600,65 Q675,20 750,65 Q825,20 900,65 Q975,20 1050,65 Q1125,20 1200,65 L1200,120 Z" fill="#FAFAFC" />
         </svg>
       </div>
     </>
@@ -178,7 +178,7 @@ export function PillarsOfCareSection() {
 
 export function LovedByFamiliesSection() {
   return (
-    <section className="bg-[#FBF5EB]">
+    <section className="bg-[#FAFAFC]">
       <div className="container-page section-padding">
         <div className="text-xs font-bold uppercase tracking-widest text-primary/80">Loved by neighborhood families</div>
         <h2 className="mt-2 text-4xl md:text-5xl font-bold text-balance">Real parents, measurable milestones.</h2>
@@ -240,7 +240,7 @@ export function FaqSection() {
   const filteredFaqs = categoryFaqs.filter((f) => f.cat === faqCategory);
 
   return (
-    <section className="bg-[#FBF2E7]">
+    <section className="bg-[#F8FAFC]">
       <div className="container-page section-padding">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6">
           <div>
@@ -265,7 +265,7 @@ export function FaqSection() {
               className={`shrink-0 px-6 py-2.5 text-xs sm:text-sm font-bold transition-all duration-200 inline-flex items-center justify-center ${
                 faqCategory === c.id
                   ? "bg-primary text-primary-foreground"
-                  : "bg-[#FFFDF9] text-foreground/75 border border-white/60 hover:bg-white hover:text-primary"
+                  : "bg-white text-foreground/75 border border-border/60 hover:bg-slate-50 hover:text-primary"
               }`}
               style={{ borderRadius: "9999px", boxShadow: "none" }}
             >
@@ -274,9 +274,9 @@ export function FaqSection() {
           ))}
         </div>
 
-        <div className="divide-y divide-border/60 rounded-3xl border border-white/70 bg-[#FFFDF9] shadow-xs overflow-hidden">
+        <div className="divide-y divide-border/60 rounded-3xl border border-border/60 bg-white shadow-xs overflow-hidden">
           {filteredFaqs.map((f) => (
-            <details key={f.q} className="group p-6 md:p-7 open:bg-[#FBF2E7]/60 transition-colors">
+            <details key={f.q} className="group p-6 md:p-7 open:bg-slate-50/80 transition-colors">
               <summary className="flex cursor-pointer list-none items-center justify-between font-bold text-foreground text-lg">
                 {f.q}
                 <span className="ml-4 text-primary text-xl transition-transform duration-300 group-open:rotate-45">+</span>

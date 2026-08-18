@@ -80,9 +80,9 @@ export function ContentPage({
   return (
     <PageShell>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#FFECCB]">
-        <div className="absolute -top-20 -right-16 h-72 w-72 blob bg-[#F8D9A8]" />
-        <div className="absolute -bottom-24 -left-10 h-64 w-64 blob bg-primary/10" />
+      <section className="relative overflow-hidden bg-[#FAFAFC]">
+        <div className="absolute -top-20 -right-16 h-72 w-72 blob bg-primary/5" />
+        <div className="absolute -bottom-24 -left-10 h-64 w-64 blob bg-primary/5" />
         {showHeroForm ? (
           <div className="container-page relative py-12 md:py-16 lg:py-20 grid lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-14 items-start">
             <div className="lg:col-span-7 flex flex-col justify-start">
@@ -132,7 +132,7 @@ export function ContentPage({
               </AdmissionDialog>
             </div>
             <div className="lg:col-span-5 relative">
-              <div className="relative overflow-hidden rounded-[2rem] border border-border/40 bg-[#FFF4E1] shadow-lg shadow-primary/10">
+              <div className="relative overflow-hidden rounded-[2rem] border border-border/60 bg-slate-100 shadow-lg shadow-primary/10">
                 <img
                   src={activeHeroImage}
                   alt={title}
@@ -185,7 +185,7 @@ export function ContentPage({
               s.tone === "berry"
                 ? "bg-primary text-primary-foreground py-12 md:py-16"
                 : s.tone === "cream"
-                  ? "bg-[#FFEBCB] py-12 md:py-16"
+                  ? "bg-[#F8FAFC] py-12 md:py-16"
                   : "bg-background py-12 md:py-16"
             }
           >
@@ -193,7 +193,7 @@ export function ContentPage({
               <div className="container-page">
                 <div className="grid items-center gap-8 lg:grid-cols-12 lg:gap-14 xl:gap-16">
                   <div className="order-1 lg:col-span-5">
-                    <div className="relative w-full h-[400px] md:h-[480px] lg:h-[520px] overflow-hidden rounded-[2rem] shadow-lg shadow-primary/10 bg-[#FFF4E1] border border-border/40">
+                    <div className="relative w-full h-[400px] md:h-[480px] lg:h-[520px] overflow-hidden rounded-[2rem] shadow-lg shadow-primary/10 bg-slate-100 border border-border/40">
                       <img
                         src={s.founderImage}
                         alt={s.title}
@@ -246,7 +246,7 @@ export function ContentPage({
                           className={`group relative flex flex-col justify-start p-5 pt-14 lg:p-5 lg:pt-14 rounded-3xl border-2 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-lg ${
                             s.tone === "berry"
                               ? "border-primary-foreground/20 bg-primary-foreground/5 text-white hover:bg-primary-foreground/10"
-                              : "border-white/80 bg-[#FFF6EA] shadow-xs hover:border-primary/40 hover:bg-white"
+                              : "border-border/60 bg-white shadow-2xs hover:border-primary/40 hover:shadow-md"
                           }`}
                         >
                           <span className="absolute top-4 left-4 lg:top-3.5 lg:left-4 text-3xl lg:text-2xl font-bold font-display text-primary/30 group-hover:text-primary transition-colors">
@@ -284,7 +284,7 @@ export function ContentPage({
                         className={`master-card-premium flex items-start gap-3.5 rounded-2xl p-4.5 text-sm font-semibold transition-all duration-300 ${
                           s.tone === "berry"
                             ? "border-primary-foreground/20 bg-primary-foreground/10 text-white hover:bg-primary-foreground/15"
-                            : "border-amber-200/50 bg-[#FFFDF9] hover:border-amber-300"
+                            : "border-border/60 bg-white hover:border-primary/40"
                         }`}
                       >
                         <span className="mt-0.5 inline-flex h-5.5 w-5.5 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white shadow-xs">
@@ -302,7 +302,7 @@ export function ContentPage({
                   <>
                     <div className="min-w-0 lg:col-span-5">
                       {s.image && (
-                        <div className="relative overflow-hidden rounded-[2rem] border border-border/40 bg-[#FFF4E1]/80 shadow-md w-full max-w-md mx-auto">
+                        <div className="relative overflow-hidden rounded-[2rem] border border-border/60 bg-slate-100/80 shadow-md w-full max-w-md mx-auto">
                           <img
                             src={s.image}
                             alt={s.title}
@@ -373,7 +373,7 @@ export function ContentPage({
 
                     <div className="min-w-0 lg:col-span-5 flex flex-col items-center justify-center">
                       {s.image && (
-                        <div className="relative overflow-hidden rounded-[2rem] border border-border/40 bg-[#FFF4E1]/80 shadow-md w-full max-w-md mx-auto">
+                        <div className="relative overflow-hidden rounded-[2rem] border border-border/60 bg-slate-100/80 shadow-md w-full max-w-md mx-auto">
                           <img
                             src={s.image}
                             alt={s.title}

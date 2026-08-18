@@ -68,45 +68,45 @@ select:-webkit-autofill:focus {
   supported-color-schemes: light;
   --radius: 1rem;
 
-  /* Softened clean cream background */
-  --background: #FAF6EE;
+  /* Clean crisp white & neutral background */
+  --background: #FFFFFF;
   --foreground: #2C2C2C;
 
-  /* Lighter crisp cream cards */
-  --card: #FFFDF9;
+  /* Crisp white cards */
+  --card: #FFFFFF;
   --card-foreground: #2C2C2C;
-  --popover: #FFFDF9;
+  --popover: #FFFFFF;
   --popover-foreground: #2C2C2C;
 
   /* Primary purple */
   --primary: #4C167F;
-  --primary-foreground: #FAF6EE;
+  --primary-foreground: #FFFFFF;
 
-  /* Secondary Background (softened) */
-  --secondary: #F4E7DA;
-  --secondary-foreground: #5A2D7A;
+  /* Secondary Background (clean slate-white) */
+  --secondary: #F8FAFC;
+  --secondary-foreground: #4C167F;
 
-  /* Alternate Section Background (softened) */
-  --muted: #FAF6EE;
-  --muted-foreground: #6B4A4A;
+  /* Alternate Section Background */
+  --muted: #F8FAFC;
+  --muted-foreground: #52525B;
 
-  /* Soft Highlight & Decorative Glow (softened) */
-  --accent: #F5E6CE;
-  --accent-foreground: #5A2D7A;
+  /* Soft Highlight & Decorative Glow */
+  --accent: #F1F5F9;
+  --accent-foreground: #4C167F;
 
   --destructive: #C24B1B;
-  --destructive-foreground: #F5E6CE;
+  --destructive-foreground: #FFFFFF;
 
-  /* Warm Borders (softened) */
-  --border: rgba(76,22,122,0.22);
-  --input: rgba(76,22,122,0.20);
+  /* Crisp Clean Borders */
+  --border: rgba(76,22,122,0.12);
+  --input: rgba(76,22,122,0.12);
   --ring: #4C157F;
 
-  /* Extended palette (softened warmth) */
-  --cream: #FAF6EE;
-  --butter: #F5E6CE;
-  --highlight: #F3DEC3;
-  --muted-beige: #EFE4D6;
+  /* Extended palette */
+  --cream: #FFFFFF;
+  --butter: #F8FAFC;
+  --highlight: #F1F5F9;
+  --muted-beige: #F8FAFC;
   --berry: #4A167F;
   --mint: #6FD6A2;
   --coral: #F09A66;
@@ -114,18 +114,18 @@ select:-webkit-autofill:focus {
   --success: #2EA86B;
   --success-foreground: #FFFFFF;
 
-  --sidebar: #F5E6CE;
+  --sidebar: #FFFFFF;
   --sidebar-foreground: #2C2C2C;
   --sidebar-primary: #430E6C;
-  --sidebar-primary-foreground: #F5E6CE;
-  --sidebar-accent: #F3DEC3;
-  --sidebar-accent-foreground: #5A2D7A;
-  --sidebar-border: #E0CDB7;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F8FAFC;
+  --sidebar-accent-foreground: #430E6C;
+  --sidebar-border: #E4E4E7;
   --sidebar-ring: #430E6C;
 
   --chart-1: #430E6C;
   --chart-2: #F09A66;
-  --chart-3: #FFDFAE;
+  --chart-3: #CBD5E1;
   --chart-4: #6FD6A2;
   --chart-5: #6EA8FF;
 }
@@ -239,17 +239,17 @@ select:-webkit-autofill:focus {
 /* Decorative blob shape */
 @utility blob {
   border-radius: 62% 38% 46% 54% / 55% 42% 58% 45%;
-  background-color: rgba(255, 215, 154, 0.25) !important;
+  background-color: rgba(76, 22, 127, 0.04) !important;
 }
 
-/* Warm Depth Shadows */
+/* Depth Shadows */
 .shadow-sm,
 .shadow,
 .shadow-md,
 .shadow-lg,
 .shadow-xl,
 .shadow-2xl {
-  box-shadow: 0 16px 40px rgba(67, 14, 108, 0.07), 0 4px 12px rgba(180, 120, 40, 0.05) !important;
+  box-shadow: 0 16px 40px rgba(67, 14, 108, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03) !important;
 }
 
 /* 10+ Years Senior Designer Masterclass Utilities */
@@ -283,9 +283,8 @@ select:-webkit-autofill:focus {
 /* Ambient Radial Mesh Background Layer */
 .bg-ambient-mesh {
   background-image: 
-    radial-gradient(at 0% 0%, rgba(247, 203, 139, 0.35) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(248, 217, 168, 0.25) 0px, transparent 50%),
-    radial-gradient(at 50% 50%, rgba(255, 235, 203, 0.5) 0px, transparent 70%);
+    radial-gradient(at 0% 0%, rgba(76, 22, 127, 0.04) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(76, 22, 127, 0.03) 0px, transparent 50%);
 }
 
 /* Soft Spring Physics Card Lift */
@@ -295,15 +294,15 @@ select:-webkit-autofill:focus {
 
 .master-card:hover {
   transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 25px 50px -12px rgba(67, 14, 108, 0.15) !important;
+  box-shadow: 0 25px 50px -12px rgba(67, 14, 108, 0.12) !important;
 }
 
 /* Glassmorphism Badge Overlay */
 .glass-badge {
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(76, 22, 127, 0.12);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
@@ -376,23 +375,23 @@ select:-webkit-autofill:focus {
 
 /* Premium Glassmorphic & Elevated Card Utilities */
 .master-card-premium {
-  background: #FFFDF9;
-  border: 1px solid rgba(245, 207, 160, 0.45);
+  background: #FFFFFF;
+  border: 1px solid rgba(76, 22, 127, 0.12);
   box-shadow: 0 10px 30px -10px rgba(67, 14, 108, 0.04), 0 4px 12px -2px rgba(0, 0, 0, 0.02);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .master-card-premium:hover {
   transform: translateY(-4px);
-  border-color: rgba(245, 207, 160, 0.85);
-  box-shadow: 0 20px 40px -12px rgba(67, 14, 108, 0.12), 0 8px 20px -4px rgba(245, 207, 160, 0.25);
+  border-color: rgba(76, 22, 127, 0.3);
+  box-shadow: 0 20px 40px -12px rgba(67, 14, 108, 0.10);
 }
 
 .glass-card {
-  background: rgba(255, 253, 249, 0.75);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(76, 22, 127, 0.12);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.03);
 }
 

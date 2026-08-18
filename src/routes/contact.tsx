@@ -20,8 +20,8 @@ export const Route = createFileRoute("/contact")({
 function Contact() {
   return (
     <PageShell>
-      <section className="bg-[#FBF5EB] relative overflow-hidden py-8 sm:py-12 md:py-16">
-        <div className="absolute -top-20 -right-16 h-72 w-72 blob bg-[#F5E6CE] pointer-events-none max-w-full" />
+      <section className="bg-[#FAFAFC] relative overflow-hidden py-8 sm:py-12 md:py-16">
+        <div className="absolute -top-20 -right-16 h-72 w-72 blob bg-primary/5 pointer-events-none max-w-full" />
         <div className="container-page relative grid gap-6 sm:gap-8 lg:grid-cols-12 lg:gap-12 xl:gap-14 items-start">
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
@@ -117,7 +117,7 @@ function Contact() {
             </p>
           </div>
 
-          <div className="overflow-hidden rounded-2xl sm:rounded-3xl border-2 sm:border-4 border-[#FFF6EA] shadow-xl relative w-full h-[280px] sm:h-[380px] md:h-[480px]">
+          <div className="overflow-hidden rounded-2xl sm:rounded-3xl border-2 sm:border-4 border-white shadow-xl relative w-full h-[280px] sm:h-[380px] md:h-[480px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.6671873537975!2d77.63180407454595!3d12.929099315809765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15899ada3411%3A0xe35948f570efc217!2sBambiBoo%20Preschool%20and%20Daycare!5e0!3m2!1sen!2sin!4v1786015120180!5m2!1sen!2sin"
               width="100%"
