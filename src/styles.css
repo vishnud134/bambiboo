@@ -72,6 +72,8 @@ input[type="date"]::-webkit-inner-spin-button {
   --color-mint: var(--mint);
   --color-coral: var(--coral);
   --color-sky: var(--sky);
+  --color-honey: var(--honey);
+  --color-honey-glow: var(--honey-glow);
   --color-success: var(--success);
   --color-success-foreground: var(--success-foreground);
 
@@ -94,9 +96,13 @@ input[type="date"]::-webkit-inner-spin-button {
   --popover: #FFFFFF;
   --popover-foreground: #2C2C2C;
 
-  /* Primary purple */
+  /* Primary Royal Velvet Purple */
   --primary: #4C167F;
   --primary-foreground: #FFFFFF;
+
+  /* Honey Sunshine Accent (Matches the Hatching Chick Mascot!) */
+  --honey: #F59E0B;
+  --honey-glow: #FBBF24;
 
   /* Secondary Background (clean slate-white) */
   --secondary: #F8FAFC;
