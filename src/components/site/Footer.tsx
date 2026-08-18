@@ -3,21 +3,21 @@ import { Instagram, Facebook, Youtube, Mail, Phone, MapPin, Clock, Download, Spa
 import { Logo } from "./Logo";
 import { AdmissionDialog } from "./AdmissionDialog";
 
-const col = "text-xs md:text-sm text-white/80 hover:text-white transition block py-[1px]";
+const col = "text-xs md:text-sm text-[#1A1228]/85 hover:text-[#4C167F] font-medium transition block py-[1px]";
 
 export function Footer() {
   return (
-    <footer className="bg-[#2D0B5A] border-t border-[#3E1178] text-white">
+    <footer className="bg-[#E4D9C7] border-t border-[#430E6C]/15 text-[#1A1228]">
       <div className="container-page grid gap-6 md:gap-8 pt-10 md:pt-14 pb-6 md:pb-8 md:grid-cols-2 lg:grid-cols-5">
         <div className="lg:col-span-2 flex flex-col justify-between">
           <div>
-            <div className="rounded-xl bg-white p-2 inline-block shadow-xs">
+            <div className="rounded-xl bg-white p-2 inline-block shadow-xs border border-[#430E6C]/10">
               <Logo />
             </div>
-            <p className="mt-4 max-w-sm text-sm text-white/90 leading-relaxed font-medium">
+            <p className="mt-4 max-w-sm text-sm text-[#231B32]/90 leading-relaxed font-medium">
               Play. Wonder. Belong. A place where childhood comes first.
             </p>
-            <p className="mt-3 max-w-sm text-xs text-white/70 leading-relaxed tracking-wide">
+            <p className="mt-3 max-w-sm text-xs text-[#231B32]/70 leading-relaxed tracking-wide">
               Visit our Koramangala campus • Book a School Tour • Follow our journey
             </p>
           </div>
@@ -27,7 +27,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="h-9 w-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white hover:text-[#2D0B5A] hover:scale-105 transition-all shadow-xs"
+              className="h-9 w-9 rounded-full bg-white/80 border border-[#4C167F]/15 text-[#4C167F] flex items-center justify-center hover:bg-[#4C167F] hover:text-white hover:scale-105 transition-all shadow-2xs"
             >
               <Instagram className="h-4.5 w-4.5" />
             </a>
@@ -36,7 +36,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="h-9 w-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white hover:text-[#2D0B5A] hover:scale-105 transition-all shadow-xs"
+              className="h-9 w-9 rounded-full bg-white/80 border border-[#4C167F]/15 text-[#4C167F] flex items-center justify-center hover:bg-[#4C167F] hover:text-white hover:scale-105 transition-all shadow-2xs"
             >
               <Facebook className="h-4.5 w-4.5" />
             </a>
@@ -45,7 +45,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
-              className="h-9 w-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white hover:text-[#2D0B5A] hover:scale-105 transition-all shadow-xs"
+              className="h-9 w-9 rounded-full bg-white/80 border border-[#4C167F]/15 text-[#4C167F] flex items-center justify-center hover:bg-[#4C167F] hover:text-white hover:scale-105 transition-all shadow-2xs"
             >
               <Youtube className="h-4.5 w-4.5" />
             </a>
@@ -53,16 +53,16 @@ export function Footer() {
         </div>
 
         <div>
-          <div className="mb-1.5 text-xs font-bold uppercase tracking-wider text-amber-300">Quick Links</div>
+          <div className="mb-2 text-xs font-bold uppercase tracking-wider text-[#4C167F]">Quick Links</div>
           <div className="space-y-[1px]">
             <AdmissionDialog>
               <button className={`${col} font-semibold inline-flex items-center gap-1 hover:underline`}>
-                <Download className="h-3 w-3" /> Download Brochure
+                <Download className="h-3 w-3 text-[#4C167F]" /> Download Brochure
               </button>
             </AdmissionDialog>
             <AdmissionDialog>
               <button className={`${col} font-semibold inline-flex items-center gap-1 hover:underline`}>
-                <Sparkles className="h-3 w-3" /> Program Enquiry
+                <Sparkles className="h-3 w-3 text-[#4C167F]" /> Program Enquiry
               </button>
             </AdmissionDialog>
             <Link to="/about" className={col}>About Us</Link>
@@ -77,7 +77,7 @@ export function Footer() {
         </div>
 
         <div>
-          <div className="mb-1.5 text-xs font-bold uppercase tracking-wider text-amber-300">Beyond Academics</div>
+          <div className="mb-2 text-xs font-bold uppercase tracking-wider text-[#4C167F]">Beyond Academics</div>
           <div className="space-y-[1px]">
             <Link to="/beyond/arts" className={col}>Arts & Crafts</Link>
             <Link to="/beyond/yoga" className={col}>Yoga & Movement</Link>
@@ -87,22 +87,22 @@ export function Footer() {
         </div>
 
         <div>
-          <div className="mb-1.5 text-xs font-bold uppercase tracking-wider text-amber-300">Get in touch</div>
-          <div className="space-y-[2px] text-xs md:text-sm text-white/90">
-            <div className="flex items-start gap-2 py-[1px]"><Phone className="h-3.5 w-3.5 mt-0.5 text-amber-300 shrink-0" /> +91 99006 39303</div>
-            <div className="flex items-start gap-2 py-[1px]"><Mail className="h-3.5 w-3.5 mt-0.5 text-amber-300 shrink-0" /> info@bambiboo.com</div>
-            <div className="flex items-start gap-2 py-[1px]"><MapPin className="h-3.5 w-3.5 mt-0.5 text-amber-300 shrink-0" /> 44, 5th Main Rd, 1st Block Koramangala, Bengaluru 560034</div>
-            <div className="flex items-start gap-2 py-[1px]"><Clock className="h-3.5 w-3.5 mt-0.5 text-amber-300 shrink-0" /> Mon to Sat · 8:30 AM to 6:30 PM</div>
+          <div className="mb-2 text-xs font-bold uppercase tracking-wider text-[#4C167F]">Get in touch</div>
+          <div className="space-y-[2px] text-xs md:text-sm text-[#231B32]/90">
+            <div className="flex items-start gap-2 py-[1px]"><Phone className="h-3.5 w-3.5 mt-0.5 text-[#4C167F] shrink-0" /> +91 99006 39303</div>
+            <div className="flex items-start gap-2 py-[1px]"><Mail className="h-3.5 w-3.5 mt-0.5 text-[#4C167F] shrink-0" /> info@bambiboo.com</div>
+            <div className="flex items-start gap-2 py-[1px]"><MapPin className="h-3.5 w-3.5 mt-0.5 text-[#4C167F] shrink-0" /> 44, 5th Main Rd, 1st Block Koramangala, Bengaluru 560034</div>
+            <div className="flex items-start gap-2 py-[1px]"><Clock className="h-3.5 w-3.5 mt-0.5 text-[#4C167F] shrink-0" /> Mon to Sat · 8:30 AM to 6:30 PM</div>
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10">
-        <div className="container-page flex flex-col gap-2 py-3 sm:flex-row sm:items-center sm:justify-between text-xs text-white/70">
+      <div className="border-t border-[#430E6C]/12">
+        <div className="container-page flex flex-col gap-2 py-3 sm:flex-row sm:items-center sm:justify-between text-xs text-[#231B32]/70">
           <div>© {new Date().getFullYear()} BambiBoo Preschool & Daycare. All rights reserved.</div>
           <div className="flex gap-4">
-            <Link to="/parents/safety" className="hover:text-white">Child Safety</Link>
-            <Link to="/parents/faq" className="hover:text-white">FAQ</Link>
-            <Link to="/contact" className="hover:text-white">Contact</Link>
+            <Link to="/parents/safety" className="hover:text-[#4C167F]">Child Safety</Link>
+            <Link to="/parents/faq" className="hover:text-[#4C167F]">FAQ</Link>
+            <Link to="/contact" className="hover:text-[#4C167F]">Contact</Link>
           </div>
         </div>
       </div>

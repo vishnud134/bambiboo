@@ -86,54 +86,54 @@ input[type="date"]::-webkit-inner-spin-button {
   supported-color-schemes: light;
   --radius: 1rem;
 
-  /* Clean crisp white & neutral background */
-  --background: #FFFFFF;
-  --foreground: #2C2C2C;
+  /* Slightly Darker Warm Twilight Night Light Theme Background */
+  --background: #EFE8DC;
+  --foreground: #1A1228;
 
-  /* Crisp white cards */
-  --card: #FFFFFF;
-  --card-foreground: #2C2C2C;
-  --popover: #FFFFFF;
-  --popover-foreground: #2C2C2C;
+  /* Cozy Soft Card Canvas */
+  --card: #F7F1E5;
+  --card-foreground: #1A1228;
+  --popover: #F7F1E5;
+  --popover-foreground: #1A1228;
 
-  /* Primary Royal Velvet Purple */
+  /* Primary Royal Purple */
   --primary: #4C167F;
   --primary-foreground: #FFFFFF;
 
-  /* Honey Sunshine Accent (Matches the Hatching Chick Mascot!) */
+  /* Honey Sunshine Accent */
   --honey: #F59E0B;
   --honey-glow: #FBBF24;
 
-  /* Secondary Background (clean slate-white) */
-  --secondary: #F8FAFC;
+  /* Secondary Section Background (Deeper Warm Twilight Sand) */
+  --secondary: #E4D9C7;
   --secondary-foreground: #4C167F;
 
   /* Alternate Section Background */
-  --muted: #F8FAFC;
-  --muted-foreground: #52525B;
+  --muted: #E4D9C7;
+  --muted-foreground: #4A3F5B;
 
-  /* Soft Highlight & Decorative Glow */
-  --accent: #F1F5F9;
+  /* Soft Night Light Glow & Highlight */
+  --accent: #F4EAD7;
   --accent-foreground: #4C167F;
 
   --destructive: #C24B1B;
   --destructive-foreground: #FFFFFF;
 
-  /* Crisp Clean Borders */
-  --border: rgba(76,22,122,0.12);
-  --input: rgba(76,22,122,0.12);
-  --ring: #4C157F;
+  /* Warm Soft Borders */
+  --border: rgba(76, 22, 127, 0.16);
+  --input: rgba(76, 22, 127, 0.16);
+  --ring: #F59E0B;
 
   /* Extended palette */
-  --cream: #FFFFFF;
-  --butter: #F8FAFC;
-  --highlight: #F1F5F9;
-  --muted-beige: #F8FAFC;
-  --berry: #4A167F;
-  --mint: #6FD6A2;
-  --coral: #F09A66;
-  --sky: #6EA8FF;
-  --success: #2EA86B;
+  --cream: #F7F1E5;
+  --butter: #E4D9C7;
+  --highlight: #F4EAD7;
+  --muted-beige: #E4D9C7;
+  --berry: #4C167F;
+  --mint: #10B981;
+  --coral: #EA580C;
+  --sky: #3B82F6;
+  --success: #10B981;
   --success-foreground: #FFFFFF;
 
   --sidebar: #FFFFFF;

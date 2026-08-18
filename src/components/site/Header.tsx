@@ -57,7 +57,7 @@ const nav: NavGroup[] = [
 export function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-white/95 backdrop-blur-md shadow-xs">
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-[#EFE8DC]/95 backdrop-blur-md shadow-2xs">
       <div className="container-page-wide flex items-center justify-between gap-4 sm:gap-6 py-2.5 sm:py-3.5">
         <Logo />
         <nav className="hidden lg:flex flex-1 items-center justify-center gap-1 px-2">
@@ -91,7 +91,7 @@ export function Header() {
                   </button>
                 )}
                 <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full pt-2 transition-all duration-200 ease-out z-50">
-                  <div className="min-w-64 rounded-2xl border border-border/80 bg-white p-2.5 shadow-2xl shadow-purple-950/10 backdrop-blur-md">
+                  <div className="min-w-64 rounded-2xl border border-border/80 bg-[#F7F1E5] p-2.5 shadow-2xl shadow-purple-950/10 backdrop-blur-md">
                     {item.children.map((c) =>
                       c.to.startsWith("http") ? (
                         <a
