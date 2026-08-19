@@ -55,6 +55,7 @@ export function Footer() {
         <div>
           <div className="mb-2 text-xs font-bold uppercase tracking-wider text-[#4C167F]">Quick Links</div>
           <div className="space-y-[1px]">
+            <Link to="/about" className={col}>About Us</Link>
             <AdmissionDialog>
               <button className={`${col} font-semibold inline-flex items-center gap-1 hover:underline`}>
                 <Download className="h-3 w-3 text-[#4C167F]" /> Download Brochure
@@ -65,14 +66,13 @@ export function Footer() {
                 <Sparkles className="h-3 w-3 text-[#4C167F]" /> Program Enquiry
               </button>
             </AdmissionDialog>
-            <Link to="/about" className={col}>About Us</Link>
             <Link to="/parents/curriculum" className={col}>Curriculum & Learning</Link>
             <Link to="/world/gallery" className={col}>Media Center & Gallery</Link>
             <Link to="/parents/admission" className={col}>Admission Process</Link>
             <Link to="/parents/safety" className={col}>Child Safety Policy</Link>
             <Link to="/parents/testimonials" className={col}>Parent Testimonials</Link>
-            <Link to="/parents/faq" className={col}>FAQ</Link>
             <Link to="/blogs" className={col}>Blogs</Link>
+            <Link to="/parents/faq" className={col}>FAQ</Link>
           </div>
         </div>
 
