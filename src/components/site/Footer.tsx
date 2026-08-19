@@ -80,6 +80,7 @@ export function Footer() {
           <div className="mb-2 text-xs font-bold uppercase tracking-wider text-[#4C167F]">Beyond Academics</div>
           <div className="space-y-[1px]">
             <Link to="/beyond/arts" className={col}>Arts & Crafts</Link>
+            <Link to="/beyond/music" className={col}>Music & Dance</Link>
             <Link to="/beyond/yoga" className={col}>Yoga & Movement</Link>
             <Link to="/beyond/field-trips" className={col}>Field Trips</Link>
             <Link to="/beyond/festivals" className={col}>Festival & Events</Link>

@@ -46,6 +46,7 @@ const nav: NavGroup[] = [
     to: "/beyond",
     children: [
       { label: "Arts & Crafts", to: "/beyond/arts" },
+      { label: "Music & Dance", to: "/beyond/music" },
       { label: "Yoga & Movement", to: "/beyond/yoga" },
       { label: "Field Trips", to: "/beyond/field-trips" },
       { label: "Festival & Events", to: "/beyond/festivals" },

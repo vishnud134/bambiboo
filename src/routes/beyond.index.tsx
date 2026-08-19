@@ -17,6 +17,12 @@ const items: Card[] = [
     color: "peach",
   },
   {
+    name: "Music & Dance",
+    to: "/beyond/music",
+    tagline: "Rhythm, movement, and group coordination through daily music and dance.",
+    color: "berry",
+  },
+  {
     name: "Yoga & Movement",
     to: "/beyond/yoga",
     tagline: "Gentle yoga and mindfulness for focus, balance and calm little bodies.",
