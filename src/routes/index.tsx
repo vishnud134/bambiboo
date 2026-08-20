@@ -153,7 +153,7 @@ function Home() {
               <span className="block font-display font-semibold text-3xl sm:text-4xl md:text-[50px] tracking-tight leading-snug mb-1">
                 A preschool where
               </span>
-              <span className="font-display font-bold text-3xl sm:text-4xl md:text-[58px] bg-[#FCD34D] text-[#4C167F] px-5 sm:px-6 py-1.5 sm:py-2.5 rounded-2xl sm:rounded-3xl inline-block shadow-2xs -rotate-3 transform origin-left transition-transform hover:rotate-0 -mt-[6px]">
+              <span className="font-display font-bold text-3xl sm:text-4xl md:text-[58px] bg-[#FCD34D] text-[#4C167F] px-5 sm:px-6 py-1.5 sm:py-2.5 rounded-2xl sm:rounded-3xl inline-block shadow-2xs -rotate-3 transform origin-left -mt-[6px]">
                 childhood comes first.
               </span>
             </h1>
