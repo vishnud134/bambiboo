@@ -86,49 +86,49 @@ input[type="date"]::-webkit-inner-spin-button {
   supported-color-schemes: light;
   --radius: 1rem;
 
-  /* Slightly Darker Warm Twilight Night Light Theme Background */
-  --background: #EFE8DC;
-  --foreground: #1A1228;
+  /* Warm Almond Paper Linen Canvas (Exact match to target design!) */
+  --background: #F4F0E8;
+  --foreground: #2A1F38;
 
-  /* Cozy Soft Card Canvas */
-  --card: #F7F1E5;
-  --card-foreground: #1A1228;
-  --popover: #F7F1E5;
-  --popover-foreground: #1A1228;
+  /* Crisp White Card Canvas */
+  --card: #FFFFFF;
+  --card-foreground: #2A1F38;
+  --popover: #FFFFFF;
+  --popover-foreground: #2A1F38;
 
-  /* Primary Royal Purple */
+  /* Primary Royal Velvet Purple */
   --primary: #4C167F;
   --primary-foreground: #FFFFFF;
 
-  /* Honey Sunshine Accent */
-  --honey: #F59E0B;
+  /* Honey Sunshine Highlight Pill Accent */
+  --honey: #FCD34D;
   --honey-glow: #FBBF24;
 
-  /* Secondary Section Background (Deeper Warm Twilight Sand) */
-  --secondary: #E4D9C7;
+  /* Secondary Section Background (Gentle Warm Sand) */
+  --secondary: #EBE5DA;
   --secondary-foreground: #4C167F;
 
   /* Alternate Section Background */
-  --muted: #E4D9C7;
-  --muted-foreground: #4A3F5B;
+  --muted: #EBE5DA;
+  --muted-foreground: #5C506C;
 
-  /* Soft Night Light Glow & Highlight */
-  --accent: #F4EAD7;
+  /* Yellow Highlight Badge & Decorative Glow */
+  --accent: #FCD34D;
   --accent-foreground: #4C167F;
 
   --destructive: #C24B1B;
   --destructive-foreground: #FFFFFF;
 
-  /* Warm Soft Borders */
-  --border: rgba(76, 22, 127, 0.16);
-  --input: rgba(76, 22, 127, 0.16);
-  --ring: #F59E0B;
+  /* Soft Purple Borders */
+  --border: rgba(76, 22, 127, 0.12);
+  --input: rgba(76, 22, 127, 0.12);
+  --ring: #4C167F;
 
   /* Extended palette */
-  --cream: #F7F1E5;
-  --butter: #E4D9C7;
-  --highlight: #F4EAD7;
-  --muted-beige: #E4D9C7;
+  --cream: #FFFFFF;
+  --butter: #EBE5DA;
+  --highlight: #FCD34D;
+  --muted-beige: #EBE5DA;
   --berry: #4C167F;
   --mint: #10B981;
   --coral: #EA580C;

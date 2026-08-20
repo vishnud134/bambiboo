@@ -138,82 +138,71 @@ function Home() {
 
   return (
     <PageShell>
-      {/* HERO */}
-      <section className="relative overflow-hidden bg-[#FAFAFC] bg-ambient-mesh">
-        {/* Floating Nursery Decorative Elements */}
-        <div className="absolute top-12 left-10 text-2xl animate-float opacity-40 select-none pointer-events-none" aria-hidden="true" />
-        <div className="absolute top-1/3 right-12 text-3xl animate-float-slow opacity-30 select-none pointer-events-none" aria-hidden="true" />
-        <div className="absolute bottom-12 left-1/4 text-2xl animate-float opacity-35 select-none pointer-events-none" aria-hidden="true" />
-
-        <div className="absolute -top-24 -right-24 h-96 w-96 blob bg-primary/5 animate-float-slow" />
-        <div className="absolute top-40 -left-16 h-72 w-72 blob bg-primary/5 animate-float" />
-        <div className="container-page relative grid gap-10 py-14 md:py-20 lg:py-24 lg:grid-cols-12 xl:gap-16 items-center">
+      {/* HERO SECTION */}
+      <section className="bg-[#F4F0E8] relative overflow-hidden py-10 sm:py-14 md:py-18">
+        <div className="container-page relative z-10 grid gap-10 lg:grid-cols-12 items-center">
           <div className="lg:col-span-6">
-            <div className="inline-flex items-center gap-2.5 rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary shadow-xs backdrop-blur-xs border border-primary/15">
-              <span className="relative flex h-2.5 w-2.5">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3.5 py-1.5 text-[11px] font-extrabold uppercase tracking-widest text-primary/80 border border-[#4C167F]/15 shadow-2xs">
+              <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              Admissions Open 2026–27 • Koramangala
+              ADMISSIONS OPEN 2026–27 • KORAMANGALA
             </div>
             <h1 className="mt-5 text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.08] text-foreground text-balance">
               A preschool where{" "}
-              <span className="relative inline-block px-3.5 py-1 font-extrabold text-primary bg-primary/10 rounded-2xl border border-primary/20 shadow-xs animate-float">
+              <span className="bg-[#FCD34D] text-[#4C167F] px-4 py-1 rounded-2xl inline-block shadow-2xs font-extrabold">
                 childhood comes first.
               </span>
             </h1>
-            <ul className="mt-6 max-w-xl text-base md:text-lg text-foreground/90 space-y-2 font-medium list-none">
-              <li className="flex items-start gap-2 before:content-[''] before:inline-block">
-                <span><strong>Learning Through Play</strong> - Real experiences. Real friendships. Real confidence.</span>
-              </li>
-              <li className="flex items-start gap-2 before:content-[''] before:inline-block">
-                <span><strong>Small Groups. Big Relationships.</strong> - Every child is seen, heard and encouraged.</span>
-              </li>
-              <li className="flex items-start gap-2 before:content-[''] before:inline-block"> 
-                <span><strong>Peace of Mind for Parents.</strong> - Safe care, transparent communication and teachers you can trust.</span>
-              </li>
-            </ul>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <p className="mt-5 max-w-xl text-base md:text-lg text-foreground/85 leading-relaxed font-medium">
+              Through learning through play and small-group experiences, children build real friendships, confidence, and meaningful relationships. With safe care, personal attention, and transparent communication, parents can have peace of mind knowing their child is seen, heard, encouraged, and supported by trusted teachers.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3.5">
               <AdmissionDialog>
-                <button className="shimmer-pill inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground shadow-xl shadow-primary/30 hover:brightness-110 hover:-translate-y-0.5 transition-all">
+                <button className="shimmer-pill inline-flex items-center gap-2 rounded-full bg-[#4C167F] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-purple-950/20 hover:brightness-110 hover:-translate-y-0.5 transition-all">
                   Book a Campus Visit <ArrowRight className="h-4 w-4" />
                 </button>
               </AdmissionDialog>
               <Link
                 to="/programmes"
-                className="inline-flex items-center gap-2 rounded-full border-2 border-primary/20 bg-white px-6 py-3.5 text-sm font-bold text-primary hover:border-primary hover:bg-slate-50 hover:-translate-y-0.5 transition-all shadow-xs"
+                className="inline-flex items-center gap-2 rounded-full border border-purple-900/15 bg-white px-6 py-3.5 text-sm font-bold text-[#4C167F] hover:bg-slate-50 hover:-translate-y-0.5 transition-all shadow-2xs"
               >
                 Explore programmes
               </Link>
             </div>
 
-            <div className="mt-10 grid grid-cols-3 gap-4 max-w-md">
-              {[
-                { n: "1:12", l: "Teacher ratio" },
-                { n: "7+", l: "Age programmes" },
-                { n: "100%", l: "CCTV Covered" },
-              ].map((s) => (
-                <div key={s.l} className="group p-3 rounded-2xl bg-white/60 border border-border/60 backdrop-blur-xs transition-all hover:bg-white hover:shadow-sm">
-                  <div className="text-3xl font-extrabold text-primary group-hover:scale-105 transition-transform origin-left">{s.n}</div>
-                  <div className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">{s.l}</div>
-                </div>
-              ))}
+            <div className="mt-10 flex items-center gap-6 sm:gap-10 border-t border-[#4C167F]/15 pt-6 max-w-xl">
+              <div>
+                <div className="text-2xl sm:text-3xl font-black text-primary">1:12</div>
+                <div className="text-[10px] sm:text-xs uppercase tracking-widest text-muted-foreground font-extrabold mt-0.5">Teacher Ratio</div>
+              </div>
+              <div className="h-9 w-px bg-[#4C167F]/15" />
+              <div>
+                <div className="text-2xl sm:text-3xl font-black text-primary">7+</div>
+                <div className="text-[10px] sm:text-xs uppercase tracking-widest text-muted-foreground font-extrabold mt-0.5">Age Programmes</div>
+              </div>
+              <div className="h-9 w-px bg-[#4C167F]/15" />
+              <div>
+                <div className="text-2xl sm:text-3xl font-black text-primary">100%</div>
+                <div className="text-[10px] sm:text-xs uppercase tracking-widest text-muted-foreground font-extrabold mt-0.5">CCTV Covered</div>
+              </div>
             </div>
           </div>
           <div className="lg:col-span-6 relative">
-            {/* Ambient Radial Glow Behind Hero Carousel */}
-            <div className="absolute -inset-4 bg-gradient-to-tr from-accent/30 via-transparent to-primary/15 rounded-3xl blur-2xl pointer-events-none" />
+            {/* Ambient Soft Aura Shape */}
+            <div className="absolute -right-8 -top-8 w-72 h-72 rounded-full bg-gradient-to-br from-purple-200/40 to-amber-200/30 blur-2xl pointer-events-none" />
             
             <HeroCarousel />
 
             {/* Bottom Left Floating Social Proof Badge */}
-            <div className="absolute -bottom-6 -left-6 rounded-3xl bg-[#FFF8EF] border border-white/80 p-4 shadow-xl shadow-primary/10 flex items-center gap-3 max-w-xs z-20 hover:-translate-y-1 transition-transform backdrop-blur-md">
-              <div className="h-10 w-10 rounded-full bg-primary text-primary-foreground grid place-items-center shrink-0 shadow-md">
-                <ShieldCheck className="h-5 w-5" />
+            <div className="absolute -bottom-5 -left-4 rounded-3xl bg-white/95 border border-[#4C167F]/10 p-3.5 shadow-xl shadow-purple-950/10 flex items-center gap-3 max-w-xs z-20 hover:-translate-y-1 transition-transform backdrop-blur-md">
+              <div className="h-9 w-9 rounded-full bg-amber-100 text-amber-900 border border-amber-300 grid place-items-center shrink-0 shadow-2xs">
+                <ShieldCheck className="h-4.5 w-4.5 text-amber-700" />
               </div>
               <div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Loved by parents</div>
-                <div className="text-sm font-bold text-foreground">4.9 / 5 from 200+ families</div>
+                <div className="text-[10px] uppercase tracking-widest text-muted-foreground font-extrabold">Loved by parents</div>
+                <div className="text-xs sm:text-sm font-black text-foreground">4.9 / 5 from 200+ families</div>
               </div>
             </div>
           </div>

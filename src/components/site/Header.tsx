@@ -58,7 +58,7 @@ const nav: NavGroup[] = [
 export function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-[#EFE8DC]/95 backdrop-blur-md shadow-2xs">
+    <header className="sticky top-0 z-50 border-b border-[#4C167F]/10 bg-[#F4F0E8]/95 backdrop-blur-md">
       <div className="container-page-wide flex items-center justify-between gap-4 sm:gap-6 py-2.5 sm:py-3.5">
         <Logo />
         <nav className="hidden lg:flex flex-1 items-center justify-center gap-1 px-2">
@@ -71,7 +71,7 @@ export function Header() {
                       href={item.to}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-semibold text-foreground/80 hover:bg-secondary hover:text-primary transition whitespace-nowrap"
+                      className="inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-semibold text-foreground/80 hover:bg-white/60 hover:text-primary transition whitespace-nowrap"
                     >
                       {item.label}
                       <ChevronDown className="h-3.5 w-3.5" />
@@ -79,20 +79,20 @@ export function Header() {
                   ) : (
                     <Link
                       to={item.to}
-                      className="inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-semibold text-foreground/80 hover:bg-secondary hover:text-primary transition whitespace-nowrap"
+                      className="inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-semibold text-foreground/80 hover:bg-white/60 hover:text-primary transition whitespace-nowrap"
                     >
                       {item.label}
                       <ChevronDown className="h-3.5 w-3.5" />
                     </Link>
                   )
                 ) : (
-                  <button className="inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-semibold text-foreground/80 hover:bg-secondary hover:text-primary transition whitespace-nowrap">
+                  <button className="inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-semibold text-foreground/80 hover:bg-white/60 hover:text-primary transition whitespace-nowrap">
                     {item.label}
                     <ChevronDown className="h-3.5 w-3.5" />
                   </button>
                 )}
                 <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full pt-2 transition-all duration-200 ease-out z-50">
-                  <div className="min-w-64 rounded-2xl border border-border/80 bg-[#F7F1E5] p-2.5 shadow-2xl shadow-purple-950/10 backdrop-blur-md">
+                  <div className="min-w-64 rounded-2xl border border-border/80 bg-white p-2.5 shadow-2xl shadow-purple-950/10 backdrop-blur-md">
                     {item.children.map((c) =>
                       c.to.startsWith("http") ? (
                         <a
@@ -125,7 +125,7 @@ export function Header() {
                 href={item.to}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full px-3 py-2 text-sm font-semibold text-foreground/80 hover:bg-secondary hover:text-primary transition whitespace-nowrap"
+                className="rounded-full px-3 py-2 text-sm font-semibold text-foreground/80 hover:bg-white/60 hover:text-primary transition whitespace-nowrap"
               >
                 {item.label}
               </a>
@@ -133,8 +133,8 @@ export function Header() {
               <Link
                 key={item.to}
                 to={item.to!}
-                className="rounded-full px-3 py-2 text-sm font-semibold text-foreground/80 hover:bg-secondary hover:text-primary transition whitespace-nowrap"
-                activeProps={{ className: "rounded full px 3 py 2 text sm font semibold bg secondary text primary whitespace nowrap" }}
+                className="px-3 py-1.5 text-sm font-bold text-foreground/80 hover:text-primary transition whitespace-nowrap"
+                activeProps={{ className: "px-3 py-1.5 text-sm font-extrabold text-[#4C167F] border-b-2 border-[#4C167F] whitespace-nowrap" }}
                 activeOptions={{ exact: true }}
               >
                 {item.label}
@@ -145,23 +145,23 @@ export function Header() {
         <div className="hidden lg:flex items-center gap-2 shrink-0">
           <a
             href="tel:+919900639303"
-            className="hidden xl:inline-flex items-center gap-2 rounded-full border border-border/80 bg-secondary px-3.5 py-2 text-sm font-semibold text-foreground hover:border-primary hover:text-primary transition shadow-2xs hover:shadow-xs"
+            className="hidden xl:inline-flex items-center gap-2 rounded-full border border-[#4C167F]/20 bg-white/70 px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-foreground hover:border-primary hover:text-primary transition shadow-2xs"
           >
             <Phone className="h-4 w-4 text-primary" /> +91 99006 39303
           </a>
           <AdmissionDialog>
-            <button className="shimmer-pill inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-bold text-white shadow-md shadow-primary/20 hover:brightness-110 hover:-translate-y-0.5 transition-all whitespace-nowrap">
+            <button className="shimmer-pill inline-flex items-center gap-1.5 rounded-full bg-[#4C167F] px-4.5 py-2 text-xs sm:text-sm font-bold text-white shadow-md shadow-purple-900/20 hover:brightness-110 hover:-translate-y-0.5 transition-all whitespace-nowrap cursor-pointer">
               Book a Visit
             </button>
           </AdmissionDialog>
         </div>
 
         <button
-          className="lg:hidden ml-auto inline-flex items-center justify-center rounded-full border border-border p-2"
+          className="lg:hidden ml-auto inline-flex items-center justify-center rounded-full border border-border p-2 bg-white/60"
           onClick={() => setOpen((o) => !o)}
           aria-label="Toggle menu"
         >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {open ? <X className="h-5 w-5 text-primary" /> : <Menu className="h-5 w-5 text-primary" />}
         </button>
       </div>
       {open && (
