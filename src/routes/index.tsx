@@ -149,13 +149,15 @@ function Home() {
               </span>
               ADMISSIONS OPEN 2026–27 • KORAMANGALA
             </div>
-            <h1 className="mt-5 text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.08] text-foreground text-balance">
-              A preschool where{" "}
-              <span className="bg-[#FCD34D] text-[#4C167F] px-4 py-1 rounded-2xl inline-block shadow-2xs font-extrabold">
+            <h1 className="mt-5 text-[#2A1F38] text-balance leading-tight">
+              <span className="text-3xl sm:text-4xl md:text-[50px] font-semibold tracking-tight leading-tight">
+                A preschool where{" "}
+              </span>
+              <span className="bg-[#FCD34D] text-[#4C167F] px-4 py-1.5 rounded-3xl inline-block shadow-2xs font-bold text-3xl sm:text-4xl md:text-[58px] -rotate-3 sm:-rotate-3.5 transform origin-left transition-transform hover:rotate-0">
                 childhood comes first.
               </span>
             </h1>
-            <p className="mt-5 max-w-xl text-base md:text-lg text-foreground/85 leading-relaxed font-medium">
+            <p className="mt-5 max-w-xl text-sm sm:text-base text-foreground/85 leading-[21px] font-medium">
               Through learning through play and small-group experiences, children build real friendships, confidence, and meaningful relationships. With safe care, personal attention, and transparent communication, parents can have peace of mind knowing their child is seen, heard, encouraged, and supported by trusted teachers.
             </p>
             <div className="mt-8 flex flex-wrap gap-3.5">
