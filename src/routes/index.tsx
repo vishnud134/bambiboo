@@ -204,7 +204,7 @@ function Home() {
               </div>
               <div>
                 <div className="text-[10px] uppercase tracking-widest text-muted-foreground font-extrabold">Loved by parents</div>
-                <div className="text-xs sm:text-sm font-black text-foreground">4.9 / 5 from 200+ families</div>
+                <div className="text-xs sm:text-sm font-semibold text-foreground">4.9 / 5 from 200+ families</div>
               </div>
             </div>
           </div>
@@ -216,7 +216,7 @@ function Home() {
         <div className="container-page section-padding grid md:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-start">
           <div className="md:col-span-5 lg:col-span-5">
             <div className="text-xs font-bold uppercase tracking-widest text-primary/80">About BambiBoo</div>
-            <h2 className="mt-2 text-3xl md:text-5xl font-black text-balance leading-tight">
+            <h2 className="mt-2 text-3xl md:text-5xl font-semibold text-balance leading-tight">
               A place where childhood comes first.
             </h2>
             <p className="mt-4 text-xl font-bold italic text-primary">
@@ -243,7 +243,7 @@ function Home() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
               <div className="text-xs font-bold uppercase tracking-widest text-primary/80">Core programmes</div>
-              <h2 className="mt-2 text-4xl md:text-5xl font-bold text-balance">
+              <h2 className="mt-2 text-4xl md:text-5xl font-semibold text-balance">
                 A path for every age, from{" "}
                 <span className="relative inline-block bg-primary/10 text-primary px-3 py-0.5 rounded-2xl border border-primary/20 shadow-xs animate-float-slow">
                   tiny toes
@@ -326,7 +326,7 @@ function Home() {
         <div className="container-page section-padding">
           <div className="max-w-2xl">
             <div className="text-xs font-bold uppercase tracking-widest text-accent">Pillars of care</div>
-            <h2 className="mt-2 text-4xl md:text-5xl font-bold text-balance">
+            <h2 className="mt-2 text-4xl md:text-5xl font-semibold text-balance">
               The BambiBoo{" "}
               <span className="bg-accent text-primary px-3 py-0.5 rounded-2xl inline-block shadow-xs">
                 Learning Journey
@@ -386,7 +386,7 @@ function Home() {
       <section className="bg-[#FAFAFC]">
         <div className="container-page section-padding">
           <div className="text-xs font-bold uppercase tracking-widest text-primary/80">Loved by neighborhood families</div>
-          <h2 className="mt-2 text-4xl md:text-5xl font-bold text-balance">Real parents, measurable milestones.</h2>
+          <h2 className="mt-2 text-4xl md:text-5xl font-semibold text-balance">Real parents, measurable milestones.</h2>
           <Carousel opts={{ align: "start", loop: true }} className="mt-10">
             <CarouselContent className="-ml-5 lg:-ml-6">
               {[
@@ -443,7 +443,7 @@ function Home() {
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6">
             <div>
               <div className="text-xs font-bold uppercase tracking-widest text-primary/80">FAQ</div>
-              <h2 className="mt-2 text-3xl md:text-5xl font-bold text-balance">Quick answers for busy parents.</h2>
+              <h2 className="mt-2 text-3xl md:text-5xl font-semibold text-balance">Quick answers for busy parents.</h2>
             </div>
             <p className="text-sm md:text-base text-muted-foreground max-w-md leading-relaxed">Still curious? Reach out we love long conversations about your child.</p>
           </div>

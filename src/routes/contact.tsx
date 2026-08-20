@@ -72,7 +72,7 @@ function Contact() {
             <div className="text-xs font-bold uppercase tracking-widest text-primary/75 mb-1">
               Book a School Tour
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#430E6C] tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#430E6C] tracking-tight">
               There's no better way to experience BambiBoo than to visit us.
             </h2>
             <p className="mt-3 sm:mt-4 text-xs sm:text-sm md:text-base text-muted-foreground max-w-2xl leading-relaxed">
@@ -99,7 +99,7 @@ function Contact() {
               <div className="text-xs font-bold uppercase tracking-widest text-[#430E6C]/75 mb-1">
                 Location & Directions
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#430E6C] tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#430E6C] tracking-tight">
                 Find Us in Koramangala
               </h2>
             </div>

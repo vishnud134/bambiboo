@@ -96,7 +96,7 @@ export function ProgrammeFinder() {
           <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary">
             <Sparkles className="h-3.5 w-3.5" /> Interactive Programme Finder
           </div>
-          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-black text-foreground tracking-tight text-balance">
+          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground tracking-tight text-balance">
             Find the perfect stage for your child.
           </h2>
           <p className="mt-3 text-base md:text-lg text-muted-foreground leading-relaxed text-balance">

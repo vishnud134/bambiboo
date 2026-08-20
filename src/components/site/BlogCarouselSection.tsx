@@ -476,7 +476,7 @@ export function BlogCarouselSection({ className = "" }: { className?: string }) 
               <BookOpen className="h-4 w-4 text-primary" />
               Parenting & Early Learning Blog
             </div>
-            <h2 className="text-3xl md:text-5xl font-black text-foreground tracking-tight text-balance">
+            <h2 className="text-3xl md:text-5xl font-semibold text-foreground tracking-tight text-balance">
               Insights & guidance for BambiBoo parents.
             </h2>
           </div>

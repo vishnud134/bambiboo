@@ -124,7 +124,7 @@ export function PillarsOfCareSection() {
         <div className="container-page section-padding">
           <div className="max-w-2xl">
             <div className="text-xs font-bold uppercase tracking-widest text-amber-300">Pillars of care</div>
-            <h2 className="mt-2 text-4xl md:text-5xl font-bold text-balance">
+            <h2 className="mt-2 text-4xl md:text-5xl font-semibold text-balance">
               Every Day,{" "}
               <span className="bg-amber-300 text-primary px-3 py-0.5 rounded-2xl inline-block shadow-xs">
                 Full of Wonder.
@@ -181,7 +181,7 @@ export function LovedByFamiliesSection() {
     <section className="bg-[#FAFAFC]">
       <div className="container-page section-padding">
         <div className="text-xs font-bold uppercase tracking-widest text-primary/80">Loved by neighborhood families</div>
-        <h2 className="mt-2 text-4xl md:text-5xl font-bold text-balance">Real parents, measurable milestones.</h2>
+        <h2 className="mt-2 text-4xl md:text-5xl font-semibold text-balance">Real parents, measurable milestones.</h2>
         <Carousel opts={{ align: "start", loop: true }} className="mt-10">
           <CarouselContent className="-ml-5 lg:-ml-6">
             {[
@@ -245,7 +245,7 @@ export function FaqSection() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6">
           <div>
             <div className="text-xs font-bold uppercase tracking-widest text-primary/80">FAQ</div>
-            <h2 className="mt-2 text-3xl md:text-5xl font-bold text-balance">Quick answers for busy parents.</h2>
+            <h2 className="mt-2 text-3xl md:text-5xl font-semibold text-balance">Quick answers for busy parents.</h2>
           </div>
           <p className="text-sm md:text-base text-muted-foreground max-w-md leading-relaxed">Still curious? Reach out we love long conversations about your child.</p>
         </div>

@@ -84,7 +84,7 @@ export function DailyRhythmExplorer() {
             <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary">
               <Sparkles className="h-3.5 w-3.5" /> A Day at BambiBoo
             </div>
-            <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-black text-[#430E6C] tracking-tight text-balance">
+            <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-semibold text-[#430E6C] tracking-tight text-balance">
               The daily rhythm of a curious child.
             </h2>
           </div>

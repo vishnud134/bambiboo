@@ -44,7 +44,7 @@ export function WhyBambiboo({ className = "" }: { className?: string }) {
             <div className="text-xs font-bold uppercase tracking-widest text-[#430E6C]/75 mb-2">
               WHY CHOOSE BAMBIBOO
             </div>
-            <h2 className="text-3xl md:text-5xl font-black text-[#430E6C] tracking-tight text-balance">
+            <h2 className="text-3xl md:text-5xl font-semibold text-[#430E6C] tracking-tight text-balance">
               A place where childhood comes first.
             </h2>
           </div>
