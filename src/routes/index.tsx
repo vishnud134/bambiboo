@@ -212,7 +212,7 @@ function Home() {
       </section>
 
       {/* ABOUT */}
-      <section className="bg-[#F8FAFC] relative">
+      <section className="bg-[#FFFAF1] relative">
         <div className="container-page section-padding grid md:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-start">
           <div className="md:col-span-5 lg:col-span-5">
             <div className="text-xs font-bold uppercase tracking-widest text-primary/80">About BambiBoo</div>
