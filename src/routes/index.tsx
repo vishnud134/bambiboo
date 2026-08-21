@@ -335,9 +335,9 @@ function Home() {
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:gap-8">
             {pillars.map((p) => (
-              <div key={p.title} className="master-card group rounded-3xl border border-primary-foreground/20 bg-primary-foreground/5 p-6 md:p-8 flex flex-col justify-between h-full hover:bg-primary-foreground/10 hover:border-accent/40 transition-all duration-300">
+              <div key={p.title} className="group rounded-3xl border border-primary-foreground/20 bg-primary-foreground/5 p-6 md:p-8 flex flex-col justify-between h-full hover:bg-primary-foreground/10 hover:border-accent/40 transition-colors duration-300">
                 <div>
-                  <div className="h-12 w-12 rounded-2xl bg-accent text-primary grid place-items-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300 shadow-md">
+                  <div className="h-12 w-12 rounded-2xl bg-accent text-primary grid place-items-center shadow-md">
                     <p.icon className="h-6 w-6" />
                   </div>
                   <h3 className="mt-4 text-xl font-bold">{p.title}</h3>
@@ -351,7 +351,7 @@ function Home() {
                       loading="lazy"
                       width={600}
                       height={208}
-                      className="block h-52 w-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      className="block h-52 w-full object-cover object-center"
                     />
                   </div>
                 )}
