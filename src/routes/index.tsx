@@ -326,9 +326,9 @@ function Home() {
         <div className="container-page section-padding">
           <div className="max-w-2xl">
             <div className="text-xs font-bold uppercase tracking-widest text-accent">Pillars of care</div>
-            <h2 className="mt-2 text-4xl md:text-5xl font-semibold text-balance">
+            <h2 className="mt-2 text-4xl md:text-5xl font-semibold text-balance leading-normal">
               The BambiBoo{" "}
-              <span className="bg-accent text-primary px-3 py-0.5 rounded-2xl inline-block shadow-xs">
+              <span className="bg-accent text-primary px-3.5 py-1 sm:py-1.5 rounded-2xl inline-block align-baseline leading-snug shadow-xs">
                 Learning Journey
               </span>
             </h2>

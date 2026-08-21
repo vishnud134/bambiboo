@@ -124,9 +124,9 @@ export function PillarsOfCareSection() {
         <div className="container-page section-padding">
           <div className="max-w-2xl">
             <div className="text-xs font-bold uppercase tracking-widest text-amber-300">Pillars of care</div>
-            <h2 className="mt-2 text-4xl md:text-5xl font-semibold text-balance">
+            <h2 className="mt-2 text-4xl md:text-5xl font-semibold text-balance leading-normal">
               Every Day,{" "}
-              <span className="bg-amber-300 text-primary px-3 py-0.5 rounded-2xl inline-block shadow-xs">
+              <span className="bg-amber-300 text-primary px-3.5 py-1 sm:py-1.5 rounded-2xl inline-block align-baseline leading-snug shadow-xs">
                 Full of Wonder.
               </span>
             </h2>
