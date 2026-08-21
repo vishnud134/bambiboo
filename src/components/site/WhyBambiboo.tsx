@@ -54,28 +54,28 @@ export function WhyBambiboo({ className = "" }: { className?: string }) {
         </div>
 
         {/* 5 Cards Row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5">
           {whyBambibooItems.map((item) => {
             const IconComponent = item.icon;
             return (
               <Link
                 key={item.label}
                 to={item.href}
-                className="master-card group flex flex-col justify-between h-full rounded-[28px] sm:rounded-[32px] bg-white border-2 border-[#7E22CE] p-6 sm:p-7 shadow-2xs hover:shadow-xl hover:border-[#6B21A8] transition-all duration-300 min-h-[260px]"
+                className="master-card group flex flex-col justify-between h-full rounded-3xl bg-white border-2 border-[#7E22CE] p-5 shadow-xs hover:shadow-lg hover:border-[#6B21A8] transition-all duration-300 min-h-[170px]"
               >
                 <div>
-                  <div className="h-12 w-12 rounded-full bg-[#7E22CE] text-white flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300 shadow-xs">
+                  <div className="h-10 w-10 rounded-full bg-[#7E22CE] text-white flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300 shadow-xs">
                     <IconComponent className="h-5 w-5 stroke-[2.25]" />
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-[#7E22CE] leading-snug tracking-tight mb-3">
+                  <h3 className="text-lg font-bold text-[#7E22CE] leading-snug tracking-tight mb-1">
                     {item.label}
                   </h3>
-                  <p className="text-sm sm:text-base text-foreground/80 font-medium leading-relaxed">
+                  <p className="text-xs text-foreground/80 font-medium leading-relaxed">
                     {item.sub}
                   </p>
                 </div>
-                <div className="mt-6 pt-2 text-sm sm:text-base font-bold text-[#7E22CE] flex items-center gap-1.5 group-hover:gap-2.5 transition-all duration-300">
-                  Learn more <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <div className="mt-4 text-xs font-bold text-[#7E22CE] flex items-center gap-1 group-hover:gap-2 transition-all duration-300">
+                  Learn more <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                 </div>
               </Link>
             );
