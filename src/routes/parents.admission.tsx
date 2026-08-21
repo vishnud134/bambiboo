@@ -103,7 +103,7 @@ function AdmissionPage() {
       </section>
 
       {/* Form + paperwork side-by-side */}
-      <section id="enquiry" className="bg-secondary/40 scroll-mt-24">
+      <section id="enquiry" className="bg-[#FFFAF1] scroll-mt-24">
         <div className="container-page py-10 md:py-14 grid gap-8 lg:grid-cols-12 items-start">
           <div className="lg:col-span-7">
             <AdmissionForm />

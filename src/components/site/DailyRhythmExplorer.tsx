@@ -76,7 +76,7 @@ export function DailyRhythmExplorer() {
   const IconComp = activeBlock.icon;
 
   return (
-    <section className="bg-[#FAF5EC] py-12 md:py-20">
+    <section className="bg-[#FFFAF1] py-12 md:py-20">
       <div className="container-page">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">

@@ -66,7 +66,7 @@ function Contact() {
         </div>
       </section>
 
-      <section className="bg-[#F8FAFC] py-8 sm:py-12 md:py-16">
+      <section className="bg-[#FFFAF1] py-8 sm:py-12 md:py-16">
         <div className="container-page grid gap-6 sm:gap-8 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-8">
             <div className="text-xs font-bold uppercase tracking-widest text-primary/75 mb-1">
@@ -92,7 +92,7 @@ function Contact() {
       </section>
 
       {/* Map / Directions */}
-      <section className="bg-white py-8 sm:py-12 md:py-16">
+      <section className="bg-[#FAFAFC] py-8 sm:py-12 md:py-16">
         <div className="container-page">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-4 mb-5 sm:mb-6">
             <div>

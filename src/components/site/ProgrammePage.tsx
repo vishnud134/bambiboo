@@ -384,7 +384,7 @@ export function ProgrammePage({ info, showHeroForm }: { info: ProgrammeInfo; sho
 
       {/* Activities - hide on Playgroup page */}
       {!info.name.toLowerCase().includes("playgroup") && (
-        <section className="bg-secondary/50">
+        <section className="bg-[#FFFAF1]">
           <div className="container-page py-10 md:py-14">
             <div className="text-xs font-bold uppercase tracking-widest text-primary/80">Development activities</div>
             <h2 className="mt-2 text-3xl md:text-4xl font-bold">Hands, feet, voice, imagination all in play.</h2>
@@ -404,7 +404,7 @@ export function ProgrammePage({ info, showHeroForm }: { info: ProgrammeInfo; sho
       )}
 
       {/* CTA */}
-      <section className="bg-slate-50 pt-10 md:pt-14 pb-11">
+      <section className="bg-[#FAFAFC] pt-10 md:pt-14 pb-11">
         <div className="container-page">
           <div className="rounded-[40px] bg-[#3D1C84] p-10 md:p-14 text-primary-foreground relative overflow-hidden">
             <div className="absolute top-0 right-0 h-full w-1/3 bg-[#8F6584]" style={{ clipPath: "ellipse(75% 120% at 100% 0%)" }} />
