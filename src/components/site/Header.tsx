@@ -58,7 +58,7 @@ const nav: NavGroup[] = [
 export function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-50 border-b border-[#4C167F]/10 bg-[#F4F0E8]/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-[#4C167F]/10 bg-[#EEE6DC]/95 backdrop-blur-md">
       <div className="container-page-wide flex items-center justify-between gap-4 sm:gap-6 py-2.5 sm:py-3.5">
         <Logo />
         <nav className="hidden lg:flex flex-1 items-center justify-center gap-1 px-2">

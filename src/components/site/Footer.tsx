@@ -7,7 +7,7 @@ const col = "text-xs md:text-sm text-[#1A1228]/85 hover:text-[#4C167F] font-medi
 
 export function Footer() {
   return (
-    <footer className="bg-[#E4D9C7] border-t border-[#430E6C]/15 text-[#1A1228]">
+    <footer className="bg-[#EEE6DC] border-t border-[#430E6C]/15 text-[#1A1228]">
       <div className="container-page grid gap-6 md:gap-8 pt-10 md:pt-14 pb-6 md:pb-8 md:grid-cols-2 lg:grid-cols-5">
         <div className="lg:col-span-2 flex flex-col justify-between">
           <div>
