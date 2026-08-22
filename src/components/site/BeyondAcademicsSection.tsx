@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Palette, Music, Sun, Compass, Sparkles, ArrowRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 import artsCraftsImg from "@/assets/bambiboo/hobby-center-prog-hd.jpg";
 import musicDanceImg from "@/assets/bambiboo/nursery-prog.jpg";
@@ -72,28 +73,38 @@ export function BeyondAcademicsSection({ className = "" }: { className?: string 
           </div>
         </div>
 
-        {/* Carousel Container */}
-        <Carousel opts={{ align: "start", loop: true }} className="relative px-1">
-          <CarouselContent className="-ml-4 md:-ml-5">
+        {/* Working Active Carousel Container */}
+        <Carousel
+          opts={{ align: "start", loop: true }}
+          plugins={[
+            Autoplay({
+              delay: 3800,
+              stopOnInteraction: false,
+              stopOnMouseEnter: true,
+            }),
+          ]}
+          className="relative px-2 md:px-4"
+        >
+          <CarouselContent className="-ml-4 md:-ml-6">
             {beyondAcademicsCards.map((item) => {
               const IconComponent = item.icon;
               return (
-                <CarouselItem key={item.label} className="pl-4 md:pl-5 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5">
+                <CarouselItem key={item.label} className="pl-4 md:pl-6 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/3">
                   <Link
                     to={item.href}
-                    className="master-card group flex flex-col justify-between h-full rounded-3xl bg-white border-2 border-[#7E22CE] p-4.5 sm:p-5 shadow-xs hover:shadow-xl hover:border-[#6B21A8] transition-all duration-300 min-h-[290px]"
+                    className="master-card group flex flex-col justify-between h-full rounded-[28px] sm:rounded-[32px] bg-white border-2 border-[#7E22CE] p-6 sm:p-7 shadow-2xs hover:shadow-xl hover:border-[#6B21A8] transition-all duration-300 min-h-[380px]"
                   >
                     <div>
-                      <div className="h-10 w-10 rounded-full bg-[#7E22CE] text-white flex items-center justify-center mb-3 group-hover:scale-105 transition-transform duration-300 shadow-xs">
-                        <IconComponent className="h-5 w-5 stroke-[2.25]" />
+                      <div className="h-12 w-12 rounded-full bg-[#7E22CE] text-white flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300 shadow-xs">
+                        <IconComponent className="h-6 w-6 stroke-[2.25]" />
                       </div>
-                      <h3 className="text-lg font-bold text-[#7E22CE] leading-snug tracking-tight mb-1">
+                      <h3 className="text-xl sm:text-2xl font-bold text-[#7E22CE] leading-snug tracking-tight mb-2">
                         {item.label}
                       </h3>
-                      <p className="text-xs text-foreground/80 font-medium leading-relaxed mb-3">
+                      <p className="text-sm text-foreground/80 font-medium leading-relaxed mb-4">
                         {item.sub}
                       </p>
-                      <div className="w-full h-32 rounded-2xl overflow-hidden mb-2 border border-[#7E22CE]/15 shadow-2xs">
+                      <div className="w-full h-44 sm:h-48 rounded-2xl overflow-hidden mb-3 border border-[#7E22CE]/15 shadow-xs">
                         <img
                           src={item.image}
                           alt={item.label}
@@ -102,16 +113,16 @@ export function BeyondAcademicsSection({ className = "" }: { className?: string 
                         />
                       </div>
                     </div>
-                    <div className="mt-3 text-xs font-bold text-[#7E22CE] flex items-center gap-1 group-hover:gap-2 transition-all duration-300">
-                      Explore {item.label.split(" ")[0]} <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                    <div className="mt-4 pt-1 text-sm font-bold text-[#7E22CE] flex items-center gap-1.5 group-hover:gap-2.5 transition-all duration-300">
+                      Explore {item.label} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </div>
                   </Link>
                 </CarouselItem>
               );
             })}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex -left-5 h-10 w-10 bg-white text-[#7E22CE] border-2 border-[#7E22CE] hover:bg-[#7E22CE] hover:text-white transition-all shadow-md" />
-          <CarouselNext className="hidden md:flex -right-5 h-10 w-10 bg-white text-[#7E22CE] border-2 border-[#7E22CE] hover:bg-[#7E22CE] hover:text-white transition-all shadow-md" />
+          <CarouselPrevious className="flex -left-3 sm:-left-5 md:-left-6 h-11 w-11 bg-white text-[#7E22CE] border-2 border-[#7E22CE] hover:bg-[#7E22CE] hover:text-white transition-all shadow-md z-20 cursor-pointer" />
+          <CarouselNext className="flex -right-3 sm:-right-5 md:-right-6 h-11 w-11 bg-white text-[#7E22CE] border-2 border-[#7E22CE] hover:bg-[#7E22CE] hover:text-white transition-all shadow-md z-20 cursor-pointer" />
         </Carousel>
       </div>
     </section>
