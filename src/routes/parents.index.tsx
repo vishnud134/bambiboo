@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/site/PageShell";
 import { Breadcrumb } from "@/components/site/Breadcrumb";
+import { BeyondAcademicsSection } from "@/components/site/BeyondAcademicsSection";
 
 type Card = {
   name: string;
@@ -95,6 +96,9 @@ function ParentsIndex() {
         </div>
       </div>
     </section>
+
+      {/* BEYOND ACADEMICS SECTION */}
+      <BeyondAcademicsSection />
     </PageShell>
   );
 }

@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { PageShell } from "@/components/site/PageShell";
+import { BeyondAcademicsSection } from "@/components/site/BeyondAcademicsSection";
 
 import outdoorBalanceTrack from "@/assets/gallery/outdoor-balance-track.webp";
 import artFingerPainting from "@/assets/gallery/art-finger-painting.webp";
@@ -86,6 +87,9 @@ function Gallery() {
           ))}
         </div>
       </section>
+
+      {/* BEYOND ACADEMICS SECTION */}
+      <BeyondAcademicsSection />
     </PageShell>
   );
 }
