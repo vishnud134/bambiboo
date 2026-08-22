@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Palette, Music, Sun, Compass, Sparkles, ArrowRight } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 import artsCraftsImg from "@/assets/bambiboo/hobby-center-prog-hd.jpg";
 import musicDanceImg from "@/assets/bambiboo/nursery-prog.jpg";
@@ -71,41 +72,47 @@ export function BeyondAcademicsSection({ className = "" }: { className?: string 
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5">
-          {beyondAcademicsCards.map((item) => {
-            const IconComponent = item.icon;
-            return (
-              <Link
-                key={item.label}
-                to={item.href}
-                className="master-card group flex flex-col justify-between h-full rounded-3xl bg-white border-2 border-[#7E22CE] p-4.5 sm:p-5 shadow-xs hover:shadow-xl hover:border-[#6B21A8] transition-all duration-300 min-h-[290px]"
-              >
-                <div>
-                  <div className="h-10 w-10 rounded-full bg-[#7E22CE] text-white flex items-center justify-center mb-3 group-hover:scale-105 transition-transform duration-300 shadow-xs">
-                    <IconComponent className="h-5 w-5 stroke-[2.25]" />
-                  </div>
-                  <h3 className="text-lg font-bold text-[#7E22CE] leading-snug tracking-tight mb-1">
-                    {item.label}
-                  </h3>
-                  <p className="text-xs text-foreground/80 font-medium leading-relaxed mb-3">
-                    {item.sub}
-                  </p>
-                  <div className="w-full h-32 rounded-2xl overflow-hidden mb-2 border border-[#7E22CE]/15 shadow-2xs">
-                    <img
-                      src={item.image}
-                      alt={item.label}
-                      loading="lazy"
-                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                </div>
-                <div className="mt-3 text-xs font-bold text-[#7E22CE] flex items-center gap-1 group-hover:gap-2 transition-all duration-300">
-                  Explore {item.label.split(" ")[0]} <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-                </div>
-              </Link>
-            );
-          })}
-        </div>
+        {/* Carousel Container */}
+        <Carousel opts={{ align: "start", loop: true }} className="relative px-1">
+          <CarouselContent className="-ml-4 md:-ml-5">
+            {beyondAcademicsCards.map((item) => {
+              const IconComponent = item.icon;
+              return (
+                <CarouselItem key={item.label} className="pl-4 md:pl-5 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5">
+                  <Link
+                    to={item.href}
+                    className="master-card group flex flex-col justify-between h-full rounded-3xl bg-white border-2 border-[#7E22CE] p-4.5 sm:p-5 shadow-xs hover:shadow-xl hover:border-[#6B21A8] transition-all duration-300 min-h-[290px]"
+                  >
+                    <div>
+                      <div className="h-10 w-10 rounded-full bg-[#7E22CE] text-white flex items-center justify-center mb-3 group-hover:scale-105 transition-transform duration-300 shadow-xs">
+                        <IconComponent className="h-5 w-5 stroke-[2.25]" />
+                      </div>
+                      <h3 className="text-lg font-bold text-[#7E22CE] leading-snug tracking-tight mb-1">
+                        {item.label}
+                      </h3>
+                      <p className="text-xs text-foreground/80 font-medium leading-relaxed mb-3">
+                        {item.sub}
+                      </p>
+                      <div className="w-full h-32 rounded-2xl overflow-hidden mb-2 border border-[#7E22CE]/15 shadow-2xs">
+                        <img
+                          src={item.image}
+                          alt={item.label}
+                          loading="lazy"
+                          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                    </div>
+                    <div className="mt-3 text-xs font-bold text-[#7E22CE] flex items-center gap-1 group-hover:gap-2 transition-all duration-300">
+                      Explore {item.label.split(" ")[0]} <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                    </div>
+                  </Link>
+                </CarouselItem>
+              );
+            })}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex -left-5 h-10 w-10 bg-white text-[#7E22CE] border-2 border-[#7E22CE] hover:bg-[#7E22CE] hover:text-white transition-all shadow-md" />
+          <CarouselNext className="hidden md:flex -right-5 h-10 w-10 bg-white text-[#7E22CE] border-2 border-[#7E22CE] hover:bg-[#7E22CE] hover:text-white transition-all shadow-md" />
+        </Carousel>
       </div>
     </section>
   );
