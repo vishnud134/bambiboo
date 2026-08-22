@@ -40,6 +40,12 @@ import natureOutdoorPillarImg from "@/assets/nature-outdoor-pillar.webp";
 import steamPlayPillarImg from "@/assets/steam-play-pillar.webp";
 import yogaMindfulnessPillarImg from "@/assets/yoga-mindfulness-pillar.webp";
 
+import artsCraftsImg from "@/assets/bambiboo/hobby-center-prog-hd.jpg";
+import musicDanceImg from "@/assets/bambiboo/nursery-prog.jpg";
+import yogaMovementImg from "@/assets/bambiboo/yoga-hero-hd.jpg";
+import fieldTripsImg from "@/assets/bambiboo/field-trip-destination.jpg";
+import festivalsEventsImg from "@/assets/bambiboo/festival-hero-hd.jpg";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -133,31 +139,36 @@ const beyondAcademicsCards = [
     icon: Palette,
     label: "Arts & Crafts",
     sub: "Free painting, clay modeling, tactile textures & creative self-expression.",
-    href: "/beyond",
+    image: artsCraftsImg,
+    href: "/beyond/arts",
   },
   {
     icon: Music,
     label: "Music & Dance",
     sub: "Rhythm, acoustic instruments, songs & joyful body movement.",
-    href: "/beyond",
+    image: musicDanceImg,
+    href: "/beyond/music",
   },
   {
     icon: Sun,
     label: "Yoga & Movement",
     sub: "Mindful breathing, motor balance, agility & body awareness.",
-    href: "/beyond",
+    image: yogaMovementImg,
+    href: "/beyond/yoga",
   },
   {
     icon: Compass,
     label: "Field Trips",
     sub: "Nature walks, farm visits, community & real-world discovery.",
-    href: "/beyond",
+    image: fieldTripsImg,
+    href: "/beyond/field-trips",
   },
   {
     icon: Sparkles,
     label: "Festivals & Events",
     sub: "Cultural traditions, seasonal celebrations & family gatherings.",
-    href: "/beyond",
+    image: festivalsEventsImg,
+    href: "/beyond/festivals",
   },
 ];
 
@@ -504,21 +515,29 @@ function Home() {
                 <Link
                   key={item.label}
                   to={item.href}
-                  className="master-card group flex flex-col justify-between h-full rounded-3xl bg-white border-2 border-[#7E22CE] p-5 shadow-xs hover:shadow-lg hover:border-[#6B21A8] transition-all duration-300 min-h-[170px]"
+                  className="master-card group flex flex-col justify-between h-full rounded-3xl bg-white border-2 border-[#7E22CE] p-4.5 sm:p-5 shadow-xs hover:shadow-xl hover:border-[#6B21A8] transition-all duration-300 min-h-[290px]"
                 >
                   <div>
-                    <div className="h-10 w-10 rounded-full bg-[#7E22CE] text-white flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300 shadow-xs">
+                    <div className="h-10 w-10 rounded-full bg-[#7E22CE] text-white flex items-center justify-center mb-3 group-hover:scale-105 transition-transform duration-300 shadow-xs">
                       <IconComponent className="h-5 w-5 stroke-[2.25]" />
                     </div>
                     <h3 className="text-lg font-bold text-[#7E22CE] leading-snug tracking-tight mb-1">
                       {item.label}
                     </h3>
-                    <p className="text-xs text-foreground/80 font-medium leading-relaxed">
+                    <p className="text-xs text-foreground/80 font-medium leading-relaxed mb-3">
                       {item.sub}
                     </p>
+                    <div className="w-full h-32 rounded-2xl overflow-hidden mb-2 border border-[#7E22CE]/15 shadow-2xs">
+                      <img
+                        src={item.image}
+                        alt={item.label}
+                        loading="lazy"
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
                   </div>
-                  <div className="mt-4 text-xs font-bold text-[#7E22CE] flex items-center gap-1 group-hover:gap-2 transition-all duration-300">
-                    Learn more <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  <div className="mt-3 text-xs font-bold text-[#7E22CE] flex items-center gap-1 group-hover:gap-2 transition-all duration-300">
+                    Explore {item.label.split(" ")[0]} <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                   </div>
                 </Link>
               );
