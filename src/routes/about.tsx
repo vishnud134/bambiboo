@@ -52,7 +52,7 @@ export const Route = createFileRoute("/about")({
               <p className="mt-2">
                 At that time, I was at the peak of my corporate career. Walking away wasn't an easy decision, but motherhood changed what success meant to me. When I looked at early childhood education again years later, I realized parents were still facing the same questions. That is why I started BambiBoo-not to build another preschool, but to create the place I had once wished existed for my own child.
               </p>
-              <div className="mt-4 p-4 rounded-2xl bg-amber-100/80 border border-amber-300 font-bold text-primary italic">
+              <div className="mt-5 p-5 sm:px-6 sm:py-5 rounded-3xl bg-[#FFF6D6] border border-amber-300 font-bold text-[#4C167F] italic text-base sm:text-lg leading-relaxed shadow-2xs">
                 "I didn't start BambiBoo to build another preschool. I started it to create the place I had once wished existed for my own child."
               </div>
               <p className="mt-4 font-bold text-foreground">Mukula Joglekar - Founder, BambiBoo Preschool</p>
@@ -74,9 +74,9 @@ export const Route = createFileRoute("/about")({
               <p className="mt-3">
                 Inspired by the <strong>Reggio Emilia</strong> philosophy, we see the environment as the <strong>third teacher</strong>. Spaces filled with open-ended materials, natural light and real objects invite children to explore, imagine, create and think independently. Relationships anchor everything we do: trust, respect, inclusivity and collaboration create the foundation for meaningful learning.
               </p>
-              <p className="mt-3 font-semibold text-primary">
+              <div className="mt-5 p-5 sm:px-6 sm:py-5 rounded-3xl bg-[#FFF6D6] border border-amber-300 font-bold text-[#4C167F] italic text-base sm:text-lg leading-relaxed shadow-2xs">
                 "We believe children know how to be completely present in the moment. Our role is not to rush childhood, but to protect that presence. Because technology will find our children. Childhood won't wait."
-              </p>
+              </div>
             </>
           ),
         },
