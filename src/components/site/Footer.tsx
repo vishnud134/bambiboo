@@ -11,7 +11,7 @@ export function Footer() {
       <div className="container-page grid gap-6 md:gap-8 pt-10 md:pt-14 pb-6 md:pb-8 md:grid-cols-2 lg:grid-cols-5">
         <div className="lg:col-span-2 flex flex-col justify-between">
           <div>
-            <div className="rounded-xl bg-[#EFE8DE] p-2 inline-block shadow-xs border border-[#430E6C]/10">
+            <div className="rounded-xl bg-[#EFE8DE] p-2 inline-block">
               <Logo />
             </div>
             <p className="mt-4 max-w-sm text-sm text-[#231B32]/90 leading-relaxed font-medium">
