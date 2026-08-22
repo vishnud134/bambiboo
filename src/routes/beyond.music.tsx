@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/site/ContentPage";
 
-import nurseryImg from "@/assets/bambiboo/nursery-prog.jpg";
-import parentToddlerImg from "@/assets/bambiboo/parent-toddler.jpg";
-import ukgImg from "@/assets/bambiboo/ukg-prog.jpg";
+import musicHeroImg from "@/assets/bambiboo/music-hero-hd-new.jpg";
+import musicRoomImg from "@/assets/bambiboo/music-room-instruments.jpg";
+import musicRhythmImg from "@/assets/bambiboo/music-rhythm-learning.jpg";
 
 export const Route = createFileRoute("/beyond/music")({
   head: () => ({
@@ -19,15 +19,15 @@ export const Route = createFileRoute("/beyond/music")({
       eyebrow="Music & Dance"
       title="Every child has a rhythm. We help them find it."
       intro="Our music and movement tracks teach rhythm, physical balance, and basic auditory logic. Children map sounds to movement, build group spatial coordination, and find their unique creative groove."
-      heroImage={nurseryImg}
+      heroImage={musicHeroImg}
       sections={[
         {
           eyebrow: "In the room",
           title: "A real music room, not a corner.",
-          image: parentToddlerImg,
+          image: musicRoomImg,
           body: (
             <p>
-              Our dedicated music and movement room is designed for sound, motion, and joyful noise. With soft flooring, child sized instruments, and a full length mirror, children can jump, spin, drum, and dance safely while learning rhythm, balance, and group coordination.
+              Our dedicated music and movement room is designed for sound, motion, and joyful noise. With soft flooring, child-sized instruments, and a full-length mirror, children can jump, spin, drum, and dance safely while learning rhythm, balance, and group coordination.
             </p>
           ),
           bullets: [
@@ -43,10 +43,10 @@ export const Route = createFileRoute("/beyond/music")({
           eyebrow: "What they learn",
           title: "Rhythm, then everything else.",
           tone: "cream",
-          image: ukgImg,
+          image: musicRhythmImg,
           body: (
             <p>
-              Music is a language. Learning it early makes children better at maths, at listening, at reading emotion. Our daily 20 minute music block builds all three without any of them realising it.
+              Music is a language. Learning it early makes children better at maths, at listening, at reading emotion. Our daily 20-minute music block builds all three without any of them realizing it.
             </p>
           ),
         },
