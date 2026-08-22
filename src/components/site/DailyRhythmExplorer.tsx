@@ -88,7 +88,7 @@ export function DailyRhythmExplorer() {
               The daily rhythm of a curious child.
             </h2>
           </div>
-          <p className="text-sm md:text-base text-muted-foreground max-w-md leading-relaxed font-medium">
+          <p className="text-sm md:text-base text-[#430E6C]/85 max-w-md leading-relaxed font-medium">
             Explore how we balance structured learning, free play, wholesome meals, and restful breaks throughout the day.
           </p>
         </div>

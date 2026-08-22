@@ -480,7 +480,7 @@ export function BlogCarouselSection({ className = "" }: { className?: string }) 
               Insights & guidance for BambiBoo parents.
             </h2>
           </div>
-          <p className="max-w-md text-muted-foreground text-sm md:text-base leading-relaxed">
+          <p className="max-w-md text-[#430E6C]/85 text-sm md:text-base font-medium leading-relaxed">
             Expert tips on early childhood development, sugar-free nutrition, STEAM play, and smooth preschool transitions.
           </p>
         </div>

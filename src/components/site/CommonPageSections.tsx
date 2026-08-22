@@ -247,7 +247,7 @@ export function FaqSection() {
             <div className="text-xs font-bold uppercase tracking-widest text-primary/80">FAQ</div>
             <h2 className="mt-2 text-3xl md:text-5xl font-semibold text-balance">Quick answers for busy parents.</h2>
           </div>
-          <p className="text-sm md:text-base text-muted-foreground max-w-md leading-relaxed">Still curious? Reach out we love long conversations about your child.</p>
+          <p className="text-sm md:text-base text-[#430E6C]/85 font-medium max-w-md leading-relaxed">Still curious? Reach out we love long conversations about your child.</p>
         </div>
 
         {/* Quick Category Filter Pills - ALL IN SAME LINE */}

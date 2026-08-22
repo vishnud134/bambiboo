@@ -103,7 +103,7 @@ function Contact() {
                 Find Us in Koramangala
               </h2>
             </div>
-            <p className="text-xs sm:text-sm text-muted-foreground max-w-md leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base text-[#430E6C]/85 font-medium max-w-md leading-relaxed">
               Located at 44, 5th Main Rd, 1st Block Koramangala - easily accessible from HSR Layout, Ejipura, and Indiranagar.
             </p>
           </div>
