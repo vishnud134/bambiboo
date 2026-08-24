@@ -42,7 +42,7 @@ const nav: NavGroup[] = [
     ],
   },
   {
-    label: "Beyond",
+    label: "Co-Curriculam",
     to: "/beyond",
     children: [
       { label: "Arts & Crafts", to: "/beyond/arts" },
