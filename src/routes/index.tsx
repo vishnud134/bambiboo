@@ -82,7 +82,7 @@ const pillars = [
 
 const trust = [
   { icon: Lock, label: "Verified Safety Systems" },
-  { icon: Cctv, label: "100% CCTV Live Access" },
+  { icon: Cctv, label: "CCTV as Required" },
   { icon: Salad, label: "Fresh Menus" },
   { icon: Bus, label: "GPS Tracked Transport" },
   { icon: Wind, label: "Air Purified Classrooms" },
@@ -195,8 +195,8 @@ function Home() {
               </div>
               <div className="h-9 w-px bg-[#4C167F]/15" />
               <div>
-                <div className="text-2xl sm:text-3xl font-black text-primary">100%</div>
-                <div className="text-[10px] sm:text-xs uppercase tracking-widest text-muted-foreground font-extrabold mt-0.5">CCTV Covered</div>
+                <div className="text-2xl sm:text-3xl font-black text-primary">CCTV</div>
+                <div className="text-[10px] sm:text-xs uppercase tracking-widest text-muted-foreground font-extrabold mt-0.5">As Required</div>
               </div>
             </div>
           </div>

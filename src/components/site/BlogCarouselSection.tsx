@@ -398,7 +398,7 @@ export const blogPosts: BlogPost[] = [
     category: "Safety & Security",
     date: "Jun 30, 2026",
     readTime: "5 min read",
-    excerpt: "From 100% CCTV live feeds to background-checked staff and GPS-tracked transport, here is our non-negotiable safety framework.",
+    excerpt: "From CCTV surveillance as required to background-checked staff and GPS-tracked transport, here is our non-negotiable safety framework.",
     image: safetyHeroImg,
     content: (
       <div className="prose prose-lg max-w-none text-foreground">
@@ -408,7 +408,7 @@ export const blogPosts: BlogPost[] = [
 
         <h2>The 8-Point Safety Checklist Every Parent Must Inspect</h2>
 
-        <h3>1. 100% Live CCTV Parent Access</h3>
+        <h3>1. CCTV Surveillance as Required</h3>
         <p>
           Parents should have secure, encrypted access to live HD video feeds of classrooms and outdoor play areas so they can observe their child at any time with total transparency.
         </p>

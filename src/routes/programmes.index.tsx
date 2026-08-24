@@ -136,7 +136,7 @@ export const Route = createFileRoute("/programmes/")({
       {
         property: "og:description",
         content:
-          "Six programmes from 6 months to 6 years. Play based curriculum, live CCTV, sugar free meals.",
+          "Six programmes from 6 months to 6 years. Play based curriculum, CCTV as required, sugar free meals.",
       },
     ],
     links: [{ rel: "canonical", href: "/programmes" }],

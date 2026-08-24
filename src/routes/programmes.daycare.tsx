@@ -69,7 +69,7 @@ export const Route = createFileRoute("/programmes/daycare")({
   head: () => ({
     meta: [
       { title: "Daycare BambiBoo (6 mo to 6 yrs)" },
-      { name: "description", content: "Full day daycare with meals, naps, live CCTV and preschool curriculum in Koramangala." },
+      { name: "description", content: "Full day daycare with meals, naps, CCTV as required and preschool curriculum in Koramangala." },
       { property: "og:url", content: "/programmes/daycare" },
     ],
     links: [{ rel: "canonical", href: "/programmes/daycare" }],

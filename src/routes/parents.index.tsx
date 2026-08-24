@@ -20,7 +20,7 @@ const items: Card[] = [
   {
     name: "Child Safety Policy",
     to: "/parents/safety",
-    tagline: "Verified staff, live CCTV, and the non-negotiables that keep every child safe.",
+    tagline: "Verified staff, CCTV as required, and the non-negotiables that keep every child safe.",
     color: "mint",
   },
   {

@@ -170,7 +170,7 @@ export function ProgrammePage({ info, showHeroForm }: { info: ProgrammeInfo; sho
               <div className="grid grid-cols-3 gap-4 pt-4 border-t border-[#430E6C]/15 max-w-lg">
                 <HeroHighlight value="1:5" label="Teacher Ratio" />
                 <HeroHighlight value="8+" label="Age Programmes" />
-                <HeroHighlight value="100%" label="Live CCTV" />
+                <HeroHighlight value="CCTV" label="As Required" />
               </div>
             </div>
             <div className="lg:col-span-5 relative">
