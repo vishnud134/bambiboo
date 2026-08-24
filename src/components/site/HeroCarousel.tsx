@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import g1 from "@/assets/gallery/g1.webp";
-import g2 from "@/assets/gallery/g2.webp";
-import g3 from "@/assets/gallery/g3.webp";
-import g4 from "@/assets/gallery/g4.webp";
-import g5 from "@/assets/gallery/g5.webp";
+import preschoolProgImg from "@/assets/bambiboo/preschool-prog-hd.jpg";
+import curriculumHeroImg from "@/assets/bambiboo/curriculum-hero-hd.jpg";
+import festivalHeroImg from "@/assets/bambiboo/festival-hero-hd.jpg";
+import musicRhythmImg from "@/assets/bambiboo/music-rhythm-learning.jpg";
+import playgroupProgImg from "@/assets/bambiboo/playgroup-prog-hd.jpg";
+import yogaHeroImg from "@/assets/bambiboo/yoga-hero-hd.jpg";
 
 const slides = [
-  { src: g1, alt: "Festival storytelling on the outdoor turf at BambiBoo" },
-  { src: g2, alt: "Children dressed for a cultural celebration at BambiBoo" },
-  { src: g3, alt: "Colourful practical life shelves in a BambiBoo classroom" },
-  { src: g4, alt: "Outdoor play zone with balance beams and mini goalposts" },
-  { src: g5, alt: "Bright learning corner with reading nook and craft tables" },
+  { src: preschoolProgImg, alt: "Interactive play-based learning at BambiBoo Preschool" },
+  { src: curriculumHeroImg, alt: "Child-led discovery & guided learning activities at BambiBoo" },
+  { src: festivalHeroImg, alt: "Cultural celebrations & joyful community events at BambiBoo" },
+  { src: musicRhythmImg, alt: "Rhythm, music and creative body movement sessions at BambiBoo" },
+  { src: playgroupProgImg, alt: "Sensory exploration and hands-on discovery corners at BambiBoo" },
+  { src: yogaHeroImg, alt: "Mindful movement, balance and outdoor physical play at BambiBoo" },
 ];
 
 export function HeroCarousel() {
