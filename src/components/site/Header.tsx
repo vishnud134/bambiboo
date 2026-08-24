@@ -53,6 +53,7 @@ const nav: NavGroup[] = [
     ],
   },
   { label: "Contact", to: "/contact" },
+  { label: "Blogs", to: "/blogs" },
 ];
 
 export function Header() {
