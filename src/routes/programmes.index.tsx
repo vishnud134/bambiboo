@@ -116,11 +116,8 @@ function ProgrammesIndex() {
         </div>
       </div>
     </section>
-
-      {/* BEYOND ACADEMICS SECTION */}
-      <BeyondAcademicsSection />
-    </PageShell>
-  );
+  </PageShell>
+);
 }
 
 export const Route = createFileRoute("/programmes/")({

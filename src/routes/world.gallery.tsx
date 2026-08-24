@@ -87,9 +87,6 @@ function Gallery() {
           ))}
         </div>
       </section>
-
-      {/* BEYOND ACADEMICS SECTION */}
-      <BeyondAcademicsSection />
     </PageShell>
   );
 }

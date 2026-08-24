@@ -96,11 +96,8 @@ function ParentsIndex() {
         </div>
       </div>
     </section>
-
-      {/* BEYOND ACADEMICS SECTION */}
-      <BeyondAcademicsSection />
-    </PageShell>
-  );
+  </PageShell>
+);
 }
 
 export const Route = createFileRoute("/parents/")({
