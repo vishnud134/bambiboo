@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ContentPage } from "@/components/site/ContentPage";
 import { WhatWeBuildCarousel } from "@/components/site/WhatWeBuildCarousel";
 import { MapPin, PhoneCall } from "lucide-react";
-import whatWeBelieveImg from "@/assets/about/what-we-believe.webp";
+import reggioTeacherImg from "@/assets/bambiboo/reggio-teacher.jpg";
 import founderImg from "@/assets/founder-mukula.webp";
 import ourTeamTeachersImg from "@/assets/bambiboo/our-team-teachers.jpg";
 import build1 from "@/assets/about/build/build-44.webp";
@@ -64,7 +64,7 @@ export const Route = createFileRoute("/about")({
           eyebrow: "What we believe",
           title: "Children are active participants in their own learning.",
           tone: "cream",
-          image: whatWeBelieveImg,
+          image: reggioTeacherImg,
           imagePosition: "right",
           body: (
             <>
