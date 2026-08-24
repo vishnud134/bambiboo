@@ -11,6 +11,7 @@ type NavGroup = { label: string; to?: string; children?: NavItem[] };
 const nav: NavGroup[] = [
   { label: "Home", to: "/" },
   { label: "About Us", to: "/about" },
+  { label: "Blogs", to: "/blogs" },
   {
     label: "Programmes",
     to: "/programmes",
@@ -53,7 +54,6 @@ const nav: NavGroup[] = [
     ],
   },
   { label: "Contact", to: "/contact" },
-  { label: "Blogs", to: "/blogs" },
 ];
 
 export function Header() {
