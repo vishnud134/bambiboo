@@ -167,9 +167,6 @@ export function ContentPage({
         )}
       </section>
 
-      {/* Why BambiBoo (2nd Container) */}
-      <WhyBambiboo />
-
       {sections.map((s, i) => {
         const isLeft =
           s.imagePosition === "left" ||
@@ -394,9 +391,6 @@ export function ContentPage({
           </section>
         );
       })}
-
-      {/* Common Footer Sections: Pillars, Loved by Families, FAQ */}
-      <CommonPageFooterSections />
     </PageShell>
   );
 }

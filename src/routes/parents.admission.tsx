@@ -70,9 +70,6 @@ function AdmissionPage() {
         </div>
       </section>
 
-      {/* Why BambiBoo (2nd Container) */}
-      <WhyBambiboo />
-
       {/* Admission Info Containers */}
       <section className="bg-white">
         <div className="container-page py-10 md:py-14">
@@ -137,9 +134,6 @@ function AdmissionPage() {
           </aside>
         </div>
       </section>
-
-      {/* Common Footer Sections: Pillars, Loved by Families, FAQ */}
-      <CommonPageFooterSections />
     </PageShell>
   );
 }

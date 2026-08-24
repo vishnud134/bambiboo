@@ -220,9 +220,6 @@ export function ProgrammePage({ info, showHeroForm }: { info: ProgrammeInfo; sho
         )}
       </section>
 
-      {/* Why BambiBoo (2nd Container) */}
-      <WhyBambiboo />
-
       {/* About */}
       <section className="bg-background">
         <div className="container-page section-padding grid lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-center">
@@ -423,9 +420,6 @@ export function ProgrammePage({ info, showHeroForm }: { info: ProgrammeInfo; sho
           </div>
         </div>
       </section>
-
-      {/* Common Footer Sections: Pillars, Loved by Families, FAQ */}
-      <CommonPageFooterSections />
     </PageShell>
   );
 }
