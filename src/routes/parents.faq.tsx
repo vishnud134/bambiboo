@@ -57,7 +57,7 @@ const groups = [
     items: [
       {
         q: "What is your teacher-child ratio?",
-        a: "We keep our groups intentionally small: ● 2:12 for toddlers ● 1:12 for older children. So every child is known, heard and supported.",
+        a: "We keep our groups intentionally small: ● 1:12 for toddlers ● 1:12 for older children. So every child is known, heard and supported.",
       },
     ],
   },

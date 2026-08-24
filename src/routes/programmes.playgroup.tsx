@@ -20,7 +20,7 @@ const info: ProgrammeInfo = {
   tagline: "A joyful first step into independence, friendships and discovery.",
   intro: "Playgroup is where children take their first confident steps into the world on their own. For many children, this is their first experience away from home. We make that transition gentle, reassuring and joyful. Through play, stories, music, movement and everyday routines, children begin to build confidence, form friendships and discover the excitement of learning alongside others. There is no pressure to 'perform.' Every day is about exploring, asking questions, trying new things and feeling safe enough to grow at their own pace.",
   image: playgroupImg,
-  ratio: "2:12",
+  ratio: "1:12",
   hours: "9:30 AM – 12:30 PM (Mon–Fri)",
   color: "mint",
   highlights: [

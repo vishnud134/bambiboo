@@ -34,7 +34,7 @@ const ageGroups: AgeGroup[] = [
     href: "/programmes/playgroup",
     tagline: "First steps into independence, social play and gentle routines.",
     hours: "9:30 AM – 12:30 PM (Mon–Fri)",
-    ratio: "2:12",
+    ratio: "1:12",
     color: "from-emerald-500/10 to-teal-600/10 border-emerald-300 text-emerald-900",
     highlights: ["Learning through play", "Building first friendships", "Routine confidence"],
   },

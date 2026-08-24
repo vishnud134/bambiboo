@@ -34,7 +34,7 @@ const info: ProgrammeInfo = {
       body: "A comforting introduction to group settings before preschool.",
     },
   ],
-  ratio: "2:12",
+  ratio: "1:12",
   hours: "90-min sessions twice a week (Mon–Sat)",
   color: "sky",
   features: [

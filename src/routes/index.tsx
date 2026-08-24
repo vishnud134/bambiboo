@@ -121,7 +121,7 @@ const categoryFaqs = [
   { cat: "cctv", q: "What emergency medical protocols are followed on campus?", a: "Every staff member is trained in pediatric CPR and first aid. We maintain a dedicated on-site first-aid station and have active medical tie-ups with two leading nearby hospitals for rapid 5-minute emergency response." },
 
   // 4. Teacher-child ratio (5 questions)
-  { cat: "meals", q: "What is your teacher-child ratio?", a: "We keep our groups intentionally small: ● 2:12 for toddlers ● 1:12 for older children. So every child is known, heard and supported." },
+  { cat: "meals", q: "What is your teacher-child ratio?", a: "We keep our groups intentionally small: ● 1:12 for toddlers ● 1:12 for older children. So every child is known, heard and supported." },
   { cat: "meals", q: "How many support staff and helpers are assigned to each classroom?", a: "Each classroom has a dedicated lead teacher accompanied by a trained helper/nanny to assist with hygiene, bathroom breaks, and classroom activities." },
   { cat: "meals", q: "How does a small ratio benefit my child's learning journey?", a: "Intentionally small group sizes allow our educators to observe each child's unique learning pace, foster deeper emotional bonds, and tailor developmental milestones." },
   { cat: "meals", q: "Are helpers and support staff trained in hygiene and pediatric care?", a: "Yes. All support staff undergo regular training in child handling, hygiene standards, sanitation protocols, and respectful caregiving." },
