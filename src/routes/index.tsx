@@ -151,7 +151,7 @@ function Home() {
       <section className="bg-[#F4F0E8] relative overflow-hidden py-10 sm:py-14 md:py-18">
         <div className="container-page relative z-10 grid gap-10 lg:grid-cols-12 items-center">
           <div className="lg:col-span-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3.5 py-1.5 text-[11px] font-extrabold uppercase tracking-widest text-primary/80 border border-[#4C167F]/15 shadow-2xs">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#F4F0E8] px-3.5 py-1.5 text-[11px] font-extrabold uppercase tracking-widest text-primary/80 border border-[#4C167F]/15 shadow-2xs">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
