@@ -2,18 +2,14 @@ import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import yogaSeatedMindfulnessImg from "@/assets/bambiboo/yoga-seated-mindfulness.jpg";
 import curriculumHeroImg from "@/assets/bambiboo/curriculum-hero-hd.jpg";
-import festivalHeroImg from "@/assets/bambiboo/festival-hero-hd.jpg";
 import musicRhythmImg from "@/assets/bambiboo/music-rhythm-learning.jpg";
 import playgroupProgImg from "@/assets/bambiboo/playgroup-prog-hd.jpg";
-import yogaHeroImg from "@/assets/bambiboo/yoga-hero-hd.jpg";
 
 const slides = [
   { src: yogaSeatedMindfulnessImg, alt: "Seated yoga & mindfulness session at BambiBoo Preschool" },
   { src: curriculumHeroImg, alt: "Child-led discovery & guided learning activities at BambiBoo" },
-  { src: festivalHeroImg, alt: "Cultural celebrations & joyful community events at BambiBoo" },
   { src: musicRhythmImg, alt: "Rhythm, music and creative body movement sessions at BambiBoo" },
   { src: playgroupProgImg, alt: "Sensory exploration and hands-on discovery corners at BambiBoo" },
-  { src: yogaHeroImg, alt: "Mindful movement, balance and outdoor physical play at BambiBoo" },
 ];
 
 export function HeroCarousel() {
