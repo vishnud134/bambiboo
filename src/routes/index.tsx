@@ -159,10 +159,10 @@ function Home() {
               ADMISSIONS OPEN 2026–27 • KORAMANGALA
             </div>
             <h1 className="mt-5 font-display text-[#1C1329] text-balance leading-tight">
-              <span className="block font-display font-semibold text-3xl sm:text-4xl md:text-[50px] tracking-tight leading-normal mb-2">
+              <span className="block font-display font-semibold text-3xl sm:text-4xl md:text-[50px] tracking-tight leading-tight mb-0.5">
                 A preschool where
               </span>
-              <span className="font-display font-bold text-3xl sm:text-4xl md:text-[58px] bg-[#FCD34D] text-[#4C167F] px-5 sm:px-6 py-1.5 sm:py-2.5 rounded-2xl sm:rounded-3xl inline-block shadow-2xs -rotate-3 transform origin-top-left mt-2">
+              <span className="font-display font-bold text-3xl sm:text-4xl md:text-[58px] bg-[#FCD34D] text-[#4C167F] px-5 sm:px-6 py-1.5 sm:py-2.5 rounded-2xl sm:rounded-3xl inline-block shadow-2xs -rotate-3 transform origin-top-left mt-0.5 sm:mt-1">
                 childhood comes first.
               </span>
             </h1>
