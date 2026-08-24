@@ -146,7 +146,7 @@ export function Header() {
         <div className="hidden lg:flex items-center gap-2 shrink-0">
           <a
             href="tel:+919900639303"
-            className="hidden xl:inline-flex items-center gap-2 rounded-full border border-[#4C167F]/20 bg-white/70 px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-foreground hover:border-primary hover:text-primary transition shadow-2xs"
+            className="hidden xl:inline-flex items-center gap-2 rounded-full bg-[#EEE7DD] px-3.5 py-1.5 text-xs sm:text-sm font-bold text-foreground"
           >
             <Phone className="h-4 w-4 text-primary" /> +91 99006 39303
           </a>
