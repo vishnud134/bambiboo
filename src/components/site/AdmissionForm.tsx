@@ -43,9 +43,11 @@ const floatingLabelBase =
 
 export function AdmissionForm({
   variant = "card",
+  compact = false,
   includeMessage = false,
 }: {
   variant?: "card" | "dialog";
+  compact?: boolean;
   includeMessage?: boolean;
 }) {
   const [values, setValues] = useState<FormValues>({
@@ -63,6 +65,7 @@ export function AdmissionForm({
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const isDialog = variant === "dialog";
+  const isCompact = compact || isDialog;
 
   const set = <K extends keyof FormValues>(k: K, v: FormValues[K]) =>
     setValues((s) => ({ ...s, [k]: v }));
@@ -198,27 +201,29 @@ export function AdmissionForm({
       className={
         isDialog
           ? "bg-transparent w-full"
+          : isCompact
+          ? "max-w-xl w-full rounded-3xl border border-border/80 bg-white/95 backdrop-blur-md p-4 sm:p-5 shadow-xl shadow-purple-950/10 overflow-hidden"
           : "max-w-2xl w-full rounded-2xl sm:rounded-[36px] border border-border/80 bg-white/95 backdrop-blur-md p-4.5 sm:p-8 md:p-10 shadow-2xl shadow-purple-950/10 overflow-hidden"
       }
     >
       {!isDialog && (
-        <div className="mb-5 sm:mb-6">
+        <div className={isCompact ? "mb-3 sm:mb-4" : "mb-5 sm:mb-6"}>
           <p className="text-[11px] uppercase tracking-widest text-[#430E6C] font-extrabold">ADMISSION ENQUIRY</p>
-          <h3 className="mt-1 text-xl sm:text-3xl font-extrabold text-[#2C0A4B]">Tell us about your little one</h3>
-          <p className="mt-1 text-xs sm:text-sm text-[#430E6C]/80 font-medium leading-relaxed">
+          <h3 className={isCompact ? "mt-0.5 text-lg sm:text-xl font-extrabold text-[#2C0A4B]" : "mt-1 text-xl sm:text-3xl font-extrabold text-[#2C0A4B]"}>Tell us about your little one</h3>
+          <p className="mt-0.5 text-xs sm:text-xs text-[#430E6C]/80 font-medium leading-relaxed">
             Fill this in and we'll get back within one working day.
           </p>
         </div>
       )}
 
-      <div className={`grid ${isDialog ? "gap-2.5 sm:gap-3" : "gap-3.5 sm:gap-4.5"} sm:grid-cols-2`}>
-        <FloatingField label="Parent name" value={values.parentName} onChange={(v) => set("parentName", v)} error={errors.parentName} compact={isDialog} />
-        <FloatingField label="Phone" type="tel" value={values.phone} onChange={(v) => set("phone", v)} error={errors.phone} compact={isDialog} />
+      <div className={`grid ${isCompact ? "gap-2.5 sm:gap-3" : "gap-3.5 sm:gap-4.5"} sm:grid-cols-2`}>
+        <FloatingField label="Parent name" value={values.parentName} onChange={(v) => set("parentName", v)} error={errors.parentName} compact={isCompact} />
+        <FloatingField label="Phone" type="tel" value={values.phone} onChange={(v) => set("phone", v)} error={errors.phone} compact={isCompact} />
         <div className="sm:col-span-2">
-          <FloatingField label="Email" type="email" value={values.email} onChange={(v) => set("email", v)} error={errors.email} compact={isDialog} />
+          <FloatingField label="Email" type="email" value={values.email} onChange={(v) => set("email", v)} error={errors.email} compact={isCompact} />
         </div>
-        <FloatingField label="Child's name" value={values.childName} onChange={(v) => set("childName", v)} error={errors.childName} compact={isDialog} />
-        <FloatingField label="Child's date of birth" type="date" value={values.childDob} onChange={(v) => set("childDob", v)} error={errors.childDob} alwaysFloat isDate compact={isDialog} />
+        <FloatingField label="Child's name" value={values.childName} onChange={(v) => set("childName", v)} error={errors.childName} compact={isCompact} />
+        <FloatingField label="Child's date of birth" type="date" value={values.childDob} onChange={(v) => set("childDob", v)} error={errors.childDob} alwaysFloat isDate compact={isCompact} />
         <div className="sm:col-span-2">
           <FloatingSelect
             label="Programme of interest"
@@ -226,11 +231,11 @@ export function AdmissionForm({
             onChange={(v) => set("programme", v)}
             options={programmes}
             error={errors.programme}
-            compact={isDialog}
+            compact={isCompact}
           />
         </div>
         <div className="sm:col-span-2">
-          <FloatingField label="Preferred start date (optional)" type="date" value={values.startDate || ""} onChange={(v) => set("startDate", v)} alwaysFloat isDate compact={isDialog} />
+          <FloatingField label="Preferred start date (optional)" type="date" value={values.startDate || ""} onChange={(v) => set("startDate", v)} alwaysFloat isDate compact={isCompact} />
         </div>
         {includeMessage && (
           <div className="sm:col-span-2">
@@ -240,7 +245,7 @@ export function AdmissionForm({
       </div>
 
       {submitError && (
-        <div className="mt-4 p-3 rounded-2xl bg-red-50 border border-red-200 text-center text-xs font-bold text-red-600">
+        <div className="mt-3 p-2.5 rounded-2xl bg-red-50 border border-red-200 text-center text-xs font-bold text-red-600">
           {submitError}
         </div>
       )}
@@ -249,7 +254,7 @@ export function AdmissionForm({
         type="submit"
         disabled={submitting}
         className={`${
-          isDialog ? "mt-4 h-[46px]" : "mt-6 h-[52px]"
+          isCompact ? "mt-3.5 h-[44px]" : "mt-6 h-[52px]"
         } inline-flex w-full items-center justify-center gap-2 rounded-full px-6 text-sm font-extrabold text-white transition-all duration-250 ease-out hover:brightness-110 active:scale-[0.99] shadow-lg shadow-purple-900/25 hover:shadow-purple-900/40 hover:-translate-y-0.5 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed`}
         style={{
           backgroundColor: "#8326B5",

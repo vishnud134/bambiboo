@@ -57,7 +57,7 @@ function Contact() {
           </div>
 
           <div className="lg:col-span-7 flex justify-center lg:justify-end w-full scroll-mt-24 sm:scroll-mt-28 md:scroll-mt-32" id="contact-form">
-            <AdmissionForm variant="card" />
+            <AdmissionForm variant="card" compact />
           </div>
         </div>
       </section>
