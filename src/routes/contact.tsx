@@ -27,13 +27,9 @@ function Contact() {
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
               <Breadcrumb items={[{ label: "Contact Us" }]} className="mb-2 sm:mb-3 text-xs font-semibold text-primary/80" />
-              <div className="text-xs font-bold uppercase tracking-widest text-primary">Contact</div>
               <h1 className="mt-1.5 text-2xl sm:text-4xl md:text-5xl font-black text-balance leading-tight break-words">
-                Let's talk about your little one.
+                Get in Touch
               </h1>
-              <p className="mt-3 text-xs sm:text-sm md:text-base text-foreground/80 leading-relaxed max-w-xl">
-                Choosing a preschool is a big decision, and we'd love to help you make it with confidence. Whether you have questions, would like to visit our campus or simply want to understand if BambiBoo is the right fit for your family, we're just a conversation away. Fill in the form below and our admissions team will get back to you within one working day. Prefer a phone call? We'd love that too.
-              </p>
             </div>
 
             <div className="mt-6 flex flex-col gap-2.5 sm:gap-3">
