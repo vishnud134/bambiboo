@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/site/ContentPage";
 
-import heroBannerKidsImg from "@/assets/bambiboo/hero-banner-kids.jpg";
-import festivalCelebrationHd from "@/assets/bambiboo/hero-banner-kids.jpg";
+import traditionalCelebrationFestiveImg from "@/assets/bambiboo/traditional-celebration-festive.jpg";
+import festivalCelebrationHd from "@/assets/bambiboo/traditional-celebration-festive.jpg";
 import lkgImg from "@/assets/bambiboo/lkg-prog.jpg";
 
 export const Route = createFileRoute("/beyond/festivals")({
@@ -19,7 +19,7 @@ export const Route = createFileRoute("/beyond/festivals")({
       eyebrow="Festival & Events"
       title="Colourful celebrations. Deep roots."
       intro="BambiBoo turns simple seasonal milestones, regional days, and project showcases into multi generational group memories that build deep social roots for every child."
-      heroImage={heroBannerKidsImg}
+      heroImage={traditionalCelebrationFestiveImg}
       sections={[
         {
           eyebrow: "What we celebrate",
