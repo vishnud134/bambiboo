@@ -396,7 +396,7 @@ function Home() {
         <div className="container-page section-padding">
           <div className="text-xs font-bold uppercase tracking-widest text-primary/80">Loved by neighborhood families</div>
           <h2 className="mt-2 text-4xl md:text-5xl font-semibold text-balance">Real parents, measurable milestones.</h2>
-          <Carousel opts={{ align: "start", loop: true }} className="mt-10">
+          <Carousel opts={{ align: "start", loop: true }} className="mt-10 relative px-8 sm:px-12 md:px-14 lg:px-16">
             <CarouselContent className="-ml-5 lg:-ml-6">
               {[
                 { name: "Deepthi Srinivasan", avatar: deepthiAvatar, meta: "Local Guide · 32 reviews · 28 photos · 10 months ago", quote: "BambiBoo is a very nice school. The teachers and helping staff are very friendly and co operative. It has both Montessori and Pre school curriculum which helps in inculcating the diverse nature of both aspects in the children. It's a rare combination to get schools like this. It is very spacious inside as well for kids to play around. They have lot of activities for children so they learn things in a practical way. All the best to BambiBoo for more successful years ahead." },
@@ -435,8 +435,8 @@ function Home() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-4" />
-            <CarouselNext className="hidden md:flex -right-4" />
+            <CarouselPrevious className="flex left-0 sm:left-1 md:left-2 h-11 w-11 bg-white border-2 border-primary/20 text-primary hover:bg-primary hover:text-white transition-all shadow-md z-20 cursor-pointer" />
+            <CarouselNext className="flex right-0 sm:right-1 md:right-2 h-11 w-11 bg-white border-2 border-primary/20 text-primary hover:bg-primary hover:text-white transition-all shadow-md z-20 cursor-pointer" />
           </Carousel>
           <div className="mt-8 text-center">
             <Link to="/parents/testimonials" className="inline-flex items-center gap-1.5 font-bold text-primary hover:underline">
