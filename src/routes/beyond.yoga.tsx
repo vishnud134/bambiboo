@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/site/ContentPage";
 
-import yogaHeroBanner from "@/assets/bambiboo/yoga-hero-banner.jpg";
+import yogaHeroBanner from "@/assets/bambiboo/yoga-seated-mindfulness.jpg";
 import yogaDailyPracticeImg from "@/assets/bambiboo/yoga-daily-practice.jpg";
 import yogaWhyItMattersImg from "@/assets/bambiboo/yoga-why-it-matters.jpg";
-import yogaHeroHd from "@/assets/bambiboo/yoga-hero-hd.jpg";
+import yogaHeroHd from "@/assets/bambiboo/yoga-seated-mindfulness.jpg";
 import yogaDailyReal from "@/assets/bambiboo/yoga-daily-real.jpg";
 import yogaMindfulReal from "@/assets/bambiboo/yoga-mindful-real.jpg";
 
