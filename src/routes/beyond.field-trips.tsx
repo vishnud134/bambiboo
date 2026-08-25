@@ -25,6 +25,7 @@ export const Route = createFileRoute("/beyond/field-trips")({
           eyebrow: "How we do them",
           title: "Small groups. Trusted partners. Written protocol.",
           image: bgVerifiedImg,
+          imagePosition: "right",
           body: (
             <p>
               Every trip is planned like a small expedition. We choose short, age appropriate destinations, brief children in advance, and maintain tight adult supervision throughout. Parents receive exact timings, location details, and live updates so they feel as connected as if they were right there.
@@ -44,6 +45,7 @@ export const Route = createFileRoute("/beyond/field-trips")({
           title: "A sample year of adventures.",
           tone: "cream",
           image: fieldTripDestinationImg,
+          imagePosition: "left",
           body: (
             <p>
               We rotate destinations across the year so children experience nature, community helpers, food, craft, and literacy in real settings. Each location is chosen for its sensory value, safety, and friendly staff who welcome small curious visitors.

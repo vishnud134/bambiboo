@@ -33,6 +33,7 @@ export const Route = createFileRoute("/parents/daily-routine")({
           eyebrow: "Daily Routine",
           title: "What should my child bring every day?",
           image: dailyRoutineBagsImg,
+          imagePosition: "right",
           body: (
             <p>
               Children should bring a labelled water bottle, a spare set of clothes and any personal essentials. Day Care
@@ -56,6 +57,7 @@ export const Route = createFileRoute("/parents/daily-routine")({
           eyebrow: "Rest Time",
           title: "Do children have nap facilities in Day Care?",
           image: napImg,
+          imagePosition: "right",
           body: (
             <p>
               Yes. Our Day Care programme includes dedicated rest time in a calm, comfortable environment so children can

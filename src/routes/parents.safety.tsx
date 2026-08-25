@@ -28,6 +28,7 @@ export const Route = createFileRoute("/parents/safety")({
         {
           title: "CCTV surveillance in School",
           image: cctvLiveImg,
+          imagePosition: "right",
           body: (
             <p>
               CCTV surveillance in School - The campus is covered by CCTV for safety and security. However, we do not provide live CCTV access to parents. Instead, we believe in building trust through open communication and regular updates about your child's day.
@@ -38,6 +39,7 @@ export const Route = createFileRoute("/parents/safety")({
           title: "Qualified teachers",
           tone: "cream",
           image: safetyCertImg,
+          imagePosition: "left",
           body: (
             <p>
               Our educators are qualified, experienced and committed to creating a warm, nurturing environment where every child feels safe, respected and encouraged to grow.
@@ -48,6 +50,7 @@ export const Route = createFileRoute("/parents/safety")({
           eyebrow: "Physical safety",
           title: "The building itself is built for tiny humans.",
           image: physicalSafetyImg,
+          imagePosition: "right",
           body: (
             <p>
               Every corner, edge, socket and staircase in our campus has been reviewed at knee height literally. Furniture is child scale with rounded corners, electrical points are covered with tamper proof guards, and staircases have double handrails at toddler and adult heights. Wet zones use anti skid flooring, outdoor play surfaces are impact absorbing rubber turf, and all windows carry grille protection without compromising light or ventilation.
@@ -67,6 +70,7 @@ export const Route = createFileRoute("/parents/safety")({
           title: "Nobody enters, teaches or picks up without being checked.",
           tone: "cream",
           image: bgVerifiedImg,
+          imagePosition: "left",
           body: (
             <p>
               All teachers and support staff are background verified before joining and re screened annually. Visitors pass through biometric checkpoint access and photo ID logging. Only pre authorised guardians can pick up children matched against a secure photo database, with OTP confirmation for one off pickups.
@@ -78,6 +82,7 @@ export const Route = createFileRoute("/parents/safety")({
           title: "Prepared for the days we hope never come.",
           tone: "berry",
           image: emergencyReadyImg,
+          imagePosition: "right",
           body: (
             <p>
               We hope we never have to use them, but we practise for them anyway. Every staff member is trained in paediatric first aid and CPR, with refresher sessions every six months. A qualified first responder is on site during all operating hours, and we maintain live tie ups with two nearby hospitals for rapid transfers. Fire, earthquake and evacuation drills happen on a fixed calendar so children treat them as familiar routines, not scary events.
@@ -96,6 +101,7 @@ export const Route = createFileRoute("/parents/safety")({
           eyebrow: "Hygiene & clean environment",
           title: "Little bodies, high standards.",
           image: hygieneCleanImg,
+          imagePosition: "left",
           body: (
             <p>
               Cleanliness is a curriculum, not a chore. Classrooms and washrooms are sanitised twice daily with child safe, non toxic disinfectants, and high touch surfaces like door handles, taps and toy shelves are wiped down every couple of hours. Soft toys and manipulatives are rotated out every 48 hours for a deep wash and sun dry, and every child has their own labelled bottle, cutlery, napkin and nap linen no sharing, ever.

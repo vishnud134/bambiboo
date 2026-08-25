@@ -28,6 +28,7 @@ export const Route = createFileRoute("/beyond/yoga")({
           eyebrow: "Daily practice",
           title: "10 minutes, twice a day.",
           image: yogaDailyPracticeImg,
+          imagePosition: "right",
           body: (
             <p>
               Yoga is woven into the daily rhythm, not treated as a separate subject. Short morning sessions wake up the body, midday breathing resets focus, and end of day stretches help children transition calmly. Every pose is taught through play, stories, and animal characters so children enjoy the practice naturally.
@@ -47,6 +48,7 @@ export const Route = createFileRoute("/beyond/yoga")({
           title: "Self regulation is a skill.",
           tone: "cream",
           image: yogaWhyItMattersImg,
+          imagePosition: "left",
           body: (
             <p>
               A child who can name their emotions can manage them. Our yoga practice gently teaches the pause between feeling and reacting the single most useful skill for the rest of their lives.

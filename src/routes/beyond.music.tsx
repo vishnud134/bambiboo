@@ -25,6 +25,7 @@ export const Route = createFileRoute("/beyond/music")({
           eyebrow: "In the room",
           title: "A real music room, not a corner.",
           image: musicRoomImg,
+          imagePosition: "right",
           body: (
             <p>
               Our dedicated music and movement room is designed for sound, motion, and joyful noise. With soft flooring, child-sized instruments, and a full-length mirror, children can jump, spin, drum, and dance safely while learning rhythm, balance, and group coordination.
@@ -44,6 +45,7 @@ export const Route = createFileRoute("/beyond/music")({
           title: "Rhythm, then everything else.",
           tone: "cream",
           image: musicRhythmImg,
+          imagePosition: "left",
           body: (
             <p>
               Music is a language. Learning it early makes children better at maths, at listening, at reading emotion. Our daily 20-minute music block builds all three without any of them realizing it.
