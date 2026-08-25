@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/site/ContentPage";
 
 import traditionalCelebrationFestiveImg from "@/assets/bambiboo/traditional-celebration-festive.jpg";
-import festivalCelebrationHd from "@/assets/bambiboo/traditional-celebration-festive.jpg";
+import whatWeCelebrateRangoliImg from "@/assets/bambiboo/what-we-celebrate-rangoli.jpg";
 import lkgImg from "@/assets/bambiboo/lkg-prog.jpg";
 
 export const Route = createFileRoute("/beyond/festivals")({
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/beyond/festivals")({
         {
           eyebrow: "What we celebrate",
           title: "The full Indian calendar, respectfully.",
-          image: festivalCelebrationHd,
+          image: whatWeCelebrateRangoliImg,
           imagePosition: "left",
           body: (
             <p>
