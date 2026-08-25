@@ -15,12 +15,12 @@ const nav: NavGroup[] = [
     label: "Programmes",
     to: "/programmes",
     children: [
-      { label: "Parent & Toddler (3m–2y)", to: "/programmes/parent-toddler" },
-      { label: "Playgroup (2–3y)", to: "/programmes/playgroup" },
-      { label: "Nursery (3–4y)", to: "/programmes/nursery" },
-      { label: "LKG (4–5y)", to: "/programmes/lkg" },
-      { label: "UKG (5–6y)", to: "/programmes/ukg" },
-      { label: "BambiBoo Day Care (2–10y)", to: "/programmes/daycare" },
+      { label: "Parent & Toddler (3m–2 yrs)", to: "/programmes/parent-toddler" },
+      { label: "Playgroup (2–3 yrs)", to: "/programmes/playgroup" },
+      { label: "Nursery (3–4 yrs)", to: "/programmes/nursery" },
+      { label: "LKG (4–5 yrs)", to: "/programmes/lkg" },
+      { label: "UKG (5–6 yrs)", to: "/programmes/ukg" },
+      { label: "BambiBoo Day Care (2–10 yrs)", to: "/programmes/daycare" },
     ],
   },
   {

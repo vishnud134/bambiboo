@@ -16,7 +16,7 @@ const programmes: Card[] = [
   {
     name: "Parent & Toddler",
     to: "/programmes/parent-toddler",
-    ageRange: "3m - 2y",
+    ageRange: "3m - 2 yrs",
     hours: "90-min sessions (Mon–Sat)",
     tagline: "Sensory play, music, movement and bonding experiences for toddler and parent.",
     color: "sky",
@@ -24,7 +24,7 @@ const programmes: Card[] = [
   {
     name: "Playgroup",
     to: "/programmes/playgroup",
-    ageRange: "2 - 3y",
+    ageRange: "2 - 3 yrs",
     hours: "Mon–Fri 9:30 AM – 12:30 PM",
     tagline: "First steps into independent learning through play, songs, and gentle structure.",
     color: "mint",
@@ -32,7 +32,7 @@ const programmes: Card[] = [
   {
     name: "Nursery",
     to: "/programmes/nursery",
-    ageRange: "3 - 4y",
+    ageRange: "3 - 4 yrs",
     hours: "Mon–Fri 9:30 AM – 12:30 PM",
     tagline: "Language expansion, phonics readiness, creative expression and social skills.",
     color: "indigo",
@@ -40,7 +40,7 @@ const programmes: Card[] = [
   {
     name: "LKG (Lower Kindergarten)",
     to: "/programmes/lkg",
-    ageRange: "4 - 5y",
+    ageRange: "4 - 5 yrs",
     hours: "Mon–Fri 9:30 AM – 1:00 PM",
     tagline: "Early reading, math concepts, inquiry-based science and creative arts.",
     color: "amber",
@@ -48,7 +48,7 @@ const programmes: Card[] = [
   {
     name: "UKG (Upper Kindergarten)",
     to: "/programmes/ukg",
-    ageRange: "5 - 6y",
+    ageRange: "5 - 6 yrs",
     hours: "Mon–Fri 9:30 AM – 1:00 PM",
     tagline: "Primary school readiness with confident reading, problem-solving, and independence.",
     color: "lavender",
@@ -56,7 +56,7 @@ const programmes: Card[] = [
   {
     name: "BambiBoo Day Care",
     to: "/programmes/daycare",
-    ageRange: "2 - 10y",
+    ageRange: "2 - 10 yrs",
     hours: "Mon–Fri 8:30 AM – 6:30 PM",
     tagline: "Safe, nurturing extended care with home-packed meals, rest time and supervised activities.",
     color: "teal",

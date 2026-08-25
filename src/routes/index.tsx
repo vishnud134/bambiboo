@@ -63,12 +63,12 @@ export const Route = createFileRoute("/")({
 });
 
 const programmes = [
-  { name: "Parent & Toddler", age: "3m - 2y", category: "toddlers", to: "/programmes/parent-toddler", tint: "bg-[#EBF5FF] text-[#0369A1] border border-[#B9E6FE] hover:bg-[#E0F2FE]" },
-  { name: "Playgroup", age: "2 - 3y", category: "toddlers", to: "/programmes/playgroup", tint: "bg-[#ECFDF5] text-[#047857] border border-[#A7F3D0] hover:bg-[#D1FAE5]" },
-  { name: "Nursery", age: "3 - 4y", category: "preschool", to: "/programmes/nursery", tint: "bg-[#EEF2FF] text-[#4338CA] border border-[#C7D2FE] hover:bg-[#E0E7FF]" },
-  { name: "LKG", age: "4 - 5y", category: "preschool", to: "/programmes/lkg", tint: "bg-[#FEFCE8] text-[#B45309] border border-[#FEF08A] hover:bg-[#FEF9C3]" },
-  { name: "UKG", age: "5 - 6y", category: "kindergarten", to: "/programmes/ukg", tint: "bg-[#F5F3FF] text-[#6D28D9] border border-[#DDD6FE] hover:bg-[#EDE9FE]" },
-  { name: "BambiBoo Day Care", age: "2 - 10y", category: "daycare", to: "/programmes/daycare", tint: "bg-[#F0FDFA] text-[#0D9488] border border-[#99F6E4] hover:bg-[#CCFBF1]" },
+  { name: "Parent & Toddler", age: "3m - 2 yrs", category: "toddlers", to: "/programmes/parent-toddler", tint: "bg-[#EBF5FF] text-[#0369A1] border border-[#B9E6FE] hover:bg-[#E0F2FE]" },
+  { name: "Playgroup", age: "2 - 3 yrs", category: "toddlers", to: "/programmes/playgroup", tint: "bg-[#ECFDF5] text-[#047857] border border-[#A7F3D0] hover:bg-[#D1FAE5]" },
+  { name: "Nursery", age: "3 - 4 yrs", category: "preschool", to: "/programmes/nursery", tint: "bg-[#EEF2FF] text-[#4338CA] border border-[#C7D2FE] hover:bg-[#E0E7FF]" },
+  { name: "LKG", age: "4 - 5 yrs", category: "preschool", to: "/programmes/lkg", tint: "bg-[#FEFCE8] text-[#B45309] border border-[#FEF08A] hover:bg-[#FEF9C3]" },
+  { name: "UKG", age: "5 - 6 yrs", category: "kindergarten", to: "/programmes/ukg", tint: "bg-[#F5F3FF] text-[#6D28D9] border border-[#DDD6FE] hover:bg-[#EDE9FE]" },
+  { name: "BambiBoo Day Care", age: "2 - 10 yrs", category: "daycare", to: "/programmes/daycare", tint: "bg-[#F0FDFA] text-[#0D9488] border border-[#99F6E4] hover:bg-[#CCFBF1]" },
 ];
 
 const pillars = [
@@ -268,9 +268,9 @@ function Home() {
             <div className="flex flex-wrap gap-1.5 p-1.5 rounded-2xl bg-white border border-border/60 shadow-xs shrink-0 self-start md:self-auto backdrop-blur-xs">
               {[
                 { id: "all", label: "All Ages" },
-                { id: "toddlers", label: "Toddlers (6M-2.5Y)" },
-                { id: "preschool", label: "Preschool (2Y-4.5Y)" },
-                { id: "kindergarten", label: "UKG (4.5Y-6Y)" },
+                { id: "toddlers", label: "Toddlers (6m-2.5 yrs)" },
+                { id: "preschool", label: "Preschool (2-4.5 yrs)" },
+                { id: "kindergarten", label: "UKG (4.5-6 yrs)" },
                 { id: "daycare", label: "Daycare & Clubs" },
               ].map((tab) => (
                 <button
