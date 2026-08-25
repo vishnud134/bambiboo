@@ -25,7 +25,7 @@ export const Route = createFileRoute("/beyond/arts")({
           eyebrow: "What we use",
           title: "Real materials, in real quantities.",
           image: preschoolHd,
-          imagePosition: "right",
+          imagePosition: "left",
           body: (
             <p>
               We stock open ended art supplies that invite touch, smell, and experimentation. Children are free to use generous amounts of paint, clay, fabric, and recycled materials because messy, hands on exploration is how young brains learn texture, cause and effect, and creative confidence.
@@ -45,7 +45,7 @@ export const Route = createFileRoute("/beyond/arts")({
           title: "The process is the point.",
           tone: "cream",
           image: reggioTeacherImg,
-          imagePosition: "left",
+          imagePosition: "right",
           body: (
             <p>
               We don't have a fridge of identical butterflies. Every artwork is different, imperfect, and completely their own. Parents receive a digital scrapbook at year end with 40+ of their child's original pieces.

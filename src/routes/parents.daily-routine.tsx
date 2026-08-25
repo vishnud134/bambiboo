@@ -33,7 +33,7 @@ export const Route = createFileRoute("/parents/daily-routine")({
           eyebrow: "Daily Routine",
           title: "What should my child bring every day?",
           image: dailyRoutineBagsImg,
-          imagePosition: "right",
+          imagePosition: "left",
           body: (
             <p>
               Children should bring a labelled water bottle, a spare set of clothes and any personal essentials. Day Care
@@ -45,7 +45,7 @@ export const Route = createFileRoute("/parents/daily-routine")({
           eyebrow: "Meals",
           title: "Does BambiBoo provide meals?",
           image: mealsImg,
-          imagePosition: "left",
+          imagePosition: "right",
           body: (
             <p>
               No. Families provide breakfast, lunch and snacks from home so children enjoy familiar food that suits their
@@ -57,7 +57,7 @@ export const Route = createFileRoute("/parents/daily-routine")({
           eyebrow: "Rest Time",
           title: "Do children have nap facilities in Day Care?",
           image: napImg,
-          imagePosition: "right",
+          imagePosition: "left",
           body: (
             <p>
               Yes. Our Day Care programme includes dedicated rest time in a calm, comfortable environment so children can

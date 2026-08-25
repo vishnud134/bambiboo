@@ -51,6 +51,7 @@ function CurriculumPage() {
           title: "Milestone tracking without pressure.",
           tone: "berry",
           image: progressImg,
+          imagePosition: "left",
           bulletStyle: "ticks",
           bullets: [
             "Daily teacher observation notes and individual photo updates shared with parents",
@@ -63,6 +64,7 @@ function CurriculumPage() {
           title: "Preparing children for primary school",
           tone: "cream",
           image: environmentImg,
+          imagePosition: "right",
           body: (
             <div className="space-y-4">
               <p>

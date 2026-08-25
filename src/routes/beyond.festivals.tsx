@@ -25,7 +25,7 @@ export const Route = createFileRoute("/beyond/festivals")({
           eyebrow: "What we celebrate",
           title: "The full Indian calendar, respectfully.",
           image: festivalCelebrationHd,
-          imagePosition: "right",
+          imagePosition: "left",
           body: (
             <p>
               Celebrations at BambiBoo are not just about costumes and sweets. We use festivals to teach children about seasonal change, regional traditions, family roles, and the values of gratitude, sharing, and community. Every child participates at their own comfort level, and families are invited to join several events across the year.
@@ -47,7 +47,7 @@ export const Route = createFileRoute("/beyond/festivals")({
           title: "The two mornings every parent circles.",
           tone: "cream",
           image: lkgImg,
-          imagePosition: "left",
+          imagePosition: "right",
           body: (
             <p>
               Our <strong>Annual Day</strong> in December is a full scale multi programme performance. Our <strong>Sports Morning</strong> in February is chaos, laughter, and finish line hugs. Both are open to grandparents and siblings.
