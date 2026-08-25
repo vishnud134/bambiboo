@@ -58,11 +58,17 @@ const nav: NavGroup[] = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [expandedGroup, setExpandedGroup] = useState<string | null>(null);
+
+  const toggleGroup = (label: string) => {
+    setExpandedGroup((prev) => (prev === label ? null : label));
+  };
+
   return (
     <header className="sticky top-0 z-50 border-b border-[#4C167F]/10 bg-[#EEE6DC]/95 backdrop-blur-md">
-      <div className="container-page-wide flex items-center justify-between gap-4 sm:gap-6 py-2.5 sm:py-3.5">
+      <div className="container-page-wide flex items-center justify-between gap-3 sm:gap-6 py-2.5 sm:py-3.5">
         <Logo />
-        <nav className="hidden lg:flex flex-1 items-center justify-center gap-1 px-2">
+        <nav className="hidden xl:flex flex-1 items-center justify-center gap-1 px-2">
           {nav.map((item) =>
             item.children ? (
               <div key={item.label} className="group relative">
@@ -143,74 +149,105 @@ export function Header() {
             ),
           )}
         </nav>
-        <div className="hidden lg:flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <a
             href="tel:+919900639303"
-            className="hidden xl:inline-flex items-center gap-2 rounded-full bg-[#EEE7DD] px-3.5 py-1.5 text-xs sm:text-sm font-bold text-foreground"
+            className="hidden 2xl:inline-flex items-center gap-2 rounded-full bg-[#EEE7DD] px-3.5 py-1.5 text-xs sm:text-sm font-bold text-foreground"
           >
             <Phone className="h-4 w-4 text-primary" /> +91 99006 39303
           </a>
           <AdmissionDialog>
-            <button className="shimmer-pill inline-flex items-center gap-1.5 rounded-full bg-[#4C167F] px-4.5 py-2 text-xs sm:text-sm font-bold text-white shadow-md shadow-purple-900/20 hover:brightness-110 hover:-translate-y-0.5 transition-all whitespace-nowrap cursor-pointer">
+            <button className="shimmer-pill inline-flex items-center gap-1.5 rounded-full bg-[#4C167F] px-3.5 py-1.5 sm:px-4.5 sm:py-2 text-xs sm:text-sm font-bold text-white shadow-md shadow-purple-900/20 hover:brightness-110 hover:-translate-y-0.5 transition-all whitespace-nowrap cursor-pointer">
               Book a Visit
             </button>
           </AdmissionDialog>
-        </div>
 
-        <button
-          className="lg:hidden ml-auto inline-flex items-center justify-center rounded-full border border-border p-2 bg-white/60"
-          onClick={() => setOpen((o) => !o)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X className="h-5 w-5 text-primary" /> : <Menu className="h-5 w-5 text-primary" />}
-        </button>
+          <button
+            className="xl:hidden inline-flex items-center justify-center rounded-full border border-border/80 p-2 bg-white/80 hover:bg-white transition text-foreground"
+            onClick={() => setOpen((o) => !o)}
+            aria-label="Toggle menu"
+          >
+            {open ? <X className="h-5 w-5 text-primary" /> : <Menu className="h-5 w-5 text-primary" />}
+          </button>
+        </div>
       </div>
       {open && (
-        <div className="lg:hidden border-t border-border bg-background">
-          <div className="container-page py-3 max-h-[75vh] overflow-y-auto">
+        <div className="xl:hidden border-t border-[#4C167F]/10 bg-[#FAFAFC] shadow-xl">
+          <div className="container-page py-4 max-h-[80vh] overflow-y-auto space-y-1">
             {nav.map((item) => (
-              <div key={item.label} className="py-1">
-                {item.to && (
-                  <Link
-                    to={item.to}
+              <div key={item.label} className="border-b border-border/40 last:border-0 pb-1">
+                {item.children ? (
+                  <div>
+                    <button
+                      onClick={() => toggleGroup(item.label)}
+                      className="w-full flex items-center justify-between rounded-xl px-3 py-2.5 font-bold text-foreground/90 hover:bg-white text-base text-left"
+                    >
+                      <span>{item.label}</span>
+                      <ChevronDown
+                        className={`h-4 w-4 text-primary transition-transform duration-200 ${
+                          expandedGroup === item.label ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                    {expandedGroup === item.label && (
+                      <div className="ml-2 pl-3 border-l-2 border-primary/20 space-y-1 my-1">
+                        {item.children.map((c) =>
+                          c.to.startsWith("http") ? (
+                            <a
+                              key={c.to}
+                              href={c.to}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={() => setOpen(false)}
+                              className="block rounded-lg px-3 py-2 text-sm font-semibold text-foreground/80 hover:text-primary hover:bg-white"
+                            >
+                              {c.label}
+                            </a>
+                          ) : (
+                            <Link
+                              key={c.to}
+                              to={c.to}
+                              onClick={() => setOpen(false)}
+                              className="block rounded-lg px-3 py-2 text-sm font-semibold text-foreground/80 hover:text-primary hover:bg-white"
+                            >
+                              {c.label}
+                            </Link>
+                          ),
+                        )}
+                      </div>
+                    )}
+                  </div>
+                ) : item.to?.startsWith("http") ? (
+                  <a
+                    href={item.to}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={() => setOpen(false)}
-                    className="block rounded-lg px-2 py-2 font-semibold text-foreground"
+                    className="block rounded-xl px-3 py-2.5 font-bold text-foreground/90 hover:bg-white text-base"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    to={item.to!}
+                    onClick={() => setOpen(false)}
+                    className="block rounded-xl px-3 py-2.5 font-bold text-foreground/90 hover:bg-white text-base"
+                    activeProps={{ className: "block rounded-xl px-3 py-2.5 font-extrabold text-[#4C167F] bg-primary/10 text-base" }}
                   >
                     {item.label}
                   </Link>
                 )}
-                {item.children && (
-                  <>
-                    {!item.to && (
-                      <div className="px-2 py-2 text-xs uppercase tracking-widest text-primary/70 font-bold">
-                        {item.label}
-                      </div>
-                    )}
-                    <div className="pl-3 border-l-2 border-secondary">
-                      {item.children.map((c) => (
-                        <Link
-                          key={c.to}
-                          to={c.to}
-                          onClick={() => setOpen(false)}
-                          className="block rounded-lg px-2 py-1.5 text-sm text-foreground/80"
-                        >
-                          {c.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </>
-                )}
               </div>
             ))}
-            <AdmissionDialog>
-              <button
-                className="mt-3 w-full rounded-full bg-primary px-4 py-3 text-center font-bold text-[#FFF6EA]"
-                onClick={() => setOpen(false)}
-              >
-                Book a Visit
-              </button>
-            </AdmissionDialog>
 
+            <div className="pt-3 border-t border-border/60 flex flex-col gap-2">
+              <a
+                href="tel:+919900639303"
+                className="flex items-center justify-center gap-2 rounded-full border border-primary/20 bg-white py-2.5 text-sm font-bold text-primary shadow-xs"
+              >
+                <Phone className="h-4 w-4" /> Call Us: +91 99006 39303
+              </a>
+            </div>
           </div>
         </div>
       )}
