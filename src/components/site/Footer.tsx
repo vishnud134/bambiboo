@@ -57,13 +57,13 @@ export function Footer() {
           <div className="space-y-[1px]">
             <Link to="/about" className={col}>About Us</Link>
             <AdmissionDialog>
-              <button className={`${col} w-full flex items-center gap-1 hover:underline text-left cursor-pointer`}>
-                <Download className="h-3 w-3 text-[#4C167F] shrink-0" /> Download Brochure
+              <button className={`${col} w-full text-left cursor-pointer`}>
+                Download Brochure
               </button>
             </AdmissionDialog>
             <AdmissionDialog>
-              <button className={`${col} w-full flex items-center gap-1 hover:underline text-left cursor-pointer`}>
-                <Sparkles className="h-3 w-3 text-[#4C167F] shrink-0" /> Program Enquiry
+              <button className={`${col} w-full text-left cursor-pointer`}>
+                Program Enquiry
               </button>
             </AdmissionDialog>
             <Link to="/parents/curriculum" className={col}>Curriculum & Learning</Link>
