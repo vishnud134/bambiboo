@@ -20,7 +20,7 @@ const info: ProgrammeInfo = {
   tagline: "Curiosity led discovery, language explosion, phonics play, and early math readiness.",
   intro: "Pre-School builds on toddlers' innate drive to explore. Through hands on culinary play, science inquiry, storytelling, and creative art projects, children develop deep focus and social collaboration.",
   image: preschoolImg,
-  ratio: "1:6 Teacher Ratio",
+  ratio: "1:12",
   hours: "8:30 AM – 12:30 PM (Mon – Fri)",
   color: "coral",
   features: [

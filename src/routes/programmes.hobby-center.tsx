@@ -20,7 +20,7 @@ const info: ProgrammeInfo = {
   tagline: "Enriching after-school & weekend clubs to discover passion, art, and movement.",
   intro: "The Bambiboo Hobby Center brings together expert instructors in fine art, music, dance, robotics, martial arts, and storytelling. Designed for preschoolers and primary school children to explore talents in a joyful, creative environment.",
   image: hobbyImg,
-  ratio: "Small Group Workshops (1:6 - 1:8)",
+  ratio: "1:12",
   hours: "3:30 PM – 6:30 PM (Weekdays) & Saturdays 9 AM – 1 PM",
   color: "coral",
   features: [
