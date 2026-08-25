@@ -83,21 +83,17 @@ export function BeyondAcademicsSection({ className = "" }: { className?: string 
               stopOnMouseEnter: true,
             }),
           ]}
-          className="relative px-2 md:px-4"
+          className="relative px-8 sm:px-12 md:px-14 lg:px-16"
         >
           <CarouselContent className="-ml-4 md:-ml-6">
             {beyondAcademicsCards.map((item) => {
-              const IconComponent = item.icon;
               return (
                 <CarouselItem key={item.label} className="pl-4 md:pl-6 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/3">
                   <Link
                     to={item.href}
-                    className="master-card group flex flex-col justify-between h-full rounded-[28px] sm:rounded-[32px] bg-white border-2 border-[#7E22CE] p-6 sm:p-7 shadow-2xs hover:shadow-xl hover:border-[#6B21A8] transition-all duration-300 min-h-[380px]"
+                    className="master-card group flex flex-col justify-between h-full rounded-[28px] sm:rounded-[32px] bg-white border-2 border-[#7E22CE] p-6 sm:p-7 shadow-2xs hover:shadow-xl hover:border-[#6B21A8] transition-all duration-300 min-h-[360px]"
                   >
                     <div>
-                      <div className="h-12 w-12 rounded-full bg-[#7E22CE] text-white flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300 shadow-xs">
-                        <IconComponent className="h-6 w-6 stroke-[2.25]" />
-                      </div>
                       <h3 className="text-xl sm:text-2xl font-bold text-[#7E22CE] leading-snug tracking-tight mb-2">
                         {item.label}
                       </h3>
@@ -121,8 +117,8 @@ export function BeyondAcademicsSection({ className = "" }: { className?: string 
               );
             })}
           </CarouselContent>
-          <CarouselPrevious className="flex -left-3 sm:-left-5 md:-left-6 h-11 w-11 bg-white text-[#7E22CE] border-2 border-[#7E22CE] hover:bg-[#7E22CE] hover:text-white transition-all shadow-md z-20 cursor-pointer" />
-          <CarouselNext className="flex -right-3 sm:-right-5 md:-right-6 h-11 w-11 bg-white text-[#7E22CE] border-2 border-[#7E22CE] hover:bg-[#7E22CE] hover:text-white transition-all shadow-md z-20 cursor-pointer" />
+          <CarouselPrevious className="flex left-0 sm:left-1 md:left-2 h-11 w-11 bg-white text-[#7E22CE] border-2 border-[#7E22CE] hover:bg-[#7E22CE] hover:text-white transition-all shadow-md z-20 cursor-pointer" />
+          <CarouselNext className="flex right-0 sm:right-1 md:right-2 h-11 w-11 bg-white text-[#7E22CE] border-2 border-[#7E22CE] hover:bg-[#7E22CE] hover:text-white transition-all shadow-md z-20 cursor-pointer" />
         </Carousel>
       </div>
     </section>
