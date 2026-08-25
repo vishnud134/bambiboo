@@ -29,7 +29,7 @@ const nav: NavGroup[] = [
     children: [
       { label: "Admission Process", to: "/parents/admission" },
       { label: "Child Safety Policy", to: "/parents/safety" },
-      { label: "Curriculum & Learning", to: "/parents/curriculum" },      { label: "Daily Routine & Care", to: "/parents/daily-routine" },      { label: "FAQ", to: "/parents/faq" },
+      { label: "Curriculum & Learning", to: "/parents/curriculum" },      { label: "Daily Routine & Care", to: "/parents/daily-routine" },      { label: "FAQS", to: "/parents/faq" },
       { label: "Testimonials", to: "/parents/testimonials" },
     ],
   },

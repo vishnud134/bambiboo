@@ -7,7 +7,7 @@ import { Breadcrumb } from "@/components/site/Breadcrumb";
 export const Route = createFileRoute("/parents/faq")({
   head: () => ({
     meta: [
-      { title: "FAQ BambiBoo Preschool" },
+      { title: "FAQS BambiBoo Preschool" },
       { name: "description", content: "Quick, transparent answers to the questions BambiBoo parents most often ask." },
       { property: "og:url", content: "/parents/faq" },
     ],
@@ -106,12 +106,12 @@ function FAQ() {
       <section className="bg-[#FAFAFC] relative overflow-hidden">
         <div className="absolute -top-20 -right-16 h-72 w-72 blob bg-primary/5" />
         <div className="container-page relative py-12 md:py-16">
-          <Breadcrumb items={[{ label: "Parents Corner", to: "/parents" }, { label: "FAQ" }]} className="mb-4 text-xs font-semibold text-primary/80" />
+          <Breadcrumb items={[{ label: "Parents Corner", to: "/parents" }, { label: "FAQS" }]} className="mb-4 text-xs font-semibold text-primary/80" />
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
             {/* Left Column: Heading, Subtitle & Search */}
             <div className="lg:col-span-6">
-              <div className="text-xs font-bold uppercase tracking-widest text-primary">FAQ</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-primary">FAQS</div>
               <h1 className="mt-3 text-4xl sm:text-5xl md:text-6xl font-extrabold text-balance">
                 Quick answers for busy parents.
               </h1>

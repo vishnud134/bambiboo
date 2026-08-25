@@ -454,7 +454,7 @@ function Home() {
         <div className="container-page section-padding">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6">
             <div>
-              <div className="text-xs font-bold uppercase tracking-widest text-primary/80">FAQ</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-primary/80">FAQS</div>
               <h2 className="mt-2 text-3xl md:text-5xl font-semibold text-balance">Quick answers for busy parents.</h2>
             </div>
             <p className="text-sm md:text-base text-[#430E6C]/85 font-medium max-w-md leading-relaxed">Still curious? Reach out we love long conversations about your child.</p>

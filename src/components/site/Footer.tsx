@@ -72,7 +72,7 @@ export function Footer() {
             <Link to="/parents/safety" className={col}>Child Safety Policy</Link>
             <Link to="/parents/testimonials" className={col}>Parent Testimonials</Link>
             <Link to="/blogs" className={col}>Blogs</Link>
-            <Link to="/parents/faq" className={col}>FAQ</Link>
+            <Link to="/parents/faq" className={col}>FAQS</Link>
           </div>
         </div>
 
@@ -102,7 +102,7 @@ export function Footer() {
           <div>© {new Date().getFullYear()} BambiBoo Preschool & Daycare. All rights reserved.</div>
           <div className="flex gap-4">
             <Link to="/parents/safety" className="hover:text-[#4C167F]">Child Safety</Link>
-            <Link to="/parents/faq" className="hover:text-[#4C167F]">FAQ</Link>
+            <Link to="/parents/faq" className="hover:text-[#4C167F]">FAQS</Link>
             <Link to="/contact" className="hover:text-[#4C167F]">Contact</Link>
           </div>
         </div>

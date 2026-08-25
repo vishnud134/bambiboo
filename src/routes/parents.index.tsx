@@ -42,7 +42,7 @@ const items: Card[] = [
     color: "berry",
   },
   {
-    name: "FAQ",
+    name: "FAQS",
     to: "/parents/faq",
     tagline: "Answers to the questions parents ask most before joining BambiBoo.",
     color: "lilac",
