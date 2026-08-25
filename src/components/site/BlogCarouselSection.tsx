@@ -486,7 +486,7 @@ export function BlogCarouselSection({ className = "" }: { className?: string }) 
         </div>
 
         {/* Blog Carousel */}
-        <Carousel opts={{ align: "start", loop: true }} className="relative">
+        <Carousel opts={{ align: "start", loop: true }} className="relative px-8 sm:px-12 md:px-14 lg:px-16">
           <CarouselContent className="-ml-5 lg:-ml-6">
             {blogPosts.map((post) => (
               <CarouselItem key={post.id} className="pl-5 lg:pl-6 md:basis-1/2 lg:basis-1/3">
@@ -545,8 +545,8 @@ export function BlogCarouselSection({ className = "" }: { className?: string }) 
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex -left-4 bg-white/90 border-border hover:bg-primary hover:text-white" />
-          <CarouselNext className="hidden md:flex -right-4 bg-white/90 border-border hover:bg-primary hover:text-white" />
+          <CarouselPrevious className="flex left-0 sm:left-1 md:left-2 h-11 w-11 bg-white border-2 border-primary/20 text-primary hover:bg-primary hover:text-white transition-all shadow-md z-20 cursor-pointer" />
+          <CarouselNext className="flex right-0 sm:right-1 md:right-2 h-11 w-11 bg-white border-2 border-primary/20 text-primary hover:bg-primary hover:text-white transition-all shadow-md z-20 cursor-pointer" />
         </Carousel>
       </div>
     </section>
