@@ -45,7 +45,7 @@ import artsCraftsImg from "@/assets/bambiboo/hobby-center-prog-hd.jpg";
 import musicDanceImg from "@/assets/bambiboo/nursery-prog.jpg";
 import yogaMovementImg from "@/assets/bambiboo/yoga-seated-mindfulness.jpg";
 import fieldTripsImg from "@/assets/bambiboo/field-trip-destination.jpg";
-import festivalsEventsImg from "@/assets/bambiboo/festival-hero-hd.jpg";
+import festivalsEventsImg from "@/assets/bambiboo/hero-banner-kids.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({

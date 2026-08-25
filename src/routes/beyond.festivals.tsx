@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/site/ContentPage";
 
 import heroBannerKidsImg from "@/assets/bambiboo/hero-banner-kids.jpg";
-import festivalCelebrationHd from "@/assets/bambiboo/festival-celebration-hd.jpg";
+import festivalCelebrationHd from "@/assets/bambiboo/hero-banner-kids.jpg";
 import lkgImg from "@/assets/bambiboo/lkg-prog.jpg";
 
 export const Route = createFileRoute("/beyond/festivals")({
