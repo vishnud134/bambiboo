@@ -9,6 +9,7 @@ import { BlogCarouselSection } from "./BlogCarouselSection";
 import { ScrollRevealProvider } from "./ScrollReveal";
 
 const excludedBlogRoutes = [
+  "/about",
   "/programmes",
   "/parents",
   "/world",
