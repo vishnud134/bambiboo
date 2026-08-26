@@ -95,7 +95,7 @@ export function ContentPage({
               </h1>
               <p className="mt-5 max-w-2xl text-lg text-muted-foreground leading-relaxed text-balance">{intro}</p>
               {heroNote && (
-                <div className="mt-5 max-w-2xl text-base md:text-lg font-bold text-foreground/90 leading-relaxed text-balance">
+                <div className="mt-5 max-w-2xl">
                   {heroNote}
                 </div>
               )}

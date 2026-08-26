@@ -31,7 +31,11 @@ export const Route = createFileRoute("/about")({
       eyebrow="About Us"
       title="A place where childhood comes first."
       intro="BambiBoo is an initiative of Ananta Educational Trust, founded with one simple purpose-to make high-quality early childhood education nurturing, accessible and affordable. We are creating a space where every child feels included, every parent feels reassured, and learning happens through joy rather than pressure."
-      heroNote={`Every decision we make begins with one question: "Will this help a child grow with joy?" Because technology will find our children. Childhood won't wait.`}
+      heroNote={
+        <div className="p-5 sm:px-6 sm:py-5 rounded-3xl bg-[#FFF6D6] border border-amber-300 font-bold text-[#4C167F] italic text-base sm:text-lg leading-relaxed shadow-2xs">
+          Every decision we make begins with one question: "Will this help a child grow with joy?" Because technology will find our children. Childhood won't wait.
+        </div>
+      }
       sections={[
         {
           eyebrow: "Founder's letter",
