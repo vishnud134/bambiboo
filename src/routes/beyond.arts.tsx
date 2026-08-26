@@ -3,7 +3,7 @@ import { ContentPage } from "@/components/site/ContentPage";
 
 import hobbyCenterHd from "@/assets/bambiboo/hobby-center-prog-hd.jpg";
 import preschoolHd from "@/assets/bambiboo/preschool-prog-hd.jpg";
-import reggioTeacherImg from "@/assets/bambiboo/reggio-teacher.jpg";
+import indianArtsPhilosophyImg from "@/assets/bambiboo/indian-arts-philosophy.jpg";
 
 export const Route = createFileRoute("/beyond/arts")({
   head: () => ({
@@ -44,7 +44,7 @@ export const Route = createFileRoute("/beyond/arts")({
           eyebrow: "The philosophy",
           title: "The process is the point.",
           tone: "cream",
-          image: reggioTeacherImg,
+          image: indianArtsPhilosophyImg,
           imagePosition: "right",
           body: (
             <p>
