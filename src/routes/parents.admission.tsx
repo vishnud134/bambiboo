@@ -73,26 +73,32 @@ function AdmissionPage() {
       {/* Admission Info Containers */}
       <section className="bg-white">
         <div className="container-page py-10 md:py-14">
-          <div className="grid gap-6 lg:grid-cols-3">
-            <div className="rounded-3xl border border-border bg-card p-6 shadow-sm">
-              <p className="text-xs uppercase tracking-widest text-primary font-bold">Admission Process</p>
-              <h3 className="mt-3 text-2xl font-bold text-foreground">Your journey begins with a campus visit.</h3>
-              <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
+          <div className="grid gap-6 lg:grid-cols-3 items-stretch">
+            <div className="master-card flex flex-col h-full rounded-3xl border border-border/60 bg-white p-6 md:p-8 shadow-2xs hover:shadow-md transition-all">
+              <p className="text-xs font-bold uppercase tracking-widest text-primary/80">Admission Process</p>
+              <h3 className="mt-2.5 text-2xl font-bold text-foreground leading-snug min-h-[3.75rem] flex items-start">
+                Your journey begins with a campus visit.
+              </h3>
+              <p className="mt-4 text-sm md:text-base text-muted-foreground leading-relaxed flex-1">
                 Meet our teachers, explore the classrooms and understand our philosophy. We'll answer all your questions, discuss the curriculum and fee structure, guide you through the documentation, and once admission is confirmed, your child receives a welcome kit with books, bag, uniform, diary and ID card.
               </p>
             </div>
-            <div className="rounded-3xl border border-border bg-card p-6 shadow-sm">
-              <p className="text-xs uppercase tracking-widest text-primary font-bold">Admissions Throughout the Year</p>
-              <h3 className="mt-3 text-2xl font-bold text-foreground">Yes. Admissions remain open throughout the year.</h3>
-              <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-                Yes. Admissions remain open throughout the year, subject to seat availability. We recommend scheduling a school visit to understand the programme best suited for your child.
+            <div className="master-card flex flex-col h-full rounded-3xl border border-border/60 bg-white p-6 md:p-8 shadow-2xs hover:shadow-md transition-all">
+              <p className="text-xs font-bold uppercase tracking-widest text-primary/80">Admissions Throughout the Year</p>
+              <h3 className="mt-2.5 text-2xl font-bold text-foreground leading-snug min-h-[3.75rem] flex items-start">
+                Yes. Admissions remain open throughout the year.
+              </h3>
+              <p className="mt-4 text-sm md:text-base text-muted-foreground leading-relaxed flex-1">
+                Yes. Admissions remain open throughout the year, subject to seat availability. We recommend scheduling a school visit to understand the programme best suited for your child and secure placement smoothly.
               </p>
             </div>
-            <div className="rounded-3xl border border-border bg-card p-6 shadow-sm">
-              <p className="text-xs uppercase tracking-widest text-primary font-bold">Documents Required for Admission</p>
-              <h3 className="mt-3 text-2xl font-bold text-foreground">What to bring for enrolment.</h3>
-              <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-                For parents, we require an Aadhaar card. For your child, we require a birth certificate, immunisation records and recent photographs.
+            <div className="master-card flex flex-col h-full rounded-3xl border border-border/60 bg-white p-6 md:p-8 shadow-2xs hover:shadow-md transition-all">
+              <p className="text-xs font-bold uppercase tracking-widest text-primary/80">Documents Required for Admission</p>
+              <h3 className="mt-2.5 text-2xl font-bold text-foreground leading-snug min-h-[3.75rem] flex items-start">
+                What documents to bring for enrolment.
+              </h3>
+              <p className="mt-4 text-sm md:text-base text-muted-foreground leading-relaxed flex-1">
+                For parents, we require an Aadhaar card or government photo ID. For your child, we require a birth certificate copy, updated immunisation records, blood group note, and recent passport-size photographs to complete enrolment.
               </p>
             </div>
           </div>
