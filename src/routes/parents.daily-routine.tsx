@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/site/ContentPage";
 import daycareRoutineHdImg from "@/assets/bambiboo/daycare-routine-hd.jpg";
 import dailyRoutineBagsImg from "@/assets/bambiboo/daily-routine-bags.png";
-import napImg from "@/assets/bambiboo/daily-routine-nap.jpg";
+import dailyRoutineNapNewImg from "@/assets/bambiboo/daily-routine-nap-new.jpg";
 import mealsImg from "@/assets/bambiboo/daily-routine-meals.jpg";
 
 export const Route = createFileRoute("/parents/daily-routine")({
@@ -56,7 +56,7 @@ export const Route = createFileRoute("/parents/daily-routine")({
         {
           eyebrow: "Rest Time",
           title: "Do children have nap facilities in Day Care?",
-          image: napImg,
+          image: dailyRoutineNapNewImg,
           imagePosition: "left",
           body: (
             <p>
