@@ -39,9 +39,9 @@ function PrivacyPolicyPage() {
       </section>
 
       {/* Main Privacy Policy Content */}
-      <section className="bg-background py-12 md:py-16">
+      <section className="bg-[#FAFAFC] py-12 md:py-16">
         <div className="container-page max-w-4xl">
-          <div className="master-card rounded-3xl bg-white border border-border/60 p-6 md:p-10 shadow-xs prose prose-slate max-w-none text-foreground/90 leading-relaxed text-sm md:text-base space-y-6">
+          <div className="rounded-3xl bg-white border border-border/60 p-6 md:p-10 shadow-sm text-[#231B32] leading-relaxed text-sm md:text-base space-y-6">
             <p>
               This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
             </p>
