@@ -32,9 +32,6 @@ function PrivacyPolicyPage() {
           <h1 className="mt-4 text-3xl md:text-5xl font-extrabold text-foreground tracking-tight">
             Privacy Policy
           </h1>
-          <p className="mt-2 text-sm md:text-base text-muted-foreground font-medium">
-            Last updated: August 28, 2026
-          </p>
         </div>
       </section>
 
@@ -46,10 +43,7 @@ function PrivacyPolicyPage() {
               This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
             </p>
             <p>
-              We use Your Personal Data to provide and improve the Service. We collect, use, and disclose Your information as described in this Privacy Policy and, where required by applicable law, only where We have a valid legal basis to do so, including Your consent (where consent is required). This Privacy Policy has been created with the help of the{" "}
-              <a href="https://www.termsfeed.com/privacy-policy-generator/" target="_blank" rel="noopener noreferrer" className="text-primary font-bold underline hover:text-primary/80">
-                Privacy Policy Generator
-              </a>.
+              We use Your Personal Data to provide and improve the Service. We collect, use, and disclose Your information as described in this Privacy Policy and, where required by applicable law, only where We have a valid legal basis to do so, including Your consent (where consent is required).
             </p>
 
             <h2 className="text-2xl font-bold text-foreground pt-4 border-t border-border/60">Interpretation and Definitions</h2>
