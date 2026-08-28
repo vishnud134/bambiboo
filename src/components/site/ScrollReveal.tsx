@@ -28,6 +28,7 @@ export function ScrollRevealProvider({ children }: { children: React.ReactNode }
     );
 
     elements.forEach((el) => {
+      if (el.classList.contains("no-reveal") || el.closest("[data-no-reveal]")) return;
       el.classList.add("scroll-reveal");
       observer.observe(el);
     });

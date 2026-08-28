@@ -23,8 +23,8 @@ function PrivacyPolicyPage() {
   return (
     <PageShell>
       {/* Hero Header */}
-      <section className="relative overflow-hidden bg-[#FAFAFC] py-10 md:py-14 border-b border-border/60">
-        <div className="container-page">
+      <section className="relative overflow-hidden bg-[#FAFAFC] py-10 md:py-14 border-b border-border/60" data-no-reveal>
+        <div className="container-page no-reveal" data-no-reveal>
           <Breadcrumb items={[{ label: "Privacy Policy" }]} className="mb-4 text-xs font-semibold text-primary/80" />
           <div className="inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary w-fit">
             Legal Information
@@ -39,9 +39,9 @@ function PrivacyPolicyPage() {
       </section>
 
       {/* Main Privacy Policy Content */}
-      <section className="bg-[#FAFAFC] py-12 md:py-16">
-        <div className="container-page max-w-4xl">
-          <div className="rounded-3xl bg-white border border-border/60 p-6 md:p-10 shadow-sm text-[#231B32] leading-relaxed text-sm md:text-base space-y-6">
+      <section className="bg-[#FAFAFC] py-12 md:py-16" data-no-reveal>
+        <div className="container-page max-w-4xl no-reveal" data-no-reveal>
+          <div className="no-reveal rounded-3xl bg-white border border-border/60 p-6 md:p-10 shadow-sm text-[#231B32] leading-relaxed text-sm md:text-base space-y-6" data-no-reveal>
             <p>
               This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
             </p>
