@@ -48,7 +48,7 @@ export function HeroCarousel() {
           type="button"
           onClick={() => go(i - 1)}
           aria-label="Previous slide"
-          className="absolute left-3 top-1/2 -translate-y-1/2 grid place-items-center h-10 w-10 rounded-full bg-background/85 backdrop-blur border border-border text-foreground hover:bg-background transition"
+          className="absolute left-3 top-1/2 -translate-y-1/2 grid place-items-center h-10 w-10 rounded-full bg-black/20 hover:bg-black/40 backdrop-blur-md border border-white/30 text-white transition-all shadow-sm z-10"
         >
           <ChevronLeft className="h-5 w-5" />
         </button>
@@ -56,7 +56,7 @@ export function HeroCarousel() {
           type="button"
           onClick={() => go(i + 1)}
           aria-label="Next slide"
-          className="absolute right-3 top-1/2 -translate-y-1/2 grid place-items-center h-10 w-10 rounded-full bg-background/85 backdrop-blur border border-border text-foreground hover:bg-background transition"
+          className="absolute right-3 top-1/2 -translate-y-1/2 grid place-items-center h-10 w-10 rounded-full bg-black/20 hover:bg-black/40 backdrop-blur-md border border-white/30 text-white transition-all shadow-sm z-10"
         >
           <ChevronRight className="h-5 w-5" />
         </button>
