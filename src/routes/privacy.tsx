@@ -52,10 +52,10 @@ function PrivacyPolicyPage() {
           <h1 className="mt-4 text-3xl md:text-5xl font-extrabold text-foreground tracking-tight text-balance">
             Privacy Policy
           </h1>
-          <p className="mt-4 max-w-3xl text-base md:text-lg text-muted-foreground leading-relaxed">
+          <p className="mt-4 text-base md:text-lg text-muted-foreground leading-relaxed">
             This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
           </p>
-          <p className="mt-3 max-w-3xl text-sm md:text-base text-foreground/80 leading-relaxed font-medium">
+          <p className="mt-3 text-sm md:text-base text-foreground/80 leading-relaxed font-medium">
             We use Your Personal Data to provide and improve the Service. We collect, use, and disclose Your information as described in this Privacy Policy and, where required by applicable law, only where We have a valid legal basis to do so, including Your consent (where consent is required).
           </p>
         </div>
@@ -64,7 +64,7 @@ function PrivacyPolicyPage() {
       {/* SECTION 1: INTERPRETATION & DEFINITIONS */}
       <section className="py-12 md:py-16 bg-background border-b border-border/40" data-no-reveal>
         <div className="container-page no-reveal" data-no-reveal>
-          <div className="max-w-3xl mb-8">
+          <div className="w-full mb-8">
             <div className="text-xs font-bold uppercase tracking-widest text-primary">Key Terminology</div>
             <h2 className="mt-2 text-2xl md:text-3xl font-extrabold text-foreground">Interpretation and Definitions</h2>
             <p className="mt-2 text-sm md:text-base text-muted-foreground">
@@ -91,7 +91,7 @@ function PrivacyPolicyPage() {
       {/* SECTION 2: DATA COLLECTION & COOKIES */}
       <section className="py-12 md:py-16 bg-[#FAFAFC] border-b border-border/40" data-no-reveal>
         <div className="container-page no-reveal" data-no-reveal>
-          <div className="max-w-3xl mb-10">
+          <div className="w-full mb-10">
             <div className="text-xs font-bold uppercase tracking-widest text-primary">Information We Collect</div>
             <h2 className="mt-2 text-2xl md:text-3xl font-extrabold text-foreground">Collecting &amp; Using Your Personal Information</h2>
           </div>
@@ -179,7 +179,7 @@ function PrivacyPolicyPage() {
       {/* SECTION 3: USE OF YOUR PERSONAL DATA */}
       <section className="py-12 md:py-16 bg-background border-b border-border/40" data-no-reveal>
         <div className="container-page no-reveal" data-no-reveal>
-          <div className="max-w-3xl mb-8">
+          <div className="w-full mb-8">
             <div className="text-xs font-bold uppercase tracking-widest text-primary">Purpose &amp; Processing</div>
             <h2 className="mt-2 text-2xl md:text-3xl font-extrabold text-foreground">Use of Your Personal Data</h2>
             <p className="mt-2 text-sm md:text-base text-muted-foreground">
