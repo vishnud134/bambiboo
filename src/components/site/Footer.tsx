@@ -98,14 +98,16 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-[#430E6C]/12">
-        <div className="container-page flex flex-col gap-2 py-3 sm:flex-row sm:items-center sm:justify-between text-xs text-[#231B32]/70">
-          <div>© 2026 <a href="https://bambiboo.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-[#4C167F] underline">https://bambiboo.vercel.app/</a>. All rights reserved.</div>
-          <div className="flex flex-wrap gap-4">
-            <Link to="/parents/safety" className="hover:text-[#4C167F]">Child Safety</Link>
-            <Link to="/parents/faq" className="hover:text-[#4C167F]">FAQS</Link>
-            <Link to="/privacy" className="hover:text-[#4C167F]">Privacy Policy</Link>
-            <Link to="/contact" className="hover:text-[#4C167F]">Contact</Link>
+      <div className="border-t border-[#430E6C]/20 bg-[#E8DFD3]/60">
+        <div className="container-page flex flex-col gap-3 py-4 pb-24 lg:pb-6 sm:flex-row sm:items-center sm:justify-between text-xs sm:text-sm font-semibold text-[#1A1228]">
+          <div className="leading-relaxed">
+            © 2026 <a href="https://bambiboo.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-[#4C167F] hover:underline font-bold">https://bambiboo.vercel.app/</a>. All rights reserved.
+          </div>
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm">
+            <Link to="/parents/safety" className="text-[#1A1228] hover:text-[#4C167F] hover:underline transition-colors">Child Safety</Link>
+            <Link to="/parents/faq" className="text-[#1A1228] hover:text-[#4C167F] hover:underline transition-colors">FAQS</Link>
+            <Link to="/privacy" className="text-[#4C167F] font-bold hover:underline transition-colors">Privacy Policy</Link>
+            <Link to="/contact" className="text-[#1A1228] hover:text-[#4C167F] hover:underline transition-colors">Contact</Link>
           </div>
         </div>
       </div>
