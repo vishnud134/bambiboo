@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, Outlet, useMatches } from "@tanstack/react-router";
 import { PageShell } from "@/components/site/PageShell";
 import { blogPosts } from "@/components/site/BlogCarouselSection";
 import { ArrowRight } from "lucide-react";
@@ -11,10 +11,17 @@ export const Route = createFileRoute("/blogs")({
     ],
     links: [{ rel: "canonical", href: "/blogs" }],
   }),
-  component: BlogsPage,
+  component: BlogsLayout,
 });
 
-function BlogsPage() {
+function BlogsLayout() {
+  const matches = useMatches();
+  const isChildRoute = matches.some((m) => m.routeId === "/blogs/$postId" || m.routeId === "/blogs/preschool-readinessguide");
+
+  if (isChildRoute) {
+    return <Outlet />;
+  }
+
   return (
     <PageShell>
       <section className="container-page py-12 md:py-16">
