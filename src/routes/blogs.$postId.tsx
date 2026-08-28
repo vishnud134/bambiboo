@@ -102,21 +102,26 @@ function BlogPostPage() {
             </div>
           </div>
 
-          <aside className="lg:col-span-1">
-              <div className="sticky top-24 space-y-4">
-                <BlogTOC selector=".post-content" />
-              <div className="rounded-xl bg-white p-4 border border-border/60">
-                <div className="text-xs text-muted-foreground">About this article</div>
-                <div className="mt-2 text-sm text-foreground">{post.excerpt}</div>
-              </div>
-              <div className="rounded-xl p-4 border border-border bg-white/90">
-                <div className="text-xs text-muted-foreground">Related posts</div>
-                <ul className="mt-3 space-y-2">
-                  {blogPosts.slice(1,4).map((p) => (
-                    <li key={p.id}><Link to="/blogs/$postId" params={{ postId: p.id }} className="text-sm text-primary hover:underline">{p.title}</Link></li>
-                  ))}
-                </ul>
-              </div>
+          <aside className="lg:col-span-1 lg:sticky lg:top-24 self-start space-y-4">
+            <div className="rounded-xl bg-white p-4 border border-border/60 shadow-2xs">
+              <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">About this article</div>
+              <div className="mt-2 text-sm text-foreground leading-relaxed">{post.excerpt}</div>
+            </div>
+            <div className="rounded-xl p-4 border border-border bg-white/90 shadow-2xs">
+              <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-3">Table of contents</div>
+              <BlogTOC selector=".post-content" />
+            </div>
+            <div className="rounded-xl p-4 border border-border bg-white/90 shadow-2xs">
+              <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Related posts</div>
+              <ul className="mt-3 space-y-2">
+                {blogPosts.slice(1, 4).map((p) => (
+                  <li key={p.id}>
+                    <Link to="/blogs/$postId" params={{ postId: p.id }} className="text-sm font-semibold text-primary hover:underline">
+                      {p.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </aside>
         </div>
