@@ -57,12 +57,12 @@ export function Footer() {
           <div className="space-y-[1px]">
             <Link to="/about" className={col}>About Us</Link>
             <AdmissionDialog>
-              <button className={`${col} w-full text-left cursor-pointer`}>
+              <button type="button" className={`${col} w-full text-left bg-transparent p-0 border-0 outline-none ring-0 shadow-none appearance-none font-medium`}>
                 Download Brochure
               </button>
             </AdmissionDialog>
             <AdmissionDialog>
-              <button className={`${col} w-full text-left cursor-pointer`}>
+              <button type="button" className={`${col} w-full text-left bg-transparent p-0 border-0 outline-none ring-0 shadow-none appearance-none font-medium`}>
                 Program Enquiry
               </button>
             </AdmissionDialog>
