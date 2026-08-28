@@ -15,6 +15,7 @@ const excludedBlogRoutes = [
   "/world",
   "/beyond",
   "/contact",
+  "/privacy",
   "/parents/faq",
   "/blogs",
 ];

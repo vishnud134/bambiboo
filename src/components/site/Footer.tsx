@@ -73,6 +73,7 @@ export function Footer() {
             <Link to="/parents/testimonials" className={col}>Parent Testimonials</Link>
             <Link to="/blogs" className={col}>Blogs</Link>
             <Link to="/parents/faq" className={col}>FAQS</Link>
+            <Link to="/privacy" className={col}>Privacy Policy</Link>
           </div>
         </div>
 
@@ -100,9 +101,10 @@ export function Footer() {
       <div className="border-t border-[#430E6C]/12">
         <div className="container-page flex flex-col gap-2 py-3 sm:flex-row sm:items-center sm:justify-between text-xs text-[#231B32]/70">
           <div>© {new Date().getFullYear()} BambiBoo Preschool & Daycare. All rights reserved.</div>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             <Link to="/parents/safety" className="hover:text-[#4C167F]">Child Safety</Link>
             <Link to="/parents/faq" className="hover:text-[#4C167F]">FAQS</Link>
+            <Link to="/privacy" className="hover:text-[#4C167F]">Privacy Policy</Link>
             <Link to="/contact" className="hover:text-[#4C167F]">Contact</Link>
           </div>
         </div>
