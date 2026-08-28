@@ -182,7 +182,7 @@ export function ContentPage({
               s.tone === "berry"
                 ? "bg-primary text-primary-foreground py-12 md:py-16"
                 : s.tone === "cream"
-                  ? "bg-[#F8FAFC] py-12 md:py-16"
+                  ? "bg-[#FAFAFC] py-12 md:py-16"
                   : "bg-background py-12 md:py-16"
             }
           >

@@ -44,6 +44,7 @@ export const Route = createFileRoute("/parents/daily-routine")({
         {
           eyebrow: "Meals",
           title: "Does BambiBoo provide meals?",
+          tone: "cream",
           image: mealsImg,
           imagePosition: "right",
           body: (
