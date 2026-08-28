@@ -100,7 +100,7 @@ export function Footer() {
       </div>
       <div className="border-t border-[#430E6C]/12">
         <div className="container-page flex flex-col gap-2 py-3 sm:flex-row sm:items-center sm:justify-between text-xs text-[#231B32]/70">
-          <div>© {new Date().getFullYear()} BambiBoo Preschool & Daycare. All rights reserved.</div>
+          <div>© 2026 <a href="https://bambiboo.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-[#4C167F] underline">https://bambiboo.vercel.app/</a>. All rights reserved.</div>
           <div className="flex flex-wrap gap-4">
             <Link to="/parents/safety" className="hover:text-[#4C167F]">Child Safety</Link>
             <Link to="/parents/faq" className="hover:text-[#4C167F]">FAQS</Link>
