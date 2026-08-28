@@ -7,8 +7,8 @@ const col = "text-xs md:text-sm text-[#1A1228]/85 hover:text-[#4C167F] font-medi
 
 export function Footer() {
   return (
-    <footer className="bg-[#EEE6DC] border-t border-[#430E6C]/15 text-[#1A1228]">
-      <div className="container-page grid gap-6 md:gap-8 pt-10 md:pt-14 pb-6 md:pb-8 md:grid-cols-2 lg:grid-cols-5">
+    <footer className="no-reveal bg-[#EEE6DC] border-t border-[#430E6C]/15 text-[#1A1228]" data-no-reveal>
+      <div className="container-page no-reveal grid gap-6 md:gap-8 pt-10 md:pt-14 pb-6 md:pb-8 md:grid-cols-2 lg:grid-cols-5" data-no-reveal>
         <div className="lg:col-span-2 flex flex-col justify-between">
           <div>
             <div className="rounded-xl bg-[#EFE8DE] p-2 inline-block">
@@ -98,8 +98,8 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-[#430E6C]/20 bg-[#E8DFD3]/60">
-        <div className="container-page flex flex-col gap-3 py-4 pb-24 lg:pb-6 sm:flex-row sm:items-center sm:justify-between text-xs sm:text-sm font-semibold text-[#1A1228]">
+      <div className="border-t border-[#430E6C]/20 bg-[#E8DFD3]/60 no-reveal" data-no-reveal>
+        <div className="container-page no-reveal flex flex-col gap-3 py-4 pb-24 lg:pb-6 sm:flex-row sm:items-center sm:justify-between text-xs sm:text-sm font-semibold text-[#1A1228]" data-no-reveal>
           <div className="leading-relaxed">
             © 2026 <a href="https://bambiboo.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-[#4C167F] hover:underline font-bold">https://bambiboo.vercel.app/</a>. All rights reserved.
           </div>
