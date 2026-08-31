@@ -23,8 +23,8 @@ function Contact() {
     <PageShell>
       <section className="bg-[#FAFAFC] relative overflow-hidden py-8 sm:py-12 md:py-16">
         <div className="absolute -top-20 -right-16 h-72 w-72 blob bg-primary/5 pointer-events-none max-w-full" />
-        <div className="container-page relative grid gap-6 sm:gap-8 lg:grid-cols-12 lg:gap-10 xl:gap-14 items-start">
-          <div className="lg:col-span-5 flex flex-col justify-between">
+        <div className="container-page relative grid gap-6 sm:gap-8 lg:grid-cols-12 lg:gap-10 xl:gap-14 items-stretch">
+          <div className="lg:col-span-5 flex flex-col justify-between h-full py-1">
             <div>
               <Breadcrumb items={[{ label: "Contact Us" }]} className="mb-2 sm:mb-3 text-xs font-semibold text-primary/80" />
               <h1 className="mt-1.5 text-3xl sm:text-4xl md:text-5xl font-black text-balance leading-tight break-words">
@@ -35,7 +35,7 @@ function Contact() {
               </p>
             </div>
 
-            <div className="mt-6 sm:mt-8 flex flex-col gap-3.5 sm:gap-4">
+            <div className="mt-6 sm:mt-8 flex flex-col gap-3.5 sm:gap-4 flex-1 justify-between">
               {[
                 { icon: Phone, label: "Call", value: "+91 99006 39303", href: "tel:+919900639303" },
                 { icon: Mail, label: "Email", value: "info@bambiboo.com", href: "mailto:info@bambiboo.com" },
@@ -45,7 +45,7 @@ function Contact() {
                 <a
                   key={c.label}
                   href={c.href}
-                  className="flex items-center gap-3.5 sm:gap-4 rounded-2xl sm:rounded-3xl border border-border/80 bg-white p-3.5 sm:px-5 sm:py-3.5 hover:border-primary/50 transition-all shadow-2xs hover:shadow-md group"
+                  className="flex items-center gap-3.5 sm:gap-4 rounded-2xl sm:rounded-3xl border border-border/80 bg-white p-3.5 sm:px-5 sm:py-3.5 hover:border-primary/50 transition-all shadow-2xs hover:shadow-md group flex-1"
                 >
                   <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-2xl bg-primary text-primary-foreground grid place-items-center shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
                     <c.icon className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -59,7 +59,7 @@ function Contact() {
             </div>
           </div>
 
-          <div className="lg:col-span-7 flex justify-center lg:justify-end w-full scroll-mt-24 sm:scroll-mt-28 md:scroll-mt-32" id="contact-form">
+          <div className="lg:col-span-7 flex justify-center lg:justify-end w-full h-full scroll-mt-24 sm:scroll-mt-28 md:scroll-mt-32" id="contact-form">
             <AdmissionForm variant="card" compact />
           </div>
         </div>
