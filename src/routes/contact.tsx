@@ -39,12 +39,19 @@ function Contact() {
               {[
                 { icon: Phone, label: "Call", value: "+91 99006 39303", href: "tel:+919900639303" },
                 { icon: Mail, label: "Email", value: "info@bambiboo.com", href: "mailto:info@bambiboo.com" },
-                { icon: MapPin, label: "Visit", value: "44, 5th Main Rd, 1st Block Koramangala, Bengaluru, Karnataka 560034" },
-                { icon: Clock, label: "Hours", value: "Mon to Sat - 8:30 AM to 6:30 PM" },
+                {
+                  icon: MapPin,
+                  label: "Visit",
+                  value: "44, 5th Main Rd, 1st Block Koramangala, Bengaluru, Karnataka 560034",
+                  href: "https://www.google.com/maps/place/BambiBoo+Preschool+and+Daycare/@12.929094,77.634379,16z/data=!4m6!3m5!1s0x3bae15899ada3411:0xe35948f570efc217!8m2!3d12.9290941!4d77.634379!16s%2Fg%2F11x8fll2dt?hl=en&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D",
+                },
+                { icon: Clock, label: "Hours", value: "Mon to Sat - 8:30 AM to 6:30 PM", href: "#contact-form" },
               ].map((c) => (
                 <a
                   key={c.label}
                   href={c.href}
+                  target={c.href.startsWith("http") ? "_blank" : undefined}
+                  rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="flex items-center gap-3.5 sm:gap-4 rounded-2xl sm:rounded-3xl border border-border/80 bg-white p-3.5 sm:px-5 sm:py-3.5 hover:border-primary/50 transition-all shadow-2xs hover:shadow-md group flex-1"
                 >
                   <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-2xl bg-primary text-primary-foreground grid place-items-center shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
