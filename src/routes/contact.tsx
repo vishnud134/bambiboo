@@ -60,7 +60,7 @@ function Contact() {
           </div>
 
           <div className="lg:col-span-7 flex justify-center lg:justify-end w-full h-full scroll-mt-24 sm:scroll-mt-28 md:scroll-mt-32" id="contact-form">
-            <AdmissionForm variant="card" compact />
+            <AdmissionForm variant="card" compact={false} includeMessage={true} />
           </div>
         </div>
       </section>
