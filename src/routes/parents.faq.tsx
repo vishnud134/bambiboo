@@ -25,8 +25,58 @@ const groups = [
         a: "We offer programmes for children from 3 months to 6 years, along with daycare for children up to 12 years.",
       },
       {
-        q: "Can parents visit the school before admission?",
-        a: "Absolutely. We encourage every family to visit our campus, meet our educators, explore the learning spaces and experience the BambiBoo environment before making a decision.",
+        q: "What is the admission process?",
+        a: "Your journey begins with a campus visit. Meet our teachers, explore the classrooms and understand our philosophy. We'll answer all your questions, discuss the curriculum and fee structure, guide you through the documentation, and once admission is confirmed, your child receives a welcome kit with books, bag, uniform, diary and ID card.",
+      },
+      {
+        q: "Are admissions open throughout the year?",
+        a: "Yes. Admissions remain open throughout the year, subject to seat availability. We recommend scheduling a school visit to understand the programme best suited for your child.",
+      },
+      {
+        q: "What documents are required for admission?",
+        a: "For parents, we require an Aadhaar card. For your child, we require a birth certificate, immunisation records and recent photographs.",
+      },
+    ],
+  },
+  {
+    title: "Curriculum & Learning",
+    items: [
+      {
+        q: "What is your teacher-child ratio?",
+        a: "We keep our groups intentionally small: ● 2:12 for toddlers ● 1:12 for older children. So every child is known, heard and supported.",
+      },
+      {
+        q: "What curriculum does BambiBoo follow?",
+        a: "Our curriculum is aligned with the National Education Policy (NEP) 2020 and ECCE principles. It combines early literacy, numeracy, science, EVS, technology & AI, practical life, sensorial activities, Hindi, Kannada and Sanskar with music, dance, art, drama, sports and experiential learning.",
+      },
+      {
+        q: "Do you offer any special learning programmes?",
+        a: "Yes. Children participate in enriching experiences such as Nature Explorers, Little Scientists, Phonics, Yoga for Kids, Life Skills, Multilingual Exposure, Motor Skills Development, Healthy Habits Club and cultural celebrations throughout the year.",
+      },
+      {
+        q: "How do you prepare children for primary school?",
+        a: "Our programme builds strong foundations in literacy, numeracy, communication, independence, creativity and problem-solving while nurturing confidence, kindness and a lifelong love for learning. School readiness grows naturally through meaningful experiences rather than academic pressure.",
+      },
+    ],
+  },
+  {
+    title: "Teachers & Safety",
+    items: [
+      {
+        q: "Do parents receive updates during the day?",
+        a: "We believe in open communication and keeping parents connected through regular updates and conversations about their child's day.",
+      },
+      {
+        q: "Are your teachers qualified?",
+        a: "Yes. Our educators are qualified, experienced and committed to creating a warm, nurturing environment where every child feels safe, respected and encouraged to grow.",
+      },
+      {
+        q: "Is the school under CCTV surveillance?",
+        a: "Yes. The campus is covered by CCTV for safety and security. However, we do not provide live CCTV access to parents. Instead, we believe in building trust through open communication and regular updates about your child's day.",
+      },
+      {
+        q: "How do you ensure children's safety?",
+        a: "Child safety is our highest priority. Our campus follows established safety protocols, emergency procedures and statutory safety compliances, including Fire & Safety requirements, to provide a secure environment for every child.",
       },
     ],
   },
@@ -38,26 +88,16 @@ const groups = [
         a: "Our programmes run Monday to Friday, with timings varying by age group. Parent & Toddler sessions are held Monday to Saturday.",
       },
       {
-        q: "Do you offer half-day and full-day Day Care?",
-        a: "Yes. We offer both half-day and full-day Day Care options to support the varying needs of families. Saturday care is available on request.",
+        q: "What should my child bring every day?",
+        a: "Children should bring a labelled water bottle, a spare set of clothes and any personal essentials. Day Care children should also bring breakfast, lunch and healthy snacks from home.",
       },
-    ],
-  },
-  {
-    title: "Teachers & Safety",
-    items: [
       {
-        q: "Do parents receive updates during the day?",
-        a: "We believe in open communication and keeping parents connected through regular updates and conversations about their child's day.",
+        q: "Does BambiBoo provide meals?",
+        a: "No. Families provide breakfast, lunch and snacks from home so children enjoy familiar food that suits their preferences and dietary needs.",
       },
-    ],
-  },
-  {
-    title: "Curriculum & Learning",
-    items: [
       {
-        q: "What is your teacher-child ratio?",
-        a: "We keep our groups intentionally small: ● 1:12 for toddlers ● 1:12 for older children. So every child is known, heard and supported.",
+        q: "Do children have nap facilities in Day Care?",
+        a: "Yes. Our Day Care programme includes dedicated rest time in a calm, comfortable environment so children can recharge before returning to play and learning.",
       },
     ],
   },
@@ -66,7 +106,15 @@ const groups = [
     items: [
       {
         q: "Is transport available?",
-        a: "Yes. Transport is available on select routes. Please speak to our team to check availability for your neighbourhood.",
+        a: "Transport is currently being introduced and is available on selected routes. Please contact our admissions team to check availability for your location.",
+      },
+      {
+        q: "Do you offer half-day and full-day Day Care?",
+        a: "Yes. We offer both half-day and full-day Day Care options to support the varying needs of families. Saturday care is available on request.",
+      },
+      {
+        q: "Can parents visit the school before admission?",
+        a: "Absolutely. We encourage every family to visit our campus, meet our educators, explore the learning spaces and experience the BambiBoo environment before making a decision.",
       },
     ],
   },

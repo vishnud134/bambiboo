@@ -92,47 +92,41 @@ const faqs = [
   { q: "What ages does BambiBoo welcome?", a: "We offer programmes for children from 3 months to 6 years, along with daycare for children up to 12 years." },
   { q: "What are your school timings?", a: "Our programmes run Monday to Friday, with timings varying by age group. Parent & Toddler sessions are held Monday to Saturday." },
   { q: "What is your teacher-child ratio?", a: "We keep our groups intentionally small: ● 2:12 for toddlers ● 1:12 for older children. So every child is known, heard and supported." },
-  
+  { q: "Do parents receive updates during the day?", a: "We believe in open communication and keeping parents connected through regular updates and conversations about their child's day." },
   { q: "Is transport available?", a: "Yes. Transport is available on select routes. Please speak to our team to check availability for your neighbourhood." },
 ];
 
 import { useState } from "react";
 
 const categoryFaqs = [
-  // 1. Admissions (5 questions)
+  // 1. Admissions & Eligibility
   { cat: "admissions", q: "What ages does BambiBoo welcome?", a: "We offer programmes for children from 3 months to 6 years, along with daycare for children up to 12 years." },
-  { cat: "admissions", q: "Can parents visit the school before admission?", a: "Absolutely. We encourage every family to visit our campus, meet our educators, explore the learning spaces and experience the BambiBoo environment before making a decision." },
-  { cat: "admissions", q: "Do admissions remain open throughout the year?", a: "Yes, admissions remain open throughout the year subject to seat availability. We recommend scheduling a campus visit to confirm enrollment for your preferred age group." },
-  { cat: "admissions", q: "What documents are required for the admission process?", a: "Parents need to submit a copy of the child's birth certificate, immunisation records, recent passport-size photographs, and Aadhaar card copies of both parents." },
-  { cat: "admissions", q: "What is included in the child's welcome kit upon admission?", a: "Once admission is confirmed, every child receives a welcome kit containing learning books, customized school bag, uniform set, student diary, and ID card." },
+  { cat: "admissions", q: "What is the admission process?", a: "Your journey begins with a campus visit. Meet our teachers, explore the classrooms and understand our philosophy. We'll answer all your questions, discuss the curriculum and fee structure, guide you through the documentation, and once admission is confirmed, your child receives a welcome kit with books, bag, uniform, diary and ID card." },
+  { cat: "admissions", q: "Are admissions open throughout the year?", a: "Yes. Admissions remain open throughout the year, subject to seat availability. We recommend scheduling a school visit to understand the programme best suited for your child." },
+  { cat: "admissions", q: "What documents are required for admission?", a: "For parents, we require an Aadhaar card. For your child, we require a birth certificate, immunisation records and recent photographs." },
 
-  // 2. Timings (5 questions)
-  { cat: "timings", q: "What are your school timings?", a: "Our programmes run Monday to Friday, with timings varying by age group. Parent & Toddler sessions are held Monday to Saturday." },
-  { cat: "timings", q: "Do you offer half-day and full-day Day Care?", a: "Yes. We offer both half-day and full-day Day Care options to support the varying needs of families. Saturday care is available on request." },
-  { cat: "timings", q: "What are the daycare operating hours?", a: "Daycare operates from 8:30 AM to 6:30 PM, Monday through Saturday, providing structured play, meal times, rest/nap periods, and supervised evening activities." },
-  { cat: "timings", q: "Is Saturday care available for preschool or daycare children?", a: "Saturday daycare and weekend Parent-Toddler engagement sessions are available upon request to assist parents with flexible weekend schedules." },
-  { cat: "timings", q: "How are late pickups handled for daycare children?", a: "We understand traffic delays in Koramangala. We provide extended evening care till 7:00 PM under continuous teacher supervision with prior notification from parents." },
+  // 2. Curriculum & Learning
+  { cat: "meals", q: "What is your teacher-child ratio?", a: "We keep our groups intentionally small: ● 2:12 for toddlers ● 1:12 for older children. So every child is known, heard and supported." },
+  { cat: "meals", q: "What curriculum does BambiBoo follow?", a: "Our curriculum is aligned with the National Education Policy (NEP) 2020 and ECCE principles. It combines early literacy, numeracy, science, EVS, technology & AI, practical life, sensorial activities, Hindi, Kannada and Sanskar with music, dance, art, drama, sports and experiential learning." },
+  { cat: "meals", q: "Do you offer any special learning programmes?", a: "Yes. Children participate in enriching experiences such as Nature Explorers, Little Scientists, Phonics, Yoga for Kids, Life Skills, Multilingual Exposure, Motor Skills Development, Healthy Habits Club and cultural celebrations throughout the year." },
+  { cat: "meals", q: "How do you prepare children for primary school?", a: "Our programme builds strong foundations in literacy, numeracy, communication, independence, creativity and problem-solving while nurturing confidence, kindness and a lifelong love for learning. School readiness grows naturally through meaningful experiences rather than academic pressure." },
 
-  // 3. Teachers and Safety (5 questions)
+  // 3. Teachers & Safety
   { cat: "cctv", q: "Do parents receive updates during the day?", a: "We believe in open communication and keeping parents connected through regular updates and conversations about their child's day." },
   { cat: "cctv", q: "Are your teachers qualified?", a: "Yes. Our educators are qualified, experienced and committed to creating a warm, nurturing environment where every child feels safe, respected and encouraged to grow." },
   { cat: "cctv", q: "Is the school under CCTV surveillance?", a: "Yes. The campus is covered by CCTV for safety and security. However, we do not provide live CCTV access to parents. Instead, we believe in building trust through open communication and regular updates about your child's day." },
-  { cat: "cctv", q: "What safety and access control measures are in place on campus?", a: "We enforce strict security protocols, including gated access, verified pickup authorization, mandatory visitor logs, child-safe rounded furniture, and finger-pinch guards on all doors." },
-  { cat: "cctv", q: "What emergency medical protocols are followed on campus?", a: "Every staff member is trained in pediatric CPR and first aid. We maintain a dedicated on-site first-aid station and have active medical tie-ups with two leading nearby hospitals for rapid 5-minute emergency response." },
+  { cat: "cctv", q: "How do you ensure children's safety?", a: "Child safety is our highest priority. Our campus follows established safety protocols, emergency procedures and statutory safety compliances, including Fire & Safety requirements, to provide a secure environment for every child." },
 
-  // 4. Teacher-child ratio (5 questions)
-  { cat: "meals", q: "What is your teacher-child ratio?", a: "We keep our groups intentionally small: ● 1:12 for toddlers ● 1:12 for older children. So every child is known, heard and supported." },
-  { cat: "meals", q: "How many support staff and helpers are assigned to each classroom?", a: "Each classroom has a dedicated lead teacher accompanied by a trained helper/nanny to assist with hygiene, bathroom breaks, and classroom activities." },
-  { cat: "meals", q: "How does a small ratio benefit my child's learning journey?", a: "Intentionally small group sizes allow our educators to observe each child's unique learning pace, foster deeper emotional bonds, and tailor developmental milestones." },
-  { cat: "meals", q: "Are helpers and support staff trained in hygiene and pediatric care?", a: "Yes. All support staff undergo regular training in child handling, hygiene standards, sanitation protocols, and respectful caregiving." },
-  { cat: "meals", q: "How are toddlers assisted during meal and toilet transition times?", a: "Teachers and dedicated nannies provide gentle, step-by-step guidance during toilet training and meal times, encouraging self-help skills while ensuring comfort and cleanliness." },
+  // 4. Daily Routine & Care
+  { cat: "timings", q: "What are your school timings?", a: "Our programmes run Monday to Friday, with timings varying by age group. Parent & Toddler sessions are held Monday to Saturday." },
+  { cat: "timings", q: "What should my child bring every day?", a: "Children should bring a labelled water bottle, a spare set of clothes and any personal essentials. Day Care children should also bring breakfast, lunch and healthy snacks from home." },
+  { cat: "timings", q: "Does BambiBoo provide meals?", a: "No. Families provide breakfast, lunch and snacks from home so children enjoy familiar food that suits their preferences and dietary needs." },
+  { cat: "timings", q: "Do children have nap facilities in Day Care?", a: "Yes. Our Day Care programme includes dedicated rest time in a calm, comfortable environment so children can recharge before returning to play and learning." },
 
-  // 5. Transport (5 questions)
-  { cat: "safety", q: "Is transport available?", a: "Yes. Transport is available on select routes. Please speak to our team to check availability for your neighbourhood." },
-  { cat: "safety", q: "Is school transport available for Koramangala & nearby areas?", a: "Yes! We provide safe, air-conditioned door-to-door transport covering Koramangala, HSR Layout, Indiranagar, and surrounding neighborhood sectors." },
-  { cat: "safety", q: "How are transport vehicles tracked for safety?", a: "All transport vehicles are fitted with real-time GPS tracking, speed governors (capped at 40 km/h), emergency panic buttons, and automated SMS arrival alerts sent directly to your phone." },
-  { cat: "safety", q: "Who accompanies the children inside the transport vehicles?", a: "Every vehicle has a mandatory, background-verified female attendant on board alongside a trained driver to assist children with seatbelts, boarding, and unboarding." },
-  { cat: "safety", q: "What background verification is done for staff and drivers?", a: "100% of drivers, attendants, teachers, and support staff undergo mandatory police background verification, address checks, medical screening, and annual safety recertifications." },
+  // 5. Facilities & Services
+  { cat: "safety", q: "Is transport available?", a: "Transport is currently being introduced and is available on selected routes. Please contact our admissions team to check availability for your location." },
+  { cat: "safety", q: "Do you offer half-day and full-day Day Care?", a: "Yes. We offer both half-day and full-day Day Care options to support the varying needs of families. Saturday care is available on request." },
+  { cat: "safety", q: "Can parents visit the school before admission?", a: "Absolutely. We encourage every family to visit our campus, meet our educators, explore the learning spaces and experience the BambiBoo environment before making a decision." },
 ];
 
 function Home() {
@@ -166,9 +160,17 @@ function Home() {
                 childhood comes first.
               </span>
             </h1>
-            <p className="mt-5 max-w-xl text-sm sm:text-base text-foreground/85 leading-[21px] font-medium">
-              Through learning through play and small-group experiences, children build real friendships, confidence, and meaningful relationships. With safe care, personal attention, and transparent communication, parents can have peace of mind knowing their child is seen, heard, encouraged, and supported by trusted teachers.
-            </p>
+            <div className="mt-5 max-w-xl text-sm sm:text-base text-foreground/85 font-medium space-y-2">
+              <p>
+                <strong className="font-semibold text-foreground">Learning Through Play:</strong> Real experiences. Real friendships. Real confidence.
+              </p>
+              <p>
+                <strong className="font-semibold text-foreground">Small Groups. Big Relationships:</strong> Every child is seen, heard and encouraged.
+              </p>
+              <p>
+                <strong className="font-semibold text-foreground">Peace of Mind for Parents:</strong> Safe care, transparent communication and teachers you can trust.
+              </p>
+            </div>
             <div className="mt-8 flex flex-wrap gap-3.5">
               <AdmissionDialog>
                 <button className="shimmer-pill inline-flex items-center gap-2 rounded-full bg-[#4C167F] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-purple-950/20 hover:brightness-110 hover:-translate-y-0.5 transition-all">
@@ -463,11 +465,11 @@ function Home() {
           {/* Quick Category Filter Pills - ALL IN SAME LINE */}
           <div className="mt-6 mb-8 flex flex-nowrap items-center gap-2.5 overflow-x-auto px-3 pb-3 pt-1.5 scrollbar-none whitespace-nowrap">
             {[
-              { id: "admissions", label: "Admissions" },
-              { id: "timings", label: "Timings" },
-              { id: "cctv", label: "Teachers and Safety" },
-              { id: "meals", label: "Teacher-child ratio" },
-              { id: "safety", label: "Transport" },
+              { id: "admissions", label: "Admissions & Eligibility" },
+              { id: "meals", label: "Curriculum & Learning" },
+              { id: "cctv", label: "Teachers & Safety" },
+              { id: "timings", label: "Daily Routine & Care" },
+              { id: "safety", label: "Facilities & Services" },
             ].map((c) => (
               <button
                 key={c.id}
