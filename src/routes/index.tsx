@@ -160,17 +160,26 @@ function Home() {
                 childhood comes first.
               </span>
             </h1>
-            <div className="mt-5 max-w-xl text-sm sm:text-base text-foreground/85 font-medium space-y-2">
-              <p>
-                <strong className="font-semibold text-foreground">Learning Through Play:</strong> Real experiences. Real friendships. Real confidence.
-              </p>
-              <p>
-                <strong className="font-semibold text-foreground">Small Groups. Big Relationships:</strong> Every child is seen, heard and encouraged.
-              </p>
-              <p>
-                <strong className="font-semibold text-foreground">Peace of Mind for Parents:</strong> Safe care, transparent communication and teachers you can trust.
-              </p>
-            </div>
+            <ul className="mt-5 max-w-xl text-sm sm:text-base text-foreground/85 font-medium space-y-2.5">
+              <li className="flex items-start gap-2.5">
+                <span className="text-[#4C167F] font-bold text-lg leading-none shrink-0 mt-0.5 select-none">•</span>
+                <span>
+                  <strong className="font-semibold text-foreground">Learning Through Play:</strong> Real experiences. Real friendships. Real confidence.
+                </span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="text-[#4C167F] font-bold text-lg leading-none shrink-0 mt-0.5 select-none">•</span>
+                <span>
+                  <strong className="font-semibold text-foreground">Small Groups. Big Relationships:</strong> Every child is seen, heard and encouraged.
+                </span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="text-[#4C167F] font-bold text-lg leading-none shrink-0 mt-0.5 select-none">•</span>
+                <span>
+                  <strong className="font-semibold text-foreground">Peace of Mind for Parents:</strong> Safe care, transparent communication and teachers you can trust.
+                </span>
+              </li>
+            </ul>
             <div className="mt-8 flex flex-wrap gap-3.5">
               <AdmissionDialog>
                 <button className="shimmer-pill inline-flex items-center gap-2 rounded-full bg-[#4C167F] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-purple-950/20 hover:brightness-110 hover:-translate-y-0.5 transition-all">
