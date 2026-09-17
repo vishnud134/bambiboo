@@ -37,7 +37,7 @@ function BlogsLayout() {
           {blogPosts.map((post) => (
             <article key={post.id} className="master-card group h-full rounded-3xl bg-white border border-border/60 overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="relative h-44 w-full overflow-hidden bg-slate-100">
-                <img src={post.image} alt={post.title} className="h-full w-full object-cover object-center" />
+                <img src={post.image} alt={post.title} className="h-full w-full object-cover object-top" />
               </div>
               <div className="p-5">
                 <div className="flex items-center gap-3 text-xs font-medium text-muted-foreground mb-2">

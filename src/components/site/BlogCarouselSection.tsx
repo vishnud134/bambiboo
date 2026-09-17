@@ -101,7 +101,7 @@ export const blogPosts: BlogPost[] = [
           <img
             src={curriculumHeroImg}
             alt="Children happily discovering and playing in a preschool classroom"
-            className="w-full h-[340px] md:h-[420px] object-cover object-center"
+            className="w-full h-auto max-h-[500px] md:max-h-[600px] object-contain rounded-2xl bg-[#FAF8F5]"
             loading="eager"
             decoding="async"
           />
@@ -187,7 +187,7 @@ export const blogPosts: BlogPost[] = [
           <img
             src={classroomMorningImg}
             alt="Children in a brightly lit BambiBoo classroom engaging in blended learning"
-            className="w-full h-[340px] md:h-[420px] object-cover object-center"
+            className="w-full h-auto max-h-[500px] md:max-h-[600px] object-contain rounded-2xl bg-[#FAF8F5]"
             loading="lazy"
             decoding="async"
           />
@@ -254,7 +254,7 @@ export const blogPosts: BlogPost[] = [
           <img
             src={steam2Img}
             alt="Toddlers engaged in hands-on building and science discovery"
-            className="w-full h-[340px] md:h-[420px] object-cover object-center"
+            className="w-full h-auto max-h-[500px] md:max-h-[600px] object-contain rounded-2xl bg-[#FAF8F5]"
             loading="lazy"
             decoding="async"
           />
@@ -308,7 +308,7 @@ export const blogPosts: BlogPost[] = [
           <img
             src={nutritionKidsEatingImg}
             alt="Children enjoying wholesome nutritious snacks and fruit smoothies together"
-            className="w-full h-[340px] md:h-[420px] object-cover object-center"
+            className="w-full h-auto max-h-[500px] md:max-h-[600px] object-contain rounded-2xl bg-[#FAF8F5]"
             loading="lazy"
             decoding="async"
           />
@@ -371,7 +371,7 @@ export const blogPosts: BlogPost[] = [
           <img
             src={fieldTripImg}
             alt="Children exploring nature and outdoor spaces at BambiBoo"
-            className="w-full h-[340px] md:h-[420px] object-cover object-center"
+            className="w-full h-auto max-h-[500px] md:max-h-[600px] object-contain rounded-2xl bg-[#FAF8F5]"
             loading="lazy"
             decoding="async"
           />
@@ -427,7 +427,7 @@ export const blogPosts: BlogPost[] = [
           <img
             src={physicalSafetyImg}
             alt="Safe, child-proofed classroom layout at BambiBoo Preschool"
-            className="w-full h-[340px] md:h-[420px] object-cover object-center"
+            className="w-full h-auto max-h-[500px] md:max-h-[600px] object-contain rounded-2xl bg-[#FAF8F5]"
             loading="lazy"
             decoding="async"
           />
@@ -497,7 +497,7 @@ export function BlogCarouselSection({ className = "" }: { className?: string }) 
                       <img
                         src={post.image}
                         alt={post.title}
-                        className="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                        className="h-full w-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                       />
                       <div className="absolute top-3 left-3">

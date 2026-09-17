@@ -57,7 +57,7 @@ function BlogPostPage() {
       <article className="container-page py-12 md:py-16">
         {/* Hero */}
         <div className="mb-8">
-            <div className="relative rounded-2xl overflow-hidden shadow-lg">
+            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md bg-[#FAF8F5] border border-border/40 flex items-center justify-center p-2 sm:p-3 md:p-4">
             {(() => {
               const hi = makeHighRes(post.image || "");
               return (
@@ -66,13 +66,12 @@ function BlogPostPage() {
                   srcSet={hi.srcSet}
                   sizes="(min-width:1024px) 1200px, 100vw"
                   alt={post.title}
-                  className="w-full h-[360px] md:h-[450px] object-cover object-center"
+                  className="w-full h-auto max-h-[550px] md:max-h-[650px] object-contain rounded-xl sm:rounded-2xl"
                   loading="eager"
                   decoding="async"
                 />
               );
             })()}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20" />
           </div>
           <div className="mt-6">
             <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary/80 mb-2">Parenting & Early Learning Blog</div>
